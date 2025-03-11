@@ -6,7 +6,7 @@ import { ArrowRight } from 'lucide-react';
 export function HeroSection() {
 	return (
 		<section className='w-full min-h-[90vh] flex flex-col items-center justify-center px-4 md:px-8 py-16 bg-gradient-to-b from-blue-50 to-white overflow-hidden'>
-			<div className='max-w-6xl mx-auto w-full flex flex-col lg:flex-row items-center gap-12'>
+			<div className='max-w-[70%] mx-auto w-full flex flex-col lg:flex-row items-center gap-12'>
 				<motion.div
 					className='flex-1 space-y-6'
 					initial={{ opacity: 0, x: -50 }}

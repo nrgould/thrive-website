@@ -57,7 +57,7 @@ export function ResultsSection() {
 				</motion.h2>
 
 				{/* Stats */}
-				<div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-20'>
+				<div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-12'>
 					<motion.div
 						className='bg-blue-50 rounded-3xl p-8 text-center flex flex-col items-center'
 						custom={0}
@@ -85,13 +85,13 @@ export function ResultsSection() {
 						variants={fadeIn}
 					>
 						<div className='w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4'>
-							<Award className='text-blue-500' size={28} />
+							<Heart className='text-blue-500' size={28} />
 						</div>
 						<h3 className='text-5xl font-bold text-blue-500 mb-2'>
-							4.3&quot;
+							59%
 						</h3>
 						<p className='text-slate-700'>
-							average decrease in waistline among participants
+							of participants improved A1C levels
 						</p>
 					</motion.div>
 
@@ -103,16 +103,76 @@ export function ResultsSection() {
 						variants={fadeIn}
 					>
 						<div className='w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4'>
-							<Heart className='text-blue-500' size={28} />
+							<Award className='text-blue-500' size={28} />
 						</div>
 						<h3 className='text-5xl font-bold text-blue-500 mb-2'>
-							7.4lbs
+							91%
 						</h3>
 						<p className='text-slate-700'>
-							average weight loss among participants
+							lost weight and improved BMI
 						</p>
 					</motion.div>
 				</div>
+
+				{/* Additional Stats */}
+				<motion.div
+					className='bg-blue-50 rounded-3xl p-8 mb-20'
+					initial={{ opacity: 0, y: 20 }}
+					animate={
+						isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
+					}
+					transition={{ duration: 0.5, delay: 0.3 }}
+				>
+					<h3 className='text-2xl font-bold text-blue-500 mb-6 text-center'>
+						And so much more...
+					</h3>
+					<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
+						<div className='flex items-center'>
+							<div className='w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-3 flex-shrink-0'>
+								<Heart className='text-blue-500' size={20} />
+							</div>
+							<p className='text-slate-700'>
+								50% reduction in depression medication reported
+							</p>
+						</div>
+						<div className='flex items-center'>
+							<div className='w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-3 flex-shrink-0'>
+								<Heart className='text-blue-500' size={20} />
+							</div>
+							<p className='text-slate-700'>
+								50% reduction in diabetes medication reported
+							</p>
+						</div>
+						<div className='flex items-center'>
+							<div className='w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-3 flex-shrink-0'>
+								<TrendingUp
+									className='text-blue-500'
+									size={20}
+								/>
+							</div>
+							<p className='text-slate-700'>
+								100% of participants showed improved systolic
+								blood pressure
+							</p>
+						</div>
+						<div className='flex items-center'>
+							<div className='w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-3 flex-shrink-0'>
+								<Award className='text-blue-500' size={20} />
+							</div>
+							<p className='text-slate-700'>
+								4.3&quot; average decrease in waistline
+							</p>
+						</div>
+						<div className='flex items-center'>
+							<div className='w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-3 flex-shrink-0'>
+								<Heart className='text-blue-500' size={20} />
+							</div>
+							<p className='text-slate-700'>
+								7.4lbs average weight loss
+							</p>
+						</div>
+					</div>
+				</motion.div>
 
 				{/* Video Container */}
 				<motion.div
