@@ -152,8 +152,8 @@ export function ResultsSection() {
 							animate={isInView ? 'visible' : 'hidden'}
 							variants={fadeIn}
 						>
-							<p className='text-slate-700 mb-4 text-lg italic'>
-								"{testimonial.quote}"
+							<p className='text-slate-700 text-lg leading-relaxed'>
+								&quot;{testimonial.quote}&quot;
 							</p>
 							<p className='text-blue-500 font-medium'>
 								— {testimonial.author}

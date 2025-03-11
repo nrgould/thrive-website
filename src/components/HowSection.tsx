@@ -65,7 +65,7 @@ export function HowSection() {
 						</h3>
 						<p className='text-slate-700 text-lg leading-relaxed'>
 							We take the guesswork out by offering a systems
-							approach—giving you the tools, structure, and
+							approach&mdash;giving you the tools, structure, and
 							support needed to create lasting habits.
 						</p>
 						<p className='text-slate-700 text-lg leading-relaxed'>
