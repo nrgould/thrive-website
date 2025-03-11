@@ -3,6 +3,7 @@
 import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { Book, Users, LineChart, Calendar, UserCircle } from 'lucide-react';
+import Image from 'next/image';
 
 export function SupportiveExperienceSection() {
 	const sectionRef = useRef(null);
@@ -21,15 +22,42 @@ export function SupportiveExperienceSection() {
 	};
 
 	// Sample coach data - would be replaced with actual data in a real implementation
-	const coaches = [
+	const team = [
 		{
-			name: 'Coach Sarah',
-			role: 'Lifestyle Medicine Specialist',
-			image: null,
+			name: 'Chasity Rice',
+			role: 'C2Life Founder/CEO',
+			image: '/team/chasity.webp',
 		},
-		{ name: 'Coach Michael', role: 'Nutrition Expert', image: null },
-		{ name: 'Coach Emma', role: 'Movement Specialist', image: null },
-		{ name: 'Coach David', role: 'Behavioral Health Coach', image: null },
+		{
+			name: 'Brett Wells',
+			role: 'Behavior Design Expert',
+			image: '/team/brett.webp',
+		},
+		{
+			name: 'Brian Asbill, MD',
+			role: 'Plant-Powered Lifestyle Medicine Physician',
+			image: '/team/brian.webp',
+		},
+		{
+			name: 'Quez "Papa Plants" Little',
+			role: 'Lifestyle Coach',
+			image: '/team/quez.webp',
+		},
+		{
+			name: 'Laurie Robinson, MD',
+			role: 'Lifestyle Coach',
+			image: '/team/laurie.webp',
+		},
+		{
+			name: 'Leticia Nichols, ANP-C, CHWC',
+			role: 'Lifestyle Coach',
+			image: '/team/leticia.webp',
+		},
+		{
+			name: 'Nicholas "the Wizard" Gould',
+			role: 'Web Developer',
+			image: '/team/nicholas.webp',
+		},
 	];
 
 	return (
@@ -210,22 +238,34 @@ export function SupportiveExperienceSection() {
 					}
 					transition={{ duration: 0.6, delay: 0.5 }}
 				>
-					{coaches.map((coach, index) => (
+					{team.map((person, index) => (
 						<div
 							key={index}
 							className='bg-white rounded-3xl p-6 text-center shadow-sm'
 						>
-							<div className='w-24 h-24 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4'>
-								<UserCircle
-									className='text-blue-300'
-									size={48}
-								/>
+							<div className='w-24 h-24 rounded-full overflow-hidden mx-auto mb-4'>
+								{person.image ? (
+									<Image
+										src={person.image}
+										alt={person.name}
+										width={96}
+										height={96}
+										className='w-full h-full object-cover'
+									/>
+								) : (
+									<div className='w-full h-full bg-blue-100 flex items-center justify-center'>
+										<UserCircle
+											className='text-blue-300'
+											size={48}
+										/>
+									</div>
+								)}
 							</div>
 							<h4 className='text-lg font-bold text-blue-950'>
-								{coach.name}
+								{person.name}
 							</h4>
 							<p className='text-slate-600 text-sm'>
-								{coach.role}
+								{person.role}
 							</p>
 						</div>
 					))}
