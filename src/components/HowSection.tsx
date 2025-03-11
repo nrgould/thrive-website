@@ -2,14 +2,7 @@
 
 import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
-import {
-	CheckCircle,
-	Brain,
-	HeartPulse,
-	Smile,
-	BarChart,
-	Users,
-} from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
 
 export function HowSection() {
 	const sectionRef = useRef(null);
@@ -69,9 +62,9 @@ export function HowSection() {
 							support needed to create lasting habits.
 						</p>
 						<p className='text-slate-700 text-lg leading-relaxed'>
-							This isn't about willpower. It's about making it
-							easier for healthy choices to become part of
-							everyday life.
+							This isn&apos;t about willpower. It&apos;s about
+							making it easier for healthy choices to become part
+							of everyday life.
 						</p>
 
 						<motion.div

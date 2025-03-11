@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import * as motion from 'motion/react-client';
 import { ArrowRight } from 'lucide-react';
 
 export function HeroSection() {

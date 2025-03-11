@@ -88,7 +88,7 @@ export function ResultsSection() {
 							<Award className='text-blue-500' size={28} />
 						</div>
 						<h3 className='text-5xl font-bold text-blue-500 mb-2'>
-							4.3"
+							4.3&quot;
 						</h3>
 						<p className='text-slate-700'>
 							average decrease in waistline among participants

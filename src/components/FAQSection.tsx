@@ -118,13 +118,13 @@ export function FAQSection() {
 
 							<div>
 								<h4 className='text-lg font-bold text-blue-700 mb-2'>
-									Get Ready for What's Next
+									Get Ready for What&apos;s Next
 								</h4>
 								<ul className='space-y-2 text-slate-700'>
 									<li className='flex items-start gap-2'>
 										<div className='w-1.5 h-1.5 rounded-full bg-blue-500 mt-2 flex-shrink-0' />
 										<p>
-											A great first step if you're
+											A great first step if you&apos;re
 											thinking about joining the full
 											THRIVE 6-Week Program in the future
 										</p>
