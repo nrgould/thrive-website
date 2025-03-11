@@ -1,9 +1,9 @@
-import { HeroSection } from '@/components/HeroSection';
-import { ResultsSection } from '@/components/ResultsSection';
-import { ProgramStructureSection } from '@/components/ProgramStructureSection';
-import { HowSection } from '@/components/HowSection';
-import { SupportiveExperienceSection } from '@/components/SupportiveExperienceSection';
-import { FAQSection } from '@/components/FAQSection';
+import { HeroSection } from '../components/HeroSection';
+import { ResultsSection } from '../components/ResultsSection';
+import { ProgramStructureSection } from '../components/ProgramStructureSection';
+import { HowSection } from '../components/HowSection';
+import { SupportiveExperienceSection } from '../components/SupportiveExperienceSection';
+import { FAQSection } from '../components/FAQSection';
 
 export default function Home() {
 	return (
