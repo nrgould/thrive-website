@@ -3,6 +3,7 @@
 import { useState, useRef } from 'react';
 import { motion, AnimatePresence, useInView } from 'framer-motion';
 import { ChevronDown, ChevronUp, Info, Zap, Mail } from 'lucide-react';
+import Link from 'next/link';
 
 export function FAQSection() {
 	const sectionRef = useRef(null);
@@ -133,9 +134,14 @@ export function FAQSection() {
 							</div>
 						</div>
 
-						<button className='w-full py-3 bg-blue-100 text-blue-700 rounded-full font-medium hover:bg-blue-200 transition-colors'>
-							Learn More
-						</button>
+						<Link
+							href='/programs/essentials'
+							className='w-full block'
+						>
+							<button className='w-full py-3 bg-blue-100 text-blue-700 rounded-full font-medium hover:bg-blue-200 transition-colors'>
+								Learn More
+							</button>
+						</Link>
 					</motion.div>
 
 					<motion.div
@@ -232,9 +238,14 @@ export function FAQSection() {
 							</div>
 						</div>
 
-						<button className='w-full py-3 bg-white text-blue-600 rounded-full font-medium hover:bg-blue-50 transition-colors'>
-							Register for Next Cohort
-						</button>
+						<Link
+							href='/programs/six-week'
+							className='w-full block'
+						>
+							<button className='w-full py-3 bg-white text-blue-600 rounded-full font-medium hover:bg-blue-50 transition-colors'>
+								Register for Next Cohort
+							</button>
+						</Link>
 					</motion.div>
 				</div>
 
