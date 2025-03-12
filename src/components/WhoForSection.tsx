@@ -71,7 +71,7 @@ export function WhoForSection() {
 					>
 						<div className='relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-xl'>
 							<Image
-								src='/lifestyle/kitchen1.png'
+								src='/lifestyle/kitchen1.webp'
 								alt='Community members preparing healthy food'
 								fill
 								className='object-cover'

@@ -77,7 +77,8 @@ export function HeroSection() {
 				>
 					<div className='absolute inset-0 bg-blue-200 bg-opacity-50 rounded-3xl flex items-center justify-center'>
 						<Image
-							src='/lifestyle/greenway1.jpg'
+							unoptimized
+							src='/lifestyle/greenway1.webp'
 							alt='Healthy, active lifestyle image'
 							className='w-full h-full object-cover'
 							width={1000}
