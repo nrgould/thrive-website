@@ -1,12 +1,54 @@
 'use client';
 
-import { useRef } from 'react';
-import { motion, useInView } from 'framer-motion';
-import { Award, Heart, TrendingUp } from 'lucide-react';
+import { useRef, useEffect } from 'react';
+import {
+	motion,
+	useInView,
+	useMotionValue,
+	useTransform,
+	animate,
+} from 'framer-motion';
+import { Award, Dumbbell, Heart, TrendingUp } from 'lucide-react';
 
 export function ResultsSection() {
 	const sectionRef = useRef(null);
 	const isInView = useInView(sectionRef, { once: true, amount: 0.2 });
+
+	// Create motion values for each stat
+	const ldlCount = useMotionValue(0);
+	const a1cCount = useMotionValue(0);
+	const bmiCount = useMotionValue(0);
+
+	// Transform the motion values to rounded numbers
+	const roundedLdl = useTransform(ldlCount, (latest) => Math.round(latest));
+	const roundedA1c = useTransform(a1cCount, (latest) => Math.round(latest));
+	const roundedBmi = useTransform(bmiCount, (latest) => Math.round(latest));
+
+	useEffect(() => {
+		if (isInView) {
+			const ldlAnimation = animate(ldlCount, 21, {
+				duration: 2,
+				ease: 'easeOut',
+			});
+
+			const a1cAnimation = animate(a1cCount, 59, {
+				duration: 2,
+				ease: 'easeOut',
+			});
+
+			const bmiAnimation = animate(bmiCount, 91, {
+				duration: 2,
+				ease: 'easeOut',
+			});
+
+			return () => {
+				ldlAnimation.stop();
+				a1cAnimation.stop();
+				bmiAnimation.stop();
+			};
+		}
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [isInView]);
 
 	const fadeIn = {
 		hidden: { opacity: 0, y: 30 },
@@ -59,18 +101,23 @@ export function ResultsSection() {
 				{/* Stats */}
 				<div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-12'>
 					<motion.div
-						className='bg-blue-50 rounded-3xl p-8 text-center flex flex-col items-center'
+						className='flex flex-col'
 						custom={0}
 						initial='hidden'
 						animate={isInView ? 'visible' : 'hidden'}
 						variants={fadeIn}
 					>
-						<div className='w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4'>
+						<div className='flex items-center gap-4 mb-2'>
 							<TrendingUp className='text-blue-500' size={28} />
+							<div className='flex items-baseline'>
+								<motion.span className='text-6xl font-bold text-blue-500'>
+									{roundedLdl}
+								</motion.span>
+								<span className='text-4xl font-bold text-blue-500'>
+									%
+								</span>
+							</div>
 						</div>
-						<h3 className='text-5xl font-bold text-blue-500 mb-2'>
-							21%
-						</h3>
 						<p className='text-slate-700'>
 							average reduction in LDL cholesterol among
 							participants
@@ -78,36 +125,46 @@ export function ResultsSection() {
 					</motion.div>
 
 					<motion.div
-						className='bg-blue-50 rounded-3xl p-8 text-center flex flex-col items-center'
+						className='flex flex-col'
 						custom={1}
 						initial='hidden'
 						animate={isInView ? 'visible' : 'hidden'}
 						variants={fadeIn}
 					>
-						<div className='w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4'>
+						<div className='flex items-center gap-4 mb-2'>
 							<Heart className='text-blue-500' size={28} />
+							<div className='flex items-baseline'>
+								<motion.span className='text-6xl font-bold text-blue-500'>
+									{roundedA1c}
+								</motion.span>
+								<span className='text-4xl font-bold text-blue-500'>
+									%
+								</span>
+							</div>
 						</div>
-						<h3 className='text-5xl font-bold text-blue-500 mb-2'>
-							59%
-						</h3>
 						<p className='text-slate-700'>
 							of participants improved A1C levels
 						</p>
 					</motion.div>
 
 					<motion.div
-						className='bg-blue-50 rounded-3xl p-8 text-center flex flex-col items-center'
+						className='flex flex-col'
 						custom={2}
 						initial='hidden'
 						animate={isInView ? 'visible' : 'hidden'}
 						variants={fadeIn}
 					>
-						<div className='w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4'>
-							<Award className='text-blue-500' size={28} />
+						<div className='flex items-center gap-4 mb-2'>
+							<Dumbbell className='text-blue-500' size={28} />
+							<div className='flex items-baseline'>
+								<motion.span className='text-6xl font-bold text-blue-500'>
+									{roundedBmi}
+								</motion.span>
+								<span className='text-4xl font-bold text-blue-500'>
+									%
+								</span>
+							</div>
 						</div>
-						<h3 className='text-5xl font-bold text-blue-500 mb-2'>
-							91%
-						</h3>
 						<p className='text-slate-700'>
 							lost weight and improved BMI
 						</p>

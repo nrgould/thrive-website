@@ -70,7 +70,7 @@ export function ThreeColumnsSection() {
 							Learn a Healthier Way
 						</h4>
 						<div className='flex-1 flex flex-col'>
-							<p className='text-slate-700 mb-3'>
+							<p className='text-slate-700 mb-3 leading-relaxed'>
 								Video tutorials, downloadable resources, &
 								interactive learning modules focused on
 								Lifestyle Medicine & Behavior Design
@@ -107,7 +107,7 @@ export function ThreeColumnsSection() {
 							Make Sustainable Change
 						</h4>
 						<div className='flex-1 flex flex-col'>
-							<p className='text-slate-700 mb-3'>
+							<p className='text-slate-700 mb-3 leading-relaxed'>
 								Participants use Behavior Design to create
 								personalized habit plans aligned with their
 								health goals.
