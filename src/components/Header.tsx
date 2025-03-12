@@ -16,7 +16,7 @@ import {
 const programs: { title: string; href: string; description: string }[] = [
 	{
 		title: 'THRIVE 6-Week Program',
-		href: '/programs/thrive',
+		href: '/programs/six-week',
 		description:
 			'Our comprehensive lifestyle change program with guidance, structure, and community support.',
 	},

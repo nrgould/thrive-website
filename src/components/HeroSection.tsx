@@ -76,9 +76,13 @@ export function HeroSection() {
 					transition={{ duration: 0.7, delay: 0.5 }}
 				>
 					<div className='absolute inset-0 bg-blue-200 bg-opacity-50 rounded-3xl flex items-center justify-center'>
-						<p className='text-blue-800 text-base sm:text-lg'>
-							Healthy, active lifestyle image
-						</p>
+						<Image
+							src='/lifestyle/greenway1.jpg'
+							alt='Healthy, active lifestyle image'
+							className='w-full h-full object-cover'
+							width={1000}
+							height={1000}
+						/>
 					</div>
 				</motion.div>
 			</div>

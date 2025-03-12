@@ -3,6 +3,7 @@
 import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { Heart, Activity, Leaf } from 'lucide-react';
+import Image from 'next/image';
 
 export function WhoForSection() {
 	const sectionRef = useRef(null);
@@ -37,7 +38,7 @@ export function WhoForSection() {
 			ref={sectionRef}
 			className='w-full py-24 px-4 md:px-8 bg-gradient-to-b from-white to-blue-50'
 		>
-			<div className='max-w-6xl mx-auto'>
+			<div className='max-w-7xl mx-auto'>
 				<motion.div
 					className='text-center mb-16'
 					initial={{ opacity: 0, y: 20 }}
@@ -56,43 +57,62 @@ export function WhoForSection() {
 					</p>
 				</motion.div>
 
-				<div className='space-y-16'>
-					{audiences.map((audience, index) => (
-						<motion.div
-							key={index}
-							className={`flex flex-col ${
-								index % 2 === 1
-									? 'md:flex-row-reverse'
-									: 'md:flex-row'
-							} items-center gap-8 md:gap-16`}
-							initial={{ opacity: 0, y: 50 }}
-							animate={
-								isInView
-									? { opacity: 1, y: 0 }
-									: { opacity: 0, y: 50 }
-							}
-							transition={{ duration: 0.6, delay: index * 0.2 }}
-						>
-							<div className='w-full md:w-1/3 flex justify-center'>
-								<div
-									className={`${audience.color} w-32 h-32 md:w-48 md:h-48 rounded-full flex items-center justify-center shadow-lg transform transition-transform hover:scale-105 duration-300`}
-								>
-									<div className='scale-150'>
-										{audience.icon}
-									</div>
-								</div>
-							</div>
+				<div className='flex flex-col lg:flex-row gap-12 items-start'>
+					{/* Images Column */}
+					<motion.div
+						className='w-full lg:w-1/2 space-y-6'
+						initial={{ opacity: 0, x: -50 }}
+						animate={
+							isInView
+								? { opacity: 1, x: 0 }
+								: { opacity: 0, x: -50 }
+						}
+						transition={{ duration: 0.6 }}
+					>
+						<div className='relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-xl'>
+							<Image
+								src='/lifestyle/kitchen1.png'
+								alt='Community members preparing healthy food'
+								fill
+								className='object-cover'
+							/>
+						</div>
+					</motion.div>
 
-							<div className='w-full md:w-2/3 text-center md:text-left'>
-								<h3 className='text-2xl font-bold text-blue-900 mb-4'>
-									{audience.title}
-								</h3>
-								<p className='text-lg text-slate-600 max-w-xl mx-auto md:mx-0'>
-									{audience.description}
-								</p>
-							</div>
-						</motion.div>
-					))}
+					{/* Content Column */}
+					<div className='w-full lg:w-1/2 space-y-12 mt-12'>
+						{audiences.map((audience, index) => (
+							<motion.div
+								key={index}
+								className='flex gap-6 items-start'
+								initial={{ opacity: 0, x: 50 }}
+								animate={
+									isInView
+										? { opacity: 1, x: 0 }
+										: { opacity: 0, x: 50 }
+								}
+								transition={{
+									duration: 0.6,
+									delay: index * 0.2,
+								}}
+							>
+								<div
+									className={`${audience.color} w-16 h-16 rounded-full flex items-center justify-center shadow-lg flex-shrink-0`}
+								>
+									{audience.icon}
+								</div>
+
+								<div>
+									<h3 className='text-xl font-bold text-blue-900 mb-2'>
+										{audience.title}
+									</h3>
+									<p className='text-slate-600'>
+										{audience.description}
+									</p>
+								</div>
+							</motion.div>
+						))}
+					</div>
 				</div>
 
 				<motion.div
