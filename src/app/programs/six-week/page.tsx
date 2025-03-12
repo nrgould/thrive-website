@@ -323,10 +323,10 @@ export default function SixWeekPage() {
 					<div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
 						<div className='bg-blue-50 p-6 rounded-3xl'>
 							<p className='text-slate-700 text-lg leading-relaxed'>
-								"This program has done wonders for how I feel
-								about myself. I've lost weight, I'm sleeping
-								better, and have a much more positive outlook on
-								life."
+								&quot;This program has done wonders for how I
+								feel about myself. I&apos;ve lost weight, I&apos;m
+								sleeping better, and have a much more positive
+								outlook on life.&quot;
 							</p>
 							<p className='text-blue-500 font-medium'>
 								— Zach, 42
@@ -334,9 +334,9 @@ export default function SixWeekPage() {
 						</div>
 						<div className='bg-blue-50 p-6 rounded-3xl'>
 							<p className='text-slate-700 text-lg leading-relaxed'>
-								"I truly understand the importance of eating
+								&quot;I truly understand the importance of eating
 								nutrient-dense foods and making smart choices.
-								My energy levels are through the roof!"
+								My energy levels are through the roof!&quot;
 							</p>
 							<p className='text-blue-500 font-medium'>
 								— Beverly, 56
