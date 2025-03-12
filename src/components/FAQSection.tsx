@@ -138,7 +138,7 @@ export function FAQSection() {
 							href='/programs/essentials'
 							className='w-full block'
 						>
-							<button className='w-full py-3 bg-blue-100 text-blue-700 rounded-full font-medium hover:bg-blue-200 transition-colors'>
+							<button className='cursor-pointer w-full py-3 bg-blue-100 text-blue-700 rounded-full font-medium hover:bg-blue-200 transition-colors'>
 								Learn More
 							</button>
 						</Link>
@@ -242,7 +242,7 @@ export function FAQSection() {
 							href='/programs/six-week'
 							className='w-full block'
 						>
-							<button className='w-full py-3 bg-white text-blue-600 rounded-full font-medium hover:bg-blue-50 transition-colors'>
+							<button className='cursor-pointer w-full py-3 bg-white text-blue-600 rounded-full font-medium hover:bg-blue-50 transition-colors'>
 								Register for Next Cohort
 							</button>
 						</Link>
@@ -261,7 +261,7 @@ export function FAQSection() {
 						Not Sure Where to Start?
 					</h3>
 					<div className='flex items-center justify-center'>
-						<button className='px-8 py-3 bg-blue-500 text-white rounded-full font-medium flex items-center gap-2 hover:bg-blue-600 transition-colors mx-auto'>
+						<button className='cursor-pointer px-8 py-3 bg-blue-500 text-white rounded-full font-medium flex items-center gap-2 hover:bg-blue-600 transition-colors mx-auto'>
 							<Mail size={18} /> Contact Us
 						</button>
 					</div>

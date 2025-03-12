@@ -1,9 +1,6 @@
-'use client';
 
-import { motion } from 'framer-motion';
 import { ArrowLeft, BookOpen, Clock, Award } from 'lucide-react';
 import Link from 'next/link';
-import Image from 'next/image';
 
 export default function EssentialsPage() {
 	return (
@@ -99,7 +96,7 @@ export default function EssentialsPage() {
 								structured program.
 							</p>
 							<p className='text-lg text-slate-700'>
-								You'll learn about the six pillars of
+								You&apos;ll learn about the six pillars of
 								health—nutrition, physical activity, sleep,
 								stress management, social connection, and
 								healthy habits—and how they form the foundation
@@ -109,7 +106,7 @@ export default function EssentialsPage() {
 
 						<div className='bg-blue-50 p-8 rounded-3xl space-y-6'>
 							<h3 className='text-2xl font-bold text-blue-950 mb-3'>
-								What You'll Get
+								What You&apos;ll Get
 							</h3>
 							<ul className='space-y-4'>
 								<li className='flex items-start gap-3'>

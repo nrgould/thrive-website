@@ -1,9 +1,5 @@
-'use client';
-
-import { motion } from 'framer-motion';
 import { ArrowLeft, Calendar, Users, CheckCircle, Zap } from 'lucide-react';
 import Link from 'next/link';
-import Image from 'next/image';
 
 export default function SixWeekPage() {
 	return (
