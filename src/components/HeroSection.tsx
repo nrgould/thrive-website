@@ -2,19 +2,20 @@
 
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
+import Image from 'next/image';
 
 export function HeroSection() {
 	return (
-		<section className='w-full min-h-[90vh] flex flex-col items-center justify-center px-4 md:px-8 py-16 bg-gradient-to-b from-blue-50 to-white overflow-hidden'>
-			<div className='max-w-[70%] mx-auto w-full flex flex-col lg:flex-row items-center gap-12'>
+		<section className='w-full min-h-[60vh] md:min-h-[60vh] flex flex-col items-center justify-center px-4 md:px-8 pt-8 md:pt-16 bg-gradient-to-b from-blue-50 to-white overflow-hidden'>
+			<div className='max-w-[90%] md:max-w-[80%] lg:max-w-[70%] mx-auto w-full flex flex-col lg:flex-row items-center gap-8 md:gap-12'>
 				<motion.div
-					className='flex-1 space-y-6'
+					className='flex-1 space-y-4 md:space-y-6 text-center lg:text-left'
 					initial={{ opacity: 0, x: -50 }}
 					animate={{ opacity: 1, x: 0 }}
 					transition={{ duration: 0.7, delay: 0.2 }}
 				>
 					<motion.h1
-						className='text-4xl md:text-6xl font-bold text-blue-950 leading-tight'
+						className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-blue-950 leading-tight'
 						initial={{ opacity: 0, y: 20 }}
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.5 }}
@@ -26,16 +27,7 @@ export function HeroSection() {
 					</motion.h1>
 
 					<motion.p
-						className='text-lg md:text-xl text-slate-700 max-w-2xl'
-						initial={{ opacity: 0, y: 20 }}
-						animate={{ opacity: 1, y: 0 }}
-						transition={{ duration: 0.5, delay: 0.2 }}
-					>
-						A Better Way to THRIVE
-					</motion.p>
-
-					<motion.p
-						className='text-base md:text-lg text-slate-600 max-w-2xl'
+						className='text-base sm:text-lg md:text-xl lg:text-2xl text-slate-600 max-w-2xl mx-auto lg:mx-0'
 						initial={{ opacity: 0, y: 20 }}
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.5, delay: 0.4 }}
@@ -45,22 +37,29 @@ export function HeroSection() {
 						solid foundation of well-being.
 					</motion.p>
 
-					<motion.p
-						className='text-base md:text-lg text-slate-600 max-w-2xl'
+					<motion.div
+						className='flex items-center gap-2 mt-4 justify-center lg:justify-start'
 						initial={{ opacity: 0, y: 20 }}
 						animate={{ opacity: 1, y: 0 }}
-						transition={{ duration: 0.5, delay: 0.6 }}
+						transition={{ duration: 0.5, delay: 0.7 }}
 					>
-						THRIVE is a 6-week program built on science-backed
-						strategies that support physical, mental, and emotional
-						well-being, so you can improve your daily routine, make
-						more sustainable lifestyle changes, reduce stress, and
-						connect more deeply with your health goals and loved
-						ones.
-					</motion.p>
+						<span className='text-slate-600 text-sm'>
+							Sponsored by
+						</span>
+						<div className='h-8 sm:h-10 w-24 sm:w-32 relative'>
+							<Image
+								src='/C2Life logo.png'
+								alt='C2Life'
+								className='h-full w-full object-contain'
+								width={128}
+								height={40}
+								priority
+							/>
+						</div>
+					</motion.div>
 
 					<motion.button
-						className='mt-8 px-8 py-4 bg-blue-500 text-white rounded-full font-medium text-lg flex items-center gap-2 hover:bg-blue-600 transition-colors shadow-lg hover:shadow-xl'
+						className='mt-6 md:mt-8 px-6 sm:px-8 py-3 sm:py-4 bg-blue-500 text-white rounded-full font-medium text-base sm:text-lg flex items-center gap-2 hover:bg-blue-600 transition-colors shadow-lg hover:shadow-xl mx-auto lg:mx-0'
 						initial={{ opacity: 0, y: 20 }}
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.5, delay: 0.8 }}
@@ -68,18 +67,18 @@ export function HeroSection() {
 						whileTap={{ scale: 0.95 }}
 					>
 						Register for next cohort{' '}
-						<ArrowRight className='ml-1' size={20} />
+						<ArrowRight className='ml-1' size={18} />
 					</motion.button>
 				</motion.div>
 
 				<motion.div
-					className='flex-1 relative h-[400px] w-full lg:h-[500px] rounded-3xl overflow-hidden'
+					className='flex-1 relative h-[250px] sm:h-[300px] md:h-[350px] w-full lg:h-[500px] rounded-3xl overflow-hidden mt-8 lg:mt-0'
 					initial={{ opacity: 0, x: 50 }}
 					animate={{ opacity: 1, x: 0 }}
 					transition={{ duration: 0.7, delay: 0.5 }}
 				>
 					<div className='absolute inset-0 bg-blue-200 bg-opacity-50 rounded-3xl flex items-center justify-center'>
-						<p className='text-blue-800 text-lg'>
+						<p className='text-blue-800 text-base sm:text-lg'>
 							Healthy, active lifestyle image
 						</p>
 					</div>
