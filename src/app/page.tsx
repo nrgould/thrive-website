@@ -5,6 +5,7 @@ import { HowSection } from '../components/HowSection';
 import { SupportiveExperienceSection } from '../components/SupportiveExperienceSection';
 import { FAQSection } from '../components/FAQSection';
 import { ThreeColumnsSection } from '../components/ThreeColumnsSection';
+import { WhoForSection } from '../components/WhoForSection';
 
 export default function Home() {
 	return (
@@ -20,6 +21,9 @@ export default function Home() {
 
 			{/* Program Structure */}
 			<ProgramStructureSection />
+
+			{/* Who This Program Is For */}
+			<WhoForSection />
 
 			{/* How THRIVE Helps */}
 			<HowSection />

@@ -2,7 +2,7 @@
 
 import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { BookOpen, Layers, Users } from 'lucide-react';
+import { BookOpen, Layers, Users, ArrowRight } from 'lucide-react';
 
 export function ThreeColumnsSection() {
 	const sectionRef = useRef(null);
@@ -38,23 +38,23 @@ export function ThreeColumnsSection() {
 				</motion.h2>
 
 				<motion.p
-					className='text-lg text-slate-700 text-center max-w-3xl mx-auto mb-12'
+					className='text-xl text-slate-700 text-center max-w-2xl mx-auto mb-12 leading-relaxed'
 					initial={{ opacity: 0, y: 20 }}
 					animate={
 						isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
 					}
 					transition={{ duration: 0.5, delay: 0.1 }}
 				>
-					THRIVE is a 6-week program built on science-backed
-					strategies that support physical, mental, and emotional
-					well-being, so you can improve your daily routine, make more
-					sustainable lifestyle changes, reduce stress, and connect
-					more deeply with your health goals and loved ones.
+					THRIVE is a program built on science-backed strategies that
+					support physical, mental, and emotional well-being, so you
+					can improve your daily routine, make more sustainable
+					lifestyle changes, reduce stress, and connect more deeply
+					with your health goals and loved ones.
 				</motion.p>
 
-				<div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
+				<div className='flex flex-col md:flex-row items-stretch justify-center gap-4 md:gap-0'>
 					<motion.div
-						className='bg-blue-50 rounded-3xl p-8 text-center flex flex-col items-center'
+						className='bg-blue-50 rounded-3xl p-8 text-center flex flex-col items-center w-full md:w-1/3 h-full'
 						custom={0}
 						initial='hidden'
 						animate={isInView ? 'visible' : 'hidden'}
@@ -69,19 +69,29 @@ export function ThreeColumnsSection() {
 						<h4 className='text-xl font-medium text-blue-900 mb-4'>
 							Learn a Healthier Way
 						</h4>
-						<p className='text-slate-700 mb-3'>
-							Video tutorials, downloadable resources, &
-							interactive learning modules focused on Lifestyle
-							Medicine & Behavior Design
-						</p>
-						<p className='text-slate-700'>
-							Delivered through a user-friendly online platform &
-							mobile app
-						</p>
+						<div className='flex-1 flex flex-col'>
+							<p className='text-slate-700 mb-3'>
+								Video tutorials, downloadable resources, &
+								interactive learning modules focused on
+								Lifestyle Medicine & Behavior Design
+							</p>
+						</div>
+					</motion.div>
+
+					{/* Arrow 1 */}
+					<motion.div
+						className='hidden md:flex justify-center items-center'
+						initial={{ opacity: 0 }}
+						animate={isInView ? { opacity: 1 } : { opacity: 0 }}
+						transition={{ duration: 0.5, delay: 0.3 }}
+					>
+						<div className='w-16 h-16 flex items-center justify-center'>
+							<ArrowRight className='text-blue-400 w-12 h-12' />
+						</div>
 					</motion.div>
 
 					<motion.div
-						className='bg-blue-50 rounded-3xl p-8 text-center flex flex-col items-center'
+						className='bg-blue-50 rounded-3xl p-8 text-center flex flex-col items-center w-full md:w-1/3 h-full'
 						custom={1}
 						initial='hidden'
 						animate={isInView ? 'visible' : 'hidden'}
@@ -96,19 +106,29 @@ export function ThreeColumnsSection() {
 						<h4 className='text-xl font-medium text-blue-900 mb-4'>
 							Make Sustainable Change
 						</h4>
-						<p className='text-slate-700 mb-3'>
-							Participants use Behavior Design to create
-							personalized habit plans aligned with their health
-							goals.
-						</p>
-						<p className='text-slate-700'>
-							Small, achievable steps build momentum for lasting
-							change.
-						</p>
+						<div className='flex-1 flex flex-col'>
+							<p className='text-slate-700 mb-3'>
+								Participants use Behavior Design to create
+								personalized habit plans aligned with their
+								health goals.
+							</p>
+						</div>
+					</motion.div>
+
+					{/* Arrow 2 */}
+					<motion.div
+						className='hidden md:flex justify-center items-center'
+						initial={{ opacity: 0 }}
+						animate={isInView ? { opacity: 1 } : { opacity: 0 }}
+						transition={{ duration: 0.5, delay: 0.4 }}
+					>
+						<div className='w-16 h-16 flex items-center justify-center'>
+							<ArrowRight className='text-blue-400 w-12 h-12' />
+						</div>
 					</motion.div>
 
 					<motion.div
-						className='bg-blue-50 rounded-3xl p-8 text-center flex flex-col items-center'
+						className='bg-blue-50 rounded-3xl p-8 text-center flex flex-col items-center w-full md:w-1/3 h-full'
 						custom={2}
 						initial='hidden'
 						animate={isInView ? 'visible' : 'hidden'}
@@ -123,15 +143,30 @@ export function ThreeColumnsSection() {
 						<h4 className='text-xl font-medium text-blue-900 mb-4'>
 							Maintain Success
 						</h4>
-						<p className='text-slate-700 mb-3'>
-							1:1 coaching sessions
-						</p>
-						<p className='text-slate-700 mb-3'>
-							Small group learning circles
-						</p>
-						<p className='text-slate-700'>
-							Larger, full cohort sessions
-						</p>
+						<div className='flex-1 flex flex-col justify-between'>
+							<div>
+								<p className='text-slate-700 mb-3'>
+									1:1 coaching sessions
+								</p>
+								<p className='text-slate-700 mb-3'>
+									Small group learning circles
+								</p>
+							</div>
+							<p className='text-slate-700'>
+								Larger, full cohort sessions
+							</p>
+						</div>
+					</motion.div>
+				</div>
+
+				{/* Mobile arrows - visible only on small screens */}
+				<div className='flex md:hidden justify-center mt-4 mb-4'>
+					<motion.div
+						initial={{ opacity: 0 }}
+						animate={isInView ? { opacity: 1 } : { opacity: 0 }}
+						transition={{ duration: 0.5, delay: 0.3 }}
+					>
+						<ArrowRight className='text-blue-400 w-8 h-8 transform rotate-90' />
 					</motion.div>
 				</div>
 			</div>

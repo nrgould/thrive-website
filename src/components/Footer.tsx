@@ -146,7 +146,7 @@ export function Footer() {
 
 				<div className='pt-8 border-t border-blue-100 flex flex-col md:flex-row items-center justify-between gap-4'>
 					<div className='text-sm text-slate-500'>
-						© {new Date().getFullYear()} THRIVE. All rights
+						© {new Date().getFullYear()} C2Life Foundation. All rights
 						reserved.
 					</div>
 
