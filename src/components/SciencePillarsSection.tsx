@@ -7,12 +7,14 @@ interface Pillar {
 	description: string;
 	evidence: string[];
 	color: string;
+	id: string;
 }
 
 export function SciencePillarsSection() {
 	const pillars: Pillar[] = [
 		{
-			title: 'Nutrition',
+			id: 'nourish',
+			title: 'Nourish',
 			icon: <Apple className='w-8 h-8' />,
 			description:
 				'A whole food, plant-predominant diet has been consistently shown to prevent, treat, and often reverse chronic disease. The scientific evidence supports minimizing processed foods and emphasizing nutrient-dense plant foods.',
@@ -25,7 +27,8 @@ export function SciencePillarsSection() {
 			color: 'text-green-500',
 		},
 		{
-			title: 'Physical Activity',
+			id: 'move',
+			title: 'Move',
 			icon: <Activity className='w-8 h-8' />,
 			description:
 				'Regular physical activity is a cornerstone of health, with benefits extending far beyond weight management. Research demonstrates its crucial role in both physical and mental well-being.',
@@ -38,6 +41,7 @@ export function SciencePillarsSection() {
 			color: 'text-blue-500',
 		},
 		{
+			id: 'sleep',
 			title: 'Sleep',
 			icon: <Moon className='w-8 h-8' />,
 			description:
@@ -51,7 +55,8 @@ export function SciencePillarsSection() {
 			color: 'text-indigo-500',
 		},
 		{
-			title: 'Stress Management',
+			id: 'release',
+			title: 'Release',
 			icon: <Brain className='w-8 h-8' />,
 			description:
 				'Chronic stress has wide-ranging negative effects on health. Evidence shows that stress management techniques can significantly improve both mental and physical health outcomes.',
@@ -64,7 +69,22 @@ export function SciencePillarsSection() {
 			color: 'text-purple-500',
 		},
 		{
-			title: 'Social Connection',
+			id: 'elevate',
+			title: 'Elevate',
+			icon: <Brain className='w-8 h-8' />,
+			description:
+				'Having a growth mindset and sense of purpose is crucial for long-term health and well-being. Research shows that psychological well-being has direct effects on physical health outcomes.',
+			evidence: [
+				'People with a strong sense of purpose have a 15% lower risk of death',
+				'Growth mindset interventions improve stress resilience by up to 30%',
+				'Purpose in life is associated with reduced risk of cardiovascular events',
+				'Positive psychological well-being reduces inflammatory markers by 20%',
+			],
+			color: 'text-orange-500',
+		},
+		{
+			id: 'connect',
+			title: 'Connect',
 			icon: <Users className='w-8 h-8' />,
 			description:
 				'Strong social relationships and community connections are powerful determinants of health. Research shows that social support significantly impacts both longevity and quality of life.',
@@ -75,19 +95,6 @@ export function SciencePillarsSection() {
 				'Social connections reduce the risk of depression by up to 50%',
 			],
 			color: 'text-pink-500',
-		},
-		{
-			title: 'Substance Avoidance',
-			icon: <Leaf className='w-8 h-8' />,
-			description:
-				'Avoiding harmful substances, including tobacco, excess alcohol, and processed foods, is crucial for health. Research demonstrates clear benefits of minimizing exposure to these substances.',
-			evidence: [
-				'Smoking cessation reduces heart disease risk by 50% within one year',
-				'Limiting alcohol consumption decreases liver disease risk by up to 40%',
-				'Reducing ultra-processed food intake lowers obesity risk by 25-35%',
-				'Avoiding environmental toxins reduces cancer risk by 20-30%',
-			],
-			color: 'text-orange-500',
 		},
 	];
 
@@ -108,7 +115,8 @@ export function SciencePillarsSection() {
 					{pillars.map((pillar, index) => (
 						<motion.div
 							key={index}
-							className='bg-white rounded-3xl shadow-sm p-8 border border-blue-100'
+							id={pillar.id}
+							className='bg-white rounded-3xl shadow-sm p-8 border border-blue-100 scroll-mt-24'
 							initial={{ opacity: 0, y: 30 }}
 							whileInView={{ opacity: 1, y: 0 }}
 							transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -119,9 +127,23 @@ export function SciencePillarsSection() {
 									<div className={`${pillar.color} mb-4`}>
 										{pillar.icon}
 									</div>
-									<h3 className='text-2xl font-bold text-blue-950 mb-4'>
+									<h3 className='text-2xl font-bold text-blue-950 mb-2'>
 										{pillar.title}
 									</h3>
+									<h4 className='text-lg text-blue-600 mb-4'>
+										{pillar.id === 'nourish' &&
+											'Nutrition & Plant-Based Diet'}
+										{pillar.id === 'move' &&
+											'Physical Activity'}
+										{pillar.id === 'sleep' &&
+											'Sleep & Recovery'}
+										{pillar.id === 'release' &&
+											'Stress Management'}
+										{pillar.id === 'elevate' &&
+											'Growth Mindset & Purpose'}
+										{pillar.id === 'connect' &&
+											'Social Connection'}
+									</h4>
 									<p className='text-slate-700 leading-relaxed'>
 										{pillar.description}
 									</p>

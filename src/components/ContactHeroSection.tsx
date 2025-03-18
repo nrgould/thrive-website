@@ -1,6 +1,6 @@
 import * as motion from 'motion/react-client';
 
-export function ScienceHeroSection() {
+export function ContactHeroSection() {
 	return (
 		<section className='w-full py-20 px-4 md:px-8 bg-gradient-to-b from-blue-50 to-white'>
 			<div className='max-w-4xl mx-auto text-center'>
@@ -11,8 +11,8 @@ export function ScienceHeroSection() {
 					transition={{ duration: 0.7 }}
 					viewport={{ once: true }}
 				>
-					The Science Behind{' '}
-					<span className='text-blue-500'>Lifestyle Medicine</span>
+					Get in Touch With{' '}
+					<span className='text-blue-500'>THRIVE</span>
 				</motion.h1>
 				<motion.p
 					className='text-lg md:text-xl text-slate-700 mb-6 leading-relaxed'
@@ -21,10 +21,9 @@ export function ScienceHeroSection() {
 					transition={{ duration: 0.7, delay: 0.2 }}
 					viewport={{ once: true }}
 				>
-					Discover the evidence-based research and scientific
-					principles that form the foundation of our approach to
-					health and wellness through the six pillars of Lifestyle
-					Medicine.
+					Have questions about our programs or approach? Want to learn
+					more about how THRIVE can help you achieve lasting health
+					changes? We're here to help.
 				</motion.p>
 				<motion.p
 					className='text-lg md:text-xl text-slate-700 leading-relaxed'
@@ -33,9 +32,9 @@ export function ScienceHeroSection() {
 					transition={{ duration: 0.7, delay: 0.3 }}
 					viewport={{ once: true }}
 				>
-					Each pillar is supported by decades of research
-					demonstrating its crucial role in preventing, treating, and
-					often reversing chronic disease.
+					Fill out the form below or use any of our contact methods to
+					reach out. Our team is ready to support you on your health
+					journey.
 				</motion.p>
 			</div>
 		</section>

@@ -73,12 +73,14 @@ const lifestyleSections = [
 interface InteractivePyramidProps {
 	activeSection: SectionId;
 	onSectionHover: (section: SectionId) => void;
+	onSectionClick: (section: SectionId) => void;
 }
 
 // Interactive Pyramid Subcomponent
 function InteractivePyramid({
 	activeSection,
 	onSectionHover,
+	onSectionClick,
 }: InteractivePyramidProps) {
 	return (
 		<div className='relative h-[500px] w-full max-w-[800px] mx-auto'>
@@ -155,6 +157,7 @@ function InteractivePyramid({
 					className='transition-all duration-300 cursor-pointer hover:fill-blue-100'
 					onMouseEnter={() => onSectionHover('connect')}
 					onMouseLeave={() => onSectionHover(null)}
+					onClick={() => onSectionClick('connect')}
 				/>
 
 				{/* Release - Middle Left */}
@@ -170,6 +173,7 @@ function InteractivePyramid({
 					className='transition-all duration-300 cursor-pointer hover:fill-blue-200'
 					onMouseEnter={() => onSectionHover('release')}
 					onMouseLeave={() => onSectionHover(null)}
+					onClick={() => onSectionClick('release')}
 				/>
 
 				{/* Elevate - Middle Right */}
@@ -185,6 +189,7 @@ function InteractivePyramid({
 					className='transition-all duration-300 cursor-pointer hover:fill-blue-200'
 					onMouseEnter={() => onSectionHover('elevate')}
 					onMouseLeave={() => onSectionHover(null)}
+					onClick={() => onSectionClick('elevate')}
 				/>
 
 				{/* Nourish - Bottom Left */}
@@ -200,6 +205,7 @@ function InteractivePyramid({
 					className='transition-all duration-300 cursor-pointer hover:fill-blue-300'
 					onMouseEnter={() => onSectionHover('nourish')}
 					onMouseLeave={() => onSectionHover(null)}
+					onClick={() => onSectionClick('nourish')}
 				/>
 
 				{/* Move - Bottom Middle */}
@@ -215,6 +221,7 @@ function InteractivePyramid({
 					className='transition-all duration-300 cursor-pointer hover:fill-blue-300'
 					onMouseEnter={() => onSectionHover('move')}
 					onMouseLeave={() => onSectionHover(null)}
+					onClick={() => onSectionClick('move')}
 				/>
 
 				{/* Sleep - Bottom Right */}
@@ -230,6 +237,7 @@ function InteractivePyramid({
 					className='transition-all duration-300 cursor-pointer hover:fill-blue-300'
 					onMouseEnter={() => onSectionHover('sleep')}
 					onMouseLeave={() => onSectionHover(null)}
+					onClick={() => onSectionClick('sleep')}
 				/>
 
 				{/* Section Labels */}
@@ -240,6 +248,7 @@ function InteractivePyramid({
 					fill='#1e40af'
 					fontWeight='bold'
 					fontSize='24'
+					className='pointer-events-none'
 				>
 					Connect
 				</text>
@@ -250,6 +259,7 @@ function InteractivePyramid({
 					fill='#1e40af'
 					fontWeight='bold'
 					fontSize='24'
+					className='pointer-events-none'
 				>
 					Release
 				</text>
@@ -260,6 +270,7 @@ function InteractivePyramid({
 					fill='#1e40af'
 					fontWeight='bold'
 					fontSize='24'
+					className='pointer-events-none'
 				>
 					Elevate
 				</text>
@@ -270,6 +281,7 @@ function InteractivePyramid({
 					fill='#1e40af'
 					fontWeight='bold'
 					fontSize='24'
+					className='pointer-events-none'
 				>
 					Nourish
 				</text>
@@ -280,6 +292,7 @@ function InteractivePyramid({
 					fill='#1e40af'
 					fontWeight='bold'
 					fontSize='24'
+					className='pointer-events-none'
 				>
 					Move
 				</text>
@@ -290,6 +303,7 @@ function InteractivePyramid({
 					fill='#1e40af'
 					fontWeight='bold'
 					fontSize='24'
+					className='pointer-events-none'
 				>
 					Sleep
 				</text>
@@ -300,6 +314,13 @@ function InteractivePyramid({
 
 export function ProgramStructureSection() {
 	const [activeSection, setActiveSection] = useState<SectionId>(null);
+
+	const handleSectionClick = (section: SectionId) => {
+		// Navigate to the science page with the appropriate section
+		if (section) {
+			window.location.href = `/about/science#${section}`;
+		}
+	};
 
 	const fadeInUp = {
 		hidden: { opacity: 0, y: 30 },
@@ -360,6 +381,7 @@ export function ProgramStructureSection() {
 						<InteractivePyramid
 							activeSection={activeSection}
 							onSectionHover={setActiveSection}
+							onSectionClick={handleSectionClick}
 						/>
 					</motion.div>
 				</div>
@@ -381,19 +403,26 @@ export function ProgramStructureSection() {
 								activeSection === item.id
 									? 'scale-105 shadow-md ring-2 ring-blue-300'
 									: ''
-							}`}
+							} cursor-pointer`}
 							custom={index}
 							initial='hidden'
 							animate='visible'
 							variants={fadeInUp}
 							onMouseEnter={() => setActiveSection(item.id)}
 							onMouseLeave={() => setActiveSection(null)}
+							onClick={() => handleSectionClick(item.id)}
 						>
 							{item.icon}
 							<h4 className='text-xl font-bold text-blue-500 mb-2'>
 								{item.title}
 							</h4>
-							<p className='text-slate-700'>{item.description}</p>
+							<p className='text-slate-700 mb-4'>
+								{item.description}
+							</p>
+							<div className='flex items-center text-blue-500 gap-1 text-sm font-medium'>
+								Learn More
+								<ArrowRight size={16} />
+							</div>
 						</motion.div>
 					))}
 				</div>

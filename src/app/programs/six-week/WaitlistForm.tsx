@@ -6,7 +6,7 @@ import { Label } from '../../../components/ui/label';
 import { Input } from '../../../components/ui/input';
 import { Button } from '../../../components/ui/button';
 
-export default function WaitlistForm() {
+export function WaitlistForm() {
 	return (
 		<>
 			<div id='mc_embed_shell' className='w-full max-w-[600px] mx-auto'>
@@ -154,30 +154,48 @@ export default function WaitlistForm() {
 				</div>
 			</div>
 
+			{/* Load jQuery first */}
+			<Script
+				src='https://code.jquery.com/jquery-3.7.1.min.js'
+				strategy='beforeInteractive'
+			/>
+
+			{/* Load MailChimp validation script after jQuery */}
 			<Script
 				type='text/javascript'
 				src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'
 				strategy='lazyOnload'
 			/>
+
+			{/* Initialize MailChimp with safety check for jQuery */}
 			<Script id='mailchimp-js' strategy='lazyOnload'>
-				{`(function($) {
-          window.fnames = new Array();
-          window.ftypes = new Array();
-          fnames[0]='EMAIL';
-          ftypes[0]='email';
-          fnames[1]='FNAME';
-          ftypes[1]='text';
-          fnames[2]='LNAME';
-          ftypes[2]='text';
-          fnames[4]='PHONE';
-          ftypes[4]='phone';
-          fnames[3]='ADDRESS';
-          ftypes[3]='address';
-          fnames[5]='BIRTHDAY';
-          ftypes[5]='birthday';
-        }(jQuery));
-        var $mcj = jQuery.noConflict(true);`}
+				{`
+				if (typeof jQuery !== 'undefined') {
+					(function($) {
+						window.fnames = new Array();
+						window.ftypes = new Array();
+						fnames[0]='EMAIL';
+						ftypes[0]='email';
+						fnames[1]='FNAME';
+						ftypes[1]='text';
+						fnames[2]='LNAME';
+						ftypes[2]='text';
+						fnames[4]='PHONE';
+						ftypes[4]='phone';
+						fnames[3]='ADDRESS';
+						ftypes[3]='address';
+						fnames[5]='BIRTHDAY';
+						ftypes[5]='birthday';
+					}(jQuery));
+					var $mcj = jQuery.noConflict(true);
+				} else {
+					console.error('jQuery not loaded for MailChimp form');
+				}
+				`}
 			</Script>
 		</>
 	);
 }
+
+// Default export for use in pages
+export default WaitlistForm;
