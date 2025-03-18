@@ -120,7 +120,7 @@ export function ApproachMethodologySection() {
 						</h4>
 						<div className='flex-1'>
 							<p className='text-slate-700 mb-6 leading-relaxed'>
-								Knowledge alone isn't enough. We use proven
+								Knowledge alone isn&apos;t enough. We use proven
 								Behavior Design principles to help you transform
 								information into action through personalized
 								habit formation that fits your life, values, and

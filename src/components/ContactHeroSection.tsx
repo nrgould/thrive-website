@@ -21,9 +21,9 @@ export function ContactHeroSection() {
 					transition={{ duration: 0.7, delay: 0.2 }}
 					viewport={{ once: true }}
 				>
-					Have questions about our programs or approach? Want to learn
-					more about how THRIVE can help you achieve lasting health
-					changes? We're here to help.
+					Have questions about our programs or approach? Want to
+					learn more about how THRIVE can help you achieve lasting
+					health changes? We&apos;re here to help.
 				</motion.p>
 				<motion.p
 					className='text-lg md:text-xl text-slate-700 leading-relaxed'

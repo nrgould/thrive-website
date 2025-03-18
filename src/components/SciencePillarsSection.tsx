@@ -1,5 +1,5 @@
 import * as motion from 'motion/react-client';
-import { Apple, Activity, Moon, Brain, Users, Leaf } from 'lucide-react';
+import { Apple, Activity, Moon, Brain, Users } from 'lucide-react';
 
 interface Pillar {
 	title: string;

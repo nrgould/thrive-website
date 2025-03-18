@@ -20,13 +20,13 @@ export function TeamHeroSection() {
 						<p className='text-lg text-slate-700 mb-6 leading-relaxed'>
 							Our team of dedicated professionals brings together
 							diverse expertise in lifestyle medicine, nutrition,
-							physical activity, behavior change, and more. We're
+							physical activity, behavior change, and more. We&apos;re
 							committed to supporting you through every step of
 							your health transformation journey.
 						</p>
 						<p className='text-lg text-slate-700 leading-relaxed'>
 							With a combined experience of over 100 years in
-							healthcare and wellness, we've helped hundreds of
+							healthcare and wellness, we&apos;ve helped hundreds of
 							people achieve lasting lifestyle changes and
 							improved health outcomes.
 						</p>

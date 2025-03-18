@@ -1,7 +1,6 @@
 import * as motion from 'motion/react-client';
 import {
 	CheckCircle,
-	LineChart,
 	Shield,
 	Heart,
 	Brain,
@@ -60,10 +59,10 @@ export function ApproachWhyItWorksSection() {
 							these conditions.
 						</p>
 						<p className='text-slate-700 text-lg leading-relaxed'>
-							THRIVE's methodology combines the science of what to
-							change with proven strategies for how to change,
-							creating a comprehensive solution for sustainable
-							health.
+							THRIVE&apos;s methodology combines the science of
+							what to change with proven strategies for how to
+							change, creating a comprehensive solution for
+							sustainable health.
 						</p>
 
 						<div className='pt-4 space-y-4'>

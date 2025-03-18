@@ -113,7 +113,8 @@ export function ContactInfoSection() {
 							Hours
 						</h3>
 						<p className='text-slate-700 mb-4'>
-							We're available to assist you during these hours:
+							We&apos;re available to assist you during these
+							hours:
 						</p>
 						<div className='text-slate-700'>
 							<p>Monday - Friday: 9AM - 5PM EST</p>

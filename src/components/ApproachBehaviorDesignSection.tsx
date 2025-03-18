@@ -46,9 +46,10 @@ export function ApproachBehaviorDesignSection() {
 							routines.
 						</p>
 						<p className='text-slate-700 text-lg leading-relaxed'>
-							The problem isn't you—it's the approach. Most
-							programs create a "willpower gap" that eventually
-							leads to failure when motivation inevitably fades.
+							The problem isn&apos;t you—it&apos;s the approach.
+							Most programs create a &quot;willpower gap&quot; that
+							eventually leads to failure when motivation
+							inevitably fades.
 						</p>
 						<p className='text-slate-700 text-lg leading-relaxed'>
 							Our approach bridges this gap by creating systems
