@@ -27,10 +27,11 @@ export default function TermsPage() {
 
 						<h2>1. Introduction</h2>
 						<p>
-							Welcome to THRIVE ("Company", "we", "our", "us")!
-							These Terms of Service ("Terms", "Terms of Service")
-							govern your use of our website and services operated
-							by THRIVE.
+							Welcome to THRIVE (&quot;Company&quot;,
+							&quot;we&quot;, &quot;our&quot;, &quot;us&quot;)!
+							These Terms of Service (&quot;Terms&quot;,
+							&quot;Terms of Service&quot;) govern your use of our
+							website and services operated by THRIVE.
 						</p>
 						<p>
 							By accessing or using our service, you agree to be
@@ -53,11 +54,12 @@ export default function TermsPage() {
 						<h2>3. Purchases</h2>
 						<p>
 							If you wish to purchase any product or service made
-							available through the Service ("Purchase"), you may
-							be asked to supply certain information relevant to
-							your Purchase including, without limitation, your
-							name, email, phone number, credit card information,
-							billing address, and shipping information.
+							available through the Service
+							(&quot;Purchase&quot;), you may be asked to supply
+							certain information relevant to your Purchase
+							including, without limitation, your name, email,
+							phone number, credit card information, billing
+							address, and shipping information.
 						</p>
 						<p>
 							You represent and warrant that: (i) you have the
@@ -72,8 +74,8 @@ export default function TermsPage() {
 						<ul>
 							<li>
 								THRIVE 6-Week Program: Full refund available
-								within the first 14 days if you're not satisfied
-								for any reason.
+								within the first 14 days if you&apos;re not
+								satisfied for any reason.
 							</li>
 							<li>
 								THRIVE Essentials: Full refund available within
@@ -110,8 +112,9 @@ export default function TermsPage() {
 							<li>
 								To transmit, or procure the sending of, any
 								advertising or promotional material, including
-								any "junk mail", "chain letter" or "spam" or any
-								other similar solicitation.
+								any &quot;junk mail&quot;, &quot;chain
+								letter&quot; or &quot;spam&quot; or any other
+								similar solicitation.
 							</li>
 							<li>
 								To impersonate or attempt to impersonate the
@@ -120,7 +123,7 @@ export default function TermsPage() {
 							</li>
 							<li>
 								To engage in any other conduct that restricts or
-								inhibits anyone's use or enjoyment of the
+								inhibits anyone&apos;s use or enjoyment of the
 								Service, or which, as determined by us, may harm
 								the Company or users of the Service or expose
 								them to liability.
@@ -173,8 +176,8 @@ export default function TermsPage() {
 							We reserve the right, at our sole discretion, to
 							modify or replace these Terms at any time. If a
 							revision is material, we will provide at least 30
-							days' notice prior to any new terms taking effect.
-							What constitutes a material change will be
+							days&apos; notice prior to any new terms taking
+							effect. What constitutes a material change will be
 							determined at our sole discretion.
 						</p>
 

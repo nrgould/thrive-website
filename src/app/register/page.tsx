@@ -88,7 +88,7 @@ export default function RegisterPage() {
 						>
 							Contact us
 						</Link>{' '}
-						and we'll help you decide.
+						and we&apos;ll help you decide.
 					</motion.p>
 				</div>
 			</section>

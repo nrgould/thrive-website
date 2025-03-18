@@ -1,9 +1,8 @@
-import * as motion from 'motion/react-client';
-import { ApproachHeroSection } from '@/components/ApproachHeroSection';
-import { ApproachMethodologySection } from '@/components/ApproachMethodologySection';
-import { ApproachBehaviorDesignSection } from '@/components/ApproachBehaviorDesignSection';
-import { ApproachWhyItWorksSection } from '@/components/ApproachWhyItWorksSection';
-import { ApproachCTASection } from '@/components/ApproachCTASection';
+import { ApproachHeroSection } from '../../components/ApproachHeroSection';
+import { ApproachMethodologySection } from '../../components/ApproachMethodologySection';
+import { ApproachBehaviorDesignSection } from '../../components/ApproachBehaviorDesignSection';
+import { ApproachWhyItWorksSection } from '../../components/ApproachWhyItWorksSection';
+import { ApproachCTASection } from '../../components/ApproachCTASection';
 
 export default function AboutPage() {
 	return (
