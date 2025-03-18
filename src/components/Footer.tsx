@@ -64,14 +64,6 @@ export function Footer() {
 									THRIVE Essentials
 								</Link>
 							</li>
-							<li>
-								<Link
-									href='/programs/corporate'
-									className='text-slate-600 hover:text-blue-500 text-sm'
-								>
-									Corporate Wellness
-								</Link>
-							</li>
 						</ul>
 					</div>
 

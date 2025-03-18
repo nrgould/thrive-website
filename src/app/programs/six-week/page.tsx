@@ -62,7 +62,7 @@ export default function SixWeekPage() {
 								href='#waitlist-form'
 								className='px-8 py-4 bg-white text-blue-600 rounded-full font-medium text-lg hover:bg-blue-50 transition-colors shadow-md inline-block'
 							>
-								Register for Next Cohort - $497
+								Join Waitlist
 							</a>
 						</div>
 						<div className='flex-1 relative h-[350px] w-full rounded-3xl overflow-hidden'>

@@ -1,13 +1,11 @@
 'use client';
 
-import { useState, useRef } from 'react';
-import { motion, AnimatePresence, useInView } from 'framer-motion';
+import { useState } from 'react';
+import * as motion from 'motion/react-client';
 import { ChevronDown, ChevronUp, Info, Zap, Mail } from 'lucide-react';
 import Link from 'next/link';
 
 export function FAQSection() {
-	const sectionRef = useRef(null);
-	const isInView = useInView(sectionRef, { once: true, amount: 0.2 });
 	const [openFaq, setOpenFaq] = useState<number | null>(null);
 
 	const toggleFaq = (index: number) => {
@@ -30,18 +28,14 @@ export function FAQSection() {
 	];
 
 	return (
-		<section
-			ref={sectionRef}
-			className='w-full py-24 px-4 md:px-8 bg-white'
-		>
+		<section className='w-full py-24 px-4 md:px-8 bg-white'>
 			<div className='max-w-6xl mx-auto'>
 				<motion.h2
 					className='text-3xl md:text-4xl font-bold text-center mb-16 text-blue-950'
 					initial={{ opacity: 0, y: 20 }}
-					animate={
-						isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
-					}
+					whileInView={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.5 }}
+					viewport={{ once: true }}
 				>
 					Which THRIVE Program is Right for You?
 				</motion.h2>
@@ -50,12 +44,9 @@ export function FAQSection() {
 					<motion.div
 						className='bg-gradient-to-b from-blue-50 to-white rounded-3xl p-8 border border-blue-100 shadow-sm'
 						initial={{ opacity: 0, y: 30 }}
-						animate={
-							isInView
-								? { opacity: 1, y: 0 }
-								: { opacity: 0, y: 30 }
-						}
+						whileInView={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.5, delay: 0.2 }}
+						viewport={{ once: true }}
 					>
 						<div className='w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-6'>
 							<Info className='text-blue-500' size={28} />
@@ -147,12 +138,9 @@ export function FAQSection() {
 					<motion.div
 						className='bg-gradient-to-b from-blue-500 to-blue-600 rounded-3xl p-8 text-white shadow-lg'
 						initial={{ opacity: 0, y: 30 }}
-						animate={
-							isInView
-								? { opacity: 1, y: 0 }
-								: { opacity: 0, y: 30 }
-						}
+						whileInView={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.5, delay: 0.4 }}
+						viewport={{ once: true }}
 					>
 						<div className='w-14 h-14 bg-blue-400 bg-opacity-30 rounded-full flex items-center justify-center mb-6'>
 							<Zap className='text-white' size={28} />
@@ -252,10 +240,9 @@ export function FAQSection() {
 				<motion.div
 					className='bg-blue-50 rounded-3xl p-8 mb-20 text-center'
 					initial={{ opacity: 0, y: 20 }}
-					animate={
-						isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
-					}
+					whileInView={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.5, delay: 0.6 }}
+					viewport={{ once: true }}
 				>
 					<h3 className='text-2xl font-bold text-blue-950 mb-4'>
 						Not Sure Where to Start?
@@ -270,8 +257,9 @@ export function FAQSection() {
 				<motion.h3
 					className='text-2xl md:text-3xl font-bold text-center mb-10 text-blue-950'
 					initial={{ opacity: 0 }}
-					animate={isInView ? { opacity: 1 } : { opacity: 0 }}
+					whileInView={{ opacity: 1 }}
 					transition={{ duration: 0.5, delay: 0.4 }}
+					viewport={{ once: true }}
 				>
 					Frequently Asked Questions
 				</motion.h3>
@@ -279,8 +267,9 @@ export function FAQSection() {
 				<motion.p
 					className='text-center text-slate-600 mb-12 max-w-2xl mx-auto'
 					initial={{ opacity: 0 }}
-					animate={isInView ? { opacity: 1 } : { opacity: 0 }}
+					whileInView={{ opacity: 1 }}
 					transition={{ duration: 0.5, delay: 0.5 }}
+					viewport={{ once: true }}
 				>
 					Please reach us at{' '}
 					<a
@@ -298,15 +287,12 @@ export function FAQSection() {
 							key={index}
 							className='border border-blue-100 rounded-2xl overflow-hidden'
 							initial={{ opacity: 0, y: 20 }}
-							animate={
-								isInView
-									? { opacity: 1, y: 0 }
-									: { opacity: 0, y: 20 }
-							}
+							whileInView={{ opacity: 1, y: 0 }}
 							transition={{
 								duration: 0.4,
 								delay: 0.1 * index + 0.6,
 							}}
+							viewport={{ once: true }}
 						>
 							<button
 								className='w-full p-5 text-left flex items-center justify-between bg-white hover:bg-blue-50 transition-colors'
@@ -327,21 +313,19 @@ export function FAQSection() {
 									/>
 								)}
 							</button>
-							<AnimatePresence>
-								{openFaq === index && (
-									<motion.div
-										initial={{ height: 0, opacity: 0 }}
-										animate={{ height: 'auto', opacity: 1 }}
-										exit={{ height: 0, opacity: 0 }}
-										transition={{ duration: 0.2 }}
-										className='overflow-hidden'
-									>
-										<div className='p-5 pt-0 text-slate-700 bg-white'>
-											<p>{faq.answer}</p>
-										</div>
-									</motion.div>
-								)}
-							</AnimatePresence>
+							{openFaq === index && (
+								<motion.div
+									initial={{ height: 0, opacity: 0 }}
+									animate={{ height: 'auto', opacity: 1 }}
+									exit={{ height: 0, opacity: 0 }}
+									transition={{ duration: 0.2 }}
+									className='overflow-hidden'
+								>
+									<div className='p-5 pt-0 text-slate-700 bg-white'>
+										<p>{faq.answer}</p>
+									</div>
+								</motion.div>
+							)}
 						</motion.div>
 					))}
 				</div>
@@ -349,8 +333,9 @@ export function FAQSection() {
 				<motion.div
 					className='text-center mt-16'
 					initial={{ opacity: 0 }}
-					animate={isInView ? { opacity: 1 } : { opacity: 0 }}
+					whileInView={{ opacity: 1 }}
 					transition={{ duration: 0.5, delay: 0.8 }}
+					viewport={{ once: true }}
 				>
 					<button className='px-8 py-4 bg-blue-500 text-white rounded-full font-medium text-lg hover:bg-blue-600 transition-colors shadow-lg'>
 						Sign up for the waiting list

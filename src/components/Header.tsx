@@ -26,12 +26,6 @@ const programs: { title: string; href: string; description: string }[] = [
 		description:
 			'A self-paced online course to explore Lifestyle Medicine and build healthier habits.',
 	},
-	{
-		title: 'Corporate Wellness',
-		href: '/programs/corporate',
-		description:
-			'Customized programs for organizations looking to improve employee health and productivity.',
-	},
 ];
 
 export function Header() {
