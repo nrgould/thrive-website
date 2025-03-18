@@ -1,14 +1,8 @@
-'use client';
-
-import { useRef } from 'react';
-import { motion, useInView } from 'framer-motion';
+import * as motion from 'motion/react-client';
 import { Heart, Activity, Leaf } from 'lucide-react';
 import Image from 'next/image';
 
 export function WhoForSection() {
-	const sectionRef = useRef(null);
-	const isInView = useInView(sectionRef, { once: true, amount: 0.2 });
-
 	const audiences = [
 		{
 			icon: <Heart className='text-white' size={28} />,
@@ -34,18 +28,16 @@ export function WhoForSection() {
 	];
 
 	return (
-		<section
-			ref={sectionRef}
-			className='w-full py-24 px-4 md:px-8 bg-gradient-to-b from-white to-blue-50'
-		>
+		<section className='w-full py-24 px-4 md:px-8 bg-gradient-to-b from-white to-blue-50'>
 			<div className='max-w-7xl mx-auto'>
 				<motion.div
 					className='text-center mb-16'
 					initial={{ opacity: 0, y: 20 }}
-					animate={
-						isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
-					}
-					transition={{ duration: 0.5 }}
+					whileInView={{ opacity: 1, y: 0 }}
+					transition={{
+						duration: 0.5,
+						delay: 0.2,
+					}}
 				>
 					<h2 className='text-3xl md:text-4xl font-bold text-blue-950 mb-6'>
 						Who This Program Is For
@@ -62,11 +54,7 @@ export function WhoForSection() {
 					<motion.div
 						className='w-full lg:w-1/2 space-y-6'
 						initial={{ opacity: 0, x: -50 }}
-						animate={
-							isInView
-								? { opacity: 1, x: 0 }
-								: { opacity: 0, x: -50 }
-						}
+						whileInView={{ opacity: 1, x: 0 }}
 						transition={{ duration: 0.6 }}
 					>
 						<div className='relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-xl'>
@@ -86,11 +74,7 @@ export function WhoForSection() {
 								key={index}
 								className='flex gap-6 items-start'
 								initial={{ opacity: 0, x: 50 }}
-								animate={
-									isInView
-										? { opacity: 1, x: 0 }
-										: { opacity: 0, x: 50 }
-								}
+								whileInView={{ opacity: 1, x: 0 }}
 								transition={{
 									duration: 0.6,
 									delay: index * 0.2,
@@ -118,9 +102,7 @@ export function WhoForSection() {
 				<motion.div
 					className='mt-20 text-center'
 					initial={{ opacity: 0, y: 30 }}
-					animate={
-						isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }
-					}
+					whileInView={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.5, delay: 0.6 }}
 				>
 					<p className='text-xl text-blue-800 font-medium'>

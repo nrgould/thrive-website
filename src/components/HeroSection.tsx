@@ -1,6 +1,7 @@
 import * as motion from 'motion/react-client';
 import { ArrowRight } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export function HeroSection() {
 	return (
@@ -56,17 +57,19 @@ export function HeroSection() {
 						</div>
 					</motion.div>
 
-					<motion.button
-						className='mt-6 md:mt-8 px-6 sm:px-8 py-3 sm:py-4 bg-blue-500 text-white rounded-full font-medium text-base sm:text-lg flex items-center gap-2 hover:bg-blue-600 transition-colors shadow-lg hover:shadow-xl mx-auto lg:mx-0'
-						initial={{ opacity: 0, y: 20 }}
-						animate={{ opacity: 1, y: 0 }}
-						transition={{ duration: 0.5, delay: 0.8 }}
-						whileHover={{ scale: 1.05 }}
-						whileTap={{ scale: 0.95 }}
-					>
-						Register for next cohort{' '}
-						<ArrowRight className='ml-1' size={18} />
-					</motion.button>
+					<Link href='/programs/six-week#waitlist-form'>
+						<motion.button
+							className='mt-6 md:mt-8 px-6 sm:px-8 py-3 sm:py-4 bg-blue-500 text-white rounded-full font-medium text-base sm:text-lg flex items-center gap-2 hover:bg-blue-600 transition-colors shadow-lg hover:shadow-xl mx-auto lg:mx-0'
+							initial={{ opacity: 0, y: 20 }}
+							animate={{ opacity: 1, y: 0 }}
+							transition={{ duration: 0.5, delay: 0.8 }}
+							whileHover={{ scale: 1.05 }}
+							whileTap={{ scale: 0.95 }}
+						>
+							Register for next cohort{' '}
+							<ArrowRight className='ml-1' size={18} />
+						</motion.button>
+					</Link>
 				</motion.div>
 
 				<motion.div

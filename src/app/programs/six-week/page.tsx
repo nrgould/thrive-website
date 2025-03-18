@@ -1,5 +1,6 @@
 import { ArrowLeft, Calendar, Users, CheckCircle, Zap } from 'lucide-react';
 import Link from 'next/link';
+import WaitlistForm from './WaitlistForm';
 
 export default function SixWeekPage() {
 	return (
@@ -57,9 +58,12 @@ export default function SixWeekPage() {
 									</span>
 								</div>
 							</div>
-							<button className='px-8 py-4 bg-white text-blue-600 rounded-full font-medium text-lg hover:bg-blue-50 transition-colors shadow-md'>
+							<a
+								href='#waitlist-form'
+								className='px-8 py-4 bg-white text-blue-600 rounded-full font-medium text-lg hover:bg-blue-50 transition-colors shadow-md inline-block'
+							>
 								Register for Next Cohort - $497
-							</button>
+							</a>
 						</div>
 						<div className='flex-1 relative h-[350px] w-full rounded-3xl overflow-hidden'>
 							<div className='absolute inset-0 bg-blue-500 bg-opacity-30 rounded-3xl flex items-center justify-center'>
@@ -324,9 +328,9 @@ export default function SixWeekPage() {
 						<div className='bg-blue-50 p-6 rounded-3xl'>
 							<p className='text-slate-700 text-lg leading-relaxed'>
 								&quot;This program has done wonders for how I
-								feel about myself. I&apos;ve lost weight, I&apos;m
-								sleeping better, and have a much more positive
-								outlook on life.&quot;
+								feel about myself. I&apos;ve lost weight,
+								I&apos;m sleeping better, and have a much more
+								positive outlook on life.&quot;
 							</p>
 							<p className='text-blue-500 font-medium'>
 								— Zach, 42
@@ -334,14 +338,36 @@ export default function SixWeekPage() {
 						</div>
 						<div className='bg-blue-50 p-6 rounded-3xl'>
 							<p className='text-slate-700 text-lg leading-relaxed'>
-								&quot;I truly understand the importance of eating
-								nutrient-dense foods and making smart choices.
-								My energy levels are through the roof!&quot;
+								&quot;I truly understand the importance of
+								eating nutrient-dense foods and making smart
+								choices. My energy levels are through the
+								roof!&quot;
 							</p>
 							<p className='text-blue-500 font-medium'>
 								— Beverly, 56
 							</p>
 						</div>
+					</div>
+				</div>
+			</section>
+
+			{/* Waitlist Form Section */}
+			<section
+				id='waitlist-form'
+				className='w-full py-16 px-4 md:px-8 bg-blue-50'
+			>
+				<div className='max-w-6xl mx-auto'>
+					<h2 className='text-3xl font-bold text-blue-950 mb-6 text-center'>
+						Join the Waitlist
+					</h2>
+					<p className='text-lg text-slate-700 mb-8 text-center max-w-3xl mx-auto'>
+						Our program cohorts fill up quickly. Sign up for our
+						waitlist to be notified when registration opens for the
+						next cohort and to receive exclusive early access.
+					</p>
+
+					<div className='flex justify-center'>
+						<WaitlistForm />
 					</div>
 				</div>
 			</section>
@@ -357,9 +383,12 @@ export default function SixWeekPage() {
 						and community support. Spots are limited to ensure
 						personalized attention.
 					</p>
-					<button className='px-8 py-4 bg-white text-blue-600 rounded-full font-medium text-lg hover:bg-blue-50 transition-colors shadow-md mx-auto'>
+					<a
+						href='#waitlist-form'
+						className='px-8 py-4 bg-white text-blue-600 rounded-full font-medium text-lg hover:bg-blue-50 transition-colors shadow-md inline-block'
+					>
 						Register Now - $497
-					</button>
+					</a>
 					<p className='mt-4 text-blue-200'>
 						Next cohort starts: September 15, 2023
 					</p>
