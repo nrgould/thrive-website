@@ -11,6 +11,7 @@ import {
 	Users,
 } from 'lucide-react';
 import { useState } from 'react';
+import Link from 'next/link';
 
 // Define section ID type for type safety
 type SectionId =
@@ -234,61 +235,61 @@ function InteractivePyramid({
 				{/* Section Labels */}
 				<text
 					x='300'
-					y='135'
+					y='150'
 					textAnchor='middle'
 					fill='#1e40af'
 					fontWeight='bold'
-					fontSize='22'
+					fontSize='24'
 				>
 					Connect
 				</text>
 				<text
-					x='217'
-					y='265'
+					x='235'
+					y='260'
 					textAnchor='middle'
 					fill='#1e40af'
 					fontWeight='bold'
-					fontSize='22'
+					fontSize='24'
 				>
 					Release
 				</text>
 				<text
-					x='383'
-					y='265'
+					x='360'
+					y='260'
 					textAnchor='middle'
 					fill='#1e40af'
 					fontWeight='bold'
-					fontSize='22'
+					fontSize='24'
 				>
 					Elevate
 				</text>
 				<text
-					x='133'
-					y='400'
+					x='160'
+					y='385'
 					textAnchor='middle'
 					fill='#1e40af'
 					fontWeight='bold'
-					fontSize='22'
+					fontSize='24'
 				>
 					Nourish
 				</text>
 				<text
 					x='300'
-					y='400'
+					y='385'
 					textAnchor='middle'
 					fill='#1e40af'
 					fontWeight='bold'
-					fontSize='22'
+					fontSize='24'
 				>
 					Move
 				</text>
 				<text
-					x='467'
-					y='400'
+					x='430'
+					y='385'
 					textAnchor='middle'
 					fill='#1e40af'
 					fontWeight='bold'
-					fontSize='22'
+					fontSize='24'
 				>
 					Sleep
 				</text>
@@ -411,9 +412,11 @@ export function ProgramStructureSection() {
 						reverse chronic disease while cultivating a healthier,
 						more meaningful life.
 					</p>
-					<button className='px-8 py-3 bg-white text-blue-600 rounded-full font-medium flex items-center gap-2 hover:bg-blue-50 transition-colors mx-auto'>
-						Signup Today <ArrowRight size={18} />
-					</button>
+					<Link href='/programs/six-week#waitlist-form'>
+						<button className='px-8 py-3 bg-white text-blue-600 rounded-full font-medium flex items-center gap-2 hover:bg-blue-50 transition-colors mx-auto'>
+							Join Waitlist <ArrowRight size={18} />
+						</button>
+					</Link>
 				</motion.div>
 			</div>
 		</section>

@@ -151,7 +151,7 @@ export function HowSection() {
 							<div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
 								<div className='space-y-6'>
 									<h4 className='text-xl font-bold text-blue-600'>
-										Small Changes, Big Impact
+										Learn
 									</h4>
 									<ul className='space-y-4'>
 										<li className='flex items-start gap-3'>
@@ -160,8 +160,8 @@ export function HowSection() {
 												size={18}
 											/>
 											<p className='text-slate-700 text-sm'>
-												Develop a healthier relationship
-												with food
+												About the Willpower Gap and how
+												to bridge it
 											</p>
 										</li>
 										<li className='flex items-start gap-3'>
@@ -170,8 +170,9 @@ export function HowSection() {
 												size={18}
 											/>
 											<p className='text-slate-700 text-sm'>
-												Build a consistent movement
-												routine without extreme workouts
+												Why most unsuccessful behavior
+												change is not a personal flaw
+												but a system flaw
 											</p>
 										</li>
 										<li className='flex items-start gap-3'>
@@ -180,8 +181,9 @@ export function HowSection() {
 												size={18}
 											/>
 											<p className='text-slate-700 text-sm'>
-												Improve sleep quality for better
-												energy and focus
+												The system that allows anyone to
+												build any habit in any area of
+												life
 											</p>
 										</li>
 									</ul>
@@ -189,7 +191,7 @@ export function HowSection() {
 
 								<div className='space-y-6'>
 									<h4 className='text-xl font-bold text-blue-600'>
-										Mental & Emotional Well-Being
+										Develop
 									</h4>
 									<ul className='space-y-4'>
 										<li className='flex items-start gap-3'>
@@ -198,8 +200,7 @@ export function HowSection() {
 												size={18}
 											/>
 											<p className='text-slate-700 text-sm'>
-												Reduce stress and overwhelm with
-												evidence-based techniques
+												The Skills of Change
 											</p>
 										</li>
 										<li className='flex items-start gap-3'>
@@ -208,8 +209,9 @@ export function HowSection() {
 												size={18}
 											/>
 											<p className='text-slate-700 text-sm'>
-												Cultivate a growth mindset and
-												sense of purpose
+												Habit &apos;recipes&apos; for
+												the behaviors you most want in
+												your life
 											</p>
 										</li>
 										<li className='flex items-start gap-3'>
@@ -218,12 +220,24 @@ export function HowSection() {
 												size={18}
 											/>
 											<p className='text-slate-700 text-sm'>
-												Strengthen connections with
-												others for lasting support
+												Willpower using the most
+												effective science-based
+												practices
 											</p>
 										</li>
 									</ul>
 								</div>
+							</div>
+
+							<div className='mt-8 pt-4 border-t border-blue-100'>
+								<blockquote className='italic text-blue-700 text-center'>
+									&ldquo;We are what we repeatedly do;
+									excellence, then, is not an act but a
+									habit&rdquo;
+									<footer className='text-sm text-blue-600 mt-2'>
+										- Aristotle
+									</footer>
+								</blockquote>
 							</div>
 						</div>
 					</motion.div>
