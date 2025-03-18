@@ -50,7 +50,7 @@ export function Footer() {
 						<ul className='space-y-2'>
 							<li>
 								<Link
-									href='/programs/thrive'
+									href='/programs/six-week'
 									className='text-slate-600 hover:text-blue-500 text-sm'
 								>
 									THRIVE 6-Week Program
@@ -72,7 +72,7 @@ export function Footer() {
 						<ul className='space-y-2'>
 							<li>
 								<Link
-									href='/about'
+									href='/about/approach'
 									className='text-slate-600 hover:text-blue-500 text-sm'
 								>
 									Our Approach
@@ -94,14 +94,6 @@ export function Footer() {
 									The Science
 								</Link>
 							</li>
-							<li>
-								<Link
-									href='/about/results'
-									className='text-slate-600 hover:text-blue-500 text-sm'
-								>
-									Results
-								</Link>
-							</li>
 						</ul>
 					</div>
 
@@ -114,22 +106,6 @@ export function Footer() {
 									className='text-slate-600 hover:text-blue-500 text-sm'
 								>
 									Get in Touch
-								</Link>
-							</li>
-							<li>
-								<Link
-									href='/register'
-									className='text-slate-600 hover:text-blue-500 text-sm'
-								>
-									Register for a Program
-								</Link>
-							</li>
-							<li>
-								<Link
-									href='/faq'
-									className='text-slate-600 hover:text-blue-500 text-sm'
-								>
-									FAQ
 								</Link>
 							</li>
 						</ul>
@@ -157,7 +133,7 @@ export function Footer() {
 						</div>
 					</div>
 
-					<div className='flex items-center gap-4'>
+					{/* <div className='flex items-center gap-4'>
 						<Link
 							href='/privacy'
 							className='text-sm text-slate-500 hover:text-blue-500'
@@ -170,7 +146,7 @@ export function Footer() {
 						>
 							Terms of Service
 						</Link>
-					</div>
+					</div> */}
 				</div>
 			</div>
 		</footer>
