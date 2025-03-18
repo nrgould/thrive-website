@@ -72,7 +72,7 @@ export function Footer() {
 						<ul className='space-y-2'>
 							<li>
 								<Link
-									href='/about/approach'
+									href='/about'
 									className='text-slate-600 hover:text-blue-500 text-sm'
 								>
 									Our Approach
