@@ -2,8 +2,16 @@
 
 import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { Book, Users, LineChart, Calendar, UserCircle } from 'lucide-react';
+import {
+	Book,
+	Users,
+	LineChart,
+	Calendar,
+	UserCircle,
+	ArrowRight,
+} from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export function SupportiveExperienceSection() {
 	const sectionRef = useRef(null);
@@ -269,6 +277,23 @@ export function SupportiveExperienceSection() {
 							</p>
 						</div>
 					))}
+				</motion.div>
+
+				<motion.div
+					className='flex justify-center mt-12'
+					initial={{ opacity: 0, y: 20 }}
+					animate={
+						isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
+					}
+					transition={{ duration: 0.6, delay: 0.7 }}
+				>
+					<Link
+						href='/about/team'
+						className='flex items-center gap-2 px-6 py-3 bg-blue-500 text-white rounded-full font-medium hover:bg-blue-600 transition-colors'
+					>
+						Meet Our Full Team
+						<ArrowRight size={16} />
+					</Link>
 				</motion.div>
 			</div>
 		</section>

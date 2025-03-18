@@ -94,13 +94,13 @@ export function Header() {
 										Research and evidence supporting
 										Lifestyle Medicine.
 									</ListItem>
-									<ListItem
+									{/* <ListItem
 										href='/about/results'
 										title='Results'
 									>
 										Real outcomes from real participants in
 										our programs.
-									</ListItem>
+									</ListItem> */}
 								</ul>
 							</NavigationMenuContent>
 						</NavigationMenuItem>
@@ -117,10 +117,10 @@ export function Header() {
 				</NavigationMenu>
 
 				<Link
-					href='/register'
+					href='/programs/six-week#waitlist-form'
 					className='hidden md:flex px-4 py-2 bg-blue-500 text-white rounded-full text-sm font-medium hover:bg-blue-600 transition-colors'
 				>
-					Register Now
+					Become a Member
 				</Link>
 			</div>
 		</header>

@@ -147,16 +147,6 @@ export default function SixWeekPage() {
 										size={22}
 									/>
 									<p className='text-slate-700'>
-										Habit tracking app and biometric
-										monitoring tools
-									</p>
-								</li>
-								<li className='flex items-start gap-3'>
-									<CheckCircle
-										className='text-blue-500 mt-1 flex-shrink-0'
-										size={22}
-									/>
-									<p className='text-slate-700'>
 										Lifetime access to program materials and
 										video recordings
 									</p>
@@ -354,13 +344,13 @@ export default function SixWeekPage() {
 			{/* Waitlist Form Section */}
 			<section
 				id='waitlist-form'
-				className='w-full py-16 px-4 md:px-8 bg-blue-50'
+				className='w-full py-16 px-4 md:px-8 bg-blue-500'
 			>
 				<div className='max-w-6xl mx-auto'>
-					<h2 className='text-3xl font-bold text-blue-950 mb-6 text-center'>
+					<h2 className='text-4xl font-bold text-white mb-6 text-center'>
 						Join the Waitlist
 					</h2>
-					<p className='text-lg text-slate-700 mb-8 text-center max-w-3xl mx-auto'>
+					<p className='text-lg text-white mb-8 text-center max-w-3xl mx-auto'>
 						Our program cohorts fill up quickly. Sign up for our
 						waitlist to be notified when registration opens for the
 						next cohort and to receive exclusive early access.
@@ -372,28 +362,6 @@ export default function SixWeekPage() {
 				</div>
 			</section>
 
-			{/* CTA Section */}
-			<section className='w-full py-16 px-4 md:px-8 bg-blue-600 text-white'>
-				<div className='max-w-3xl mx-auto text-center'>
-					<h2 className='text-3xl font-bold mb-6'>
-						Join the Next THRIVE Cohort
-					</h2>
-					<p className='text-lg text-blue-100 mb-8'>
-						Transform your health and wellbeing with expert guidance
-						and community support. Spots are limited to ensure
-						personalized attention.
-					</p>
-					<a
-						href='#waitlist-form'
-						className='px-8 py-4 bg-white text-blue-600 rounded-full font-medium text-lg hover:bg-blue-50 transition-colors shadow-md inline-block'
-					>
-						Register Now - $497
-					</a>
-					<p className='mt-4 text-blue-200'>
-						Next cohort starts: September 15, 2023
-					</p>
-				</div>
-			</section>
 		</main>
 	);
 }
