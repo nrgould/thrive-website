@@ -91,8 +91,8 @@ function InteractivePyramid({
 				<polygon
 					points='50,450 550,450 300,50'
 					fill='none'
-					stroke='#e2e8f0'
-					strokeWidth='2'
+					stroke='white'
+					strokeWidth='4'
 				/>
 
 				{/* Horizontal dividers */}
@@ -101,16 +101,16 @@ function InteractivePyramid({
 					y1='317'
 					x2='467'
 					y2='317'
-					stroke='#e2e8f0'
-					strokeWidth='2'
+					stroke='white'
+					strokeWidth='3.5'
 				/>
 				<line
 					x1='217'
 					y1='183'
 					x2='383'
 					y2='183'
-					stroke='#e2e8f0'
-					strokeWidth='2'
+					stroke='white'
+					strokeWidth='3.5'
 				/>
 
 				{/* Vertical dividers */}
@@ -120,8 +120,8 @@ function InteractivePyramid({
 					y1='183'
 					x2='300'
 					y2='317'
-					stroke='#e2e8f0'
-					strokeWidth='2'
+					stroke='white'
+					strokeWidth='3.5'
 				/>
 
 				{/* Dividers between bottom sections */}
@@ -130,16 +130,16 @@ function InteractivePyramid({
 					y1='317'
 					x2='217'
 					y2='450'
-					stroke='#e2e8f0'
-					strokeWidth='2'
+					stroke='white'
+					strokeWidth='3.5'
 				/>
 				<line
 					x1='383'
 					y1='317'
 					x2='383'
 					y2='450'
-					stroke='#e2e8f0'
-					strokeWidth='2'
+					stroke='white'
+					strokeWidth='3.5'
 				/>
 
 				{/* Connect - Top */}
@@ -150,8 +150,8 @@ function InteractivePyramid({
 							? '#dbeafe'
 							: 'rgba(219, 234, 254, 0.5)'
 					}
-					stroke={activeSection === 'connect' ? '#3b82f6' : '#e2e8f0'}
-					strokeWidth={activeSection === 'connect' ? '2' : '1'}
+					stroke={activeSection === 'connect' ? '#3b82f6' : 'white'}
+					strokeWidth={activeSection === 'connect' ? '4' : '3'}
 					className='transition-all duration-300 cursor-pointer hover:fill-blue-100'
 					onMouseEnter={() => onSectionHover('connect')}
 					onMouseLeave={() => onSectionHover(null)}
@@ -165,8 +165,8 @@ function InteractivePyramid({
 							? '#bfdbfe'
 							: 'rgba(191, 219, 254, 0.5)'
 					}
-					stroke={activeSection === 'release' ? '#3b82f6' : '#e2e8f0'}
-					strokeWidth={activeSection === 'release' ? '2' : '1'}
+					stroke={activeSection === 'release' ? '#3b82f6' : 'white'}
+					strokeWidth={activeSection === 'release' ? '4' : '3'}
 					className='transition-all duration-300 cursor-pointer hover:fill-blue-200'
 					onMouseEnter={() => onSectionHover('release')}
 					onMouseLeave={() => onSectionHover(null)}
@@ -180,8 +180,8 @@ function InteractivePyramid({
 							? '#bfdbfe'
 							: 'rgba(191, 219, 254, 0.5)'
 					}
-					stroke={activeSection === 'elevate' ? '#3b82f6' : '#e2e8f0'}
-					strokeWidth={activeSection === 'elevate' ? '2' : '1'}
+					stroke={activeSection === 'elevate' ? '#3b82f6' : 'white'}
+					strokeWidth={activeSection === 'elevate' ? '4' : '3'}
 					className='transition-all duration-300 cursor-pointer hover:fill-blue-200'
 					onMouseEnter={() => onSectionHover('elevate')}
 					onMouseLeave={() => onSectionHover(null)}
@@ -195,8 +195,8 @@ function InteractivePyramid({
 							? '#93c5fd'
 							: 'rgba(147, 197, 253, 0.7)'
 					}
-					stroke={activeSection === 'nourish' ? '#3b82f6' : '#e2e8f0'}
-					strokeWidth={activeSection === 'nourish' ? '2' : '1'}
+					stroke={activeSection === 'nourish' ? '#3b82f6' : 'white'}
+					strokeWidth={activeSection === 'nourish' ? '4' : '3'}
 					className='transition-all duration-300 cursor-pointer hover:fill-blue-300'
 					onMouseEnter={() => onSectionHover('nourish')}
 					onMouseLeave={() => onSectionHover(null)}
@@ -210,8 +210,8 @@ function InteractivePyramid({
 							? '#93c5fd'
 							: 'rgba(147, 197, 253, 0.7)'
 					}
-					stroke={activeSection === 'move' ? '#3b82f6' : '#e2e8f0'}
-					strokeWidth={activeSection === 'move' ? '2' : '1'}
+					stroke={activeSection === 'move' ? '#3b82f6' : 'white'}
+					strokeWidth={activeSection === 'move' ? '4' : '3'}
 					className='transition-all duration-300 cursor-pointer hover:fill-blue-300'
 					onMouseEnter={() => onSectionHover('move')}
 					onMouseLeave={() => onSectionHover(null)}
@@ -225,8 +225,8 @@ function InteractivePyramid({
 							? '#93c5fd'
 							: 'rgba(147, 197, 253, 0.7)'
 					}
-					stroke={activeSection === 'sleep' ? '#3b82f6' : '#e2e8f0'}
-					strokeWidth={activeSection === 'sleep' ? '2' : '1'}
+					stroke={activeSection === 'sleep' ? '#3b82f6' : 'white'}
+					strokeWidth={activeSection === 'sleep' ? '4' : '3'}
 					className='transition-all duration-300 cursor-pointer hover:fill-blue-300'
 					onMouseEnter={() => onSectionHover('sleep')}
 					onMouseLeave={() => onSectionHover(null)}
