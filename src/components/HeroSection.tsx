@@ -46,19 +46,26 @@ export function HeroSection() {
 						transition={{ duration: 0.5, delay: 0.7 }}
 						viewport={{ once: true }}
 					>
-						<span className='text-slate-600 text-sm'>
-							Sponsored by
-						</span>
-						<div className='h-8 sm:h-10 w-24 sm:w-32 relative'>
-							<Image
-								src='/C2Life logo.png'
-								alt='C2Life'
-								className='h-full w-full object-contain'
-								width={128}
-								height={40}
-								priority
-							/>
-						</div>
+						<a
+							href='https://c2life.org'
+							target='_blank'
+							rel='noopener noreferrer'
+							className='flex items-center gap-2 hover:opacity-80 transition-opacity'
+						>
+							<span className='text-slate-600 text-sm'>
+								Sponsored by
+							</span>
+							<div className='h-8 sm:h-10 w-24 sm:w-32 relative'>
+								<Image
+									src='/C2Life logo.png'
+									alt='C2Life'
+									className='h-full w-full object-contain'
+									width={128}
+									height={40}
+									priority
+								/>
+							</div>
+						</a>
 					</motion.div>
 
 					<Link href='/programs/six-week#waitlist-form'>

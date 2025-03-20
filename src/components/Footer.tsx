@@ -114,23 +114,30 @@ export function Footer() {
 
 				<div className='pt-8 border-t border-blue-100 flex flex-col md:flex-row items-center justify-between gap-4'>
 					<div className='text-sm text-slate-500'>
-						© {new Date().getFullYear()} C2Life Foundation. All rights
-						reserved.
+						© {new Date().getFullYear()} C2Life Foundation. All
+						rights reserved.
 					</div>
 
 					<div className='flex items-center gap-2'>
-						<span className='text-slate-600 text-sm'>
-							Sponsored by
-						</span>
-						<div className='h-8 w-24 relative'>
-							<Image
-								src='/C2Life logo.png'
-								alt='C2Life'
-								className='h-full w-full object-contain'
-								width={96}
-								height={32}
-							/>
-						</div>
+						<a
+							href='https://c2life.org'
+							target='_blank'
+							rel='noopener noreferrer'
+							className='flex items-center gap-2 hover:opacity-80 transition-opacity'
+						>
+							<span className='text-slate-600 text-sm'>
+								Sponsored by
+							</span>
+							<div className='h-8 w-24 relative'>
+								<Image
+									src='/C2Life logo.png'
+									alt='C2Life'
+									className='h-full w-full object-contain'
+									width={96}
+									height={32}
+								/>
+							</div>
+						</a>
 					</div>
 
 					{/* <div className='flex items-center gap-4'>
