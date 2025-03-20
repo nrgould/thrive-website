@@ -5,7 +5,7 @@ import { LinkButton } from './ui/link-button';
 import { MotionContainer } from './ui/motion-container';
 import { SectionContainer } from './ui/section-container';
 
-const animationDelay = 0.8;
+const animationDelay = 0.3;
 
 export function ThreeColumnsSection() {
 	return (

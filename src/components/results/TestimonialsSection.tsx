@@ -1,5 +1,5 @@
 import { Quote } from 'lucide-react';
-import * as motion from 'motion/react-client'
+import * as motion from 'motion/react-client';
 
 export function TestimonialsSection() {
 	const testimonials = [
@@ -30,9 +30,11 @@ export function TestimonialsSection() {
 				{testimonials.map((testimonial, index) => (
 					<motion.div
 						key={index}
-						className='bg-blue-600 rounded-2xl shadow-md p-6 relative opacity-0 translate-y-4 animate-fade-up text-white'
-						style={{ animationDelay: `${index * 200}ms` }}
-						whileHover={{ scale: 1.05 }}
+						className='bg-blue-600 rounded-2xl shadow-md p-6 relative text-white'
+						initial={{ opacity: 0, y: 30 }}
+						whileInView={{ opacity: 1, y: 0 }}
+						transition={{ duration: 0.4, delay: index * 0.2 }}
+						whileHover={{ scale: 1.03 }}
 					>
 						<div className='absolute top-3 left-3'>
 							<Quote className='text-white' size={20} />
