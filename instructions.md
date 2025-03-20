@@ -12,3 +12,5 @@
     								delay: 0.2,
     							}}
 -   Tech stack: Nextjs, shadcn, tailwind,
+- CHECK FOR EXISTING REUSABLE COMPONENTS BEFORE CREATING NEW ONES
+- Use SHADCN components where possible
