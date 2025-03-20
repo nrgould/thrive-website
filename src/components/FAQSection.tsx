@@ -4,6 +4,7 @@ import { useState } from 'react';
 import * as motion from 'motion/react-client';
 import { ChevronDown, ChevronUp, Info, Zap, Mail } from 'lucide-react';
 import Link from 'next/link';
+import { Button } from './ui/button';
 
 export function FAQSection() {
 	const [openFaq, setOpenFaq] = useState<number | null>(null);
@@ -40,7 +41,7 @@ export function FAQSection() {
 					Which THRIVE Program is Right for You?
 				</motion.h2>
 
-				<div  className='grid grid-cols-1 md:grid-cols-2 gap-8 mb-24'>
+				<div className='grid grid-cols-1 md:grid-cols-2 gap-8 mb-24'>
 					<motion.div
 						className='bg-gradient-to-b from-blue-50 to-white rounded-3xl p-8 border border-blue-100 shadow-sm'
 						initial={{ opacity: 0, y: 30 }}
@@ -339,9 +340,17 @@ export function FAQSection() {
 					transition={{ duration: 0.5, delay: 0.8 }}
 					viewport={{ once: true }}
 				>
-					<button className='px-8 py-4 bg-blue-500 text-white rounded-full font-medium text-lg hover:bg-blue-600 transition-colors shadow-lg'>
-						Sign up for the waiting list
-					</button>
+					<Button
+						asChild
+						className='inline-block mt-4 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors shadow-md'
+					>
+						<Link
+							href='/programs/six-week#join-waitlist'
+							className='px-8 pb-10 pt-3 font-medium text-xl'
+						>
+							Sign up for the waitlist
+						</Link>
+					</Button>
 				</motion.div>
 			</div>
 		</section>

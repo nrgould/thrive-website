@@ -23,6 +23,8 @@ type SectionId =
 	| 'connect'
 	| null;
 
+const strokeWidth = 8;
+
 // Define the sections data in one place to be reused
 const lifestyleSections = [
 	{
@@ -82,79 +84,174 @@ function InteractivePyramid({
 	onSectionHover,
 	onSectionClick,
 }: InteractivePyramidProps) {
+	// Define gradient IDs for 3D effect
+	const gradientIds = {
+		connect: 'connectGradient',
+		release: 'releaseGradient',
+		elevate: 'elevateGradient',
+		nourish: 'nourishGradient',
+		move: 'moveGradient',
+		sleep: 'sleepGradient',
+	};
+
 	return (
-		<div className='relative h-[500px] w-full max-w-[800px] mx-auto'>
+		<div className='relative h-[600px] w-full max-w-[900px] mx-auto flex items-center'>
 			<svg
 				viewBox='0 0 600 500'
 				className='w-full h-full'
 				preserveAspectRatio='xMidYMid meet'
 			>
-				{/* Pyramid Outline */}
-				<polygon
-					points='50,450 550,450 300,50'
-					fill='none'
-					stroke='white'
-					strokeWidth='4'
-				/>
+				{/* Define gradients for 3D effect */}
+				<defs>
+					{/* Top section gradient */}
+					<linearGradient
+						id={gradientIds.connect}
+						x1='0%'
+						y1='0%'
+						x2='100%'
+						y2='0%'
+					>
+						<stop
+							offset='0%'
+							stopColor='#dbeafe'
+							stopOpacity={
+								activeSection === 'connect' ? '1' : '0.7'
+							}
+						/>
+						<stop
+							offset='100%'
+							stopColor='#bfdbfe'
+							stopOpacity={
+								activeSection === 'connect' ? '1' : '0.7'
+							}
+						/>
+					</linearGradient>
 
-				{/* Horizontal dividers */}
-				<line
-					x1='133'
-					y1='317'
-					x2='467'
-					y2='317'
-					stroke='white'
-					strokeWidth='3.5'
-				/>
-				<line
-					x1='217'
-					y1='183'
-					x2='383'
-					y2='183'
-					stroke='white'
-					strokeWidth='3.5'
-				/>
+					{/* Middle left section gradient */}
+					<linearGradient
+						id={gradientIds.release}
+						x1='0%'
+						y1='0%'
+						x2='100%'
+						y2='0%'
+					>
+						<stop
+							offset='0%'
+							stopColor='#bfdbfe'
+							stopOpacity={
+								activeSection === 'release' ? '1' : '0.7'
+							}
+						/>
+						<stop
+							offset='100%'
+							stopColor='#93c5fd'
+							stopOpacity={
+								activeSection === 'release' ? '1' : '0.7'
+							}
+						/>
+					</linearGradient>
 
-				{/* Vertical dividers */}
-				{/* Single divider between Release and Elevate */}
-				<line
-					x1='300'
-					y1='183'
-					x2='300'
-					y2='317'
-					stroke='white'
-					strokeWidth='3.5'
-				/>
+					{/* Middle right section gradient */}
+					<linearGradient
+						id={gradientIds.elevate}
+						x1='0%'
+						y1='0%'
+						x2='100%'
+						y2='0%'
+					>
+						<stop
+							offset='0%'
+							stopColor='#93c5fd'
+							stopOpacity={
+								activeSection === 'elevate' ? '1' : '0.7'
+							}
+						/>
+						<stop
+							offset='100%'
+							stopColor='#60a5fa'
+							stopOpacity={
+								activeSection === 'elevate' ? '1' : '0.7'
+							}
+						/>
+					</linearGradient>
 
-				{/* Dividers between bottom sections */}
-				<line
-					x1='217'
-					y1='317'
-					x2='217'
-					y2='450'
-					stroke='white'
-					strokeWidth='3.5'
-				/>
-				<line
-					x1='383'
-					y1='317'
-					x2='383'
-					y2='450'
-					stroke='white'
-					strokeWidth='3.5'
-				/>
+					{/* Bottom left section gradient */}
+					<linearGradient
+						id={gradientIds.nourish}
+						x1='0%'
+						y1='0%'
+						x2='100%'
+						y2='0%'
+					>
+						<stop
+							offset='0%'
+							stopColor='#93c5fd'
+							stopOpacity={
+								activeSection === 'nourish' ? '1' : '0.7'
+							}
+						/>
+						<stop
+							offset='100%'
+							stopColor='#60a5fa'
+							stopOpacity={
+								activeSection === 'nourish' ? '1' : '0.7'
+							}
+						/>
+					</linearGradient>
+
+					{/* Bottom middle section gradient */}
+					<linearGradient
+						id={gradientIds.move}
+						x1='0%'
+						y1='0%'
+						x2='100%'
+						y2='0%'
+					>
+						<stop
+							offset='0%'
+							stopColor='#60a5fa'
+							stopOpacity={activeSection === 'move' ? '1' : '0.7'}
+						/>
+						<stop
+							offset='100%'
+							stopColor='#3b82f6'
+							stopOpacity={activeSection === 'move' ? '1' : '0.7'}
+						/>
+					</linearGradient>
+
+					{/* Bottom right section gradient */}
+					<linearGradient
+						id={gradientIds.sleep}
+						x1='0%'
+						y1='0%'
+						x2='100%'
+						y2='0%'
+					>
+						<stop
+							offset='0%'
+							stopColor='#3b82f6'
+							stopOpacity={
+								activeSection === 'sleep' ? '1' : '0.7'
+							}
+						/>
+						<stop
+							offset='100%'
+							stopColor='#2563eb'
+							stopOpacity={
+								activeSection === 'sleep' ? '1' : '0.7'
+							}
+						/>
+					</linearGradient>
+				</defs>
 
 				{/* Connect - Top */}
 				<polygon
 					points='300,50 217,183 383,183'
-					fill={
-						activeSection === 'connect'
-							? '#dbeafe'
-							: 'rgba(219, 234, 254, 0.5)'
-					}
+					fill={`url(#${gradientIds.connect})`}
 					stroke={activeSection === 'connect' ? '#3b82f6' : 'white'}
-					strokeWidth={activeSection === 'connect' ? '4' : '3'}
-					className='transition-all duration-300 cursor-pointer hover:fill-blue-100'
+					strokeWidth={strokeWidth}
+					strokeLinejoin='round'
+					className='transition-all duration-300 cursor-pointer'
 					onMouseEnter={() => onSectionHover('connect')}
 					onMouseLeave={() => onSectionHover(null)}
 					onClick={() => onSectionClick('connect')}
@@ -163,14 +260,11 @@ function InteractivePyramid({
 				{/* Release - Middle Left */}
 				<polygon
 					points='133,317 217,183 300,183 300,317'
-					fill={
-						activeSection === 'release'
-							? '#bfdbfe'
-							: 'rgba(191, 219, 254, 0.5)'
-					}
+					fill={`url(#${gradientIds.release})`}
 					stroke={activeSection === 'release' ? '#3b82f6' : 'white'}
-					strokeWidth={activeSection === 'release' ? '4' : '3'}
-					className='transition-all duration-300 cursor-pointer hover:fill-blue-200'
+					strokeWidth={strokeWidth}
+					strokeLinejoin='round'
+					className='transition-all duration-300 cursor-pointer'
 					onMouseEnter={() => onSectionHover('release')}
 					onMouseLeave={() => onSectionHover(null)}
 					onClick={() => onSectionClick('release')}
@@ -179,14 +273,11 @@ function InteractivePyramid({
 				{/* Elevate - Middle Right */}
 				<polygon
 					points='467,317 383,183 300,183 300,317'
-					fill={
-						activeSection === 'elevate'
-							? '#bfdbfe'
-							: 'rgba(191, 219, 254, 0.5)'
-					}
+					fill={`url(#${gradientIds.elevate})`}
 					stroke={activeSection === 'elevate' ? '#3b82f6' : 'white'}
-					strokeWidth={activeSection === 'elevate' ? '4' : '3'}
-					className='transition-all duration-300 cursor-pointer hover:fill-blue-200'
+					strokeWidth={strokeWidth}
+					strokeLinejoin='round'
+					className='transition-all duration-300 cursor-pointer'
 					onMouseEnter={() => onSectionHover('elevate')}
 					onMouseLeave={() => onSectionHover(null)}
 					onClick={() => onSectionClick('elevate')}
@@ -195,14 +286,11 @@ function InteractivePyramid({
 				{/* Nourish - Bottom Left */}
 				<polygon
 					points='50,450 133,317 217,317 217,450'
-					fill={
-						activeSection === 'nourish'
-							? '#93c5fd'
-							: 'rgba(147, 197, 253, 0.7)'
-					}
+					fill={`url(#${gradientIds.nourish})`}
 					stroke={activeSection === 'nourish' ? '#3b82f6' : 'white'}
-					strokeWidth={activeSection === 'nourish' ? '4' : '3'}
-					className='transition-all duration-300 cursor-pointer hover:fill-blue-300'
+					strokeWidth={strokeWidth}
+					strokeLinejoin='round'
+					className='transition-all duration-300 cursor-pointer'
 					onMouseEnter={() => onSectionHover('nourish')}
 					onMouseLeave={() => onSectionHover(null)}
 					onClick={() => onSectionClick('nourish')}
@@ -211,14 +299,11 @@ function InteractivePyramid({
 				{/* Move - Bottom Middle */}
 				<polygon
 					points='217,450 217,317 383,317 383,450'
-					fill={
-						activeSection === 'move'
-							? '#93c5fd'
-							: 'rgba(147, 197, 253, 0.7)'
-					}
+					fill={`url(#${gradientIds.move})`}
 					stroke={activeSection === 'move' ? '#3b82f6' : 'white'}
-					strokeWidth={activeSection === 'move' ? '4' : '3'}
-					className='transition-all duration-300 cursor-pointer hover:fill-blue-300'
+					strokeWidth={strokeWidth}
+					strokeLinejoin='round'
+					className='transition-all duration-300 cursor-pointer'
 					onMouseEnter={() => onSectionHover('move')}
 					onMouseLeave={() => onSectionHover(null)}
 					onClick={() => onSectionClick('move')}
@@ -227,14 +312,11 @@ function InteractivePyramid({
 				{/* Sleep - Bottom Right */}
 				<polygon
 					points='383,450 383,317 467,317 550,450'
-					fill={
-						activeSection === 'sleep'
-							? '#93c5fd'
-							: 'rgba(147, 197, 253, 0.7)'
-					}
+					fill={`url(#${gradientIds.sleep})`}
 					stroke={activeSection === 'sleep' ? '#3b82f6' : 'white'}
-					strokeWidth={activeSection === 'sleep' ? '4' : '3'}
-					className='transition-all duration-300 cursor-pointer hover:fill-blue-300'
+					strokeWidth={strokeWidth}
+					strokeLinejoin='round'
+					className='transition-all duration-300 cursor-pointer'
 					onMouseEnter={() => onSectionHover('sleep')}
 					onMouseLeave={() => onSectionHover(null)}
 					onClick={() => onSectionClick('sleep')}
@@ -243,11 +325,11 @@ function InteractivePyramid({
 				{/* Section Labels */}
 				<text
 					x='300'
-					y='150'
+					y='165'
 					textAnchor='middle'
 					fill='#1e40af'
 					fontWeight='bold'
-					fontSize='24'
+					fontSize='26'
 					className='pointer-events-none'
 				>
 					Connect
@@ -258,7 +340,7 @@ function InteractivePyramid({
 					textAnchor='middle'
 					fill='#1e40af'
 					fontWeight='bold'
-					fontSize='24'
+					fontSize='26'
 					className='pointer-events-none'
 				>
 					Release
@@ -269,40 +351,40 @@ function InteractivePyramid({
 					textAnchor='middle'
 					fill='#1e40af'
 					fontWeight='bold'
-					fontSize='24'
+					fontSize='26'
 					className='pointer-events-none'
 				>
 					Elevate
 				</text>
 				<text
 					x='160'
-					y='385'
+					y='390'
 					textAnchor='middle'
 					fill='#1e40af'
 					fontWeight='bold'
-					fontSize='24'
+					fontSize='26'
 					className='pointer-events-none'
 				>
 					Nourish
 				</text>
 				<text
 					x='300'
-					y='385'
+					y='390'
 					textAnchor='middle'
 					fill='#1e40af'
 					fontWeight='bold'
-					fontSize='24'
+					fontSize='26'
 					className='pointer-events-none'
 				>
 					Move
 				</text>
 				<text
 					x='430'
-					y='385'
+					y='390'
 					textAnchor='middle'
 					fill='#1e40af'
 					fontWeight='bold'
-					fontSize='24'
+					fontSize='26'
 					className='pointer-events-none'
 				>
 					Sleep
@@ -351,7 +433,7 @@ export function ProgramStructureSection() {
 				</motion.p>
 
 				<motion.h2
-					className='text-3xl md:text-4xl font-bold text-center mb-16 text-blue-950'
+					className='text-3xl md:text-4xl font-bold text-center mb-4 text-blue-950'
 					initial={{ opacity: 0, y: 20 }}
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.5 }}
@@ -359,7 +441,7 @@ export function ProgramStructureSection() {
 					A Framework for Life
 				</motion.h2>
 
-				<div className='grid grid-cols-1 lg:grid-cols-2 gap-16 items-start'>
+				<div className='grid grid-cols-1 lg:grid-cols-2 gap-16 items-center'>
 					<motion.div
 						className='space-y-6'
 						initial={{ opacity: 0, x: -30 }}

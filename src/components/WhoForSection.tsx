@@ -30,7 +30,7 @@ export function WhoForSection() {
 	];
 
 	return (
-		<section className='w-full py-24 px-4 md:px-8 bg-gradient-to-b from-white to-blue-50'>
+		<section className='w-full py-24 px-4 md:px-8 '>
 			<div className='max-w-7xl mx-auto'>
 				<motion.div
 					className='text-center mb-16'

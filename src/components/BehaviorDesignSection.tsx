@@ -133,7 +133,7 @@ export function BehaviorDesignSection() {
 
 						<div className='relative z-10'>
 							<h3 className='text-2xl font-bold text-blue-950 mb-8'>
-								Building habits that last—Behavior Design
+								Building habits that last
 							</h3>
 
 							<div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
@@ -221,13 +221,13 @@ export function BehaviorDesignSection() {
 				</div>
 
 				<motion.div
-					className='max-w-3xl mx-auto text-center'
+					className='max-w-3xl mx-auto text-center mt-16'
 					initial={{ opacity: 0, y: 20 }}
 					whileInView={{ opacity: 1, y: 0 }}
 					viewport={{ once: true }}
 					transition={{ duration: 0.5, delay: 0.4 }}
 				>
-					<blockquote className='italic text-blue-700 text-xl'>
+					<blockquote className='italic text-blue-700 text-3xl'>
 						&ldquo;We are what we repeatedly do; excellence, then,
 						is not an act but a habit&rdquo;
 						<footer className='text-sm text-blue-600 mt-2'>
