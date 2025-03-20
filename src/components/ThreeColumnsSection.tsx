@@ -6,6 +6,8 @@ import { LinkButton } from './ui/link-button';
 import { MotionContainer } from './ui/motion-container';
 import { SectionContainer } from './ui/section-container';
 
+const animationDelay = 0.8;
+
 export function ThreeColumnsSection() {
 	return (
 		<SectionContainer background='white'>
@@ -24,6 +26,7 @@ export function ThreeColumnsSection() {
 					title='Education'
 					subtitle='Learn a Healthier Way'
 					className='w-full md:w-1/3'
+					animationDelay={animationDelay}
 				>
 					<p className='text-slate-700 mb-3 leading-relaxed'>
 						Video tutorials, downloadable resources, & interactive
@@ -33,14 +36,14 @@ export function ThreeColumnsSection() {
 				</IconCard>
 
 				{/* Arrow 1 */}
-				<ArrowDivider animationDelay={0.3} />
+				<ArrowDivider animationDelay={animationDelay + 0.1} />
 
 				<IconCard
 					icon={Layers}
 					title='Integration'
 					subtitle='Make Sustainable Change'
 					className='w-full md:w-1/3'
-					animationDelay={0.2}
+					animationDelay={animationDelay + 0.2}
 				>
 					<p className='text-slate-700 mb-3 leading-relaxed'>
 						Participants use Behavior Design to create personalized
@@ -49,14 +52,14 @@ export function ThreeColumnsSection() {
 				</IconCard>
 
 				{/* Arrow 2 */}
-				<ArrowDivider animationDelay={0.4} />
+				<ArrowDivider animationDelay={animationDelay + 0.3} />
 
 				<IconCard
 					icon={Users}
 					title='Connection'
 					subtitle='Maintain Success'
 					className='w-full md:w-1/3'
-					animationDelay={0.4}
+					animationDelay={animationDelay + 0.4}
 				>
 					<div className='flex-1 flex flex-col justify-between'>
 						<div>
@@ -84,7 +87,7 @@ export function ThreeColumnsSection() {
 			{/* Learn More Button */}
 			<MotionContainer
 				className='mt-12 flex justify-center'
-				animationDelay={0.5}
+				animationDelay={animationDelay + 0.5}
 			>
 				<LinkButton href='/about'>
 					Learn more about our approach

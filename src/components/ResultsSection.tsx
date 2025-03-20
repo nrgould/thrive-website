@@ -8,7 +8,7 @@ import {
 	animate,
 	useInView,
 } from 'framer-motion';
-import { Award, Dumbbell, Heart, TrendingUp } from 'lucide-react';
+import { Award, Dumbbell, Heart, TrendingDown, TrendingUp } from 'lucide-react';
 
 export function ResultsSection() {
 	const sectionRef = useRef(null);
@@ -109,7 +109,7 @@ export function ResultsSection() {
 						variants={fadeIn}
 					>
 						<div className='flex items-center gap-4 mb-2'>
-							<TrendingUp className='text-blue-500' size={28} />
+							<TrendingDown className='text-blue-500' size={28} />
 							<div className='flex items-baseline'>
 								<motion.span className='text-6xl font-bold text-blue-500'>
 									{roundedLdl}
