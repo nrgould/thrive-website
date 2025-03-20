@@ -10,7 +10,7 @@ import {
 	Brain,
 	Users,
 } from 'lucide-react';
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 
 // Define section ID type for type safety
@@ -314,6 +314,27 @@ function InteractivePyramid({
 
 export function ProgramStructureSection() {
 	const [activeSection, setActiveSection] = useState<SectionId>(null);
+	const sectionRef = useRef<HTMLDivElement>(null);
+	const [isVisible, setIsVisible] = useState(false);
+
+	useEffect(() => {
+		const observer = new IntersectionObserver(
+			([entry]) => {
+				setIsVisible(entry.isIntersecting);
+			},
+			{ threshold: 0.1 }
+		);
+
+		if (sectionRef.current) {
+			observer.observe(sectionRef.current);
+		}
+
+		return () => {
+			if (sectionRef.current) {
+				observer.unobserve(sectionRef.current);
+			}
+		};
+	}, []);
 
 	const handleSectionClick = (section: SectionId) => {
 		// Navigate to the science page with the appropriate section
@@ -335,8 +356,27 @@ export function ProgramStructureSection() {
 	};
 
 	return (
-		<section className='w-full py-24 px-4 md:px-8 bg-blue-50'>
-			<div className='max-w-6xl mx-auto'>
+		<section
+			ref={sectionRef}
+			className='w-full py-24 px-4 md:px-8 bg-blue-50 relative overflow-hidden'
+		>
+			{/* Large Background Text */}
+			<motion.div
+				className='absolute top-16 md:top-24 inset-x-0 flex justify-center items-center pointer-events-none z-0 overflow-hidden'
+				initial={{ opacity: 0, scale: 0.9 }}
+				animate={
+					isVisible
+						? { opacity: 0.07, scale: 1 }
+						: { opacity: 0, scale: 0.9 }
+				}
+				transition={{ duration: 1, ease: 'easeOut' }}
+			>
+				<h1 className='text-[150px] md:text-[220px] lg:text-[280px] font-black text-blue-900 select-none whitespace-nowrap'>
+					EDUCATION
+				</h1>
+			</motion.div>
+
+			<div className='max-w-6xl mx-auto relative z-10'>
 				<motion.h2
 					className='text-3xl md:text-4xl font-bold text-center mb-16 text-blue-950'
 					initial={{ opacity: 0, y: 20 }}

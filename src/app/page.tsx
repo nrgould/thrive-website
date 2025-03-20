@@ -19,11 +19,11 @@ export default function Home() {
 			{/* Results & Testimonials */}
 			<ResultsSection />
 
-			{/* Program Structure */}
-			<ProgramStructureSection />
-
 			{/* Who This Program Is For */}
 			<WhoForSection />
+
+			{/* Program Structure */}
+			<ProgramStructureSection />
 
 			{/* How THRIVE Helps */}
 			<HowSection />
