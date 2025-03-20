@@ -65,12 +65,12 @@ export function ResultsSection() {
 
 	const testimonials = [
 		{
-			quote: 'This program has done wonders for how I feel about myself.',
-			author: 'Zach',
-		},
-		{
 			quote: "I haven't felt this good on a daily basis in years.",
 			author: 'Michael',
+		},
+		{
+			quote: 'This program has done wonders for how I feel about myself.',
+			author: 'Zach',
 		},
 		{
 			quote: 'I truly understand the importance of eating nutrient-dense foods and making smart choices.',
