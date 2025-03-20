@@ -7,9 +7,8 @@ export function ScienceHeroSection() {
 				<motion.h1
 					className='text-4xl md:text-5xl font-bold text-blue-950 mb-6'
 					initial={{ opacity: 0, y: 20 }}
-					whileInView={{ opacity: 1, y: 0 }}
+					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.7 }}
-					viewport={{ once: true }}
 				>
 					The Science Behind{' '}
 					<span className='text-blue-500'>Lifestyle Medicine</span>
@@ -17,9 +16,8 @@ export function ScienceHeroSection() {
 				<motion.p
 					className='text-lg md:text-xl text-slate-700 mb-6 leading-relaxed'
 					initial={{ opacity: 0, y: 20 }}
-					whileInView={{ opacity: 1, y: 0 }}
+					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.7, delay: 0.2 }}
-					viewport={{ once: true }}
 				>
 					Discover the evidence-based research and scientific
 					principles that form the foundation of our approach to
@@ -29,9 +27,8 @@ export function ScienceHeroSection() {
 				<motion.p
 					className='text-lg md:text-xl text-slate-700 leading-relaxed'
 					initial={{ opacity: 0, y: 20 }}
-					whileInView={{ opacity: 1, y: 0 }}
+					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.7, delay: 0.3 }}
-					viewport={{ once: true }}
 				>
 					Each pillar is supported by decades of research
 					demonstrating its crucial role in preventing, treating, and

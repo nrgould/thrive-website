@@ -7,9 +7,8 @@ export function ContactHeroSection() {
 				<motion.h1
 					className='text-4xl md:text-5xl font-bold text-blue-950 mb-6'
 					initial={{ opacity: 0, y: 20 }}
-					whileInView={{ opacity: 1, y: 0 }}
+					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.7 }}
-					viewport={{ once: true }}
 				>
 					Get in Touch With{' '}
 					<span className='text-blue-500'>THRIVE</span>
@@ -17,20 +16,18 @@ export function ContactHeroSection() {
 				<motion.p
 					className='text-lg md:text-xl text-slate-700 mb-6 leading-relaxed'
 					initial={{ opacity: 0, y: 20 }}
-					whileInView={{ opacity: 1, y: 0 }}
+					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.7, delay: 0.2 }}
-					viewport={{ once: true }}
 				>
-					Have questions about our programs or approach? Want to
-					learn more about how THRIVE can help you achieve lasting
-					health changes? We&apos;re here to help.
+					Have questions about our programs or approach? Want to learn
+					more about how THRIVE can help you achieve lasting health
+					changes? We&apos;re here to help.
 				</motion.p>
 				<motion.p
 					className='text-lg md:text-xl text-slate-700 leading-relaxed'
 					initial={{ opacity: 0, y: 20 }}
-					whileInView={{ opacity: 1, y: 0 }}
+					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.7, delay: 0.3 }}
-					viewport={{ once: true }}
 				>
 					Fill out the form below or use any of our contact methods to
 					reach out. Our team is ready to support you on your health

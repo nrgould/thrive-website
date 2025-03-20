@@ -14,7 +14,7 @@ export function ArrowDivider({
 	className,
 	direction = 'horizontal',
 	animationDelay = 0.3,
-	size = 12,
+	size = 28,
 }: ArrowDividerProps) {
 	return (
 		<motion.div

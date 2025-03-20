@@ -361,7 +361,6 @@ export default function SixWeekPage() {
 					</div>
 				</div>
 			</section>
-
 		</main>
 	);
 }

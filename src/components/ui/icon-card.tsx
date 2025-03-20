@@ -23,7 +23,7 @@ export function IconCard({
 	return (
 		<motion.div
 			className={cn(
-				'bg-blue-50 rounded-3xl p-8 text-center flex flex-col items-center w-full h-full',
+				'bg-blue-50 rounded-3xl p-8 text-center flex flex-col items-center w-full h-full min-h-[350px]',
 				className
 			)}
 			initial={{ opacity: 0, y: 30 }}

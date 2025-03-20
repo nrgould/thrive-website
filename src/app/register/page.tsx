@@ -10,18 +10,16 @@ export default function RegisterPage() {
 					<motion.h1
 						className='text-4xl md:text-5xl font-bold text-blue-950 mb-6'
 						initial={{ opacity: 0, y: 20 }}
-						whileInView={{ opacity: 1, y: 0 }}
+						animate={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.7 }}
-						viewport={{ once: true }}
 					>
 						Register for THRIVE
 					</motion.h1>
 					<motion.p
 						className='text-lg md:text-xl text-slate-700 mb-10 leading-relaxed'
 						initial={{ opacity: 0, y: 20 }}
-						whileInView={{ opacity: 1, y: 0 }}
+						animate={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.7, delay: 0.2 }}
-						viewport={{ once: true }}
 					>
 						Take the first step toward lasting health
 						transformation. Select a program below to join our
@@ -32,9 +30,8 @@ export default function RegisterPage() {
 						<motion.div
 							className='bg-white rounded-3xl shadow-md border border-blue-100 p-8 flex flex-col'
 							initial={{ opacity: 0, y: 30 }}
-							whileInView={{ opacity: 1, y: 0 }}
+							animate={{ opacity: 1, y: 0 }}
 							transition={{ duration: 0.5 }}
-							viewport={{ once: true }}
 						>
 							<h2 className='text-2xl font-bold text-blue-950 mb-4'>
 								THRIVE 6-Week Program
@@ -54,9 +51,8 @@ export default function RegisterPage() {
 						<motion.div
 							className='bg-white rounded-3xl shadow-md border border-blue-100 p-8 flex flex-col'
 							initial={{ opacity: 0, y: 30 }}
-							whileInView={{ opacity: 1, y: 0 }}
+							animate={{ opacity: 1, y: 0 }}
 							transition={{ duration: 0.5, delay: 0.1 }}
-							viewport={{ once: true }}
 						>
 							<h2 className='text-2xl font-bold text-blue-950 mb-4'>
 								THRIVE Essentials
@@ -77,9 +73,8 @@ export default function RegisterPage() {
 					<motion.p
 						className='text-base text-slate-600 mt-12'
 						initial={{ opacity: 0 }}
-						whileInView={{ opacity: 1 }}
+						animate={{ opacity: 1 }}
 						transition={{ duration: 0.5, delay: 0.3 }}
-						viewport={{ once: true }}
 					>
 						Not sure which program is right for you?{' '}
 						<Link

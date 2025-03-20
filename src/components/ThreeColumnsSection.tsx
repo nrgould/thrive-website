@@ -66,10 +66,10 @@ export function ThreeColumnsSection() {
 							<p className='text-slate-700 mb-3'>
 								Small group learning circles
 							</p>
+							<p className='text-slate-700'>
+								Larger, full cohort sessions
+							</p>
 						</div>
-						<p className='text-slate-700'>
-							Larger, full cohort sessions
-						</p>
 					</div>
 				</IconCard>
 			</div>

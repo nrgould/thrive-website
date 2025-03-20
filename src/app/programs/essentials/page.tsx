@@ -1,4 +1,3 @@
-
 import { ArrowLeft, BookOpen, Clock, Award } from 'lucide-react';
 import Link from 'next/link';
 

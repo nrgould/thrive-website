@@ -7,9 +7,8 @@ export function ApproachHeroSection() {
 				<motion.h1
 					className='text-4xl md:text-5xl font-bold text-blue-950 mb-6'
 					initial={{ opacity: 0, y: 20 }}
-					whileInView={{ opacity: 1, y: 0 }}
+					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.7 }}
-					viewport={{ once: true }}
 				>
 					Our Approach to{' '}
 					<span className='text-blue-500'>Lasting Change</span>
@@ -17,9 +16,8 @@ export function ApproachHeroSection() {
 				<motion.p
 					className='text-lg md:text-xl text-slate-700 mb-6 leading-relaxed'
 					initial={{ opacity: 0, y: 20 }}
-					whileInView={{ opacity: 1, y: 0 }}
+					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.7, delay: 0.2 }}
-					viewport={{ once: true }}
 				>
 					Most health programs focus on quick fixes and fads, but real
 					transformation requires a fundamentally different approach.
@@ -30,9 +28,8 @@ export function ApproachHeroSection() {
 				<motion.p
 					className='text-lg md:text-xl text-slate-700 leading-relaxed'
 					initial={{ opacity: 0, y: 20 }}
-					whileInView={{ opacity: 1, y: 0 }}
+					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.7, delay: 0.3 }}
-					viewport={{ once: true }}
 				>
 					Our methodology is built on a simple truth:{' '}
 					<span className='font-semibold'>
