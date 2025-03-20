@@ -13,6 +13,14 @@ export function HeroSection() {
 					animate={{ opacity: 1, x: 0 }}
 					transition={{ duration: 0.7, delay: 0.2 }}
 				>
+					<motion.span
+						className='text-blue-600 font-semibold tracking-wide block mb-2'
+						initial={{ opacity: 0, y: 20 }}
+						animate={{ opacity: 1, y: 0 }}
+						transition={{ duration: 0.5 }}
+					>
+						THRIVE
+					</motion.span>
 					<motion.h1
 						className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-blue-950 leading-tight'
 						initial={{ opacity: 0, y: 20 }}

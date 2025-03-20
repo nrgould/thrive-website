@@ -345,7 +345,7 @@ export function FAQSection() {
 						className='inline-block mt-4 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors shadow-md'
 					>
 						<Link
-							href='/programs/six-week#join-waitlist'
+							href='/programs/six-week#waitlist-form'
 							className='px-8 pb-10 pt-3 font-medium text-xl'
 						>
 							Sign up for the waitlist

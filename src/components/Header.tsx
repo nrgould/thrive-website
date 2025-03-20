@@ -33,8 +33,12 @@ export function Header() {
 		<header className='w-full py-4 px-4 md:px-8 bg-white/90 backdrop-blur-sm sticky top-0 z-50 border-b border-slate-100'>
 			<div className='max-w-full mx-auto flex items-center justify-between'>
 				<Link href='/' className='flex items-center gap-2'>
-					<span className='text-2xl font-bold text-blue-500'>
-						THRIVE
+					<span className='text-2xl font-bold'>
+						<span className='text-blue-600'>THRIVE</span>
+						<span className='text-blue-500 mx-1'>
+							<span className='text-blue-900'>L</span>ifestyle
+							<span className='text-blue-900 ml-1'>M</span>edicine
+						</span>
 					</span>
 				</Link>
 

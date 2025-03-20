@@ -13,7 +13,7 @@ export function TeamCTASection() {
 					transition={{ duration: 0.5 }}
 					viewport={{ once: true }}
 				>
-					Ready to Change Your Life with Our Team?
+					Ready to Get Started?
 				</motion.h2>
 
 				<motion.p
