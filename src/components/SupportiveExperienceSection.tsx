@@ -71,6 +71,7 @@ export function SupportiveExperienceSection() {
 	return (
 		<section
 			ref={sectionRef}
+			id='connection-section'
 			className='w-full py-24 px-4 md:px-8 bg-blue-50'
 		>
 			<div className='max-w-6xl mx-auto'>

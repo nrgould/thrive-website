@@ -1,10 +1,12 @@
-import * as motion from 'motion/react-client'
+import * as motion from 'motion/react-client';
 import { CheckCircle } from 'lucide-react';
 
 export function BehaviorDesignSection() {
-
 	return (
-		<section className='w-full py-24 px-4 md:px-8 bg-white'>
+		<section
+			id='integration-section'
+			className='w-full py-24 px-4 md:px-8 bg-white'
+		>
 			<div className='max-w-6xl mx-auto'>
 				<motion.p
 					className='text-lg text-blue-600 font-medium text-center mb-3'

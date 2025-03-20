@@ -1,4 +1,3 @@
-import { BookOpen, Layers, Users } from 'lucide-react';
 import { IconCard } from './ui/icon-card';
 import { ArrowDivider } from './ui/arrow-divider';
 import { SectionTitle } from './ui/section-title';
@@ -22,11 +21,11 @@ export function ThreeColumnsSection() {
 
 			<div className='flex flex-col md:flex-row items-stretch justify-center gap-4 md:gap-0'>
 				<IconCard
-					icon={BookOpen}
 					title='Education'
 					subtitle='Learn a Healthier Way'
-					className='w-full md:w-1/3'
+					className='w-full md:w-1/3 transition-transform duration-300 hover:scale-105'
 					animationDelay={animationDelay}
+					targetSectionId='education-section'
 				>
 					<p className='text-slate-700 mb-3 leading-relaxed'>
 						Video tutorials, downloadable resources, & interactive
@@ -39,11 +38,11 @@ export function ThreeColumnsSection() {
 				<ArrowDivider animationDelay={animationDelay + 0.1} />
 
 				<IconCard
-					icon={Layers}
 					title='Integration'
 					subtitle='Make Sustainable Change'
-					className='w-full md:w-1/3'
+					className='w-full md:w-1/3 transition-transform duration-300 hover:scale-105'
 					animationDelay={animationDelay + 0.2}
+					targetSectionId='integration-section'
 				>
 					<p className='text-slate-700 mb-3 leading-relaxed'>
 						Participants use Behavior Design to create personalized
@@ -55,11 +54,11 @@ export function ThreeColumnsSection() {
 				<ArrowDivider animationDelay={animationDelay + 0.3} />
 
 				<IconCard
-					icon={Users}
 					title='Connection'
 					subtitle='Maintain Success'
-					className='w-full md:w-1/3'
+					className='w-full md:w-1/3 transition-transform duration-300 hover:scale-105'
 					animationDelay={animationDelay + 0.4}
+					targetSectionId='connection-section'
 				>
 					<div className='flex-1 flex flex-col justify-between'>
 						<div>
