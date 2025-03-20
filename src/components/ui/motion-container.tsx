@@ -45,9 +45,8 @@ export function MotionContainer({
 		<motion.div
 			className={className}
 			initial={getInitialAnimation()}
-			whileInView={getAnimationTarget()}
+			animate={getAnimationTarget()}
 			transition={{ duration: animationDuration, delay: animationDelay }}
-			viewport={{ once: true }}
 		>
 			{children}
 		</motion.div>

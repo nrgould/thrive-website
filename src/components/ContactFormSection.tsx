@@ -58,9 +58,8 @@ export function ContactFormSection() {
 				<motion.div
 					className='bg-white rounded-3xl shadow-md border border-blue-100 p-8 md:p-10'
 					initial={{ opacity: 0, y: 20 }}
-					whileInView={{ opacity: 1, y: 0 }}
+					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.5 }}
-					viewport={{ once: true }}
 				>
 					<h2 className='text-2xl md:text-3xl font-bold text-blue-950 mb-6'>
 						Contact Us

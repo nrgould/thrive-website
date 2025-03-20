@@ -27,9 +27,8 @@ export function IconCard({
 				className
 			)}
 			initial={{ opacity: 0, y: 30 }}
-			whileInView={{ opacity: 1, y: 0 }}
+			animate={{ opacity: 1, y: 0 }}
 			transition={{ duration: 0.5, delay: animationDelay }}
-			viewport={{ once: true }}
 		>
 			<div className='w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4'>
 				<Icon className='text-blue-500' size={28} />

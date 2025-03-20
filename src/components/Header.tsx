@@ -120,7 +120,7 @@ export function Header() {
 					href='/programs/six-week#waitlist-form'
 					className='hidden md:flex px-4 py-2 bg-blue-500 text-white rounded-full text-sm font-medium hover:bg-blue-600 transition-colors'
 				>
-					Become a Member
+					Join Waitlist
 				</Link>
 			</div>
 		</header>

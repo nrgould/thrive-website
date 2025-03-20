@@ -25,9 +25,8 @@ export function ArrowDivider({
 				className
 			)}
 			initial={{ opacity: 0 }}
-			whileInView={{ opacity: 1 }}
+			animate={{ opacity: 1 }}
 			transition={{ duration: 0.5, delay: animationDelay }}
-			viewport={{ once: true }}
 		>
 			<div className='w-16 h-16 flex items-center justify-center'>
 				<ArrowRight

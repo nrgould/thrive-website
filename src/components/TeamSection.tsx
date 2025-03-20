@@ -73,9 +73,8 @@ export function TeamSection() {
 				<motion.h1
 					className='text-4xl md:text-5xl font-bold text-center mb-6 text-blue-950'
 					initial={{ opacity: 0, y: 20 }}
-					whileInView={{ opacity: 1, y: 0 }}
+					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.5 }}
-					viewport={{ once: true }}
 				>
 					Meet Our Coaches & Team
 				</motion.h1>
@@ -83,9 +82,8 @@ export function TeamSection() {
 				<motion.p
 					className='text-xl text-slate-700 text-center max-w-3xl mx-auto mb-16 leading-relaxed'
 					initial={{ opacity: 0, y: 20 }}
-					whileInView={{ opacity: 1, y: 0 }}
+					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.5, delay: 0.1 }}
-					viewport={{ once: true }}
 				>
 					At C2Life, our mission is to empower you to thrive through
 					lifestyle medicine. Meet the dedicated team guiding you on
@@ -98,9 +96,8 @@ export function TeamSection() {
 							key={index}
 							className='bg-white rounded-3xl shadow-sm p-6 lg:p-8 border border-blue-100 h-full'
 							initial={{ opacity: 0, y: 30 }}
-							whileInView={{ opacity: 1, y: 0 }}
+							animate={{ opacity: 1, y: 0 }}
 							transition={{ duration: 0.5, delay: index * 0.05 }}
-							viewport={{ once: true, margin: '-100px' }}
 						>
 							<div className='flex flex-col gap-6'>
 								<div className='flex flex-col items-center'>

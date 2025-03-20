@@ -3,16 +3,16 @@
 import { useRef, useEffect } from 'react';
 import {
 	motion,
-	useInView,
 	useMotionValue,
 	useTransform,
 	animate,
+	useInView,
 } from 'framer-motion';
 import { Award, Dumbbell, Heart, TrendingUp } from 'lucide-react';
 
 export function ResultsSection() {
 	const sectionRef = useRef(null);
-	const isInView = useInView(sectionRef, { once: true, amount: 0.2 });
+	const isInView = useInView(sectionRef, { once: true, margin: '-100px' });
 
 	// Create motion values for each stat
 	const ldlCount = useMotionValue(0);
@@ -25,6 +25,7 @@ export function ResultsSection() {
 	const roundedBmi = useTransform(bmiCount, (latest) => Math.round(latest));
 
 	useEffect(() => {
+		// Only animate when the section comes into view
 		if (isInView) {
 			const ldlAnimation = animate(ldlCount, 21, {
 				duration: 2,
@@ -266,7 +267,7 @@ export function ResultsSection() {
 							className='bg-blue-50 p-6 rounded-3xl'
 							custom={index}
 							initial='hidden'
-							animate={isInView ? 'visible' : 'hidden'}
+							animate={{ opacity: 1 }}
 							variants={fadeIn}
 						>
 							<p className='text-slate-700 text-lg leading-relaxed'>

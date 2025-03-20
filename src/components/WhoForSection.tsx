@@ -1,6 +1,8 @@
 import * as motion from 'motion/react-client';
 import { Heart, Activity, Leaf } from 'lucide-react';
 import Image from 'next/image';
+import { Button } from './ui/button';
+import Link from 'next/link';
 
 export function WhoForSection() {
 	const audiences = [
@@ -110,14 +112,9 @@ export function WhoForSection() {
 						provides the tools, support, and community you need to
 						succeed.
 					</p>
-					<div className='mt-8'>
-						<a
-							href='#register'
-							className='inline-block px-8 py-3 bg-blue-600 text-white rounded-full font-medium hover:bg-blue-700 transition-colors shadow-md'
-						>
-							Find Your Path
-						</a>
-					</div>
+					<Button asChild className='inline-block mt-4 bg-blue-600 text-white rounded-full font-medium hover:bg-blue-700 transition-colors shadow-md'>
+						<Link href='#programs' className='px-8 pb-8 pt-3'>Find Your Path</Link>
+					</Button>
 				</motion.div>
 			</div>
 		</section>

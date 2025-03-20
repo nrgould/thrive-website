@@ -29,7 +29,7 @@ export function FAQSection() {
 
 	return (
 		<section className='w-full py-24 px-4 md:px-8 bg-white'>
-			<div className='max-w-6xl mx-auto'>
+			<div className='max-w-6xl mx-auto' id='programs'>
 				<motion.h2
 					className='text-3xl md:text-4xl font-bold text-center mb-16 text-blue-950'
 					initial={{ opacity: 0, y: 20 }}
@@ -40,7 +40,7 @@ export function FAQSection() {
 					Which THRIVE Program is Right for You?
 				</motion.h2>
 
-				<div className='grid grid-cols-1 md:grid-cols-2 gap-8 mb-24'>
+				<div  className='grid grid-cols-1 md:grid-cols-2 gap-8 mb-24'>
 					<motion.div
 						className='bg-gradient-to-b from-blue-50 to-white rounded-3xl p-8 border border-blue-100 shadow-sm'
 						initial={{ opacity: 0, y: 30 }}
@@ -248,9 +248,11 @@ export function FAQSection() {
 						Not Sure Where to Start?
 					</h3>
 					<div className='flex items-center justify-center'>
-						<button className='cursor-pointer px-8 py-3 bg-blue-500 text-white rounded-full font-medium flex items-center gap-2 hover:bg-blue-600 transition-colors mx-auto'>
-							<Mail size={18} /> Contact Us
-						</button>
+						<Link href='/contact'>
+							<button className='cursor-pointer px-8 py-3 bg-blue-500 text-white rounded-full font-medium flex items-center gap-2 hover:bg-blue-600 transition-colors mx-auto'>
+								<Mail size={18} /> Talk with one of our coaches
+							</button>
+						</Link>
 					</div>
 				</motion.div>
 

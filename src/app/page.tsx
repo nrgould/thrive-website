@@ -1,12 +1,11 @@
 import { HeroSection } from '../components/HeroSection';
 import { ResultsSection } from '../components/ResultsSection';
 import { ProgramStructureSection } from '../components/ProgramStructureSection';
-import { HowSection } from '../components/HowSection';
 import { SupportiveExperienceSection } from '../components/SupportiveExperienceSection';
 import { FAQSection } from '../components/FAQSection';
 import { ThreeColumnsSection } from '../components/ThreeColumnsSection';
 import { WhoForSection } from '../components/WhoForSection';
-
+import { BehaviorDesignSection } from '../components/BehaviorDesignSection';
 export default function Home() {
 	return (
 		<main className='min-h-screen flex flex-col items-center'>
@@ -26,7 +25,7 @@ export default function Home() {
 			<ProgramStructureSection />
 
 			{/* How THRIVE Helps */}
-			<HowSection />
+			<BehaviorDesignSection />
 
 			{/* Supportive Experience */}
 			<SupportiveExperienceSection />

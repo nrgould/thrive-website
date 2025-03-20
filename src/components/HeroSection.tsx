@@ -66,7 +66,7 @@ export function HeroSection() {
 
 					<Link href='/programs/six-week#waitlist-form'>
 						<motion.button
-							className='mt-6 md:mt-8 px-6 sm:px-8 py-3 sm:py-4 bg-blue-500 text-white rounded-full font-medium text-base sm:text-lg flex items-center gap-2 hover:bg-blue-600 transition-colors shadow-lg hover:shadow-xl mx-auto lg:mx-0'
+							className='cursor-pointer mt-6 md:mt-8 px-6 sm:px-8 py-3 sm:py-4 bg-blue-500 text-white rounded-full font-medium text-base sm:text-lg flex items-center gap-2 hover:bg-blue-600 transition-colors shadow-lg hover:shadow-xl mx-auto lg:mx-0'
 							initial={{ opacity: 0, y: 20 }}
 							animate={{ opacity: 1, y: 0 }}
 							transition={{ duration: 0.5, delay: 0.8 }}

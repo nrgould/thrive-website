@@ -10,7 +10,7 @@ import {
 	Brain,
 	Users,
 } from 'lucide-react';
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef } from 'react';
 import Link from 'next/link';
 
 // Define section ID type for type safety
@@ -315,26 +315,6 @@ function InteractivePyramid({
 export function ProgramStructureSection() {
 	const [activeSection, setActiveSection] = useState<SectionId>(null);
 	const sectionRef = useRef<HTMLDivElement>(null);
-	const [isVisible, setIsVisible] = useState(false);
-
-	useEffect(() => {
-		const observer = new IntersectionObserver(
-			([entry]) => {
-				setIsVisible(entry.isIntersecting);
-			},
-			{ threshold: 0.1 }
-		);
-
-		if (sectionRef.current) {
-			observer.observe(sectionRef.current);
-		}
-
-		return () => {
-			if (sectionRef.current) {
-				observer.unobserve(sectionRef.current);
-			}
-		};
-	}, []);
 
 	const handleSectionClick = (section: SectionId) => {
 		// Navigate to the science page with the appropriate section
@@ -360,39 +340,41 @@ export function ProgramStructureSection() {
 			ref={sectionRef}
 			className='w-full py-24 px-4 md:px-8 bg-blue-50 relative overflow-hidden'
 		>
-			{/* Large Background Text */}
-			<motion.div
-				className='absolute top-16 md:top-24 inset-x-0 flex justify-center items-center pointer-events-none z-0 overflow-hidden'
-				initial={{ opacity: 0, scale: 0.9 }}
-				animate={
-					isVisible
-						? { opacity: 0.07, scale: 1 }
-						: { opacity: 0, scale: 0.9 }
-				}
-				transition={{ duration: 1, ease: 'easeOut' }}
-			>
-				<h1 className='text-[150px] md:text-[220px] lg:text-[280px] font-black text-blue-900 select-none whitespace-nowrap'>
+			<div className='max-w-6xl mx-auto'>
+				<motion.p
+					className='text-lg text-blue-600 font-medium text-center mb-3'
+					initial={{ opacity: 0, y: 10 }}
+					animate={{ opacity: 1, y: 0 }}
+					transition={{ duration: 0.4 }}
+				>
 					EDUCATION
-				</h1>
-			</motion.div>
+				</motion.p>
 
-			<div className='max-w-6xl mx-auto relative z-10'>
 				<motion.h2
 					className='text-3xl md:text-4xl font-bold text-center mb-16 text-blue-950'
 					initial={{ opacity: 0, y: 20 }}
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.5 }}
 				>
-					What is Lifestyle Medicine?
+					A Framework for Life
 				</motion.h2>
 
-				<div className='grid grid-cols-1 lg:grid-cols-2 gap-16 items-center'>
+				<div className='grid grid-cols-1 lg:grid-cols-2 gap-16 items-start'>
 					<motion.div
 						className='space-y-6'
 						initial={{ opacity: 0, x: -30 }}
 						animate={{ opacity: 1, x: 0 }}
 						transition={{ duration: 0.6, delay: 0.2 }}
 					>
+						<motion.h3
+							className='text-2xl font-bold text-blue-950 mb-6'
+							initial={{ opacity: 0 }}
+							animate={{ opacity: 1 }}
+							transition={{ duration: 0.5 }}
+						>
+							What is Lifestyle Medicine?
+						</motion.h3>
+
 						<p className='text-slate-700 text-lg leading-relaxed'>
 							Lifestyle Medicine is an evidence-based approach to
 							preventing, treating, and even reversing chronic
@@ -426,16 +408,7 @@ export function ProgramStructureSection() {
 					</motion.div>
 				</div>
 
-				<motion.h3
-					className='text-2xl md:text-3xl font-bold text-center mt-24 mb-12 text-blue-950'
-					initial={{ opacity: 0 }}
-					animate={{ opacity: 1 }}
-					transition={{ duration: 0.5, delay: 0.4 }}
-				>
-					A Framework for Life
-				</motion.h3>
-
-				<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16'>
+				<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16 mt-8'>
 					{lifestyleSections.map((item, index) => (
 						<motion.div
 							key={index}
@@ -482,7 +455,7 @@ export function ProgramStructureSection() {
 						more meaningful life.
 					</p>
 					<Link href='/programs/six-week#waitlist-form'>
-						<button className='px-8 py-3 bg-white text-blue-600 rounded-full font-medium flex items-center gap-2 hover:bg-blue-50 transition-colors mx-auto'>
+						<button className='px-8 py-3 cursor-pointer bg-white text-blue-600 rounded-full font-medium flex items-center gap-2 hover:bg-blue-50 transition-colors mx-auto'>
 							Join Waitlist <ArrowRight size={18} />
 						</button>
 					</Link>

@@ -8,9 +8,8 @@ export function ApproachMethodologySection() {
 				<motion.h2
 					className='text-3xl md:text-4xl font-bold text-center mb-6 text-blue-950'
 					initial={{ opacity: 0, y: 20 }}
-					whileInView={{ opacity: 1, y: 0 }}
+					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.5 }}
-					viewport={{ once: true }}
 				>
 					The THRIVE Methodology
 				</motion.h2>
@@ -18,9 +17,8 @@ export function ApproachMethodologySection() {
 				<motion.p
 					className='text-xl text-slate-700 text-center max-w-3xl mx-auto mb-16 leading-relaxed'
 					initial={{ opacity: 0, y: 20 }}
-					whileInView={{ opacity: 1, y: 0 }}
+					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.5, delay: 0.1 }}
-					viewport={{ once: true }}
 				>
 					Our approach combines three essential elements to create a
 					comprehensive system for sustainable health transformation.
@@ -32,9 +30,8 @@ export function ApproachMethodologySection() {
 					<motion.div
 						className='bg-blue-50 rounded-3xl p-8 flex flex-col'
 						initial={{ opacity: 0, y: 30 }}
-						whileInView={{ opacity: 1, y: 0 }}
+						animate={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.5 }}
-						viewport={{ once: true }}
 					>
 						<div className='w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6'>
 							<BookOpen className='text-blue-500' size={28} />
@@ -105,9 +102,8 @@ export function ApproachMethodologySection() {
 					<motion.div
 						className='bg-blue-50 rounded-3xl p-8 flex flex-col'
 						initial={{ opacity: 0, y: 30 }}
-						whileInView={{ opacity: 1, y: 0 }}
+						animate={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.5, delay: 0.2 }}
-						viewport={{ once: true }}
 					>
 						<div className='w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6'>
 							<Layers className='text-blue-500' size={28} />
@@ -176,9 +172,8 @@ export function ApproachMethodologySection() {
 					<motion.div
 						className='bg-blue-50 rounded-3xl p-8 flex flex-col'
 						initial={{ opacity: 0, y: 30 }}
-						whileInView={{ opacity: 1, y: 0 }}
+						animate={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.5, delay: 0.4 }}
-						viewport={{ once: true }}
 					>
 						<div className='w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6'>
 							<Users className='text-blue-500' size={28} />
