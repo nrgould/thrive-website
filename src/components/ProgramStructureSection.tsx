@@ -10,7 +10,7 @@ import {
 	Brain,
 	Users,
 } from 'lucide-react';
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 
 // Define section ID type for type safety
@@ -78,6 +78,47 @@ interface InteractivePyramidProps {
 	onSectionClick: (section: SectionId) => void;
 }
 
+// Popup component for the pyramid sections
+function SectionPopup({
+	section,
+	x,
+	y,
+	visible,
+}: {
+	section: SectionId;
+	x: number;
+	y: number;
+	visible: boolean;
+}) {
+	if (!section || !visible) return null;
+
+	const sectionData = lifestyleSections.find((s) => s.id === section);
+	if (!sectionData) return null;
+
+	return (
+		<motion.div
+			className='absolute z-10 bg-white p-4 rounded-xl shadow-lg text-sm max-w-[240px] pointer-events-none border border-blue-100'
+			style={{
+				left: `${x}px`,
+				top: `${y - 20}px`,
+				transform: 'translateX(-50%)',
+			}}
+			initial={{ opacity: 0, y: -10 }}
+			animate={{ opacity: 1, y: 0 }}
+			transition={{ duration: 0.2 }}
+		>
+			<div className='flex items-center gap-2 mb-1'>
+				{sectionData.icon}
+				<h4 className='font-bold text-blue-600 text-base'>
+					{sectionData.title}
+				</h4>
+			</div>
+			<p className='text-gray-700'>{sectionData.description}</p>
+			<div className='absolute left-1/2 bottom-0 w-3 h-3 bg-white border-r border-b border-blue-100 transform rotate-45 translate-y-1.5 -translate-x-1.5'></div>
+		</motion.div>
+	);
+}
+
 // Interactive Pyramid Subcomponent
 function InteractivePyramid({
 	activeSection,
@@ -94,9 +135,56 @@ function InteractivePyramid({
 		sleep: 'sleepGradient',
 	};
 
+	// Define fixed positions for popups based on pyramid section
+	const popupPositions = {
+		connect: { x: 300, y: 80 },
+		release: { x: 210, y: 210 },
+		elevate: { x: 390, y: 210 },
+		nourish: { x: 140, y: 320 },
+		move: { x: 300, y: 320 },
+		sleep: { x: 450, y: 320 },
+	};
+
+	const svgRef = useRef<SVGSVGElement>(null);
+	const [popupPosition, setPopupPosition] = useState({ x: 0, y: 0 });
+
+	// Update popup position when the active section changes or on resize
+	useEffect(() => {
+		const updatePopupPosition = () => {
+			if (!activeSection || !popupPositions[activeSection]) {
+				setPopupPosition({ x: 0, y: 0 });
+				return;
+			}
+
+			if (svgRef.current) {
+				const svgRect = svgRef.current.getBoundingClientRect();
+				const { width, height } = svgRect;
+
+				const pos = popupPositions[activeSection];
+				setPopupPosition({
+					x: (pos.x / 600) * width,
+					y: (pos.y / 500) * height,
+				});
+			}
+		};
+
+		// Update the position initially
+		updatePopupPosition();
+
+		// Add resize event listener to update on window resize
+		window.addEventListener('resize', updatePopupPosition);
+
+		// Clean up event listener
+		return () => {
+			window.removeEventListener('resize', updatePopupPosition);
+		};
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [activeSection]);
+
 	return (
 		<div className='relative h-[600px] w-full max-w-[900px] mx-auto flex items-center'>
 			<svg
+				ref={svgRef}
 				viewBox='0 0 600 500'
 				className='w-full h-full'
 				preserveAspectRatio='xMidYMid meet'
@@ -390,6 +478,15 @@ function InteractivePyramid({
 					Sleep
 				</text>
 			</svg>
+
+			{activeSection && (
+				<SectionPopup
+					section={activeSection}
+					x={popupPosition.x}
+					y={popupPosition.y}
+					visible={!!activeSection}
+				/>
+			)}
 		</div>
 	);
 }
@@ -442,42 +539,7 @@ export function ProgramStructureSection() {
 					A Framework for Life
 				</motion.h2>
 
-				<div className='grid grid-cols-1 lg:grid-cols-2 gap-16 items-center'>
-					<motion.div
-						className='space-y-6'
-						initial={{ opacity: 0, x: -30 }}
-						animate={{ opacity: 1, x: 0 }}
-						transition={{ duration: 0.6, delay: 0.2 }}
-					>
-						<motion.h3
-							className='text-2xl font-bold text-blue-950 mb-6'
-							initial={{ opacity: 0 }}
-							animate={{ opacity: 1 }}
-							transition={{ duration: 0.5 }}
-						>
-							What is Lifestyle Medicine?
-						</motion.h3>
-
-						<p className='text-slate-700 text-lg leading-relaxed'>
-							Lifestyle Medicine is an evidence-based approach to
-							preventing, treating, and even reversing chronic
-							disease by making simple, sustainable changes to the
-							way we live.
-						</p>
-						<p className='text-slate-700 text-lg leading-relaxed'>
-							It focuses on six key areas—nutrition, physical
-							activity, sleep, stress management, social
-							connection, and healthy habits—that together form
-							the foundation for long-term health and well-being.
-						</p>
-						<p className='text-slate-700 text-lg leading-relaxed'>
-							Rather than relying on quick fixes, Lifestyle
-							Medicine empowers individuals to take control of
-							their health through small, meaningful actions that
-							fit into daily life.
-						</p>
-					</motion.div>
-
+				<div className='grid grid-cols-1 items-center'>
 					<motion.div
 						initial={{ opacity: 0, scale: 0.95 }}
 						animate={{ opacity: 1, scale: 1 }}
@@ -488,6 +550,9 @@ export function ProgramStructureSection() {
 							onSectionHover={setActiveSection}
 							onSectionClick={handleSectionClick}
 						/>
+						<h3 className='text-2xl text-center font-bold text-blue-950 -mt-8 mb-12'>
+							The Lifestyle Medicine Pyramid
+						</h3>
 					</motion.div>
 				</div>
 
