@@ -90,9 +90,6 @@ const sharedTransition = {
 // Pop-out offset for active sections
 const popOutOffset = 15;
 
-// Enhanced shadow for active sections
-const activeShadow = 'drop-shadow(0 0 12px rgba(37, 99, 235, 0.7))';
-
 // Popup component for the pyramid sections
 function SectionPopup({
 	section,
@@ -197,24 +194,24 @@ function InteractivePyramid({
 	onSectionHover,
 	onSectionClick,
 }: InteractivePyramidProps) {
-	// Define gradient IDs for 3D effect
-	const gradientIds = {
-		connect: 'connectGradient',
-		release: 'releaseGradient',
-		elevate: 'elevateGradient',
-		nourish: 'nourishGradient',
-		move: 'moveGradient',
-		sleep: 'sleepGradient',
-	};
-
 	// Define fixed positions for popups based on pyramid section - positioned OUTSIDE the pyramid
 	const popupPositions = {
 		nourish: { x: -50, y: 330, arrowDirection: 'left' },
-		move: { x: 220, y: 400, arrowDirection: 'up' },
+		move: { x: 220, y: 480, arrowDirection: 'up' },
 		sleep: { x: 500, y: 320, arrowDirection: 'right' },
 		release: { x: 0, y: 200, arrowDirection: 'left' },
-		elevate: { x: 400, y: 200, arrowDirection: 'right' },
+		elevate: { x: 420, y: 200, arrowDirection: 'right' },
 		connect: { x: 360, y: 70, arrowDirection: 'right' },
+	};
+
+	// Define label positions with offsets for animation
+	const labelPositions = {
+		connect: { x: 250, y: 125, activeX: 250, activeY: 115 },
+		release: { x: 185, y: 220, activeX: 175, activeY: 220 },
+		elevate: { x: 310, y: 220, activeX: 320, activeY: 220 },
+		nourish: { x: 110, y: 350, activeX: 100, activeY: 355 },
+		move: { x: 250, y: 350, activeX: 250, activeY: 355 },
+		sleep: { x: 380, y: 350, activeX: 390, activeY: 355 },
 	};
 
 	const svgRef = useRef<SVGSVGElement>(null);
@@ -258,6 +255,25 @@ function InteractivePyramid({
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [activeSection]);
 
+	// Animation spring settings
+	const springTransition = {
+		type: 'spring',
+		stiffness: 500,
+		damping: 30,
+		mass: 1,
+	};
+
+	// Common function to get section fill/stroke
+	const getSectionFill = (sectionId: SectionId) =>
+		activeSection === sectionId ? '#2563eb' : 'white';
+
+	const getSectionStroke = (sectionId: SectionId) =>
+		activeSection === sectionId ? '#2563eb' : '#2563eb';
+
+	// High z-index for active sections to ensure they're on top
+	const getZIndex = (sectionId: SectionId) =>
+		activeSection === sectionId ? 100 : 10;
+
 	return (
 		<div className='relative h-[600px] w-full max-w-[900px] mx-auto flex items-center'>
 			<svg
@@ -266,636 +282,323 @@ function InteractivePyramid({
 				className='w-full h-full'
 				preserveAspectRatio='xMidYMid meet'
 			>
-				{/* Define gradients for 3D effect */}
-				<defs>
-					{/* Top section gradient */}
-					<linearGradient
-						id={gradientIds.connect}
-						x1='0%'
-						y1='0%'
-						x2='100%'
-						y2='0%'
-					>
-						<stop
-							offset='0%'
-							stopColor={
-								activeSection === 'connect'
-									? '#3b82f6'
-									: 'white'
-							}
-							stopOpacity='1'
-						/>
-						<stop
-							offset='100%'
-							stopColor={
-								activeSection === 'connect'
-									? '#2563eb'
-									: 'white'
-							}
-							stopOpacity='1'
-						/>
-					</linearGradient>
+				{/* Draw the pyramid */}
+				{/* Connect section */}
+				<motion.polygon
+					points='300,50 217,183 383,183'
+					fill={getSectionFill('connect')}
+					stroke={getSectionStroke('connect')}
+					strokeWidth={strokeWidth}
+					strokeLinejoin='round'
+					className='cursor-pointer'
+					onMouseEnter={() => onSectionHover('connect')}
+					onMouseLeave={() => onSectionHover(null)}
+					onClick={() => onSectionClick('connect')}
+					animate={{
+						scale: activeSection === 'connect' ? 1.05 : 1,
+						zIndex: getZIndex('connect'),
+						y: activeSection === 'connect' ? -popOutOffset : 0,
+					}}
+					style={{
+						transformOrigin: '300px 120px',
+					}}
+					transition={springTransition}
+				/>
 
-					{/* Middle left section gradient */}
-					<linearGradient
-						id={gradientIds.release}
-						x1='0%'
-						y1='0%'
-						x2='100%'
-						y2='0%'
-					>
-						<stop
-							offset='0%'
-							stopColor={
-								activeSection === 'release'
-									? '#3b82f6'
-									: 'white'
-							}
-							stopOpacity='1'
-						/>
-						<stop
-							offset='100%'
-							stopColor={
-								activeSection === 'release'
-									? '#2563eb'
-									: 'white'
-							}
-							stopOpacity='1'
-						/>
-					</linearGradient>
+				{/* Release section */}
+				<motion.polygon
+					points='133,317 217,183 300,183 300,317'
+					fill={getSectionFill('release')}
+					stroke={getSectionStroke('release')}
+					strokeWidth={strokeWidth}
+					strokeLinejoin='round'
+					className='cursor-pointer'
+					onMouseEnter={() => onSectionHover('release')}
+					onMouseLeave={() => onSectionHover(null)}
+					onClick={() => onSectionClick('release')}
+					animate={{
+						scale: activeSection === 'release' ? 1.05 : 1,
+						zIndex: getZIndex('release'),
+						x: activeSection === 'release' ? -popOutOffset / 2 : 0,
+						y: activeSection === 'release' ? 0 : 0,
+					}}
+					style={{
+						transformOrigin: '200px 250px',
+					}}
+					transition={springTransition}
+				/>
 
-					{/* Middle right section gradient */}
-					<linearGradient
-						id={gradientIds.elevate}
-						x1='0%'
-						y1='0%'
-						x2='100%'
-						y2='0%'
-					>
-						<stop
-							offset='0%'
-							stopColor={
-								activeSection === 'elevate'
-									? '#3b82f6'
-									: 'white'
-							}
-							stopOpacity='1'
-						/>
-						<stop
-							offset='100%'
-							stopColor={
-								activeSection === 'elevate'
-									? '#2563eb'
-									: 'white'
-							}
-							stopOpacity='1'
-						/>
-					</linearGradient>
+				{/* Elevate section */}
+				<motion.polygon
+					points='467,317 383,183 300,183 300,317'
+					fill={getSectionFill('elevate')}
+					stroke={getSectionStroke('elevate')}
+					strokeWidth={strokeWidth}
+					strokeLinejoin='round'
+					className='cursor-pointer'
+					onMouseEnter={() => onSectionHover('elevate')}
+					onMouseLeave={() => onSectionHover(null)}
+					onClick={() => onSectionClick('elevate')}
+					animate={{
+						scale: activeSection === 'elevate' ? 1.05 : 1,
+						zIndex: getZIndex('elevate'),
+						x: activeSection === 'elevate' ? popOutOffset / 2 : 0,
+						y: activeSection === 'elevate' ? 0 : 0,
+					}}
+					style={{
+						transformOrigin: '400px 250px',
+					}}
+					transition={springTransition}
+				/>
 
-					{/* Bottom left section gradient */}
-					<linearGradient
-						id={gradientIds.nourish}
-						x1='0%'
-						y1='0%'
-						x2='100%'
-						y2='0%'
-					>
-						<stop
-							offset='0%'
-							stopColor={
-								activeSection === 'nourish'
-									? '#3b82f6'
-									: 'white'
-							}
-							stopOpacity='1'
-						/>
-						<stop
-							offset='100%'
-							stopColor={
-								activeSection === 'nourish'
-									? '#2563eb'
-									: 'white'
-							}
-							stopOpacity='1'
-						/>
-					</linearGradient>
+				{/* Nourish section */}
+				<motion.polygon
+					points='50,450 133,317 217,317 217,450'
+					fill={getSectionFill('nourish')}
+					stroke={getSectionStroke('nourish')}
+					strokeWidth={strokeWidth}
+					strokeLinejoin='round'
+					className='cursor-pointer'
+					onMouseEnter={() => onSectionHover('nourish')}
+					onMouseLeave={() => onSectionHover(null)}
+					onClick={() => onSectionClick('nourish')}
+					animate={{
+						scale: activeSection === 'nourish' ? 1.05 : 1,
+						zIndex: getZIndex('nourish'),
+						x: activeSection === 'nourish' ? -popOutOffset / 2 : 0,
+						y: activeSection === 'nourish' ? popOutOffset / 2 : 0,
+					}}
+					style={{
+						transformOrigin: '150px 375px',
+					}}
+					transition={springTransition}
+				/>
 
-					{/* Bottom middle section gradient */}
-					<linearGradient
-						id={gradientIds.move}
-						x1='0%'
-						y1='0%'
-						x2='100%'
-						y2='0%'
-					>
-						<stop
-							offset='0%'
-							stopColor={
-								activeSection === 'move' ? '#3b82f6' : 'white'
-							}
-							stopOpacity='1'
-						/>
-						<stop
-							offset='100%'
-							stopColor={
-								activeSection === 'move' ? '#2563eb' : 'white'
-							}
-							stopOpacity='1'
-						/>
-					</linearGradient>
+				{/* Move section */}
+				<motion.polygon
+					points='217,450 217,317 383,317 383,450'
+					fill={getSectionFill('move')}
+					stroke={getSectionStroke('move')}
+					strokeWidth={strokeWidth}
+					strokeLinejoin='round'
+					className='cursor-pointer'
+					onMouseEnter={() => onSectionHover('move')}
+					onMouseLeave={() => onSectionHover(null)}
+					onClick={() => onSectionClick('move')}
+					animate={{
+						scale: activeSection === 'move' ? 1.05 : 1,
+						zIndex: getZIndex('move'),
+						y: activeSection === 'move' ? popOutOffset / 2 : 0,
+					}}
+					style={{
+						transformOrigin: '300px 375px',
+					}}
+					transition={springTransition}
+				/>
 
-					{/* Bottom right section gradient */}
-					<linearGradient
-						id={gradientIds.sleep}
-						x1='0%'
-						y1='0%'
-						x2='100%'
-						y2='0%'
-					>
-						<stop
-							offset='0%'
-							stopColor={
-								activeSection === 'sleep' ? '#3b82f6' : 'white'
-							}
-							stopOpacity='1'
-						/>
-						<stop
-							offset='100%'
-							stopColor={
-								activeSection === 'sleep' ? '#2563eb' : 'white'
-							}
-							stopOpacity='1'
-						/>
-					</linearGradient>
-				</defs>
+				{/* Sleep section */}
+				<motion.polygon
+					points='383,450 383,317 467,317 550,450'
+					fill={getSectionFill('sleep')}
+					stroke={getSectionStroke('sleep')}
+					strokeWidth={strokeWidth}
+					strokeLinejoin='round'
+					className='cursor-pointer'
+					onMouseEnter={() => onSectionHover('sleep')}
+					onMouseLeave={() => onSectionHover(null)}
+					onClick={() => onSectionClick('sleep')}
+					animate={{
+						scale: activeSection === 'sleep' ? 1.05 : 1,
+						zIndex: getZIndex('sleep'),
+						x: activeSection === 'sleep' ? popOutOffset / 2 : 0,
+						y: activeSection === 'sleep' ? popOutOffset / 2 : 0,
+					}}
+					style={{
+						transformOrigin: '450px 375px',
+					}}
+					transition={springTransition}
+				/>
 
-				{/* Draw the pyramid in specific order to ensure active section is on top */}
-				{/* First draw non-active sections */}
-				{activeSection !== 'connect' && (
-					<motion.polygon
-						points='300,50 217,183 383,183'
-						fill={`url(#${gradientIds.connect})`}
-						stroke='#2563eb'
-						strokeWidth={strokeWidth}
-						strokeLinejoin='round'
-						className='cursor-pointer'
-						onMouseEnter={() => onSectionHover('connect')}
-						onMouseLeave={() => onSectionHover(null)}
-						onClick={() => onSectionClick('connect')}
-						initial={false}
-						layoutId='section-connect'
-						animate={{
-							stroke: '#2563eb',
-							scale: 1,
-						}}
-						transition={sharedTransition}
-						style={{
-							filter: 'none',
-							zIndex: 1,
-							transformOrigin: '300px 100px',
-							position: 'relative',
-						}}
-					/>
-				)}
-
-				{activeSection !== 'release' && (
-					<motion.polygon
-						points='133,317 217,183 300,183 300,317'
-						fill={`url(#${gradientIds.release})`}
-						stroke='#2563eb'
-						strokeWidth={strokeWidth}
-						strokeLinejoin='round'
-						className='cursor-pointer'
-						onMouseEnter={() => onSectionHover('release')}
-						onMouseLeave={() => onSectionHover(null)}
-						onClick={() => onSectionClick('release')}
-						initial={false}
-						layoutId='section-release'
-						animate={{
-							stroke: '#2563eb',
-							scale: 1,
-						}}
-						transition={sharedTransition}
-						style={{
-							filter: 'none',
-							zIndex: 1,
-							transformOrigin: '200px 250px',
-							position: 'relative',
-						}}
-					/>
-				)}
-
-				{activeSection !== 'elevate' && (
-					<motion.polygon
-						points='467,317 383,183 300,183 300,317'
-						fill={`url(#${gradientIds.elevate})`}
-						stroke='#2563eb'
-						strokeWidth={strokeWidth}
-						strokeLinejoin='round'
-						className='cursor-pointer'
-						onMouseEnter={() => onSectionHover('elevate')}
-						onMouseLeave={() => onSectionHover(null)}
-						onClick={() => onSectionClick('elevate')}
-						initial={false}
-						layoutId='section-elevate'
-						animate={{
-							stroke: '#2563eb',
-							scale: 1,
-						}}
-						transition={sharedTransition}
-						style={{
-							filter: 'none',
-							zIndex: 1,
-							transformOrigin: '400px 250px',
-							position: 'relative',
-						}}
-					/>
-				)}
-
-				{activeSection !== 'nourish' && (
-					<motion.polygon
-						points='50,450 133,317 217,317 217,450'
-						fill={`url(#${gradientIds.nourish})`}
-						stroke='#2563eb'
-						strokeWidth={strokeWidth}
-						strokeLinejoin='round'
-						className='cursor-pointer'
-						onMouseEnter={() => onSectionHover('nourish')}
-						onMouseLeave={() => onSectionHover(null)}
-						onClick={() => onSectionClick('nourish')}
-						initial={false}
-						layoutId='section-nourish'
-						animate={{
-							stroke: '#2563eb',
-							scale: 1,
-						}}
-						transition={sharedTransition}
-						style={{
-							filter: 'none',
-							zIndex: 1,
-							transformOrigin: '150px 375px',
-							position: 'relative',
-						}}
-					/>
-				)}
-
-				{activeSection !== 'move' && (
-					<motion.polygon
-						points='217,450 217,317 383,317 383,450'
-						fill={`url(#${gradientIds.move})`}
-						stroke='#2563eb'
-						strokeWidth={strokeWidth}
-						strokeLinejoin='round'
-						className='cursor-pointer'
-						onMouseEnter={() => onSectionHover('move')}
-						onMouseLeave={() => onSectionHover(null)}
-						onClick={() => onSectionClick('move')}
-						initial={false}
-						layoutId='section-move'
-						animate={{
-							stroke: '#2563eb',
-							scale: 1,
-						}}
-						transition={sharedTransition}
-						style={{
-							filter: 'none',
-							zIndex: 1,
-							transformOrigin: '300px 375px',
-							position: 'relative',
-						}}
-					/>
-				)}
-
-				{activeSection !== 'sleep' && (
-					<motion.polygon
-						points='383,450 383,317 467,317 550,450'
-						fill={`url(#${gradientIds.sleep})`}
-						stroke='#2563eb'
-						strokeWidth={strokeWidth}
-						strokeLinejoin='round'
-						className='cursor-pointer'
-						onMouseEnter={() => onSectionHover('sleep')}
-						onMouseLeave={() => onSectionHover(null)}
-						onClick={() => onSectionClick('sleep')}
-						initial={false}
-						layoutId='section-sleep'
-						animate={{
-							stroke: '#2563eb',
-							scale: 1,
-						}}
-						transition={sharedTransition}
-						style={{
-							filter: 'none',
-							zIndex: 1,
-							transformOrigin: '450px 375px',
-							position: 'relative',
-						}}
-					/>
-				)}
-
-				{/* Then draw the active section last so it's on top */}
-				{activeSection === 'connect' && (
-					<motion.polygon
-						points={`300,${50 - popOutOffset} ${
-							217 - popOutOffset
-						},183 ${383 + popOutOffset},183`}
-						fill='#2563eb'
-						stroke='white'
-						strokeWidth={strokeWidth + 2}
-						strokeLinejoin='round'
-						className='cursor-pointer'
-						onMouseEnter={() => onSectionHover('connect')}
-						onMouseLeave={() => onSectionHover(null)}
-						onClick={() => onSectionClick('connect')}
-						initial={false}
-						layoutId='section-connect'
-						animate={{
-							stroke: 'white',
-							scale: 1.05,
-						}}
-						transition={sharedTransition}
-						style={{
-							filter: activeShadow,
-							zIndex: 40,
-							transformOrigin: '300px 100px',
-							position: 'relative',
-						}}
-					/>
-				)}
-
-				{activeSection === 'release' && (
-					<motion.polygon
-						points={`${133 - popOutOffset},${
-							317 + popOutOffset / 2
-						} ${217 - popOutOffset / 2},${
-							183 - popOutOffset / 2
-						} ${300},${183 - popOutOffset / 2} ${300},${
-							317 + popOutOffset / 2
-						}`}
-						fill='#2563eb'
-						stroke='white'
-						strokeWidth={strokeWidth + 2}
-						strokeLinejoin='round'
-						className='cursor-pointer'
-						onMouseEnter={() => onSectionHover('release')}
-						onMouseLeave={() => onSectionHover(null)}
-						onClick={() => onSectionClick('release')}
-						initial={false}
-						layoutId='section-release'
-						animate={{
-							stroke: 'white',
-							scale: 1.05,
-						}}
-						transition={sharedTransition}
-						style={{
-							filter: activeShadow,
-							zIndex: 40,
-							transformOrigin: '200px 250px',
-							position: 'relative',
-						}}
-					/>
-				)}
-
-				{activeSection === 'elevate' && (
-					<motion.polygon
-						points={`${467 + popOutOffset},${
-							317 + popOutOffset / 2
-						} ${383 + popOutOffset / 2},${
-							183 - popOutOffset / 2
-						} ${300},${183 - popOutOffset / 2} ${300},${
-							317 + popOutOffset / 2
-						}`}
-						fill='#2563eb'
-						stroke='white'
-						strokeWidth={strokeWidth + 2}
-						strokeLinejoin='round'
-						className='cursor-pointer'
-						onMouseEnter={() => onSectionHover('elevate')}
-						onMouseLeave={() => onSectionHover(null)}
-						onClick={() => onSectionClick('elevate')}
-						initial={false}
-						layoutId='section-elevate'
-						animate={{
-							stroke: 'white',
-							scale: 1.05,
-						}}
-						transition={sharedTransition}
-						style={{
-							filter: activeShadow,
-							zIndex: 40,
-							transformOrigin: '400px 250px',
-							position: 'relative',
-						}}
-					/>
-				)}
-
-				{activeSection === 'nourish' && (
-					<motion.polygon
-						points={`${50 - popOutOffset},${450 + popOutOffset} ${
-							133 - popOutOffset / 2
-						},${317 - popOutOffset / 2} ${217},${
-							317 - popOutOffset / 2
-						} ${217},${450 + popOutOffset}`}
-						fill='#2563eb'
-						stroke='white'
-						strokeWidth={strokeWidth + 2}
-						strokeLinejoin='round'
-						className='cursor-pointer'
-						onMouseEnter={() => onSectionHover('nourish')}
-						onMouseLeave={() => onSectionHover(null)}
-						onClick={() => onSectionClick('nourish')}
-						initial={false}
-						layoutId='section-nourish'
-						animate={{
-							stroke: 'white',
-							scale: 1.05,
-						}}
-						transition={sharedTransition}
-						style={{
-							filter: activeShadow,
-							zIndex: 40,
-							transformOrigin: '150px 375px',
-							position: 'relative',
-						}}
-					/>
-				)}
-
-				{activeSection === 'move' && (
-					<motion.polygon
-						points={`${217},${450 + popOutOffset} ${217},${
-							317 - popOutOffset / 2
-						} ${383},${317 - popOutOffset / 2} ${383},${
-							450 + popOutOffset
-						}`}
-						fill='#2563eb'
-						stroke='white'
-						strokeWidth={strokeWidth + 2}
-						strokeLinejoin='round'
-						className='cursor-pointer'
-						onMouseEnter={() => onSectionHover('move')}
-						onMouseLeave={() => onSectionHover(null)}
-						onClick={() => onSectionClick('move')}
-						initial={false}
-						layoutId='section-move'
-						animate={{
-							stroke: 'white',
-							scale: 1.05,
-						}}
-						transition={sharedTransition}
-						style={{
-							filter: activeShadow,
-							zIndex: 40,
-							transformOrigin: '300px 375px',
-							position: 'relative',
-						}}
-					/>
-				)}
-
-				{activeSection === 'sleep' && (
-					<motion.polygon
-						points={`${383},${450 + popOutOffset} ${383},${
-							317 - popOutOffset / 2
-						} ${467 + popOutOffset / 2},${317 - popOutOffset / 2} ${
-							550 + popOutOffset
-						},${450 + popOutOffset}`}
-						fill='#2563eb'
-						stroke='white'
-						strokeWidth={strokeWidth + 2}
-						strokeLinejoin='round'
-						className='cursor-pointer'
-						onMouseEnter={() => onSectionHover('sleep')}
-						onMouseLeave={() => onSectionHover(null)}
-						onClick={() => onSectionClick('sleep')}
-						initial={false}
-						layoutId='section-sleep'
-						animate={{
-							stroke: 'white',
-							scale: 1.05,
-						}}
-						transition={sharedTransition}
-						style={{
-							filter: activeShadow,
-							zIndex: 40,
-							transformOrigin: '450px 375px',
-							position: 'relative',
-						}}
-					/>
-				)}
-
-				{/* Section Labels */}
-				<foreignObject
-					x='250'
-					y='125'
+				{/* Section Labels with animations */}
+				{/* Connect label */}
+				<motion.foreignObject
 					width='100'
 					height='60'
 					className='pointer-events-none'
+					animate={{
+						x:
+							activeSection === 'connect'
+								? labelPositions.connect.activeX
+								: labelPositions.connect.x,
+						y:
+							activeSection === 'connect'
+								? labelPositions.connect.activeY
+								: labelPositions.connect.y,
+						zIndex: activeSection === 'connect' ? 110 : 20,
+						scale: activeSection === 'connect' ? 1.05 : 1,
+					}}
+					transition={springTransition}
 				>
 					<div
 						className={`w-full h-full flex items-center justify-center text-2xl font-bold ${
 							activeSection === 'connect'
 								? 'text-white'
-								: 'text-blue-800'
+								: 'text-blue-600'
 						}`}
-						style={{ zIndex: activeSection === 'connect' ? 50 : 2 }}
 					>
 						Connect
 					</div>
-				</foreignObject>
+				</motion.foreignObject>
 
-				<foreignObject
-					x='185'
-					y='220'
+				{/* Release label */}
+				<motion.foreignObject
 					width='100'
 					height='60'
 					className='pointer-events-none'
+					animate={{
+						x:
+							activeSection === 'release'
+								? labelPositions.release.activeX
+								: labelPositions.release.x,
+						y:
+							activeSection === 'release'
+								? labelPositions.release.activeY
+								: labelPositions.release.y,
+						zIndex: activeSection === 'release' ? 110 : 20,
+						scale: activeSection === 'release' ? 1.05 : 1,
+					}}
+					transition={springTransition}
 				>
 					<div
 						className={`w-full h-full flex items-center justify-center text-2xl font-bold ${
 							activeSection === 'release'
 								? 'text-white'
-								: 'text-blue-800'
+								: 'text-blue-600'
 						}`}
-						style={{ zIndex: activeSection === 'release' ? 50 : 2 }}
 					>
 						Release
 					</div>
-				</foreignObject>
+				</motion.foreignObject>
 
-				<foreignObject
-					x='310'
-					y='220'
+				{/* Elevate label */}
+				<motion.foreignObject
 					width='100'
 					height='60'
 					className='pointer-events-none'
+					animate={{
+						x:
+							activeSection === 'elevate'
+								? labelPositions.elevate.activeX
+								: labelPositions.elevate.x,
+						y:
+							activeSection === 'elevate'
+								? labelPositions.elevate.activeY
+								: labelPositions.elevate.y,
+						zIndex: activeSection === 'elevate' ? 110 : 10,
+						scale: activeSection === 'elevate' ? 1.05 : 1,
+					}}
+					transition={springTransition}
 				>
 					<div
 						className={`w-full h-full flex items-center justify-center text-2xl font-bold ${
 							activeSection === 'elevate'
 								? 'text-white'
-								: 'text-blue-800'
+								: 'text-blue-600'
 						}`}
-						style={{ zIndex: activeSection === 'elevate' ? 50 : 2 }}
 					>
 						Elevate
 					</div>
-				</foreignObject>
+				</motion.foreignObject>
 
-				<foreignObject
-					x='110'
-					y='350'
+				{/* Nourish label */}
+				<motion.foreignObject
 					width='100'
 					height='60'
 					className='pointer-events-none'
+					animate={{
+						x:
+							activeSection === 'nourish'
+								? labelPositions.nourish.activeX
+								: labelPositions.nourish.x,
+						y:
+							activeSection === 'nourish'
+								? labelPositions.nourish.activeY
+								: labelPositions.nourish.y,
+						zIndex: activeSection === 'nourish' ? 110 : 10,
+						scale: activeSection === 'nourish' ? 1.05 : 1,
+					}}
+					transition={springTransition}
 				>
 					<div
 						className={`w-full h-full flex items-center justify-center text-2xl font-bold ${
 							activeSection === 'nourish'
 								? 'text-white'
-								: 'text-blue-800'
+								: 'text-blue-600'
 						}`}
-						style={{ zIndex: activeSection === 'nourish' ? 50 : 2 }}
 					>
 						Nourish
 					</div>
-				</foreignObject>
+				</motion.foreignObject>
 
-				<foreignObject
-					x='250'
-					y='350'
+				{/* Move label */}
+				<motion.foreignObject
 					width='100'
 					height='60'
 					className='pointer-events-none'
+					animate={{
+						x:
+							activeSection === 'move'
+								? labelPositions.move.activeX
+								: labelPositions.move.x,
+						y:
+							activeSection === 'move'
+								? labelPositions.move.activeY
+								: labelPositions.move.y,
+						zIndex: activeSection === 'move' ? 110 : 10,
+						scale: activeSection === 'move' ? 1.05 : 1,
+					}}
+					transition={springTransition}
 				>
 					<div
 						className={`w-full h-full flex items-center justify-center text-2xl font-bold ${
 							activeSection === 'move'
-								? 'text-white'
-								: 'text-blue-800'
+								? 'text-white z-100'
+								: 'text-blue-600 z-10'
 						}`}
-						style={{ zIndex: activeSection === 'move' ? 50 : 2 }}
 					>
 						Move
 					</div>
-				</foreignObject>
+				</motion.foreignObject>
 
-				<foreignObject
-					x='380'
-					y='350'
+				{/* Sleep label */}
+				<motion.foreignObject
 					width='100'
 					height='60'
 					className='pointer-events-none'
+					animate={{
+						x:
+							activeSection === 'sleep'
+								? labelPositions.sleep.activeX
+								: labelPositions.sleep.x,
+						y:
+							activeSection === 'sleep'
+								? labelPositions.sleep.activeY
+								: labelPositions.sleep.y,
+						zIndex: activeSection === 'sleep' ? 110 : 20,
+						scale: activeSection === 'sleep' ? 1.05 : 1,
+					}}
+					transition={springTransition}
 				>
 					<div
 						className={`w-full h-full flex items-center justify-center text-2xl font-bold ${
 							activeSection === 'sleep'
 								? 'text-white'
-								: 'text-blue-800'
+								: 'text-blue-600'
 						}`}
-						style={{ zIndex: activeSection === 'sleep' ? 50 : 2 }}
 					>
 						Sleep
 					</div>
-				</foreignObject>
+				</motion.foreignObject>
 			</svg>
 
 			<AnimatePresence>
