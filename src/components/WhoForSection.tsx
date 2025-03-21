@@ -102,18 +102,26 @@ export function WhoForSection() {
 				</div>
 
 				<motion.div
-					className='mt-20 text-center'
+					className='mt-20 text-center max-w-3xl mx-auto'
 					initial={{ opacity: 0, y: 30 }}
 					whileInView={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.5, delay: 0.6 }}
 				>
-					<p className='text-xl text-blue-800 font-medium'>
+					<p className='text-2xl text-blue-700 font-medium leading-relaxed'>
 						No matter where you are in your health journey, THRIVE
 						provides the tools, support, and community you need to
 						succeed.
 					</p>
-					<Button asChild className='inline-block mt-4 bg-blue-600 text-white rounded-full font-medium hover:bg-blue-700 transition-colors shadow-md'>
-						<Link href='#programs' className='px-8 pb-8 pt-3'>Find Your Path</Link>
+					<Button
+						asChild
+						className='inline-block mt-4 bg-blue-600 text-white rounded-full font-medium hover:bg-blue-700 transition-colors shadow-md'
+					>
+						<Link
+							href='#programs'
+							className='px-12 pb-10 pt-3 text-xl'
+						>
+							Find Your Path
+						</Link>
 					</Button>
 				</motion.div>
 			</div>
