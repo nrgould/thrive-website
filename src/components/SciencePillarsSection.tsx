@@ -104,7 +104,8 @@ export function SciencePillarsSection() {
 				<motion.h2
 					className='text-3xl md:text-4xl font-bold text-center mb-16 text-blue-950'
 					initial={{ opacity: 0, y: 20 }}
-					animate={{ opacity: 1, y: 0 }}
+					whileInView={{ opacity: 1, y: 0 }}
+					viewport={{ once: true }}
 					transition={{ duration: 0.5 }}
 				>
 					The Six Pillars of Lifestyle Medicine
@@ -117,7 +118,8 @@ export function SciencePillarsSection() {
 							id={pillar.id}
 							className='bg-white rounded-3xl shadow-sm p-8 border border-blue-100 scroll-mt-24'
 							initial={{ opacity: 0, y: 30 }}
-							animate={{ opacity: 1, y: 0 }}
+							whileInView={{ opacity: 1, y: 0 }}
+							viewport={{ once: true }}
 							transition={{ duration: 0.5, delay: index * 0.1 }}
 						>
 							<div className='flex flex-col md:flex-row gap-8'>
