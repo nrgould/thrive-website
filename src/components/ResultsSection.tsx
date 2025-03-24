@@ -4,9 +4,12 @@ import { TestimonialsSection } from './results/TestimonialsSection';
 
 export function ResultsSection() {
 	return (
-		<section id='results' className='container mx-auto px-4 py-20'>
-			<h2 className='text-4xl font-bold text-center mb-16 text-blue-600'>
-				Our Results Speak Volumes
+		<section
+			id='results'
+			className='container mx-auto py-20 max-w-6xl'
+		>
+			<h2 className='text-4xl font-bold text-center mb-16 text-blue-500'>
+				How THRIVE impacts your health
 			</h2>
 
 			<StatsSection />

@@ -56,7 +56,7 @@ export function StatsSection() {
 			opacity: 1,
 			y: 0,
 			transition: {
-				delay: 0.1 * i,
+				delay: 0.5 * i,
 				duration: 0.5,
 			},
 		}),
@@ -82,8 +82,8 @@ export function StatsSection() {
 						</span>
 					</div>
 				</div>
-				<p className='text-zinc-600 text-xl max-w-[350px] font-semibold'>
-					Average reduction in LDL cholesterol among participants
+				<p className='text-zinc-600 text-lg max-w-[350px] font-medium'>
+					Average reduction in LDL cholesterol
 				</p>
 			</motion.div>
 
@@ -105,7 +105,7 @@ export function StatsSection() {
 						</span>
 					</div>
 				</div>
-				<p className='text-zinc-600 text-xl max-w-[350px] font-semibold'>
+				<p className='text-zinc-600 text-lg max-w-[350px] font-medium'>
 					of participants improved A1C levels
 				</p>
 			</motion.div>
@@ -128,7 +128,7 @@ export function StatsSection() {
 						</span>
 					</div>
 				</div>
-				<p className='text-zinc-600 text-xl max-w-[350px] font-semibold'>
+				<p className='text-zinc-600 text-lg max-w-[350px] font-medium'>
 					lost weight and improved BMI
 				</p>
 			</motion.div>

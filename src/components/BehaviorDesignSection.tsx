@@ -1,5 +1,6 @@
 import * as motion from 'motion/react-client';
 import { CheckCircle } from 'lucide-react';
+// import { InteractiveBehaviorContent } from './clients/InteractiveBehaviorContent';
 
 export function BehaviorDesignSection() {
 	return (
@@ -141,6 +142,8 @@ export function BehaviorDesignSection() {
 						</div>
 					</motion.div>
 				</div>
+
+				{/* <InteractiveBehaviorContent /> */}
 
 				<motion.div
 					className='w-full mx-auto text-center mt-16 bg-blue-600 rounded-3xl p-12'
