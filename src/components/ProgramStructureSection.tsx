@@ -88,7 +88,7 @@ const sharedTransition = {
 };
 
 // Pop-out offset for active sections
-const popOutOffset = 15;
+const popOutOffset = 20;
 
 // Popup component for the pyramid sections
 function SectionPopup({
@@ -206,12 +206,12 @@ function InteractivePyramid({
 
 	// Define label positions with offsets for animation
 	const labelPositions = {
-		connect: { x: 250, y: 125, activeX: 250, activeY: 115 },
-		release: { x: 185, y: 220, activeX: 175, activeY: 220 },
-		elevate: { x: 310, y: 220, activeX: 320, activeY: 220 },
-		nourish: { x: 110, y: 350, activeX: 100, activeY: 355 },
-		move: { x: 250, y: 350, activeX: 250, activeY: 355 },
-		sleep: { x: 380, y: 350, activeX: 390, activeY: 355 },
+		connect: { x: 250, y: 125, activeX: 250, activeY: 105 },
+		release: { x: 185, y: 220, activeX: 175, activeY: 210 },
+		elevate: { x: 310, y: 220, activeX: 320, activeY: 210 },
+		nourish: { x: 110, y: 350, activeX: 90, activeY: 365 },
+		move: { x: 250, y: 350, activeX: 250, activeY: 365 },
+		sleep: { x: 380, y: 350, activeX: 400, activeY: 365 },
 	};
 
 	const svgRef = useRef<SVGSVGElement>(null);
@@ -319,8 +319,8 @@ function InteractivePyramid({
 					animate={{
 						scale: activeSection === 'release' ? 1.05 : 1,
 						zIndex: getZIndex('release'),
-						x: activeSection === 'release' ? -popOutOffset / 2 : 0,
-						y: activeSection === 'release' ? 0 : 0,
+						x: activeSection === 'release' ? -popOutOffset : 0,
+						y: activeSection === 'release' ? -popOutOffset : 0,
 					}}
 					style={{
 						transformOrigin: '200px 250px',
@@ -342,8 +342,8 @@ function InteractivePyramid({
 					animate={{
 						scale: activeSection === 'elevate' ? 1.05 : 1,
 						zIndex: getZIndex('elevate'),
-						x: activeSection === 'elevate' ? popOutOffset / 2 : 0,
-						y: activeSection === 'elevate' ? 0 : 0,
+						x: activeSection === 'elevate' ? popOutOffset : 0,
+						y: activeSection === 'elevate' ? -popOutOffset : 0,
 					}}
 					style={{
 						transformOrigin: '400px 250px',
@@ -365,8 +365,8 @@ function InteractivePyramid({
 					animate={{
 						scale: activeSection === 'nourish' ? 1.05 : 1,
 						zIndex: getZIndex('nourish'),
-						x: activeSection === 'nourish' ? -popOutOffset / 2 : 0,
-						y: activeSection === 'nourish' ? popOutOffset / 2 : 0,
+						x: activeSection === 'nourish' ? -popOutOffset : 0,
+						y: activeSection === 'nourish' ? popOutOffset : 0,
 					}}
 					style={{
 						transformOrigin: '150px 375px',
@@ -388,7 +388,7 @@ function InteractivePyramid({
 					animate={{
 						scale: activeSection === 'move' ? 1.05 : 1,
 						zIndex: getZIndex('move'),
-						y: activeSection === 'move' ? popOutOffset / 2 : 0,
+						y: activeSection === 'move' ? popOutOffset : 0,
 					}}
 					style={{
 						transformOrigin: '300px 375px',
@@ -410,8 +410,8 @@ function InteractivePyramid({
 					animate={{
 						scale: activeSection === 'sleep' ? 1.05 : 1,
 						zIndex: getZIndex('sleep'),
-						x: activeSection === 'sleep' ? popOutOffset / 2 : 0,
-						y: activeSection === 'sleep' ? popOutOffset / 2 : 0,
+						x: activeSection === 'sleep' ? 20 : 0,
+						y: activeSection === 'sleep' ? 20 : 0,
 					}}
 					style={{
 						transformOrigin: '450px 375px',
