@@ -6,6 +6,9 @@ import { FAQSection } from '../components/FAQSection';
 import { ThreeColumnsSection } from '../components/ThreeColumnsSection';
 import { WhoForSection } from '../components/WhoForSection';
 import { BehaviorDesignSection } from '../components/BehaviorDesignSection';
+import { CTASection } from '../components/CTASection';
+import WhichProgram from '../components/molecules/WhichProgram';
+
 export default function Home() {
 	return (
 		<main className='min-h-screen flex flex-col items-center'>
@@ -30,8 +33,14 @@ export default function Home() {
 			{/* Supportive Experience */}
 			<SupportiveExperienceSection />
 
+			{/* Which Program? */}
+			<WhichProgram />
+
 			{/* FAQ & Final CTA */}
 			<FAQSection />
+
+			{/* CTASection */}
+			<CTASection />
 		</main>
 	);
 }

@@ -2,7 +2,7 @@ import { ApproachHeroSection } from '../../components/ApproachHeroSection';
 import { ApproachMethodologySection } from '../../components/ApproachMethodologySection';
 import { ApproachBehaviorDesignSection } from '../../components/ApproachBehaviorDesignSection';
 import { ApproachWhyItWorksSection } from '../../components/ApproachWhyItWorksSection';
-import { ApproachCTASection } from '../../components/ApproachCTASection';
+import { CTASection } from '../../components/CTASection';
 
 export default function AboutPage() {
 	return (
@@ -11,7 +11,7 @@ export default function AboutPage() {
 			<ApproachMethodologySection />
 			<ApproachBehaviorDesignSection />
 			<ApproachWhyItWorksSection />
-			<ApproachCTASection />
+			<CTASection />
 		</main>
 	);
 }
