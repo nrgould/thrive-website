@@ -675,7 +675,7 @@ export function ProgramStructureSection() {
 							onSectionHover={setActiveSection}
 							onSectionClick={handleSectionClick}
 						/>
-						<h3 className='text-2xl text-center font-bold text-blue-950 -mt-8 mb-12'>
+						<h3 className='text-2xl text-center text-blue-950/80 -mt-8 mb-12'>
 							The Lifestyle Medicine Pyramid
 						</h3>
 					</motion.div>
