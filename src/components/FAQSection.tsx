@@ -27,7 +27,7 @@ export function FAQSection() {
 	];
 
 	return (
-		<section className='w-full py-24 px-4 md:px-8 bg-white'>
+		<section className='w-full pb-24 px-4 md:px-8 bg-white'>
 			<motion.h3
 				className='text-2xl md:text-3xl font-bold text-center mb-10 text-blue-950'
 				initial={{ opacity: 0 }}

@@ -22,26 +22,31 @@ export function HeroSection() {
 						THRIVE
 					</motion.span>
 					<motion.h1
-						className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-blue-950 leading-tight'
+						className='text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-bold text-blue-950 leading-tight'
 						initial={{ opacity: 0, y: 20 }}
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.5 }}
 					>
-						Lifestyle is the{' '}
-						<span className='text-blue-500'>Cause</span>.<br />
-						Lifestyle is also the{' '}
-						<span className='text-blue-500'>Cure</span>.
+						<span className='whitespace-nowrap'>
+							Lifestyle is the{' '}
+							<span className='text-blue-500'>Cause</span>.
+						</span>
+						<br />
+						<span className='whitespace-nowrap'>
+							Lifestyle is also the{' '}
+							<span className='text-blue-500'>Cure</span>.
+						</span>
 					</motion.h1>
 
 					<motion.p
-						className='text-base sm:text-lg md:text-xl lg:text-2xl text-slate-600 max-w-2xl mx-auto lg:mx-0'
+						className='text-base sm:text-lg md:text-xl lg:text-xl text-slate-600 max-w-2xl mx-auto lg:mx-0'
 						initial={{ opacity: 0, y: 20 }}
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.5, delay: 0.4 }}
 					>
-						Many health programs focus on quick fixes and fads, but
-						real change happens when small, consistent steps build a
-						solid foundation of well-being.
+						A program built on science-backed strategies so you can
+						improve your daily routine, make more sustainable
+						lifestyle changes.
 					</motion.p>
 
 					<motion.div
@@ -78,7 +83,6 @@ export function HeroSection() {
 							initial={{ opacity: 0, y: 20 }}
 							animate={{ opacity: 1, y: 0 }}
 							transition={{ duration: 0.5, delay: 0.8 }}
-							whileHover={{ scale: 1.05 }}
 							whileTap={{ scale: 0.95 }}
 						>
 							Register for next cohort{' '}

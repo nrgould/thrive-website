@@ -12,11 +12,7 @@ export function ThreeColumnsSection() {
 		<SectionContainer background='white'>
 			<SectionTitle
 				title='A Better Way to THRIVE'
-				description='THRIVE is a program built on science-backed strategies that
-				support physical, mental, and emotional well-being, so you
-				can improve your daily routine, make more sustainable
-				lifestyle changes, reduce stress, and connect more deeply
-				with your health goals and loved ones.'
+				description='Elevate your health with a comprehensive approach covering three key areas'
 			/>
 
 			<div className='flex flex-col md:flex-row items-stretch justify-center gap-4 md:gap-0'>

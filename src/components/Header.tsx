@@ -35,10 +35,10 @@ export function Header() {
 				<Link href='/' className='flex items-center gap-2'>
 					<span className='text-2xl font-bold'>
 						<span className='text-blue-600'>THRIVE</span>
-						<span className='text-blue-500 mx-1'>
+						{/* <span className='text-blue-500 mx-1'>
 							<span className='text-blue-900'>L</span>ifestyle
 							<span className='text-blue-900 ml-1'>M</span>edicine
-						</span>
+						</span> */}
 					</span>
 				</Link>
 
