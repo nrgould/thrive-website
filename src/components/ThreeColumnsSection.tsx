@@ -23,11 +23,11 @@ export function ThreeColumnsSection() {
 					animationDelay={animationDelay}
 					targetSectionId='education-section'
 				>
-					<p className='text-slate-700 mb-3 leading-relaxed'>
+					{/* <p className='text-slate-700 mb-3 leading-relaxed'>
 						Video tutorials, downloadable resources, & interactive
 						learning modules focused on Lifestyle Medicine &
 						Behavior Design
-					</p>
+					</p> */}
 				</IconCard>
 
 				{/* Arrow 1 */}
@@ -40,10 +40,10 @@ export function ThreeColumnsSection() {
 					animationDelay={animationDelay + 0.2}
 					targetSectionId='integration-section'
 				>
-					<p className='text-slate-700 mb-3 leading-relaxed'>
+					{/* <p className='text-slate-700 mb-3 leading-relaxed'>
 						Participants use Behavior Design to create personalized
 						habit plans aligned with their health goals.
-					</p>
+					</p> */}
 				</IconCard>
 
 				{/* Arrow 2 */}
@@ -56,7 +56,7 @@ export function ThreeColumnsSection() {
 					animationDelay={animationDelay + 0.4}
 					targetSectionId='connection-section'
 				>
-					<div className='flex-1 flex flex-col justify-between'>
+					{/* <div className='flex-1 flex flex-col justify-between'>
 						<div>
 							<p className='text-slate-700 mb-3'>
 								1:1 coaching sessions
@@ -68,7 +68,7 @@ export function ThreeColumnsSection() {
 								Larger, full cohort sessions
 							</p>
 						</div>
-					</div>
+					</div> */}
 				</IconCard>
 			</div>
 

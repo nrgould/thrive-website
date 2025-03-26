@@ -26,7 +26,7 @@ export function BehaviorDesignSection() {
 					viewport={{ once: true }}
 					transition={{ duration: 0.5 }}
 				>
-					Simplify Habit Change
+					Building Habits that Last
 				</motion.h2>
 
 				<div className='grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-20'>
@@ -112,9 +112,9 @@ export function BehaviorDesignSection() {
 						<div className='absolute bottom-0 left-0 w-24 h-24 bg-blue-100 rounded-full -ml-12 -mb-12 z-0' />
 
 						<div className='relative z-10'>
-							<h3 className='text-3xl font-bold text-blue-950 mb-10'>
+							{/* <h3 className='text-3xl font-bold text-blue-950 mb-10'>
 								Building habits that last
-							</h3>
+							</h3> */}
 
 							<div className='grid grid-cols-1 gap-10'>
 								<div className='space-y-6'>
@@ -130,7 +130,17 @@ export function BehaviorDesignSection() {
 
 								<div className='space-y-6'>
 									<h4 className='text-2xl font-bold text-blue-600'>
-										Develop
+										Practice
+									</h4>
+									<p className='text-slate-700 text-xl'>
+										Master the Skills of Change and create
+										habit &ldquo;recipes&rdquo; for
+										behaviors you want
+									</p>
+								</div>
+								<div className='space-y-6'>
+									<h4 className='text-2xl font-bold text-blue-600'>
+										Share
 									</h4>
 									<p className='text-slate-700 text-xl'>
 										Master the Skills of Change and create

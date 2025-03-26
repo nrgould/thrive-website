@@ -1,3 +1,4 @@
+import { CTASection } from '@/components/CTASection';
 import { ScienceHeroSection } from '@/components/ScienceHeroSection';
 import { SciencePillarsSection } from '@/components/SciencePillarsSection';
 import type { Metadata } from 'next';
@@ -13,6 +14,7 @@ export default function SciencePage() {
 		<main className='min-h-screen flex flex-col items-center'>
 			<ScienceHeroSection />
 			<SciencePillarsSection />
+			<CTASection />
 		</main>
 	);
 }

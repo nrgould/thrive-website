@@ -70,7 +70,7 @@ export function WhoForSection() {
 					</motion.div>
 
 					{/* Content Column */}
-					<div className='w-full lg:w-1/2 space-y-12 mt-12'>
+					<div className='w-full lg:w-1/2 space-y-12 mt-4'>
 						{audiences.map((audience, index) => (
 							<motion.div
 								key={index}
@@ -88,8 +88,8 @@ export function WhoForSection() {
 									{audience.icon}
 								</div>
 
-								<div>
-									<h3 className='text-xl font-bold text-blue-900 mb-2'>
+								<div className='max-w-[450px] leading-relaxed'>
+									<h3 className='text-2xl font-bold text-blue-900 mb-2'>
 										{audience.title}
 									</h3>
 									<p className='text-slate-600'>

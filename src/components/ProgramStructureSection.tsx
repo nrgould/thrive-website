@@ -639,6 +639,46 @@ export function ProgramStructureSection() {
 		}),
 	};
 
+	// Program offering content for each pillar
+	const pillarContent = {
+		nourish: {
+			title: 'Nourish',
+			content:
+				'Evidence-based nutrition guidance, meal planning tools, and habit formation strategies to build a healthier relationship with food.',
+			icon: <Apple className='text-blue-500 w-10 h-10' />,
+		},
+		move: {
+			title: 'Move',
+			content:
+				'Personalized workout plans, mobility exercises, and strength training routines designed for sustainable physical wellbeing.',
+			icon: <Activity className='text-blue-500 w-10 h-10' />,
+		},
+		sleep: {
+			title: 'Sleep',
+			content:
+				'Sleep optimization techniques, evening routine frameworks, and tools to improve both sleep quality and energy levels.',
+			icon: <Moon className='text-blue-500 w-10 h-10' />,
+		},
+		release: {
+			title: 'Release',
+			content:
+				'Stress management practices, mindfulness techniques, and methods to identify and release limiting patterns.',
+			icon: <Sparkles className='text-blue-500 w-10 h-10' />,
+		},
+		elevate: {
+			title: 'Elevate',
+			content:
+				'Purpose discovery frameworks, goal-setting methodologies, and practices to cultivate a growth mindset.',
+			icon: <Brain className='text-blue-500 w-10 h-10' />,
+		},
+		connect: {
+			title: 'Connect',
+			content:
+				'Relationship building strategies, community development tools, and social connection frameworks.',
+			icon: <Users className='text-blue-500 w-10 h-10' />,
+		},
+	};
+
 	return (
 		<section
 			ref={sectionRef}
@@ -656,7 +696,7 @@ export function ProgramStructureSection() {
 				</motion.p>
 
 				<motion.h2
-					className='text-3xl md:text-4xl font-bold text-center mb-4 text-blue-950'
+					className='text-3xl md:text-5xl font-bold text-center mb-4 text-blue-950'
 					initial={{ opacity: 0, y: 20 }}
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.5 }}
@@ -681,7 +721,8 @@ export function ProgramStructureSection() {
 					</motion.div>
 				</div>
 
-				<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16 mt-8 relative'>
+				{/* Mobile Cards - Only visible on mobile */}
+				<div className='grid grid-cols-1 gap-6 mb-16 mt-8 relative md:hidden'>
 					{lifestyleSections.map((item, index) => (
 						<motion.div
 							key={index}
@@ -730,6 +771,60 @@ export function ProgramStructureSection() {
 							</div>
 						</motion.div>
 					))}
+				</div>
+
+				{/* Desktop Content - Only visible on desktop */}
+				<div className='hidden md:block mt-8 mb-16'>
+					<motion.h3
+						className='text-2xl font-bold text-center mb-8 text-blue-950 leading-relaxed max-w-2xl mx-auto'
+						initial={{ opacity: 0 }}
+						animate={{ opacity: 1 }}
+						transition={{ duration: 0.5 }}
+					>
+						THRIVE provides educational content for each core area
+						of the lifestyle medicine pyramid.
+					</motion.h3>
+
+					<div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
+						{Object.entries(pillarContent).map(
+							([key, value], index) => (
+								<motion.div
+									key={key}
+									className='bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow relative overflow-hidden'
+									custom={index}
+									initial='hidden'
+									animate='visible'
+									variants={fadeInUp}
+									onMouseEnter={() =>
+										setActiveSection(key as SectionId)
+									}
+									onMouseLeave={() => setActiveSection(null)}
+								>
+									<div className='flex items-center gap-3 mb-3'>
+										<div className='rounded-xl'>
+											{value.icon}
+										</div>
+										<h4 className='text-xl font-bold text-blue-600'>
+											{value.title}
+										</h4>
+									</div>
+									<p className='text-slate-700'>
+										{value.content}
+									</p>
+
+									<Link
+										href={`/about/science#${key}`}
+										className='inline-flex items-center text-blue-500 gap-1 mt-4 text-sm font-medium hover:underline'
+									>
+										Learn More <ArrowRight size={16} />
+									</Link>
+
+									{/* Decorative element */}
+									<div className='absolute top-0 right-0 w-16 h-16 bg-blue-50 rounded-bl-3xl -mr-8 -mt-8 opacity-50'></div>
+								</motion.div>
+							)
+						)}
+					</div>
 				</div>
 
 				<motion.div

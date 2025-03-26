@@ -30,7 +30,7 @@ export function TestimonialsSection() {
 				{testimonials.map((testimonial, index) => (
 					<motion.div
 						key={index}
-						className='bg-blue-600 rounded-2xl shadow-md p-6 relative text-white'
+						className='bg-blue-500 rounded-2xl shadow-md p-6 relative text-white'
 						initial={{ opacity: 0, y: 30 }}
 						whileInView={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.4, delay: index * 0.2 }}
