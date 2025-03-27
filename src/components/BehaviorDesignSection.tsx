@@ -156,16 +156,16 @@ export function BehaviorDesignSection() {
 				{/* <InteractiveBehaviorContent /> */}
 
 				<motion.div
-					className='w-full mx-auto text-center mt-16 bg-blue-600 rounded-3xl p-12'
+					className='w-full mx-auto text-center mt-16 p-12 border-t border-b border-slate-200'
 					initial={{ opacity: 0, y: 20 }}
 					whileInView={{ opacity: 1, y: 0 }}
 					viewport={{ once: true }}
 					transition={{ duration: 0.5, delay: 0.4 }}
 				>
-					<blockquote className='italic text-white text-3xl md:text-4xl font-medium'>
+					<blockquote className='italic text-slate-700 text-3xl md:text-4xl font-medium'>
 						&ldquo;We are what we repeatedly do; excellence, then,
 						is not an act but a habit&rdquo;
-						<footer className='text-blue-100 text-xl mt-4'>
+						<footer className='text-slate-500 text-xl mt-4'>
 							- Aristotle
 						</footer>
 					</blockquote>
