@@ -97,14 +97,16 @@ function SectionPopup({
 	y,
 	arrowDirection,
 	visible,
+	showPopups,
 }: {
 	section: SectionId;
 	x: number;
 	y: number;
 	arrowDirection: string;
 	visible: boolean;
+	showPopups: boolean;
 }) {
-	if (!section || !visible) return null;
+	if (!section || !visible || !showPopups) return null;
 
 	const sectionData = lifestyleSections.find((s) => s.id === section);
 	if (!sectionData) return null;
@@ -193,7 +195,8 @@ function InteractivePyramid({
 	activeSection,
 	onSectionHover,
 	onSectionClick,
-}: InteractivePyramidProps) {
+	showPopups = true,
+}: InteractivePyramidProps & { showPopups?: boolean }) {
 	// Define fixed positions for popups based on pyramid section - positioned OUTSIDE the pyramid
 	const popupPositions = {
 		nourish: { x: -50, y: 330, arrowDirection: 'left' },
@@ -609,6 +612,7 @@ function InteractivePyramid({
 						y={popupPosition.y}
 						arrowDirection={popupPosition.arrowDirection}
 						visible={!!activeSection}
+						showPopups={showPopups}
 					/>
 				)}
 			</AnimatePresence>
@@ -618,6 +622,9 @@ function InteractivePyramid({
 
 export function ProgramStructureSection() {
 	const [activeSection, setActiveSection] = useState<SectionId>(null);
+	const [popupSource, setPopupSource] = useState<'pyramid' | 'card' | null>(
+		null
+	);
 	const sectionRef = useRef<HTMLDivElement>(null);
 
 	const handleSectionClick = (section: SectionId) => {
@@ -625,6 +632,16 @@ export function ProgramStructureSection() {
 		if (section) {
 			window.location.href = `/about/science#${section}`;
 		}
+	};
+
+	const handlePyramidHover = (section: SectionId) => {
+		setActiveSection(section);
+		setPopupSource('pyramid');
+	};
+
+	const handleCardHover = (section: SectionId) => {
+		setActiveSection(section);
+		setPopupSource('card');
 	};
 
 	const fadeInUp = {
@@ -712,8 +729,9 @@ export function ProgramStructureSection() {
 					>
 						<InteractivePyramid
 							activeSection={activeSection}
-							onSectionHover={setActiveSection}
+							onSectionHover={handlePyramidHover}
 							onSectionClick={handleSectionClick}
+							showPopups={popupSource === 'pyramid'}
 						/>
 						<h3 className='text-2xl text-center text-blue-950/80 -mt-8 mb-12'>
 							The Lifestyle Medicine Pyramid
@@ -735,7 +753,7 @@ export function ProgramStructureSection() {
 							initial='hidden'
 							animate='visible'
 							variants={fadeInUp}
-							onMouseEnter={() => setActiveSection(item.id)}
+							onMouseEnter={() => handleCardHover(item.id)}
 							onMouseLeave={() => setActiveSection(null)}
 							onClick={() => handleSectionClick(item.id)}
 							layoutId={`card-${item.id}`}
@@ -795,8 +813,15 @@ export function ProgramStructureSection() {
 									initial='hidden'
 									animate='visible'
 									variants={fadeInUp}
+									whileHover={{
+										scale: 1.05,
+										transition: {
+											...sharedTransition,
+											scale: { duration: 0.2 },
+										},
+									}}
 									onMouseEnter={() =>
-										setActiveSection(key as SectionId)
+										handleCardHover(key as SectionId)
 									}
 									onMouseLeave={() => setActiveSection(null)}
 								>
