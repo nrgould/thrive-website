@@ -14,8 +14,8 @@ export function ThreeColumnsSection() {
 	return (
 		<SectionContainer background='white'>
 			<SectionTitle
-				title='A Better Way to THRIVE'
-				description='A three-step approach to sustainable health'
+				title='A Better Way to Thrive'
+				description='Our three-step approach to a lifetime of health'
 			/>
 
 			<div className='flex flex-col md:flex-row items-center justify-center gap-4 md:gap-0'>

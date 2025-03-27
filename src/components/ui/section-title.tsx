@@ -23,7 +23,7 @@ export function SectionTitle({
 		<div className={cn(centered && 'text-center', className)}>
 			<motion.h2
 				className={cn(
-					'text-3xl md:text-4xl font-bold mb-6 text-blue-950',
+					'text-3xl md:text-4xl font-bold mb-4 text-blue-950',
 					centered && 'text-center',
 					titleClassName
 				)}
@@ -39,7 +39,7 @@ export function SectionTitle({
 					className={cn(
 						'text-xl text-slate-700 max-w-2xl leading-relaxed',
 						centered && 'text-center mx-auto',
-						'mb-12',
+						'mb-8',
 						descriptionClassName
 					)}
 					initial={{ opacity: 0, y: 20 }}

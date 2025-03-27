@@ -13,26 +13,26 @@ import Link from 'next/link';
 
 export function HeroSection() {
 	return (
-		<section className='w-full min-h-[60vh] relative flex flex-col items-center justify-center px-4 md:px-8 py-16 md:py-24 overflow-hidden bg-gradient-to-b from-blue-50 to-white'>
+		<section className='w-full min-h-[60vh] relative flex flex-col items-center justify-center px-4 md:px-8 py-16 md:py-20 overflow-hidden bg-gradient-to-b from-blue-50 to-white'>
 			{/* Content */}
 			<div className='relative z-10 max-w-4xl mx-auto w-full text-center'>
 				{/* Decorative Elements */}
 				<div className='absolute inset-0 pointer-events-none'>
 					{/* Top Left Circle */}
-					<motion.div
+					{/* <motion.div
 						className='absolute top-0 left-0 w-32 h-32 rounded-full bg-blue-100/70'
 						initial={{ scale: 0, opacity: 0 }}
 						animate={{ scale: 1, opacity: 1 }}
 						transition={{ duration: 0.8, delay: 0.3 }}
-					/>
+					/> */}
 
 					{/* Bottom Right Circle */}
-					<motion.div
+					{/* <motion.div
 						className='absolute bottom-0 right-0 w-40 h-40 rounded-full bg-blue-100/70'
 						initial={{ scale: 0, opacity: 0 }}
 						animate={{ scale: 1, opacity: 1 }}
 						transition={{ duration: 0.8, delay: 0.5 }}
-					/>
+					/> */}
 
 					{/* Floating Icons from Program Pillars */}
 					<motion.div
