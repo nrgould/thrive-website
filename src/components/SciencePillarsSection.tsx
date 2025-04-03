@@ -24,7 +24,7 @@ export function SciencePillarsSection() {
 			evidence: [
 				'Plant-based diets are associated with a 31-45% lower risk of heart disease',
 				'Dietary patterns rich in whole plant foods can reduce the risk of type 2 diabetes by up to 34%',
-				'Mediterranean-style diets show up to 40% reduction in Alzheimer&apos;s disease risk',
+				"Mediterranean-style diets show up to 40% reduction in Alzheimer's disease risk",
 				'Higher intake of fruits and vegetables is linked to reduced cancer risk across multiple studies',
 			],
 			color: 'text-green-500',

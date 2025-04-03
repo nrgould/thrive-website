@@ -30,12 +30,6 @@ export function TeamSection() {
 			image: '/team/leticia.webp',
 		},
 		{
-			name: 'Ryan Yost',
-			role: 'District Chef | Fall 2022 Alumni | Health Coach',
-			bio: "With over 15 years of culinary experience, Ryan is passionate about nourishing young minds through healthy food. As District Chef for Burke County Schools, he ensures students receive nutritious meals daily. A graduate of the C2Life program, Ryan's personal lifestyle transformation fuels his enthusiasm to coach others. His energy and belief in a whole food, plant-based diet inspire participants to achieve life-changing results.",
-			image: '/team/ryan.webp',
-		},
-		{
 			name: 'Dr. Laurie Robinson, MD',
 			role: 'Family Physician | Lifestyle Medicine Coach | Fall 2022 Alumni',
 			bio: "Laurie has practiced Family Medicine for 23 years at Burke Primary Care. After participating in the FIM program, she became certified in Lifestyle Medicine, shifting her focus to helping patients embrace whole food, plant-based nutrition and other pillars of lifestyle medicine. Laurie recently started a separate Lifestyle Medicine practice and is furthering her expertise in women's health through certification with the Menopause Society. She enjoys hiking, cooking, and traveling with her husband Tim and their three children.",
@@ -44,25 +38,25 @@ export function TeamSection() {
 		{
 			name: 'Nicholas "The Wizard" Gould',
 			role: 'Web Developer',
-			bio: '(Coach Bio Pending)',
+			bio: '(Bio Pending)',
 			image: '/team/nicholas.webp',
 		},
 		{
 			name: 'Chasity Poteat Rice',
 			role: 'C2Life Founder/CEO',
-			bio: '(Coach Bio Pending)',
+			bio: '(Bio Pending)',
 			image: '/team/chasity.webp',
 		},
 		{
 			name: 'Charlie Rice',
 			role: 'Coach',
-			bio: '(Coach Bio Pending)',
+			bio: '(Bio Pending)',
 			image: '/team/charlie.webp',
 		},
 		{
 			name: 'Brett Wells',
 			role: 'Behavior Design Expert',
-			bio: '(Coach Bio Pending)',
+			bio: '(Bio Pending)',
 			image: '/team/brett.webp',
 		},
 	];
@@ -76,7 +70,7 @@ export function TeamSection() {
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.5 }}
 				>
-					Meet Our Coaches & Team
+					Meet Our Team
 				</motion.h1>
 
 				<motion.p
@@ -85,9 +79,8 @@ export function TeamSection() {
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.5, delay: 0.1 }}
 				>
-					At C2Life, our mission is to empower you to thrive through
-					lifestyle medicine. Meet the dedicated team guiding you on
-					your journey to better health and well-being.
+					Meet the dedicated team guiding you on your journey to
+					better health and well-being.
 				</motion.p>
 
 				<div className='grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12'>

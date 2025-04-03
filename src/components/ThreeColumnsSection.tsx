@@ -54,10 +54,10 @@ export function ThreeColumnsSection() {
 					</div>
 				</motion.div>
 
-				{/* Arrow 1 */}
+				{/* Arrow 1 - hidden on mobile */}
 				<ArrowDivider
 					animationDelay={animationDelay + 0.1}
-					className='[&_svg]:text-white'
+					className='hidden md:flex [&_svg]:text-white'
 				/>
 
 				{/* Integration */}
@@ -94,10 +94,10 @@ export function ThreeColumnsSection() {
 					</div>
 				</motion.div>
 
-				{/* Arrow 2 */}
+				{/* Arrow 2 - hidden on mobile */}
 				<ArrowDivider
 					animationDelay={animationDelay + 0.3}
-					className='[&_svg]:text-white'
+					className='hidden md:flex [&_svg]:text-white'
 				/>
 
 				{/* Connection */}
@@ -134,12 +134,8 @@ export function ThreeColumnsSection() {
 				</motion.div>
 			</div>
 
-			{/* Mobile arrows - visible only on small screens */}
-			<ArrowDivider
-				direction='vertical'
-				className='flex md:hidden justify-center mt-4 mb-4 [&_svg]:text-white'
-				size={8}
-			/>
+			{/* Mobile arrows - visible only on small screens, now removed */}
+			{/* Removed vertical arrow for mobile */}
 
 			{/* Learn More Button */}
 			<MotionContainer

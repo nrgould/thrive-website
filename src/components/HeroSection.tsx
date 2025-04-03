@@ -64,7 +64,7 @@ export function HeroSection() {
 					</motion.div>
 
 					<motion.div
-						className='absolute top-1/4 right-0 text-blue-600/70'
+						className='absolute top-50 right-0 text-blue-600/70'
 						initial={{ opacity: 0, x: -20 }}
 						animate={{ opacity: 0.7, x: 0 }}
 						transition={{
@@ -78,7 +78,7 @@ export function HeroSection() {
 					</motion.div>
 
 					<motion.div
-						className='absolute bottom-1/4 left-5 text-blue-400/70'
+						className='absolute bottom-50 -left-10 text-blue-400/70'
 						initial={{ opacity: 0, scale: 0.8 }}
 						animate={{ opacity: 0.8, scale: 1 }}
 						transition={{
@@ -92,7 +92,7 @@ export function HeroSection() {
 					</motion.div>
 
 					<motion.div
-						className='absolute bottom-20 right-0 text-blue-500/70'
+						className='absolute bottom-20 right-10 text-blue-500/70'
 						initial={{ opacity: 0, y: 15 }}
 						animate={{ opacity: 0.7, y: 0 }}
 						transition={{
@@ -106,7 +106,7 @@ export function HeroSection() {
 					</motion.div>
 
 					<motion.div
-						className='absolute top-1/4 left-0 text-blue-600/60'
+						className='absolute top-10 left-0 text-blue-600/60'
 						initial={{ opacity: 0, scale: 0.9 }}
 						animate={{ opacity: 0.7, scale: 1 }}
 						transition={{
