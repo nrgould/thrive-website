@@ -3,10 +3,12 @@ import { Apple, Activity, Moon, Brain, Users } from 'lucide-react';
 
 interface Pillar {
 	title: string;
+	subtitle: string;
 	icon: React.ReactNode;
 	description: string;
 	evidence: string[];
 	color: string;
+	bgColor: string;
 	id: string;
 }
 
@@ -15,6 +17,7 @@ export function SciencePillarsSection() {
 		{
 			id: 'nourish',
 			title: 'Nourish',
+			subtitle: 'Nutrition & Plant-Based Diet',
 			icon: <Apple className='w-8 h-8' />,
 			description:
 				'A whole food, plant-predominant diet has been consistently shown to prevent, treat, and often reverse chronic disease. The scientific evidence supports minimizing processed foods and emphasizing nutrient-dense plant foods.',
@@ -25,10 +28,12 @@ export function SciencePillarsSection() {
 				'Higher intake of fruits and vegetables is linked to reduced cancer risk across multiple studies',
 			],
 			color: 'text-green-500',
+			bgColor: 'bg-green-500',
 		},
 		{
 			id: 'move',
 			title: 'Move',
+			subtitle: 'Physical Activity',
 			icon: <Activity className='w-8 h-8' />,
 			description:
 				'Regular physical activity is a cornerstone of health, with benefits extending far beyond weight management. Research demonstrates its crucial role in both physical and mental well-being.',
@@ -39,10 +44,12 @@ export function SciencePillarsSection() {
 				'Strength training reduces the risk of age-related muscle loss by up to 30-50%',
 			],
 			color: 'text-blue-500',
+			bgColor: 'bg-blue-500',
 		},
 		{
 			id: 'sleep',
 			title: 'Sleep',
+			subtitle: 'Sleep & Recovery',
 			icon: <Moon className='w-8 h-8' />,
 			description:
 				'Quality sleep is essential for physical repair, cognitive function, and emotional regulation. Research increasingly reveals its fundamental role in health maintenance and disease prevention.',
@@ -53,10 +60,12 @@ export function SciencePillarsSection() {
 				'Adequate sleep improves immune function by up to 70%',
 			],
 			color: 'text-indigo-500',
+			bgColor: 'bg-indigo-500',
 		},
 		{
 			id: 'release',
 			title: 'Release',
+			subtitle: 'Stress Management',
 			icon: <Brain className='w-8 h-8' />,
 			description:
 				'Chronic stress has wide-ranging negative effects on health. Evidence shows that stress management techniques can significantly improve both mental and physical health outcomes.',
@@ -67,10 +76,12 @@ export function SciencePillarsSection() {
 				'Stress management programs improve blood pressure control by 10-15%',
 			],
 			color: 'text-purple-500',
+			bgColor: 'bg-purple-500',
 		},
 		{
 			id: 'elevate',
 			title: 'Elevate',
+			subtitle: 'Growth Mindset & Purpose',
 			icon: <Brain className='w-8 h-8' />,
 			description:
 				'Having a growth mindset and sense of purpose is crucial for long-term health and well-being. Research shows that psychological well-being has direct effects on physical health outcomes.',
@@ -81,10 +92,12 @@ export function SciencePillarsSection() {
 				'Positive psychological well-being reduces inflammatory markers by 20%',
 			],
 			color: 'text-orange-500',
+			bgColor: 'bg-orange-500',
 		},
 		{
 			id: 'connect',
 			title: 'Connect',
+			subtitle: 'Social Connection',
 			icon: <Users className='w-8 h-8' />,
 			description:
 				'Strong social relationships and community connections are powerful determinants of health. Research shows that social support significantly impacts both longevity and quality of life.',
@@ -95,6 +108,7 @@ export function SciencePillarsSection() {
 				'Social connections reduce the risk of depression by up to 50%',
 			],
 			color: 'text-pink-500',
+			bgColor: 'bg-pink-500',
 		},
 	];
 
@@ -131,18 +145,7 @@ export function SciencePillarsSection() {
 										{pillar.title}
 									</h3>
 									<h4 className='text-lg text-blue-600 mb-4'>
-										{pillar.id === 'nourish' &&
-											'Nutrition & Plant-Based Diet'}
-										{pillar.id === 'move' &&
-											'Physical Activity'}
-										{pillar.id === 'sleep' &&
-											'Sleep & Recovery'}
-										{pillar.id === 'release' &&
-											'Stress Management'}
-										{pillar.id === 'elevate' &&
-											'Growth Mindset & Purpose'}
-										{pillar.id === 'connect' &&
-											'Social Connection'}
+										{pillar.subtitle}
 									</h4>
 									<p className='text-slate-700 leading-relaxed'>
 										{pillar.description}
@@ -160,10 +163,7 @@ export function SciencePillarsSection() {
 												className='flex items-start gap-3'
 											>
 												<div
-													className={`w-2 h-2 rounded-full ${pillar.color.replace(
-														'text',
-														'bg'
-													)} mt-2 flex-shrink-0`}
+													className={`w-2 h-2 rounded-full ${pillar.bgColor} mt-2 flex-shrink-0`}
 												/>
 												<p className='text-slate-700'>
 													{item}
