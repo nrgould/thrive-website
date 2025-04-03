@@ -31,42 +31,43 @@ const lifestyleSections = [
 	{
 		id: 'nourish' as const,
 		title: 'Nourish',
-		description: 'Develop a healthier relationship with food',
+		description: 'Healthy eating is foundational',
 		icon: <Apple className='text-blue-500 w-8 h-8 mb-3' />,
 		color: '#3b82f6', // blue-500
 	},
 	{
 		id: 'move' as const,
 		title: 'Move',
-		description: 'Improve strength, mobility & endurance',
+		description: 'Functional fitness',
 		icon: <Activity className='text-blue-500 w-8 h-8 mb-3' />,
 		color: '#2563eb', // blue-600
 	},
 	{
 		id: 'sleep' as const,
 		title: 'Sleep',
-		description: 'Build better habits for more energy',
+		description: 'Consistent, restorative sleep',
 		icon: <Moon className='text-blue-500 w-8 h-8 mb-3' />,
 		color: '#1d4ed8', // blue-700
 	},
 	{
 		id: 'release' as const,
 		title: 'Release',
-		description: "Manage stress and let go of what's not serving you",
+		description: 'Stress management & letting go of unhealthy habits',
 		icon: <Sparkles className='text-blue-500 w-8 h-8 mb-3' />,
 		color: '#1e40af', // blue-800
 	},
 	{
 		id: 'elevate' as const,
 		title: 'Elevate',
-		description: 'Find purpose and maintain a growth mindset',
+		description: 'Living with purpose, focus & joy',
 		icon: <Brain className='text-blue-500 w-8 h-8 mb-3' />,
 		color: '#1e3a8a', // blue-900
 	},
 	{
 		id: 'connect' as const,
 		title: 'Connect',
-		description: 'Strengthen relationships and build community',
+		description:
+			'Nurturing meaningful relationships with self, family, & community',
 		icon: <Users className='text-blue-500 w-8 h-8 mb-3' />,
 		color: '#172554', // blue-950
 	},
@@ -200,11 +201,11 @@ function InteractivePyramid({
 	// Define fixed positions for popups based on pyramid section - positioned OUTSIDE the pyramid
 	const popupPositions = {
 		nourish: { x: -50, y: 330, arrowDirection: 'left' },
-		move: { x: 220, y: 480, arrowDirection: 'up' },
+		move: { x: 250, y: 490, arrowDirection: 'up' },
 		sleep: { x: 500, y: 320, arrowDirection: 'right' },
 		release: { x: 0, y: 200, arrowDirection: 'left' },
 		elevate: { x: 420, y: 200, arrowDirection: 'right' },
-		connect: { x: 360, y: 70, arrowDirection: 'right' },
+		connect: { x: 370, y: 70, arrowDirection: 'right' },
 	};
 
 	// Define label positions with offsets for animation
