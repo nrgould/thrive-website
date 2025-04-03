@@ -108,7 +108,7 @@ export function SciencePillarsSection() {
 					viewport={{ once: true }}
 					transition={{ duration: 0.5 }}
 				>
-					The Six Pillars of Lifestyle Medicine
+					The Six Pillars of THRIVE Lifestyle Medicine
 				</motion.h2>
 
 				<div className='grid grid-cols-1 gap-12'>

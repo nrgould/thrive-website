@@ -1,3 +1,4 @@
+import { ApproachBehaviorDesignSection } from '@/components/ApproachBehaviorDesignSection';
 import { CTASection } from '@/components/CTASection';
 import { ScienceHeroSection } from '@/components/ScienceHeroSection';
 import { SciencePillarsSection } from '@/components/SciencePillarsSection';
@@ -14,6 +15,7 @@ export default function SciencePage() {
 		<main className='min-h-screen flex flex-col items-center'>
 			<ScienceHeroSection />
 			<SciencePillarsSection />
+			<ApproachBehaviorDesignSection />
 			<CTASection />
 		</main>
 	);
