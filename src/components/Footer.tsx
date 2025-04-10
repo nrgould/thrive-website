@@ -1,8 +1,5 @@
-'use client';
-
 import Link from 'next/link';
 import Image from 'next/image';
-import { Facebook, Instagram, Twitter, Mail } from 'lucide-react';
 
 export function Footer() {
 	return (
@@ -17,7 +14,7 @@ export function Footer() {
 							A better way to improve your health through
 							Lifestyle Medicine and Behavior Design.
 						</p>
-						<div className='flex items-center gap-4'>
+						{/* <div className='flex items-center gap-4'>
 							<Link
 								href='#'
 								className='text-blue-500 hover:text-blue-700'
@@ -42,7 +39,7 @@ export function Footer() {
 							>
 								<Mail size={20} />
 							</Link>
-						</div>
+						</div> */}
 					</div>
 
 					<div className='space-y-4'>
@@ -56,14 +53,14 @@ export function Footer() {
 									THRIVE 6-Week Program
 								</Link>
 							</li>
-							<li>
+							{/* <li>
 								<Link
 									href='/programs/essentials'
 									className='text-slate-600 hover:text-blue-500 text-sm'
 								>
 									THRIVE Essentials
 								</Link>
-							</li>
+							</li> */}
 						</ul>
 					</div>
 
