@@ -106,12 +106,37 @@ export function ScienceMythsTruthsSection() {
 							whileInView={{ opacity: 1, y: 0 }}
 							viewport={{ once: true }}
 							transition={{ duration: 0.5, delay: index * 0.1 }}
+							whileHover={{
+								scale: 1.02,
+								transition: { duration: 0.2 },
+							}}
 						>
 							<div className='p-6 md:p-8 bg-gray-50 border-b md:border-b-0 md:border-r border-blue-100'>
 								<div className='flex'>
-									<div className='w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 mr-4'>
-										{pair.mythIcon}
-									</div>
+									<motion.div
+										className='w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 mr-4'
+										initial={{ rotate: -30, scale: 0.8 }}
+										whileInView={{ rotate: 0, scale: 1 }}
+										whileHover={{
+											rotate: -15,
+											transition: { duration: 0.3 },
+										}}
+										transition={{
+											type: 'spring',
+											stiffness: 260,
+											damping: 20,
+											delay: index * 0.1,
+										}}
+									>
+										<motion.div
+											whileHover={{
+												rotate: 30,
+												transition: { duration: 0.3 },
+											}}
+										>
+											{pair.mythIcon}
+										</motion.div>
+									</motion.div>
 									<div>
 										<p className='text-sm font-light uppercase tracking-wider text-slate-500 mb-1'>
 											Myth
@@ -125,9 +150,30 @@ export function ScienceMythsTruthsSection() {
 
 							<div className='p-6 md:p-8'>
 								<div className='flex'>
-									<div className='w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 mr-4'>
-										{pair.truthIcon}
-									</div>
+									<motion.div
+										className='w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 mr-4'
+										initial={{ rotate: 30, scale: 0.8 }}
+										whileInView={{ rotate: 0, scale: 1 }}
+										whileHover={{
+											rotate: 15,
+											transition: { duration: 0.3 },
+										}}
+										transition={{
+											type: 'spring',
+											stiffness: 260,
+											damping: 20,
+											delay: index * 0.1,
+										}}
+									>
+										<motion.div
+											whileHover={{
+												rotate: -30,
+												transition: { duration: 0.3 },
+											}}
+										>
+											{pair.truthIcon}
+										</motion.div>
+									</motion.div>
 									<div>
 										<p className='text-sm font-light uppercase tracking-wider text-slate-500 mb-1'>
 											Truth
