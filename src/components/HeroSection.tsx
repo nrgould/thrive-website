@@ -126,14 +126,14 @@ export function HeroSection() {
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.7 }}
 				>
-					<motion.span
+					{/* <motion.span
 						className='text-blue-600 font-semibold tracking-wide block'
 						initial={{ opacity: 0, y: 20 }}
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.5 }}
 					>
 						THRIVE
-					</motion.span>
+					</motion.span> */}
 
 					{/* Headline with decorative underline */}
 					<div className='relative inline-block'>

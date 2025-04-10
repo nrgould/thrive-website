@@ -14,7 +14,7 @@ export function ThreeColumnsSection() {
 	return (
 		<SectionContainer background='blue' className='bg-blue-500'>
 			<SectionTitle
-				title='A Better Way to Thrive'
+				title='A Better Way to THRIVE'
 				description='Our three-step approach to a lifetime of health'
 				titleClassName='text-white'
 				descriptionClassName='text-blue-100'
