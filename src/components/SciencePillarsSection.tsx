@@ -22,9 +22,9 @@ export function SciencePillarsSection() {
 			description:
 				'A whole food, plant-predominant diet has been consistently shown to prevent, treat, and often reverse chronic disease. The scientific evidence supports minimizing processed foods and emphasizing nutrient-dense plant foods.',
 			evidence: [
-				'Plant-based diets are associated with a 31-45% lower risk of heart disease',
-				'Dietary patterns rich in whole plant foods can reduce the risk of type 2 diabetes by up to 34%',
-				"Mediterranean-style diets show up to 40% reduction in Alzheimer's disease risk",
+				'Plant-based diets are associated with a 30-40% lower risk of heart disease',
+				'Dietary patterns rich in whole plant foods can reduce the risk of type 2 diabetes by up to 50%',
+				"Mediterranean-style diets show up to 53% reduction in Alzheimer's disease risk",
 				'Higher intake of fruits and vegetables is linked to reduced cancer risk across multiple studies',
 			],
 			color: 'text-green-500',
@@ -38,8 +38,8 @@ export function SciencePillarsSection() {
 			description:
 				'Regular physical activity is a cornerstone of health, with benefits extending far beyond weight management. Research demonstrates its crucial role in both physical and mental well-being.',
 			evidence: [
-				'150 minutes of moderate exercise weekly reduces all-cause mortality by 30-40%',
-				'Regular physical activity decreases the risk of cardiovascular disease by up to 40%',
+				'150 minutes of moderate exercise weekly reduces all-cause mortality by 20%',
+				'Regular physical activity decreases the risk of cardiovascular disease by up to 35%',
 				'Exercise is as effective as medication for treating mild to moderate depression',
 				'Strength training reduces the risk of age-related muscle loss by up to 30-50%',
 			],
@@ -54,10 +54,10 @@ export function SciencePillarsSection() {
 			description:
 				'Quality sleep is essential for physical repair, cognitive function, and emotional regulation. Research increasingly reveals its fundamental role in health maintenance and disease prevention.',
 			evidence: [
-				'7-9 hours of sleep per night is associated with optimal cognitive performance',
-				'Chronic sleep deprivation increases the risk of obesity by 55%',
-				'Poor sleep quality is linked to a 48% increased risk of heart disease',
-				'Adequate sleep improves immune function by up to 70%',
+				'7-9 hours of sleep per night is generally associated with optimal cognitive performance',
+				'Chronic sleep deprivation can increase the risk of dementia by 30-50%',
+				'Poor sleep quality is linked to a 45% increased risk of heart disease',
+				'Adequate sleep improves immune function',
 			],
 			color: 'text-indigo-500',
 			bgColor: 'bg-indigo-500',
@@ -70,10 +70,10 @@ export function SciencePillarsSection() {
 			description:
 				'Chronic stress has wide-ranging negative effects on health. Evidence shows that stress management techniques can significantly improve both mental and physical health outcomes.',
 			evidence: [
-				'Regular meditation can reduce anxiety symptoms by 30-40%',
-				'Stress reduction practices show 28% decrease in chronic pain intensity',
-				'Mindfulness-based interventions reduce inflammatory markers by up to 15%',
-				'Stress management programs improve blood pressure control by 10-15%',
+				'Regular meditation can reduce anxiety symptoms by 30%',
+				'Stress reduction practices show up to a 40% decrease in chronic pain intensity',
+				'Mindfulness-based interventions reduce inflammatory markers and inflammation related gene expression',
+				'Stress management programs improve systolic blood pressure control by up to 10mmHg',
 			],
 			color: 'text-purple-500',
 			bgColor: 'bg-purple-500',
@@ -86,10 +86,10 @@ export function SciencePillarsSection() {
 			description:
 				'Having a growth mindset and sense of purpose is crucial for long-term health and well-being. Research shows that psychological well-being has direct effects on physical health outcomes.',
 			evidence: [
-				'People with a strong sense of purpose have a 15% lower risk of death',
+				'Living with a strong sense of purpose added 7 years of quality life in the Blue Zones',
 				'Growth mindset interventions improve stress resilience by up to 30%',
-				'Purpose in life is associated with reduced risk of cardiovascular events',
-				'Positive psychological well-being reduces inflammatory markers by 20%',
+				'Living with purpose is associated with a reduced risk of cardiovascular events',
+				'Positive psychological well-being reduces cortisol levels and activates the parasympathetic "rest and digest" nervous system',
 			],
 			color: 'text-orange-500',
 			bgColor: 'bg-orange-500',
@@ -100,7 +100,7 @@ export function SciencePillarsSection() {
 			subtitle: 'Social Connection',
 			icon: <Users className='w-8 h-8' />,
 			description:
-				'Strong social relationships and community connections are powerful determinants of health. Research shows that social support significantly impacts both longevity and quality of life.',
+				'Strong social relationships and community connections are perhaps the most powerful determinants of health. Research shows that social support significantly impacts both longevity and quality of life.',
 			evidence: [
 				'Strong social connections increase longevity by up to 50%',
 				'Social isolation increases mortality risk comparable to smoking 15 cigarettes daily',
