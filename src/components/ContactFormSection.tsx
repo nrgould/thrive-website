@@ -228,15 +228,8 @@ export function ContactFormSection() {
 							)}
 
 							<p className='text-xs text-slate-500 mt-6'>
-								By submitting this form, you agree to our{' '}
-								<a
-									href='/privacy'
-									className='text-blue-500 hover:underline'
-								>
-									Privacy Policy
-								</a>{' '}
-								and consent to being contacted about THRIVE
-								programs.
+								By submitting this form, you agree to being
+								contacted about THRIVE programs.
 							</p>
 						</form>
 					)}

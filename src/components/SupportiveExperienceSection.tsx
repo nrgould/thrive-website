@@ -48,7 +48,7 @@ export function SupportiveExperienceSection() {
 		},
 		{
 			name: 'Charlie Rice',
-			role: 'Coach',
+			role: '',
 			image: '/team/charlie.webp',
 		},
 	];

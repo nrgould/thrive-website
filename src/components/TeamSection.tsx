@@ -36,9 +36,9 @@ export function TeamSection() {
 			image: '/team/laurie.webp',
 		},
 		{
-			name: 'Nicholas "The Wizard" Gould',
-			role: 'Web Developer',
-			bio: '(Bio Pending)',
+			name: 'Nicholas Gould',
+			role: 'Creative Technologist',
+			bio: 'Nicholas leads technology development for the THRIVE program, focusing on creating a seamless and engaging experience for participants. With a background in software engineering and a passion for education, he helps shape how content is delivered and how users engage with the THRIVE platform—ensuring the program is accessible, supportive, and built for lasting impact.',
 			image: '/team/nicholas.webp',
 		},
 		{
