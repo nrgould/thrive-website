@@ -10,7 +10,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 export function SupportiveExperienceSection() {
-	// Sample coach data - would be replaced with actual data in a real implementation
 	const team = [
 		{
 			name: 'Chasity Rice',
@@ -24,7 +23,7 @@ export function SupportiveExperienceSection() {
 		},
 		{
 			name: 'Brian Asbill, MD',
-			role: 'Plant-Powered Lifestyle Medicine Physician',
+			role: 'Lifestyle Medicine Physician',
 			image: '/team/brian.webp',
 		},
 		{
@@ -38,14 +37,19 @@ export function SupportiveExperienceSection() {
 			image: '/team/laurie.webp',
 		},
 		{
-			name: 'Leticia Nichols, ANP-C, CHWC',
+			name: 'Leticia Nichols, ANP-C, NBC-HWC',
 			role: 'Lifestyle Coach',
 			image: '/team/leticia.webp',
 		},
 		{
-			name: 'Nicholas "the Wizard" Gould',
+			name: 'Nicholas Gould',
 			role: 'Web Developer',
 			image: '/team/nicholas.webp',
+		},
+		{
+			name: 'Charlie Rice',
+			role: 'Coach',
+			image: '/team/charlie.webp',
 		},
 	];
 

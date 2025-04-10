@@ -62,7 +62,10 @@ export function ScienceMythsTruthsSection() {
 	];
 
 	return (
-		<section className='w-full py-12 px-4 md:px-8 bg-white'>
+		<section
+			className='w-full py-12 px-4 md:px-8 bg-white'
+			id='behavior-design'
+		>
 			<div className='max-w-6xl mx-auto'>
 				<motion.div
 					className='text-center mt-16'

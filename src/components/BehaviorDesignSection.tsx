@@ -60,7 +60,7 @@ export function BehaviorDesignSection() {
 							transition={{ duration: 0.5, delay: 0.3 }}
 						>
 							<Link
-								href='/about/science#behaviordesign'
+								href='/about/science'
 								className='inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-full font-medium hover:bg-blue-700 transition-colors cursor-pointer'
 							>
 								Learn More <ArrowRight size={18} />
