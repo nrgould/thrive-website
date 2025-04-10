@@ -20,12 +20,12 @@ const programs: { title: string; href: string; description: string }[] = [
 		description:
 			'Our comprehensive lifestyle change program with guidance, structure, and community support.',
 	},
-	{
-		title: 'THRIVE Essentials',
-		href: '/programs/essentials',
-		description:
-			'A self-paced online course to explore Lifestyle Medicine and build healthier habits.',
-	},
+	// {
+	// 	title: 'THRIVE Essentials',
+	// 	href: '/programs/essentials',
+	// 	description:
+	// 		'A self-paced online course to explore Lifestyle Medicine and build healthier habits.',
+	// },
 ];
 
 export function Header() {
@@ -51,7 +51,7 @@ export function Header() {
 								Programs
 							</NavigationMenuTrigger>
 							<NavigationMenuContent>
-								<ul className='grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]'>
+								<ul className='grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[500px]'>
 									{programs.map((program) => (
 										<ListItem
 											key={program.title}

@@ -1,6 +1,7 @@
 import { ApproachBehaviorDesignSection } from '@/components/ApproachBehaviorDesignSection';
 import { CTASection } from '@/components/CTASection';
 import { ScienceHeroSection } from '@/components/ScienceHeroSection';
+import { ScienceMythsTruthsSection } from '@/components/ScienceMythsTruthsSection';
 import { SciencePillarsSection } from '@/components/SciencePillarsSection';
 import type { Metadata } from 'next';
 
@@ -14,6 +15,7 @@ export default function SciencePage() {
 	return (
 		<main className='min-h-screen flex flex-col items-center'>
 			<ScienceHeroSection />
+			<ScienceMythsTruthsSection />
 			<SciencePillarsSection />
 			<ApproachBehaviorDesignSection />
 			<CTASection />

@@ -35,7 +35,7 @@ export function BehaviorDesignSection() {
 							viewport={{ once: true }}
 							transition={{ duration: 0.5, delay: 0.1 }}
 						>
-							<span className='text-blue-600 text-4xl block mb-1'>
+							<span className='text-blue-600 block mb-1'>
 								Behavior Design:
 							</span>{' '}
 							Building Habits that Last
