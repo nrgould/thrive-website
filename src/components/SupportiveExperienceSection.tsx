@@ -8,50 +8,9 @@ import {
 } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { team } from './TeamSection';
 
 export function SupportiveExperienceSection() {
-	const team = [
-		{
-			name: 'Chasity Rice',
-			role: 'C2Life Founder/CEO',
-			image: '/team/chasity.webp',
-		},
-		{
-			name: 'Brett Wells',
-			role: 'Behavior Design Expert',
-			image: '/team/brett.webp',
-		},
-		{
-			name: 'Brian Asbill, MD',
-			role: 'Lifestyle Medicine Physician',
-			image: '/team/brian.webp',
-		},
-		{
-			name: 'Quez "Papa Plants" Little',
-			role: 'Lifestyle Coach',
-			image: '/team/quez.webp',
-		},
-		{
-			name: 'Laurie Robinson, MD',
-			role: 'Lifestyle Coach',
-			image: '/team/laurie.webp',
-		},
-		{
-			name: 'Leticia Nichols, ANP-C, NBC-HWC',
-			role: 'Lifestyle Coach',
-			image: '/team/leticia.webp',
-		},
-		{
-			name: 'Nicholas Gould',
-			role: 'Web Developer',
-			image: '/team/nicholas.webp',
-		},
-		{
-			name: 'Charlie Rice',
-			role: '',
-			image: '/team/charlie.webp',
-		},
-	];
 
 	return (
 		<section

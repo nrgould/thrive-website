@@ -9,57 +9,59 @@ interface TeamMember {
 	image?: string;
 }
 
+export const team: TeamMember[] = [
+	{
+		name: 'Dr. Brian Asbill, MD',
+		role: 'Lifestyle Medicine Physician',
+		bio: "Brian began his cardiology practice in Asheville, NC in 2001. After realizing that procedures and medications weren't enough to truly heal his patients, he shifted his focus to lifestyle medicine. Inspired by witnessing the transformational power of a whole food, plant-based diet, Brian left his cardiology role in 2020 to help others reclaim optimal health through simple, sustainable lifestyle changes. His wife, Sarah, is also a board-certified lifestyle medicine physician. Together they've raised two sons who thrive on a plant-forward lifestyle.",
+		image: '/team/brian.webp',
+	},
+	{
+		name: 'Quez "Papa Plants" Little',
+		role: 'Heart Health Advocate | Coach',
+		bio: "After a diagnosis of heart disease in 2012 followed by stents and bypass surgery, Quez knew he needed a new path. Twelve years later, he's still on a mission for optimal health. Quez shares his journey and passion for lifestyle transformation, helping others make health a permanent and empowering part of their lives.",
+		image: '/team/quez.webp',
+	},
+	{
+		name: 'Leticia A. Nichols, ANP-C, CHWC',
+		role: 'Nurse Practitioner | Health & Well-being Coach',
+		bio: 'Leticia brings over 35 years of clinical experience, now focusing on lifestyle medicine after addressing her own health challenges. Certified in Plant-based Nutrition (eCornell) and a Food for Life Instructor, she integrates her passion into both C2Life and her private practice, Healthy at Last! Leticia is dedicated to helping individuals finally achieve lasting wellness.',
+		image: '/team/leticia.webp',
+	},
+	{
+		name: 'Dr. Laurie Robinson, MD',
+		role: 'Family Physician | Lifestyle Medicine Coach',
+		bio: "Laurie has practiced Family Medicine for 23 years at Burke Primary Care. After participating in the FIM program, she became certified in Lifestyle Medicine, shifting her focus to helping patients embrace whole food, plant-based nutrition and other pillars of lifestyle medicine. Laurie recently started a separate Lifestyle Medicine practice and is furthering her expertise in women's health through certification with the Menopause Society. She enjoys hiking, cooking, and traveling with her husband Tim and their three children.",
+		image: '/team/laurie.webp',
+	},
+	{
+		name: 'Nicholas Gould',
+		role: 'Creative Technologist',
+		bio: 'Nicholas leads technology development for the THRIVE program, focusing on creating a seamless and engaging experience for participants. With a background in software engineering and a passion for education, he helps shape how content is delivered and how users engage with the THRIVE platform—ensuring the program is accessible, supportive, and built for lasting impact.',
+		image: '/team/nicholas.webp',
+	},
+	{
+		name: 'Chasity Poteat Rice',
+		role: 'C2Life Founder/CEO',
+		bio: '(Bio Pending)',
+		image: '/team/chasity.webp',
+	},
+	{
+		name: 'Charlie Rice',
+		role: 'Coach',
+		bio: '(Bio Pending)',
+		image: '/team/charlie.webp',
+	},
+	{
+		name: 'Brett Wells',
+		role: 'Behavior Design Expert',
+		bio: '(Bio Pending)',
+		image: '/team/brett.webp',
+	},
+];
+
 export function TeamSection() {
-	const team: TeamMember[] = [
-		{
-			name: 'Dr. Brian Asbill, MD',
-			role: 'Lifestyle Medicine Physician',
-			bio: "Brian began his cardiology practice in Asheville, NC in 2001. After realizing that procedures and medications weren't enough to truly heal his patients, he shifted his focus to lifestyle medicine. Inspired by witnessing the transformational power of a whole food, plant-based diet, Brian left his cardiology role in 2020 to help others reclaim optimal health through simple, sustainable lifestyle changes. His wife, Sarah, is also a board-certified lifestyle medicine physician. Together they've raised two sons who thrive on a plant-forward lifestyle.",
-			image: '/team/brian.webp',
-		},
-		{
-			name: 'Quez "Papa Plants" Little',
-			role: 'Heart Health Advocate | Coach',
-			bio: "After a diagnosis of heart disease in 2012 followed by stents and bypass surgery, Quez knew he needed a new path. Twelve years later, he's still on a mission for optimal health. Quez shares his journey and passion for lifestyle transformation, helping others make health a permanent and empowering part of their lives.",
-			image: '/team/quez.webp',
-		},
-		{
-			name: 'Leticia A. Nichols, ANP-C, CHWC',
-			role: 'Nurse Practitioner | Health & Well-being Coach',
-			bio: 'Leticia brings over 35 years of clinical experience, now focusing on lifestyle medicine after addressing her own health challenges. Certified in Plant-based Nutrition (eCornell) and a Food for Life Instructor, she integrates her passion into both C2Life and her private practice, Healthy at Last! Leticia is dedicated to helping individuals finally achieve lasting wellness.',
-			image: '/team/leticia.webp',
-		},
-		{
-			name: 'Dr. Laurie Robinson, MD',
-			role: 'Family Physician | Lifestyle Medicine Coach | Fall 2022 Alumni',
-			bio: "Laurie has practiced Family Medicine for 23 years at Burke Primary Care. After participating in the FIM program, she became certified in Lifestyle Medicine, shifting her focus to helping patients embrace whole food, plant-based nutrition and other pillars of lifestyle medicine. Laurie recently started a separate Lifestyle Medicine practice and is furthering her expertise in women's health through certification with the Menopause Society. She enjoys hiking, cooking, and traveling with her husband Tim and their three children.",
-			image: '/team/laurie.webp',
-		},
-		{
-			name: 'Nicholas Gould',
-			role: 'Creative Technologist',
-			bio: 'Nicholas leads technology development for the THRIVE program, focusing on creating a seamless and engaging experience for participants. With a background in software engineering and a passion for education, he helps shape how content is delivered and how users engage with the THRIVE platform—ensuring the program is accessible, supportive, and built for lasting impact.',
-			image: '/team/nicholas.webp',
-		},
-		{
-			name: 'Chasity Poteat Rice',
-			role: 'C2Life Founder/CEO',
-			bio: '(Bio Pending)',
-			image: '/team/chasity.webp',
-		},
-		{
-			name: 'Charlie Rice',
-			role: 'Coach',
-			bio: '(Bio Pending)',
-			image: '/team/charlie.webp',
-		},
-		{
-			name: 'Brett Wells',
-			role: 'Behavior Design Expert',
-			bio: '(Bio Pending)',
-			image: '/team/brett.webp',
-		},
-	];
+	
 
 	return (
 		<section className='w-full py-24 px-4 md:px-8 bg-white'>
