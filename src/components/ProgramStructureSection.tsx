@@ -279,7 +279,7 @@ function InteractivePyramid({
 		activeSection === sectionId ? 100 : 10;
 
 	return (
-		<div className='relative h-[400px] md:h-[600px] w-full max-w-[900px] mx-auto flex items-center'>
+		<div className='relative h-[50wh] md:h-[50vh] w-full max-w-[900px] mx-auto flex items-center'>
 			<svg
 				ref={svgRef}
 				viewBox='0 0 600 500'

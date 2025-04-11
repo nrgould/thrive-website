@@ -3,22 +3,31 @@
 import { Play } from 'lucide-react';
 import * as motion from 'motion/react-client';
 import { useState } from 'react';
+import Image from 'next/image';
+
 export default function VideoSection() {
 	const [showVideo, setShowVideo] = useState(false);
 
 	return (
 		<motion.div
-			className='h-full'
+			className='w-full'
 			initial={{ opacity: 0, scale: 0.95 }}
 			whileInView={{ opacity: 1, scale: 1 }}
 			transition={{ duration: 0.5 }}
 		>
 			{!showVideo ? (
 				<div
-					className='relative bg-gradient-to-r from-blue-600 to-blue-500 rounded-xl overflow-hidden aspect-video w-full h-full flex items-center justify-center group cursor-pointer shadow-md'
+					className='relative bg-gradient-to-r from-blue-600 to-blue-500 rounded-xl overflow-hidden aspect-video w-full flex items-center justify-center group cursor-pointer shadow-md'
 					onClick={() => setShowVideo(true)}
 				>
-					<div className='absolute inset-0 bg-gradient-to-r from-blue-500/30 to-indigo-500/30 opacity-90'></div>
+					<Image
+						src='/events/kitchen.webp'
+						alt='Video Thumbnail'
+						fill
+						className='object-cover'
+					/>
+					<div className='absolute inset-0 bg-gradient-to-t from-blue-900/80 from-5% to-transparent'></div>
+					<div className='absolute inset-0 bg-gradient-to-r from-blue-500/30 to-blue-500/10'></div>
 					<div className='w-16 h-16 md:w-20 md:h-20 rounded-full bg-white/90 flex items-center justify-center relative z-10 group-hover:scale-105 transition-transform'>
 						<Play
 							fill='#2563eb'
