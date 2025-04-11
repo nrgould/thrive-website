@@ -11,10 +11,28 @@ interface TeamMember {
 
 export const team: TeamMember[] = [
 	{
+		name: 'Chasity Poteat Rice',
+		role: 'C2Life Founder/CEO',
+		bio: '(Bio Pending)',
+		image: '/team/chasity.webp',
+	},
+	{
 		name: 'Dr. Brian Asbill, MD',
-		role: 'Lifestyle Medicine Physician',
+		role: 'CMO | Lifestyle Medicine Physician',
 		bio: "Brian began his cardiology practice in Asheville, NC in 2001. After realizing that procedures and medications weren't enough to truly heal his patients, he shifted his focus to lifestyle medicine. Inspired by witnessing the transformational power of a whole food, plant-based diet, Brian left his cardiology role in 2020 to help others reclaim optimal health through simple, sustainable lifestyle changes. His wife, Sarah, is also a board-certified lifestyle medicine physician. Together they've raised two sons who thrive on a plant-forward lifestyle.",
 		image: '/team/brian.webp',
+	},
+	{
+		name: 'Brett Wells',
+		role: 'Behavior Design Expert',
+		bio: '(Bio Pending)',
+		image: '/team/brett.webp',
+	},
+	{
+		name: 'Nicholas Gould',
+		role: 'Creative Technologist',
+		bio: 'Nicholas leads technology development for the THRIVE program, focusing on creating a seamless and engaging experience for participants. With a background in software engineering and a passion for education, he helps shape how content is delivered and how users engage with the THRIVE platform—ensuring the program is accessible, supportive, and built for lasting impact.',
+		image: '/team/nicholas.webp',
 	},
 	{
 		name: 'Quez "Papa Plants" Little',
@@ -30,21 +48,9 @@ export const team: TeamMember[] = [
 	},
 	{
 		name: 'Dr. Laurie Robinson, MD',
-		role: 'Family Physician | Lifestyle Medicine Coach',
+		role: 'Lifestyle Medicine Physician | THRIVE Coach',
 		bio: "Laurie has practiced Family Medicine for 23 years at Burke Primary Care. After participating in the FIM program, she became certified in Lifestyle Medicine, shifting her focus to helping patients embrace whole food, plant-based nutrition and other pillars of lifestyle medicine. Laurie recently started a separate Lifestyle Medicine practice and is furthering her expertise in women's health through certification with the Menopause Society. She enjoys hiking, cooking, and traveling with her husband Tim and their three children.",
 		image: '/team/laurie.webp',
-	},
-	{
-		name: 'Nicholas Gould',
-		role: 'Creative Technologist',
-		bio: 'Nicholas leads technology development for the THRIVE program, focusing on creating a seamless and engaging experience for participants. With a background in software engineering and a passion for education, he helps shape how content is delivered and how users engage with the THRIVE platform—ensuring the program is accessible, supportive, and built for lasting impact.',
-		image: '/team/nicholas.webp',
-	},
-	{
-		name: 'Chasity Poteat Rice',
-		role: 'C2Life Founder/CEO',
-		bio: '(Bio Pending)',
-		image: '/team/chasity.webp',
 	},
 	{
 		name: 'Charlie Rice',
@@ -52,17 +58,9 @@ export const team: TeamMember[] = [
 		bio: '(Bio Pending)',
 		image: '/team/charlie.webp',
 	},
-	{
-		name: 'Brett Wells',
-		role: 'Behavior Design Expert',
-		bio: '(Bio Pending)',
-		image: '/team/brett.webp',
-	},
 ];
 
 export function TeamSection() {
-	
-
 	return (
 		<section className='w-full py-24 px-4 md:px-8 bg-white'>
 			<div className='max-w-6xl mx-auto'>

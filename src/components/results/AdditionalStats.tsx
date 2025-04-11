@@ -1,5 +1,3 @@
-
-
 import { Heart, TrendingUp, Award } from 'lucide-react';
 import * as motion from 'motion/react-client';
 import VideoSection from './VideoSection';
@@ -40,8 +38,8 @@ export function AdditionalStats() {
 			</h2> */}
 
 			<div className='grid grid-cols-1 lg:grid-cols-3 gap-6'>
-				{/* Stats Column */}
-				<div className='lg:col-span-1'>
+				{/* Stats Column - hidden on mobile */}
+				<div className='hidden md:block lg:col-span-1'>
 					<div className='space-y-5'>
 						{stats.map((stat, index) => (
 							<motion.div
@@ -72,8 +70,8 @@ export function AdditionalStats() {
 					</div>
 				</div>
 
-				{/* Video Section */}
-				<div className='lg:col-span-2'>
+				{/* Video Section - full width on mobile */}
+				<div className='col-span-1 md:col-span-1 lg:col-span-2'>
 					<VideoSection />
 				</div>
 			</div>

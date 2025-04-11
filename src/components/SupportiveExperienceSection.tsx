@@ -10,6 +10,36 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { team } from './TeamSection';
 
+const supportCards = [
+	{
+		icon: <MessageCircle className='text-blue-600' size={32} />,
+		title: 'Small-Group Learning Circles',
+		items: [
+			'Learn and grow with others on a similar health journey',
+			'Share challenges and celebrate successes together',
+			'Build meaningful connections that support lasting change',
+		],
+	},
+	{
+		icon: <UserPlus className='text-blue-600' size={32} />,
+		title: 'One-on-One Coaching',
+		items: [
+			'Personalized guidance for your unique health habits and goals',
+			'Regular check-ins to help overcome obstacles',
+			'Accountability and encouragement when you need it most',
+		],
+	},
+	{
+		icon: <Globe className='text-blue-600' size={32} />,
+		title: 'Social Opportunities',
+		items: [
+			'Virtual meetings that fit into your busy schedule',
+			'In-person events and workshops for hands-on learning',
+			'Community activities that make healthy living enjoyable',
+		],
+	},
+];
+
 export function SupportiveExperienceSection() {
 	return (
 		<section
@@ -70,122 +100,38 @@ export function SupportiveExperienceSection() {
 					</div>
 				</motion.div>
 
-				<div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-12'>
-					<motion.div
-						className='bg-white rounded-3xl p-10 shadow-md hover:shadow-lg transition-shadow'
-						initial={{ opacity: 0, y: 30 }}
-						whileInView={{ opacity: 1, y: 0 }}
-						transition={{ duration: 0.6, delay: 0.1 }}
-						viewport={{ once: true }}
-					>
-						<div className='w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-8'>
-							<MessageCircle
-								className='text-blue-600'
-								size={32}
-							/>
-						</div>
-						<h3 className='text-2xl font-bold text-blue-950 mb-6'>
-							Small-Group Learning Circles
-						</h3>
-						<ul className='space-y-4 text-slate-700 text-lg'>
-							<li className='flex items-start gap-3'>
-								<div className='w-2 h-2 rounded-full bg-blue-500 mt-2.5 flex-shrink-0' />
-								<p>
-									Learn and grow with others on a similar
-									health journey
-								</p>
-							</li>
-							<li className='flex items-start gap-3'>
-								<div className='w-2 h-2 rounded-full bg-blue-500 mt-2.5 flex-shrink-0' />
-								<p>
-									Share challenges and celebrate successes
-									together
-								</p>
-							</li>
-							<li className='flex items-start gap-3'>
-								<div className='w-2 h-2 rounded-full bg-blue-500 mt-2.5 flex-shrink-0' />
-								<p>
-									Build meaningful connections that support
-									lasting change
-								</p>
-							</li>
-						</ul>
-					</motion.div>
-
-					<motion.div
-						className='bg-white rounded-3xl p-10 shadow-md hover:shadow-lg transition-shadow'
-						initial={{ opacity: 0, y: 30 }}
-						whileInView={{ opacity: 1, y: 0 }}
-						transition={{ duration: 0.6, delay: 0.3 }}
-						viewport={{ once: true }}
-					>
-						<div className='w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-8'>
-							<UserPlus className='text-blue-600' size={32} />
-						</div>
-						<h3 className='text-2xl font-bold text-blue-950 mb-6'>
-							One-on-One Coaching
-						</h3>
-						<ul className='space-y-4 text-slate-700 text-lg'>
-							<li className='flex items-start gap-3'>
-								<div className='w-2 h-2 rounded-full bg-blue-500 mt-2.5 flex-shrink-0' />
-								<p>
-									Personalized guidance for your unique health
-									habits and goals
-								</p>
-							</li>
-							<li className='flex items-start gap-3'>
-								<div className='w-2 h-2 rounded-full bg-blue-500 mt-2.5 flex-shrink-0' />
-								<p>
-									Regular check-ins to help overcome obstacles
-								</p>
-							</li>
-							<li className='flex items-start gap-3'>
-								<div className='w-2 h-2 rounded-full bg-blue-500 mt-2.5 flex-shrink-0' />
-								<p>
-									Accountability and encouragement when you
-									need it most
-								</p>
-							</li>
-						</ul>
-					</motion.div>
-
-					<motion.div
-						className='bg-white rounded-3xl p-10 shadow-md hover:shadow-lg transition-shadow'
-						initial={{ opacity: 0, y: 30 }}
-						whileInView={{ opacity: 1, y: 0 }}
-						transition={{ duration: 0.6, delay: 0.5 }}
-						viewport={{ once: true }}
-					>
-						<div className='w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-8'>
-							<Globe className='text-blue-600' size={32} />
-						</div>
-						<h3 className='text-2xl font-bold text-blue-950 mb-6'>
-							Social Opportunities
-						</h3>
-						<ul className='space-y-4 text-slate-700 text-lg'>
-							<li className='flex items-start gap-3'>
-								<div className='w-2 h-2 rounded-full bg-blue-500 mt-2.5 flex-shrink-0' />
-								<p>
-									Virtual meetings that fit into your busy
-									schedule
-								</p>
-							</li>
-							<li className='flex items-start gap-3'>
-								<div className='w-2 h-2 rounded-full bg-blue-500 mt-2.5 flex-shrink-0' />
-								<p>
-									In-person events and workshops for hands-on
-									learning
-								</p>
-							</li>
-							<li className='flex items-start gap-3'>
-								<div className='w-2 h-2 rounded-full bg-blue-500 mt-2.5 flex-shrink-0' />
-								<p>
-									Community activities that make healthy
-									living enjoyable
-								</p>
-							</li>
-						</ul>
-					</motion.div>
+				<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12'>
+					{supportCards.map((card, index) => (
+						<motion.div
+							key={index}
+							className='bg-white rounded-3xl p-10 shadow-md hover:shadow-lg transition-shadow min-w-[280px]'
+							initial={{ opacity: 0, y: 30 }}
+							whileInView={{ opacity: 1, y: 0 }}
+							transition={{
+								duration: 0.6,
+								delay: 0.1 * (index + 1),
+							}}
+							viewport={{ once: true }}
+						>
+							<div className='w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-8'>
+								{card.icon}
+							</div>
+							<h3 className='text-2xl font-bold text-blue-950 mb-6'>
+								{card.title}
+							</h3>
+							<ul className='space-y-4 text-slate-700 text-lg'>
+								{card.items.map((item, itemIndex) => (
+									<li
+										key={itemIndex}
+										className='flex items-start gap-3'
+									>
+										<div className='w-2 h-2 rounded-full bg-blue-500 mt-2.5 flex-shrink-0' />
+										<p>{item}</p>
+									</li>
+								))}
+							</ul>
+						</motion.div>
+					))}
 				</div>
 
 				{/* CTA Button */}
