@@ -279,7 +279,7 @@ function InteractivePyramid({
 		activeSection === sectionId ? 100 : 10;
 
 	return (
-		<div className='relative h-[600px] w-full max-w-[900px] mx-auto flex items-center'>
+		<div className='relative h-[400px] md:h-[600px] w-full max-w-[900px] mx-auto flex items-center'>
 			<svg
 				ref={svgRef}
 				viewBox='0 0 600 500'
@@ -714,7 +714,7 @@ export function ProgramStructureSection() {
 				</motion.p>
 
 				<motion.h2
-					className='text-3xl md:text-5xl font-bold text-center mb-4 text-blue-950'
+					className='text-3xl md:text-5xl font-bold text-center md:mb-4 text-blue-950'
 					initial={{ opacity: 0, y: 20 }}
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.5 }}
@@ -734,7 +734,7 @@ export function ProgramStructureSection() {
 							onSectionClick={handleSectionClick}
 							showPopups={popupSource === 'pyramid'}
 						/>
-						<h3 className='text-2xl text-center text-blue-950/80 -mt-8 mb-12'>
+						<h3 className='text-2xl text-center text-blue-950/80  md:-mt-8 md:mb-12'>
 							The THRIVE Lifestyle Medicine Pyramid
 						</h3>
 					</motion.div>
