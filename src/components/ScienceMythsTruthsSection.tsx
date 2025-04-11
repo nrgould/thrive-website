@@ -188,8 +188,8 @@ export function ScienceMythsTruthsSection() {
 
 	return (
 		<section
-			className='w-full py-12 px-4 md:px-8 relative'
-			id='behavior-design'
+			className='w-full py-4 px-4 md:px-8 relative'
+			id='myths-truths'
 		>
 			{/* Decorative elements */}
 			<div className='absolute top-40 right-0 w-64 h-64 rounded-full bg-blue-100/40 blur-3xl -z-10'></div>
