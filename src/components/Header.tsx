@@ -39,6 +39,11 @@ const programs: { title: string; href: string; description: string }[] = [
 
 export function Header() {
 	const pathname = usePathname();
+	const [open, setOpen] = React.useState(false);
+
+	const handleLinkClick = () => {
+		setOpen(false);
+	};
 
 	return (
 		<header className='w-full py-4 px-4 md:px-8 bg-white backdrop-blur-sm sticky top-0 z-50 border-b border-slate-100'>
@@ -142,7 +147,7 @@ export function Header() {
 
 				{/* Mobile Navigation */}
 				<div className='md:hidden flex items-center'>
-					<Sheet>
+					<Sheet open={open} onOpenChange={setOpen}>
 						<SheetTrigger asChild>
 							<button className='p-2 text-blue-800 hover:bg-blue-50 rounded-md'>
 								<Menu size={24} />
@@ -184,6 +189,7 @@ export function Header() {
 													? 'text-blue-700 border-b border-blue-500 inline-block'
 													: 'hover:text-blue-600'
 											}`}
+											onClick={handleLinkClick}
 										>
 											Home
 										</Link>
@@ -204,6 +210,7 @@ export function Header() {
 														? 'text-blue-700 border-b border-blue-500 inline-block'
 														: 'hover:text-blue-600'
 												}`}
+												onClick={handleLinkClick}
 											>
 												{program.title}
 											</Link>
@@ -223,6 +230,7 @@ export function Header() {
 													? 'text-blue-700 border-b border-blue-500 inline-block'
 													: 'hover:text-blue-600'
 											}`}
+											onClick={handleLinkClick}
 										>
 											Our Approach
 										</Link>
@@ -233,6 +241,7 @@ export function Header() {
 													? 'text-blue-700 border-b border-blue-500 inline-block'
 													: 'hover:text-blue-600'
 											}`}
+											onClick={handleLinkClick}
 										>
 											Our Team
 										</Link>
@@ -243,6 +252,7 @@ export function Header() {
 													? 'text-blue-700 border-b border-blue-500 inline-block'
 													: 'hover:text-blue-600'
 											}`}
+											onClick={handleLinkClick}
 										>
 											The Science
 										</Link>
@@ -261,6 +271,7 @@ export function Header() {
 													? 'text-blue-700 border-b border-blue-500 inline-block'
 													: 'hover:text-blue-600'
 											}`}
+											onClick={handleLinkClick}
 										>
 											Get in Touch
 										</Link>
@@ -271,6 +282,7 @@ export function Header() {
 									<Link
 										href='/programs/six-week#waitlist-form'
 										className='block w-full text-center px-4 py-3 bg-blue-500 text-white rounded-full text-sm font-medium hover:bg-blue-600 transition-colors shadow-sm'
+										onClick={handleLinkClick}
 									>
 										Join Waitlist
 									</Link>
