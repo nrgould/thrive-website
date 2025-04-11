@@ -124,7 +124,7 @@ export function ThreeColumnsSection() {
 						Connection
 					</h3>
 					<p className='text-lg font-medium text-blue-100 group-hover:text-white transition-colors duration-300'>
-						Maintain Success
+						Engage in a Community of Support
 					</p>
 
 					<div className='mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white flex items-center gap-1'>

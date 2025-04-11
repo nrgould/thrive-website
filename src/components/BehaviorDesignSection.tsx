@@ -17,7 +17,7 @@ export function BehaviorDesignSection() {
 			<div className='max-w-6xl mx-auto'>
 				<div className='grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16'>
 					{/* Left side - Main title */}
-					<div className='flex flex-col justify-center'>
+					<div className='flex flex-col justify-center  max-w-[75%]'>
 						<motion.p
 							className='text-xl text-blue-600 font-medium mb-3'
 							initial={{ opacity: 0, x: -20 }}
@@ -29,7 +29,7 @@ export function BehaviorDesignSection() {
 						</motion.p>
 
 						<motion.h2
-							className='text-4xl md:text-5xl font-bold text-blue-950 mb-6 max-w-[400px]'
+							className='text-4xl md:text-5xl font-bold text-blue-950 mb-6'
 							initial={{ opacity: 0, x: -20 }}
 							whileInView={{ opacity: 1, x: 0 }}
 							viewport={{ once: true }}
@@ -79,11 +79,8 @@ export function BehaviorDesignSection() {
 							transition={{ duration: 0.6 }}
 						>
 							<div className='flex items-start gap-5'>
-								<div className='bg-blue-100 p-4 rounded-full'>
-									<Brain
-										className='text-blue-600'
-										size={28}
-									/>
+								<div className='bg-blue-500 p-4 rounded-full shadow-md'>
+									<Brain className='text-white' size={28} />
 								</div>
 								<div className='space-y-3 flex-1'>
 									<h3 className='text-xl font-bold text-blue-950'>
@@ -133,9 +130,9 @@ export function BehaviorDesignSection() {
 							transition={{ duration: 0.6, delay: 0.2 }}
 						>
 							<div className='flex items-start gap-5'>
-								<div className='bg-blue-100 p-4 rounded-full'>
+								<div className='bg-green-500 p-4 rounded-full shadow-md'>
 									<Lightbulb
-										className='text-blue-600'
+										className='text-white'
 										size={28}
 									/>
 								</div>
@@ -146,7 +143,7 @@ export function BehaviorDesignSection() {
 									<ul className='space-y-2 text-slate-700'>
 										<li className='flex items-start gap-2'>
 											<ChevronRight
-												className='text-blue-500 flex-shrink-0 mt-1'
+												className='text-green-500 flex-shrink-0 mt-1'
 												size={16}
 											/>
 											<p>
@@ -156,7 +153,7 @@ export function BehaviorDesignSection() {
 										</li>
 										<li className='flex items-start gap-2'>
 											<ChevronRight
-												className='text-blue-500 flex-shrink-0 mt-1'
+												className='text-green-500 flex-shrink-0 mt-1'
 												size={16}
 											/>
 											<p>
@@ -166,7 +163,7 @@ export function BehaviorDesignSection() {
 										</li>
 										<li className='flex items-start gap-2'>
 											<ChevronRight
-												className='text-blue-500 flex-shrink-0 mt-1'
+												className='text-green-500 flex-shrink-0 mt-1'
 												size={16}
 											/>
 											<p>
@@ -188,11 +185,8 @@ export function BehaviorDesignSection() {
 							transition={{ duration: 0.6, delay: 0.4 }}
 						>
 							<div className='flex items-start gap-5'>
-								<div className='bg-blue-100 p-4 rounded-full'>
-									<Layers
-										className='text-blue-600'
-										size={28}
-									/>
+								<div className='bg-teal-500 p-4 rounded-full shadow-md'>
+									<Layers className='text-white' size={28} />
 								</div>
 								<div className='space-y-3 flex-1'>
 									<h3 className='text-xl font-bold text-blue-950'>
@@ -201,7 +195,7 @@ export function BehaviorDesignSection() {
 									<ul className='space-y-2 text-slate-700'>
 										<li className='flex items-start gap-2'>
 											<ChevronRight
-												className='text-blue-500 flex-shrink-0 mt-1'
+												className='text-teal-500 flex-shrink-0 mt-1'
 												size={16}
 											/>
 											<p>
@@ -211,7 +205,7 @@ export function BehaviorDesignSection() {
 										</li>
 										<li className='flex items-start gap-2'>
 											<ChevronRight
-												className='text-blue-500 flex-shrink-0 mt-1'
+												className='text-teal-500 flex-shrink-0 mt-1'
 												size={16}
 											/>
 											<p>
@@ -221,7 +215,7 @@ export function BehaviorDesignSection() {
 										</li>
 										<li className='flex items-start gap-2'>
 											<ChevronRight
-												className='text-blue-500 flex-shrink-0 mt-1'
+												className='text-teal-500 flex-shrink-0 mt-1'
 												size={16}
 											/>
 											<p>
@@ -244,8 +238,8 @@ export function BehaviorDesignSection() {
 					transition={{ duration: 0.5, delay: 0.4 }}
 				>
 					<blockquote className='italic text-slate-700 text-3xl md:text-4xl font-medium'>
-						&ldquo;We are what we repeatedly do; excellence, then,
-						is not an act but a habit&rdquo;
+						&ldquo;We are what we repeatedly do; <br />
+						excellence, then, is not an act but a habit&rdquo;
 						<footer className='text-slate-500 text-xl mt-4'>
 							- Aristotle
 						</footer>

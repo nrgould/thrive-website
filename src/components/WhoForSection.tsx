@@ -17,14 +17,14 @@ export function WhoForSection() {
 			icon: <Activity className='text-white' size={28} />,
 			title: 'Health-Conscious Individuals',
 			description:
-				'People looking to optimize their well-being, increase energy levels, and build sustainable healthy habits for the long term.',
+				'People looking to optimize their well-being, increase energy levels, and build sustainable healthy habits for the long-term.',
 			color: 'bg-green-500',
 		},
 		{
 			icon: <Leaf className='text-white' size={28} />,
 			title: 'Prevention-Focused Individuals',
 			description:
-				'Those with family history of chronic disease who want to take proactive steps to reduce their risk factors through lifestyle changes.',
+				'Those with a family history of chronic disease who want to take proactive steps to reduce their risk factors through lifestyle changes.',
 			color: 'bg-teal-500',
 		},
 	];
@@ -47,7 +47,7 @@ export function WhoForSection() {
 					<p className='text-lg text-slate-700 max-w-3xl mx-auto'>
 						THRIVE is designed to help a wide range of people
 						improve their health and well-being through
-						evidence-based lifestyle changes.
+						evidence-based lifestyle behaviorchanges.
 					</p>
 				</motion.div>
 

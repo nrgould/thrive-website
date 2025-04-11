@@ -662,7 +662,7 @@ export function ProgramStructureSection() {
 		nourish: {
 			title: 'Nourish',
 			content:
-				'Evidence-based nutrition guidance, meal planning tools, and habit formation strategies to build a healthier relationship with food.',
+				'Evidence-based nutrition guidance, meal planning tools, and habit formation strategies to consistently build a healthier relationship with food.',
 			icon: <Apple className='text-blue-500 w-10 h-10' />,
 		},
 		move: {
@@ -674,7 +674,7 @@ export function ProgramStructureSection() {
 		sleep: {
 			title: 'Sleep',
 			content:
-				'Sleep optimization techniques, evening routine frameworks, and tools to improve both sleep quality and energy levels.',
+				'Sleep optimization techniques, evening routine frameworks, and tools to improve sleep quality and energy levels.',
 			icon: <Moon className='text-blue-500 w-10 h-10' />,
 		},
 		release: {
@@ -719,7 +719,7 @@ export function ProgramStructureSection() {
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.5 }}
 				>
-					A Framework for Life
+					A Healthy Framework for Life
 				</motion.h2>
 
 				<div className='grid grid-cols-1 items-center'>
@@ -735,7 +735,7 @@ export function ProgramStructureSection() {
 							showPopups={popupSource === 'pyramid'}
 						/>
 						<h3 className='text-2xl text-center text-blue-950/80 -mt-8 mb-12'>
-							The Lifestyle Medicine Pyramid
+							The THRIVE Lifestyle Medicine Pyramid
 						</h3>
 					</motion.div>
 				</div>
@@ -801,7 +801,7 @@ export function ProgramStructureSection() {
 						transition={{ duration: 0.5 }}
 					>
 						THRIVE provides educational content for each core area
-						of the lifestyle medicine pyramid.
+						of the lifestyle medicine pillars.
 					</motion.h3>
 
 					<div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
@@ -860,7 +860,9 @@ export function ProgramStructureSection() {
 					transition={{ duration: 0.6, delay: 0.6 }}
 				>
 					<h3 className='text-2xl md:text-3xl font-bold mb-4'>
-						Lifestyle is both the cause and the cure.
+						Lifestyle is both the{' '}
+						<span className='text-blue-950'>cause</span> and the{' '}
+						<span className='text-blue-950'>cure.</span>
 					</h3>
 					<p className='text-blue-100 mb-8 max-w-2xl mx-auto'>
 						By addressing these six areas, you can prevent and

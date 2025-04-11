@@ -11,7 +11,6 @@ import Link from 'next/link';
 import { team } from './TeamSection';
 
 export function SupportiveExperienceSection() {
-
 	return (
 		<section
 			id='connection-section'
@@ -35,7 +34,7 @@ export function SupportiveExperienceSection() {
 					transition={{ duration: 0.5 }}
 					viewport={{ once: true }}
 				>
-					Supported Every Step of the Way
+					Finding Consistency through Community
 				</motion.h2>
 
 				{/* Lifestyle Medicine Class Image Section */}
@@ -60,12 +59,13 @@ export function SupportiveExperienceSection() {
 							Lifestyle Medicine Education
 						</h3>
 						<p className='text-slate-700'>
-							Our experts like Dr. Brian Asbill provide
-							evidence-based lifestyle medicine education in a
-							supportive group setting. Learn practical strategies
-							to improve your health through plant-powered
-							nutrition, physical activity, stress management, and
-							more.
+							Our experts, like Dr. Brian Asbill and our THRIVE
+							coaches, provide evidence-based lifestyle medicine
+							and behavior change education in a supportive group
+							setting. Learn practical strategies while also
+							supporting others on their health journeys through
+							whole-food nutrition, physical activity, stress
+							management, and more
 						</p>
 					</div>
 				</motion.div>
@@ -85,7 +85,7 @@ export function SupportiveExperienceSection() {
 							/>
 						</div>
 						<h3 className='text-2xl font-bold text-blue-950 mb-6'>
-							Small-Group Discussions
+							Small-Group Learning Circles
 						</h3>
 						<ul className='space-y-4 text-slate-700 text-lg'>
 							<li className='flex items-start gap-3'>
@@ -130,7 +130,7 @@ export function SupportiveExperienceSection() {
 								<div className='w-2 h-2 rounded-full bg-blue-500 mt-2.5 flex-shrink-0' />
 								<p>
 									Personalized guidance for your unique health
-									goals
+									habits and goals
 								</p>
 							</li>
 							<li className='flex items-start gap-3'>

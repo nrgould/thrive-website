@@ -179,8 +179,8 @@ export function HeroSection() {
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.5, delay: 0.4 }}
 					>
-						A program built on science-backed strategies so you can
-						improve your daily routine, make more sustainable
+						A program built on science-backed strategies so you
+						can improve your whole-person health through sustainable
 						lifestyle changes.
 					</motion.p>
 
