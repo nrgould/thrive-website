@@ -19,7 +19,7 @@ export default function VideoSection() {
 					onClick={() => setShowVideo(true)}
 				>
 					<div className='absolute inset-0 bg-gradient-to-r from-blue-500/30 to-indigo-500/30 opacity-90'></div>
-					<div className='w-20 h-20 rounded-full bg-white/90 flex items-center justify-center relative z-10 group-hover:scale-105 transition-transform'>
+					<div className='w-16 h-16 md:w-20 md:h-20 rounded-full bg-white/90 flex items-center justify-center relative z-10 group-hover:scale-105 transition-transform'>
 						<Play
 							fill='#2563eb'
 							size={32}
@@ -27,7 +27,7 @@ export default function VideoSection() {
 						/>
 					</div>
 					<div className='absolute bottom-6 left-6 right-6 text-white'>
-						<p className='text-2xl font-bold mb-2'>
+						<p className='text-xl md:text-2xl font-bold md:mb-2'>
 							See the transformation
 						</p>
 						<p className='text-blue-50'>

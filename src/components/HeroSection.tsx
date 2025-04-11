@@ -16,8 +16,18 @@ export function HeroSection() {
 		<section className='w-full min-h-[60vh] relative flex flex-col items-center justify-center px-4 md:px-8 py-16 md:py-20 overflow-hidden bg-gradient-to-b from-blue-50 to-white'>
 			{/* Content */}
 			<div className='relative z-10 max-w-4xl mx-auto w-full text-center'>
-				{/* Decorative Elements */}
-				<div className='absolute inset-0 pointer-events-none'>
+				{/* Mobile Icons Row - visible only on small screens */}
+				<div className='flex justify-center gap-4 mb-6 md:hidden'>
+					<Apple size={24} className='text-blue-500/80' />
+					<Activity size={24} className='text-blue-500/80' />
+					<Moon size={24} className='text-blue-500/80' />
+					<Sparkles size={24} className='text-blue-500/80' />
+					<Brain size={24} className='text-blue-500/80' />
+					<Users size={24} className='text-blue-500/80' />
+				</div>
+
+				{/* Decorative Elements - hidden on mobile */}
+				<div className='absolute inset-0 pointer-events-none hidden md:block'>
 					{/* Top Left Circle */}
 					{/* <motion.div
 						className='absolute top-0 left-0 w-32 h-32 rounded-full bg-blue-100/70'
@@ -179,8 +189,8 @@ export function HeroSection() {
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.5, delay: 0.4 }}
 					>
-						A program built on science-backed strategies so you
-						can improve your whole-person health through sustainable
+						A program built on science-backed strategies so you can
+						improve your whole-person health through sustainable
 						lifestyle changes.
 					</motion.p>
 

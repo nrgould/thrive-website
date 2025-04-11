@@ -63,9 +63,83 @@ export function StatsSection() {
 	};
 
 	return (
-		<div ref={ref} className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-12'>
+		<div ref={ref} className='md:grid md:grid-cols-3 md:gap-8 mb-12'>
+			<div className='md:hidden bg-blue-50 rounded-xl p-6 mb-8'>
+				<div className='space-y-8'>
+					<motion.div
+						className='flex flex-col items-center text-center'
+						custom={0}
+						initial='hidden'
+						animate={isInView ? 'visible' : 'hidden'}
+						variants={fadeIn}
+					>
+						<div className='flex items-center gap-4 mb-2'>
+							<TrendingDown className='text-blue-500' size={28} />
+							<div className='flex items-baseline'>
+								<motion.span className='text-6xl font-bold text-blue-500'>
+									{roundedLdl}
+								</motion.span>
+								<span className='text-4xl font-bold text-blue-500'>
+									%
+								</span>
+							</div>
+						</div>
+						<p className='text-zinc-600 text-lg max-w-[350px] font-medium'>
+							Average reduction in LDL cholesterol
+						</p>
+					</motion.div>
+
+					<motion.div
+						className='flex flex-col items-center text-center'
+						custom={1}
+						initial='hidden'
+						animate={isInView ? 'visible' : 'hidden'}
+						variants={fadeIn}
+					>
+						<div className='flex items-center gap-4 mb-2'>
+							<Heart className='text-blue-500' size={28} />
+							<div className='flex items-baseline'>
+								<motion.span className='text-6xl font-bold text-blue-500'>
+									{roundedA1c}
+								</motion.span>
+								<span className='text-4xl font-bold text-blue-500'>
+									%
+								</span>
+							</div>
+						</div>
+						<p className='text-zinc-600 text-lg max-w-[350px] font-medium'>
+							of participants improved A1C levels
+						</p>
+					</motion.div>
+
+					<motion.div
+						className='flex flex-col items-center text-center'
+						custom={2}
+						initial='hidden'
+						animate={isInView ? 'visible' : 'hidden'}
+						variants={fadeIn}
+					>
+						<div className='flex items-center gap-4 mb-2'>
+							<Dumbbell className='text-blue-500' size={28} />
+							<div className='flex items-baseline'>
+								<motion.span className='text-6xl font-bold text-blue-500'>
+									{roundedBmi}
+								</motion.span>
+								<span className='text-4xl font-bold text-blue-500'>
+									%
+								</span>
+							</div>
+						</div>
+						<p className='text-zinc-600 text-lg max-w-[350px] font-medium'>
+							lost weight and improved BMI
+						</p>
+					</motion.div>
+				</div>
+			</div>
+
+			{/* Desktop layout */}
 			<motion.div
-				className='flex flex-col'
+				className='hidden md:flex md:flex-col md:items-start'
 				custom={0}
 				initial='hidden'
 				animate={isInView ? 'visible' : 'hidden'}
@@ -88,7 +162,7 @@ export function StatsSection() {
 			</motion.div>
 
 			<motion.div
-				className='flex flex-col'
+				className='hidden md:flex md:flex-col md:items-start'
 				custom={1}
 				initial='hidden'
 				animate={isInView ? 'visible' : 'hidden'}
@@ -111,7 +185,7 @@ export function StatsSection() {
 			</motion.div>
 
 			<motion.div
-				className='flex flex-col'
+				className='hidden md:flex md:flex-col md:items-start'
 				custom={2}
 				initial='hidden'
 				animate={isInView ? 'visible' : 'hidden'}

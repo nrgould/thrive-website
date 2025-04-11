@@ -8,7 +8,7 @@ export function ResultsSection() {
 			id='results'
 			className='container mx-auto py-20 pt-48 max-w-6xl px-4 md:px-6'
 		>
-			<h2 className='text-4xl font-bold text-center mb-16 text-blue-500'>
+			<h2 className='text-4xl font-bold text-center mb-4 md:mb-16 text-slate-800'>
 				How THRIVE impacts your health
 			</h2>
 
