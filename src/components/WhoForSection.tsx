@@ -30,7 +30,7 @@ export function WhoForSection() {
 	];
 
 	return (
-		<section className='w-full py-24 px-4 md:px-8 '>
+		<section className='w-full pb-24 px-4 md:px-8 '>
 			<div className='max-w-7xl mx-auto'>
 				<motion.div
 					className='text-center mb-16'
@@ -42,9 +42,9 @@ export function WhoForSection() {
 					}}
 				>
 					<h2 className='text-3xl md:text-4xl font-bold text-blue-950 mb-6'>
-						Who This Program Is For
+						Who is THRIVE for?
 					</h2>
-					<p className='text-lg text-slate-700 max-w-3xl mx-auto'>
+					<p className='text-lg text-slate-700 max-w-2xl mx-auto'>
 						THRIVE is designed to help a wide range of people
 						improve their health and well-being through
 						evidence-based lifestyle behavior changes.

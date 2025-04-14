@@ -14,6 +14,8 @@ import {
 	Plus,
 	UserPlus,
 	Heart,
+	Lightbulb,
+	GraduationCap,
 } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 
@@ -60,35 +62,59 @@ const navLinks = [
 	{
 		title: 'Approach',
 		href: '/about',
+		icon: Lightbulb,
+		iconColor: 'text-white',
+		groupId: 'approach',
 	},
 	{
 		title: 'Science',
 		href: '/about/science',
 		icon: FlaskConical,
 		iconClass: 'group-hover:rotate-[-6deg]',
+		iconColor: 'text-blue-500',
+		groupId: 'science',
 	},
 	{
 		title: 'Programs',
 		isDropdown: true,
 		dropdownItems: programs,
+		icon: GraduationCap,
+		iconColor: 'text-white',
+		groupId: 'programs',
 	},
 	{
 		title: 'Team',
 		href: '/about/team',
+		icon: Users,
+		iconColor: 'text-white',
+		groupId: 'team',
 	},
-
 	{
 		title: 'Contact',
 		href: '/contact',
+		icon: Mail,
+		iconColor: 'text-white',
+		groupId: 'contact',
 	},
 ];
 
 export function Header() {
 	const pathname = usePathname();
 	const [open, setOpen] = React.useState(false);
+	// State to track which nav item is hovered
+	const [hoveredItem, setHoveredItem] = React.useState<string | null>(null);
 
 	const handleLinkClick = () => {
 		setOpen(false);
+	};
+
+	// Handle hover events
+	const handleMouseEnter = (id: string) => {
+		setHoveredItem(id);
+	};
+
+	const handleMouseLeave = () => {
+		setHoveredItem(null);
 	};
 
 	return (
@@ -117,7 +143,37 @@ export function Header() {
 								<NavigationMenuItem key={link.title}>
 									{link.isDropdown ? (
 										<>
-											<NavigationMenuTrigger className='bg-transparent text-white hover:bg-transparent hover:text-slate-300 focus:bg-transparent focus:text-white data-[active]:bg-transparent data-[state=open]:bg-transparent'>
+											<NavigationMenuTrigger
+												className='bg-transparent text-white hover:bg-transparent hover:text-slate-300 focus:bg-transparent focus:text-white data-[active]:bg-transparent data-[state=open]:bg-transparent'
+												onMouseEnter={() =>
+													handleMouseEnter(link.title)
+												}
+												onMouseLeave={handleMouseLeave}
+											>
+												{link.icon && (
+													<span
+														className={`inline-block transition-all duration-300 ease-out ${
+															hoveredItem ===
+															link.title
+																? 'w-4 mr-2'
+																: 'w-0 mr-0'
+														} overflow-hidden`}
+													>
+														<link.icon
+															className={`h-4 w-4 block ${
+																link.iconColor
+															} transition-all duration-300 ease-out ${
+																hoveredItem ===
+																link.title
+																	? 'opacity-100 scale-100 translate-x-0 rotate-0'
+																	: 'opacity-0 scale-75 translate-x-4 rotate-[30deg]'
+															} ${
+																link.iconClass ||
+																''
+															}`}
+														/>
+													</span>
+												)}
 												{link.title}
 											</NavigationMenuTrigger>
 											<NavigationMenuContent>
@@ -154,13 +210,34 @@ export function Header() {
 											passHref
 										>
 											<NavigationMenuLink
-												className={`group inline-flex h-10 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors bg-transparent text-white hover:bg-transparent hover:text-slate-300 focus:bg-transparent focus:text-white focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-transparent data-[state=open]:bg-transparent`}
+												className='inline-flex h-10 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors bg-transparent text-white hover:bg-transparent hover:text-slate-300 focus:bg-transparent focus:text-white focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-transparent data-[state=open]:bg-transparent'
+												onMouseEnter={() =>
+													handleMouseEnter(link.title)
+												}
+												onMouseLeave={handleMouseLeave}
 											>
 												<span className='inline-flex items-center'>
 													{link.icon && (
-														<span className='inline-block transition-all duration-300 ease-out w-0 mr-0 group-hover:w-4 group-hover:mr-2 overflow-hidden'>
+														<span
+															className={`inline-block transition-all duration-300 ease-out ${
+																hoveredItem ===
+																link.title
+																	? 'w-4 mr-2'
+																	: 'w-0 mr-0'
+															} overflow-hidden`}
+														>
 															<link.icon
-																className={`h-4 w-4 block text-blue-500 transition-all duration-300 ease-out opacity-0 scale-75 translate-x-4 rotate-[30deg] group-hover:opacity-100 group-hover:scale-100 group-hover:translate-x-0 group-hover:rotate-0`}
+																className={`h-4 w-4 block ${
+																	link.iconColor
+																} transition-all duration-300 ease-out ${
+																	hoveredItem ===
+																	link.title
+																		? 'opacity-100 scale-100 translate-x-0 rotate-0'
+																		: 'opacity-0 scale-75 translate-x-4 rotate-[30deg]'
+																} ${
+																	link.iconClass ||
+																	''
+																}`}
 															/>
 														</span>
 													)}

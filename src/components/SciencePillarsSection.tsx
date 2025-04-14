@@ -147,7 +147,7 @@ export function SciencePillarsSection() {
 						<motion.div
 							key={index}
 							id={pillar.id}
-							className='bg-white rounded-3xl shadow-sm p-8 border border-blue-100 scroll-mt-24'
+							className='bg-slate-900 rounded-3xl shadow-sm p-8  scroll-mt-24'
 							initial={{ opacity: 0, y: 30 }}
 							whileInView={{ opacity: 1, y: 0 }}
 							viewport={{ once: true, amount: 0.2 }}
@@ -158,19 +158,19 @@ export function SciencePillarsSection() {
 									<div className={`${pillar.color} mb-4`}>
 										{pillar.icon}
 									</div>
-									<h3 className='text-2xl font-bold text-blue-950 mb-2'>
+									<h3 className='text-2xl font-bold text-white mb-2'>
 										{pillar.title}
 									</h3>
-									<h4 className='text-lg text-blue-600 mb-4'>
+									<h4 className='text-lg text-blue-300 mb-4'>
 										{pillar.subtitle}
 									</h4>
-									<p className='text-slate-700 leading-relaxed'>
+									<p className='text-slate-300 leading-relaxed'>
 										{pillar.description}
 									</p>
 								</div>
 
 								<div className='md:w-1/2'>
-									<h4 className='text-lg font-semibold text-blue-950 mb-4'>
+									<h4 className='text-lg font-semibold text-white mb-4'>
 										Research Highlights
 									</h4>
 									<ul className='space-y-4'>
@@ -182,7 +182,7 @@ export function SciencePillarsSection() {
 												<div
 													className={`w-2 h-2 rounded-full ${pillar.bgColor} mt-2 flex-shrink-0`}
 												/>
-												<p className='text-slate-700'>
+												<p className='text-slate-300'>
 													{item}
 												</p>
 											</li>
