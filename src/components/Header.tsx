@@ -29,12 +29,12 @@ const programs: { title: string; href: string; description: string }[] = [
 		description:
 			'Our comprehensive lifestyle change program with guidance, structure, and community support.',
 	},
-	// {
-	// 	title: 'THRIVE Essentials',
-	// 	href: '/programs/essentials',
-	// 	description:
-	// 		'A self-paced online course to explore Lifestyle Medicine and build healthier habits.',
-	// },
+	{
+		title: 'THRIVE Essentials',
+		href: '/programs/essentials',
+		description:
+			'A self-paced online course to explore Lifestyle Medicine and build healthier habits.',
+	},
 ];
 
 export function Header() {

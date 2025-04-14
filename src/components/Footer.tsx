@@ -53,14 +53,14 @@ export function Footer() {
 									THRIVE 6-Week Program
 								</Link>
 							</li>
-							{/* <li>
+							<li>
 								<Link
 									href='/programs/essentials'
 									className='text-slate-600 hover:text-blue-500 text-sm'
 								>
 									THRIVE Essentials
 								</Link>
-							</li> */}
+							</li>
 						</ul>
 					</div>
 

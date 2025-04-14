@@ -861,10 +861,27 @@ export function ProgramStructureSection() {
 				>
 					<h3 className='text-2xl md:text-3xl font-bold mb-4'>
 						Lifestyle is both the{' '}
-						<span className='text-blue-950'>cause</span> and the{' '}
-						<span className='text-blue-950'>cure.</span>
+						<span className='text-blue-300 relative'>
+							cause
+							<motion.span
+								className='absolute -bottom-2 left-0 w-full h-1 bg-blue-300'
+								initial={{ width: 0 }}
+								animate={{ width: '100%' }}
+								transition={{ duration: 0.6, delay: 0.7 }}
+							/>
+						</span>{' '}
+						and the{' '}
+						<span className='text-blue-300 relative'>
+							cure.
+							<motion.span
+								className='absolute -bottom-2 left-0 w-full h-1 bg-blue-300'
+								initial={{ width: 0 }}
+								animate={{ width: '100%' }}
+								transition={{ duration: 0.6, delay: 0.9 }}
+							/>
+						</span>
 					</h3>
-					<p className='text-blue-100 mb-8 max-w-2xl mx-auto'>
+					<p className='text-blue-100 mb-8 max-w-2xl text-xl mx-auto'>
 						By addressing these six areas, you can prevent and
 						reverse chronic disease while cultivating a healthier,
 						more meaningful life.
