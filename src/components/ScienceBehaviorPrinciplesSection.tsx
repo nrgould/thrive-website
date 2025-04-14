@@ -45,6 +45,25 @@ export function ScienceBehaviorPrinciplesSection() {
 	const [carouselApi, setCarouselApi] = useState<CarouselApi | null>(null);
 	const modalRef = useRef<HTMLDivElement>(null);
 
+	// Define animation variants
+	const cardVariants = {
+		initial: { scale: 1 },
+		hover: { scale: 1.015 },
+	};
+
+	const iconVariants = {
+		initial: { scale: 1 },
+		hover: {
+			scale: 1.2,
+			rotate: 5,
+			transition: {
+				type: 'spring',
+				stiffness: 300,
+				damping: 10,
+			},
+		},
+	};
+
 	const openModal = (index: number) => {
 		setActiveModal(index);
 		document.body.style.overflow = 'hidden';
@@ -294,7 +313,8 @@ export function ScienceBehaviorPrinciplesSection() {
 							viewport={{ once: true }}
 							transition={{ duration: 0.3, delay: index * 0.05 }}
 							onClick={() => openModal(index)}
-							whileHover={{ scale: 1.015 }}
+							variants={cardVariants}
+							whileHover='hover'
 						>
 							<div className='p-6'>
 								<div className='flex items-center gap-4 mb-4'>
@@ -304,13 +324,20 @@ export function ScienceBehaviorPrinciplesSection() {
 											principle.bgColorLight
 										)}
 									>
-										<span
+										<motion.span
 											className={cn(
+												'flex items-center justify-center',
 												principle.textColorDark
 											)}
+											variants={iconVariants}
+											animate={
+												index === activeModal
+													? 'hover'
+													: 'initial'
+											}
 										>
 											{principle.icon}
-										</span>
+										</motion.span>
 									</div>
 									<h4 className='text-xl font-bold text-blue-950 flex-1'>
 										{principle.title}
@@ -513,13 +540,23 @@ export function ScienceBehaviorPrinciplesSection() {
 															principle.bgColorLight
 														)}
 													>
-														<span
+														<motion.span
 															className={cn(
+																'flex items-center justify-center',
 																principle.textColorDark
 															)}
+															variants={
+																iconVariants
+															}
+															animate={
+																index ===
+																activeModal
+																	? 'hover'
+																	: 'initial'
+															}
 														>
 															{principle.icon}
-														</span>
+														</motion.span>
 													</div>
 													<h3 className='text-2xl font-bold text-blue-950'>
 														{principle.title}
