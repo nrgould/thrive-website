@@ -2,7 +2,18 @@
 
 import * as React from 'react';
 import Link from 'next/link';
-import { Menu } from 'lucide-react';
+import {
+	Menu,
+	CalendarClock,
+	Sparkles,
+	Info,
+	Mail,
+	Home,
+	Users,
+	FlaskConical,
+	Plus,
+	UserPlus,
+} from 'lucide-react';
 import { usePathname } from 'next/navigation';
 
 import {
@@ -22,18 +33,25 @@ import {
 	SheetTitle,
 } from '@/components/ui/sheet';
 
-const programs: { title: string; href: string; description: string }[] = [
+const programs: {
+	title: string;
+	href: string;
+	description: string;
+	icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+}[] = [
 	{
 		title: 'THRIVE 6-Week Program',
 		href: '/programs/six-week',
 		description:
 			'Our comprehensive lifestyle change program with guidance, structure, and community support.',
+		icon: CalendarClock,
 	},
 	{
 		title: 'THRIVE Essentials',
 		href: '/programs/essentials',
 		description:
 			'A self-paced online course to explore Lifestyle Medicine and build healthier habits.',
+		icon: Sparkles,
 	},
 ];
 
@@ -81,6 +99,9 @@ export function Header() {
 												key={program.title}
 												title={program.title}
 												href={program.href}
+												icon={
+													<program.icon className='mr-2 h-4 w-4 text-blue-600' />
+												}
 											>
 												{program.description}
 											</ListItem>
@@ -116,6 +137,9 @@ export function Header() {
 										<ListItem
 											href='/about/team'
 											title='Our Team'
+											icon={
+												<Users className='mr-2 h-4 w-4 text-blue-600' />
+											}
 										>
 											Meet the experts behind
 											THRIVE&apos;s evidence-based
@@ -124,6 +148,9 @@ export function Header() {
 										<ListItem
 											href='/about/science'
 											title='The Science'
+											icon={
+												<FlaskConical className='mr-2 h-4 w-4 text-blue-600' />
+											}
 										>
 											Research and evidence supporting
 											Lifestyle Medicine.
@@ -141,8 +168,9 @@ export function Header() {
 							<NavigationMenuItem>
 								<Link href='/contact' legacyBehavior passHref>
 									<NavigationMenuLink
-										className={navigationMenuTriggerStyle()}
+										className={`${navigationMenuTriggerStyle()} group`}
 									>
+										<Mail className='mr-2 h-4 w-4 transition-transform duration-200 group-hover:-rotate-6' />
 										Contact
 									</NavigationMenuLink>
 								</Link>
@@ -190,34 +218,36 @@ export function Header() {
 									<div className='flex flex-col space-y-3 pl-1'>
 										<Link
 											href='/'
-											className={`text-base py-1 transition-colors font-medium ${
+											className={`text-base py-1 transition-colors font-medium group flex items-center ${
 												pathname === '/'
 													? 'text-blue-700 border-b border-blue-500 inline-block'
 													: 'hover:text-blue-600'
 											}`}
 											onClick={handleLinkClick}
 										>
+											<Home className='mr-3 h-5 w-5 text-blue-500 transition-transform duration-200 group-hover:scale-110' />
 											Home
 										</Link>
 									</div>
 								</div>
 
 								<div className='px-2'>
-									<h2 className='text-lg font-semibold mb-3 text-blue-600 border-b border-blue-100 pb-2'>
+									<h2 className='text-lg font-semibold mb-3 text-blue-600'>
 										Programs
 									</h2>
-									<div className='flex flex-col space-y-3 pl-1'>
+									<div className='flex flex-col space-y-2'>
 										{programs.map((program) => (
 											<Link
 												key={program.title}
 												href={program.href}
-												className={`text-base py-1 transition-colors font-medium ${
+												className={`text-base py-1 transition-colors font-medium group flex items-center ${
 													pathname === program.href
 														? 'text-blue-700 border-b border-blue-500 inline-block'
 														: 'hover:text-blue-600'
 												}`}
 												onClick={handleLinkClick}
 											>
+												<program.icon className='mr-3 h-5 w-5 text-blue-500 transition-transform duration-200 group-hover:scale-110' />
 												{program.title}
 											</Link>
 										))}
@@ -225,41 +255,44 @@ export function Header() {
 								</div>
 
 								<div className='px-2'>
-									<h2 className='text-lg font-semibold mb-3 text-blue-600 border-b border-blue-100 pb-2'>
+									<h2 className='text-lg font-semibold mb-3 text-blue-600'>
 										About
 									</h2>
 									<div className='flex flex-col space-y-3 pl-1'>
 										<Link
 											href='/about'
-											className={`text-base py-1 transition-colors font-medium ${
+											className={`text-base py-1 transition-colors font-medium group flex items-center ${
 												pathname === '/about'
 													? 'text-blue-700 border-b border-blue-500 inline-block'
 													: 'hover:text-blue-600'
 											}`}
 											onClick={handleLinkClick}
 										>
+											<Info className='mr-3 h-5 w-5 text-blue-500 transition-transform duration-200 group-hover:rotate-6' />
 											Our Approach
 										</Link>
 										<Link
 											href='/about/team'
-											className={`text-base py-1 transition-colors font-medium ${
+											className={`text-base py-1 transition-colors font-medium group flex items-center ${
 												pathname === '/about/team'
 													? 'text-blue-700 border-b border-blue-500 inline-block'
 													: 'hover:text-blue-600'
 											}`}
 											onClick={handleLinkClick}
 										>
+											<Users className='mr-3 h-5 w-5 text-blue-500 transition-transform duration-200 group-hover:scale-110' />
 											Our Team
 										</Link>
 										<Link
 											href='/about/science'
-											className={`text-base py-1 transition-colors font-medium ${
+											className={`text-base py-1 transition-colors font-medium group flex items-center ${
 												pathname === '/about/science'
 													? 'text-blue-700 border-b border-blue-500 inline-block'
 													: 'hover:text-blue-600'
 											}`}
 											onClick={handleLinkClick}
 										>
+											<FlaskConical className='mr-3 h-5 w-5 text-blue-500 transition-transform duration-200 group-hover:rotate-[-6deg]' />
 											The Science
 										</Link>
 									</div>
@@ -272,13 +305,14 @@ export function Header() {
 									<div className='flex flex-col space-y-3 pl-1'>
 										<Link
 											href='/contact'
-											className={`text-base py-1 transition-colors font-medium ${
+											className={`text-base py-1 transition-colors font-medium group flex items-center ${
 												pathname === '/contact'
 													? 'text-blue-700 border-b border-blue-500 inline-block'
 													: 'hover:text-blue-600'
 											}`}
 											onClick={handleLinkClick}
 										>
+											<Mail className='mr-3 h-5 w-5 text-blue-500 transition-transform duration-200 group-hover:-rotate-6' />
 											Get in Touch
 										</Link>
 									</div>
@@ -287,9 +321,10 @@ export function Header() {
 								<div className='mt-4 px-2'>
 									<Link
 										href='/programs/six-week#waitlist-form'
-										className='block w-full text-center px-4 py-3 bg-blue-500 text-white rounded-full text-sm font-medium hover:bg-blue-600 transition-colors shadow-sm'
+										className='block w-full text-center px-4 py-3 bg-blue-500 text-white rounded-full text-sm font-medium hover:bg-blue-600 transition-colors shadow-sm group flex items-center justify-center'
 										onClick={handleLinkClick}
 									>
+										<Plus className='mr-2 h-4 w-4 transition-transform duration-200 group-hover:scale-125' />
 										Join Waitlist
 									</Link>
 								</div>
@@ -300,8 +335,9 @@ export function Header() {
 
 				<Link
 					href='/programs/six-week#waitlist-form'
-					className='hidden md:flex px-4 py-2 bg-blue-500 text-white rounded-full text-sm font-medium hover:bg-blue-600 transition-colors'
+					className='hidden md:flex px-4 py-2 bg-blue-500 text-white rounded-full text-sm font-medium hover:bg-blue-600 transition-colors items-center group'
 				>
+					<UserPlus className='mr-2 h-4 w-4 transition-transform duration-200 group-hover:scale-125' />
 					Join Waitlist
 				</Link>
 			</div>
@@ -311,22 +347,33 @@ export function Header() {
 
 const ListItem = React.forwardRef<
 	React.ElementRef<'a'>,
-	React.ComponentPropsWithoutRef<'a'>
->(({ className, title, children, ...props }, ref) => {
+	React.ComponentPropsWithoutRef<'a'> & { icon?: React.ReactNode }
+>(({ className, title, children, icon, ...props }, ref) => {
 	return (
 		<li>
 			<NavigationMenuLink asChild>
 				<a
 					ref={ref}
-					className={`block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-blue-50 hover:text-blue-900 focus:bg-blue-50 focus:text-blue-900 ${className}`}
+					className={`group flex select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-blue-50 hover:text-blue-900 focus:bg-blue-50 focus:text-blue-900 ${className}`}
 					{...props}
 				>
-					<div className='text-sm font-medium leading-none'>
-						{title}
+					<div className='flex flex-col w-full'>
+						<div className='text-sm font-medium leading-none flex items-center'>
+							{icon && (
+								<span className='transition-transform duration-200 group-hover:scale-110'>
+									{icon}
+								</span>
+							)}
+							{title}
+						</div>
+						<p
+							className={`line-clamp-2 text-sm leading-snug text-slate-600 ${
+								icon ? 'ml-6' : ''
+							}`}
+						>
+							{children}
+						</p>
 					</div>
-					<p className='line-clamp-2 text-sm leading-snug text-slate-600'>
-						{children}
-					</p>
 				</a>
 			</NavigationMenuLink>
 		</li>
