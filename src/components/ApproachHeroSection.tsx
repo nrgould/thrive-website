@@ -11,7 +11,7 @@ export function ApproachHeroSection() {
 					transition={{ duration: 0.7 }}
 				>
 					Our Approach to{' '}
-					<span className='text-blue-500'>Lasting Change</span>
+					<span className='text-blue-600'>Lasting Change</span>
 				</motion.h1>
 				<motion.p
 					className='text-lg md:text-xl text-slate-700 mb-6 leading-relaxed'

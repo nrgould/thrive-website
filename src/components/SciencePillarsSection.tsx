@@ -1,4 +1,6 @@
-import * as motion from 'motion/react-client';
+'use client';
+
+import { motion } from 'framer-motion';
 import { Apple, Activity, Moon, Brain, Users } from 'lucide-react';
 
 interface Pillar {
@@ -113,20 +115,23 @@ export function SciencePillarsSection() {
 	];
 
 	return (
-		<section className='w-full py-24 px-4 md:px-8 bg-white'>
+		<motion.section className='w-full py-24 px-4 md:px-8 bg-slate-950'>
 			<div className='max-w-6xl mx-auto'>
 				<motion.h2
-					className='text-3xl md:text-4xl font-bold text-center mb-4 text-blue-950'
+					className='text-3xl md:text-4xl font-bold text-center mb-4 text-white'
 					initial={{ opacity: 0, y: 20 }}
 					whileInView={{ opacity: 1, y: 0 }}
 					viewport={{ once: true }}
 					transition={{ duration: 0.5 }}
 				>
-					The Six Pillars of THRIVE Lifestyle Medicine
+					The Six Pillars of{' '}
+					<span className='text-blue-600'>
+						THRIVE Lifestyle Medicine
+					</span>
 				</motion.h2>
 
 				<motion.p
-					className='text-center text-slate-700 mb-16 max-w-3xl mx-auto text-lg md:text-xl leading-relaxed'
+					className='text-center text-slate-700 mb-16 max-w-3xl mx-auto text-lg md:text-xl text-white leading-relaxed'
 					initial={{ opacity: 0, y: 20 }}
 					whileInView={{ opacity: 1, y: 0 }}
 					viewport={{ once: true }}
@@ -145,7 +150,7 @@ export function SciencePillarsSection() {
 							className='bg-white rounded-3xl shadow-sm p-8 border border-blue-100 scroll-mt-24'
 							initial={{ opacity: 0, y: 30 }}
 							whileInView={{ opacity: 1, y: 0 }}
-							viewport={{ once: true }}
+							viewport={{ once: true, amount: 0.2 }}
 							transition={{ duration: 0.5, delay: index * 0.1 }}
 						>
 							<div className='flex flex-col md:flex-row gap-8'>
@@ -164,7 +169,7 @@ export function SciencePillarsSection() {
 									</p>
 								</div>
 
-								<div className='md:w-2/3'>
+								<div className='md:w-1/2'>
 									<h4 className='text-lg font-semibold text-blue-950 mb-4'>
 										Research Highlights
 									</h4>
@@ -189,6 +194,6 @@ export function SciencePillarsSection() {
 					))}
 				</div>
 			</div>
-		</section>
+		</motion.section>
 	);
 }
