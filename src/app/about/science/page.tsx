@@ -8,7 +8,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
 	title: 'The Science | THRIVE',
 	description:
-		'Discover the evidence-based research and scientific principles behind the six pillars of Lifestyle Medicine that form the foundation of the THRIVE program.',
+		'Discover the evidence-based research and scientific principles that form the foundation of our approach to health and well-beinglness through the six pillars of Lifestyle Medicine and Behavior Design.',
 };
 
 export default function SciencePage() {

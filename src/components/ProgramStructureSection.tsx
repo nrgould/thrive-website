@@ -861,7 +861,7 @@ export function ProgramStructureSection() {
 				>
 					<h3 className='text-2xl md:text-3xl font-bold mb-4'>
 						Lifestyle is both the{' '}
-						<span className='text-blue-300 relative'>
+						<span className='text-white relative'>
 							cause
 							<motion.span
 								className='absolute -bottom-2 left-0 w-full h-1 bg-blue-300'
@@ -871,7 +871,7 @@ export function ProgramStructureSection() {
 							/>
 						</span>{' '}
 						and the{' '}
-						<span className='text-blue-300 relative'>
+						<span className='text-white relative'>
 							cure.
 							<motion.span
 								className='absolute -bottom-2 left-0 w-full h-1 bg-blue-300'
