@@ -13,6 +13,7 @@ import {
 	FlaskConical,
 	Plus,
 	UserPlus,
+	Heart,
 } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 
@@ -93,10 +94,11 @@ export function Header() {
 	return (
 		<header className='w-full py-4 px-4 md:px-8 bg-slate-950 backdrop-blur-sm sticky top-0 z-50 border-b border-slate-800'>
 			<div className='max-w-full mx-auto flex items-center justify-between'>
-				<Link href='/' className='flex items-center gap-2'>
-					<span className='flex flex-col items-center leading-tight'>
-						<span className='text-3xl font-bold text-white'>
+				<Link href='/' className='flex items-center gap-2 group'>
+					<span className='flex flex-col items-center leading-tight transition-transform duration-300 group-hover:scale-105'>
+						<span className='relative text-3xl font-bold text-white'>
 							THRIVE
+							<Heart className='absolute -right-5 -top-0.5 h-4 w-4 text-red-500 fill-red-500 transition-all duration-300 ease-out opacity-0 scale-0 rotate-[30deg] translate-x-2 group-hover:opacity-100 group-hover:scale-100 group-hover:rotate-0 group-hover:translate-x-0' />
 						</span>
 						<span className='text-xs text-white -mt-1'>
 							<span className='text-white '>L</span>
@@ -158,7 +160,7 @@ export function Header() {
 													{link.icon && (
 														<span className='inline-block transition-all duration-300 ease-out w-0 mr-0 group-hover:w-4 group-hover:mr-2 overflow-hidden'>
 															<link.icon
-																className={`h-4 w-4 block transition-all duration-300 ease-out opacity-0 scale-75 translate-x-4 rotate-[30deg] group-hover:opacity-100 group-hover:scale-100 group-hover:translate-x-0 group-hover:rotate-0`}
+																className={`h-4 w-4 block text-blue-500 transition-all duration-300 ease-out opacity-0 scale-75 translate-x-4 rotate-[30deg] group-hover:opacity-100 group-hover:scale-100 group-hover:translate-x-0 group-hover:rotate-0`}
 															/>
 														</span>
 													)}
@@ -206,7 +208,7 @@ export function Header() {
 							</div>
 							<div className='flex flex-col gap-8'>
 								<div className='px-2'>
-									<h2 className='text-lg font-semibold mb-3 text-blue-600 border-b border-blue-100 pb-2'>
+									<h2 className='text-lg font-semibold mb-3 text-blue-600'>
 										Navigation
 									</h2>
 									<div className='flex flex-col space-y-3 pl-1'>
@@ -214,7 +216,7 @@ export function Header() {
 											href='/'
 											className={`text-base py-1 transition-colors font-medium group flex items-center ${
 												pathname === '/'
-													? 'text-blue-700 border-b border-blue-500 inline-block'
+													? 'text-blue-700 border-b border-blue-500'
 													: 'hover:text-blue-600'
 											}`}
 											onClick={handleLinkClick}
@@ -293,7 +295,7 @@ export function Header() {
 								</div>
 
 								<div className='px-2'>
-									<h2 className='text-lg font-semibold mb-3 text-blue-600 border-b border-blue-100 pb-2'>
+									<h2 className='text-lg font-semibold mb-3 text-blue-600'>
 										Contact
 									</h2>
 									<div className='flex flex-col space-y-3 pl-1'>
