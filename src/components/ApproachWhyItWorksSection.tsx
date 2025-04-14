@@ -1,5 +1,5 @@
 import * as motion from 'motion/react-client';
-import { CheckCircle, Shield, Heart, Brain, Clock, Users } from 'lucide-react';
+import { CheckCircle, Heart, Brain, Clock, Users } from 'lucide-react';
 
 export function ApproachWhyItWorksSection() {
 	return (
