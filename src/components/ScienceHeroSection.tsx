@@ -41,8 +41,8 @@ export function ScienceHeroSection() {
 					>
 						Discover the evidence-based research and scientific
 						principles that form the foundation of our approach to
-						health and wellness through the six pillars of Lifestyle
-						Medicine.
+						health and well-being through Lifestyle Medicine and
+						Behavior Design.
 					</motion.p>
 					{/* Scroll down animation */}
 					<ScrollDownCTA className='mt-8' targetId='myths-truths' />

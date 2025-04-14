@@ -192,7 +192,7 @@ export function ApproachWhyItWorksSection() {
 					</motion.div>
 				</div>
 
-				<motion.div
+				{/* <motion.div
 					className='bg-blue-600 rounded-3xl p-10 text-center text-white'
 					initial={{ opacity: 0, y: 30 }}
 					whileInView={{ opacity: 1, y: 0 }}
@@ -249,7 +249,7 @@ export function ApproachWhyItWorksSection() {
 							</p>
 						</div>
 					</div>
-				</motion.div>
+				</motion.div> */}
 			</div>
 		</section>
 	);

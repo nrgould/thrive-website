@@ -15,7 +15,6 @@ import {
 	ArrowRight,
 	ChevronLeft,
 	ChevronRight,
-	ClipboardList,
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import {
@@ -262,22 +261,6 @@ export function ScienceBehaviorPrinciplesSection() {
 		<section className='w-full pt-20 bg-blue-50'>
 			<div className='max-w-6xl mx-auto px-4 md:px-8'>
 				<div className='mb-16 text-center'>
-					<motion.div
-						className='inline-flex items-center justify-center mb-4 bg-blue-100 px-5 py-2 rounded-full shadow-sm'
-						initial={{ opacity: 0, y: 20 }}
-						whileInView={{ opacity: 1, y: 0 }}
-						viewport={{ once: true }}
-						transition={{ duration: 0.5 }}
-					>
-						<ClipboardList
-							className='text-blue-600 mr-2'
-							size={18}
-						/>
-						<h3 className='text-md text-blue-600 font-medium uppercase'>
-							Foundational Concepts
-						</h3>
-					</motion.div>
-
 					<motion.h2
 						className='text-3xl md:text-4xl font-bold mb-4 text-blue-950'
 						initial={{ opacity: 0, y: 20 }}

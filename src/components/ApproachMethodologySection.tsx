@@ -184,7 +184,7 @@ export function ApproachMethodologySection() {
 							Connection
 						</h3>
 						<h4 className='text-xl font-medium text-blue-900 mb-4'>
-							Maintain Success
+							Engage in a Community of Support
 						</h4>
 						<div className='flex-1'>
 							<p className='text-slate-700 mb-6 leading-relaxed'>

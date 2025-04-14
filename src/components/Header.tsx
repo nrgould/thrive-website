@@ -23,7 +23,6 @@ import {
 	NavigationMenuLink,
 	NavigationMenuList,
 	NavigationMenuTrigger,
-	navigationMenuTriggerStyle,
 } from '@/components/ui/navigation-menu';
 
 import {
@@ -55,6 +54,34 @@ const programs: {
 	},
 ];
 
+// Define navigation links array
+const navLinks = [
+	{
+		title: 'Approach',
+		href: '/about',
+	},
+	{
+		title: 'Science',
+		href: '/about/science',
+		icon: FlaskConical,
+		iconClass: 'group-hover:rotate-[-6deg]',
+	},
+	{
+		title: 'Programs',
+		isDropdown: true,
+		dropdownItems: programs,
+	},
+	{
+		title: 'Team',
+		href: '/about/team',
+	},
+
+	{
+		title: 'Contact',
+		href: '/contact',
+	},
+];
+
 export function Header() {
 	const pathname = usePathname();
 	const [open, setOpen] = React.useState(false);
@@ -64,21 +91,17 @@ export function Header() {
 	};
 
 	return (
-		<header className='w-full py-4 px-4 md:px-8 bg-white backdrop-blur-sm sticky top-0 z-50 border-b border-slate-100'>
+		<header className='w-full py-4 px-4 md:px-8 bg-black backdrop-blur-sm sticky top-0 z-50 border-b border-slate-800'>
 			<div className='max-w-full mx-auto flex items-center justify-between'>
 				<Link href='/' className='flex items-center gap-2'>
 					<span className='flex flex-col items-center leading-tight'>
-						<span className='text-3xl font-bold text-blue-600'>
+						<span className='text-3xl font-bold text-white'>
 							THRIVE
 						</span>
-						<span className='text-xs text-blue-400 -mt-1'>
-							<span className='text-blue-600 text-md font-bold'>
-								L
-							</span>
+						<span className='text-xs text-white -mt-1'>
+							<span className='text-white '>L</span>
 							ifestyle
-							<span className='text-blue-600 text-md font-bold ml-1'>
-								M
-							</span>
+							<span className='text-white ml-1'>M</span>
 							edicine
 						</span>
 					</span>
@@ -87,94 +110,65 @@ export function Header() {
 				{/* Desktop Navigation */}
 				<div className='hidden md:block'>
 					<NavigationMenu>
-						<NavigationMenuList>
-							<NavigationMenuItem>
-								<NavigationMenuTrigger>
-									Programs
-								</NavigationMenuTrigger>
-								<NavigationMenuContent>
-									<ul className='grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[500px]'>
-										{programs.map((program) => (
-											<ListItem
-												key={program.title}
-												title={program.title}
-												href={program.href}
-												icon={
-													<program.icon className='mr-2 h-4 w-4 text-blue-600' />
-												}
+						<NavigationMenuList className='text-white'>
+							{navLinks.map((link) => (
+								<NavigationMenuItem key={link.title}>
+									{link.isDropdown ? (
+										<>
+											<NavigationMenuTrigger className='bg-transparent text-white hover:bg-transparent hover:text-slate-300 focus:bg-transparent focus:text-white data-[active]:bg-transparent data-[state=open]:bg-transparent'>
+												{link.title}
+											</NavigationMenuTrigger>
+											<NavigationMenuContent>
+												<ul className='grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[500px] bg-white text-black'>
+													{link.dropdownItems?.map(
+														(program) => (
+															<ListItem
+																key={
+																	program.title
+																}
+																title={
+																	program.title
+																}
+																href={
+																	program.href
+																}
+																icon={
+																	<program.icon className='mr-2 h-4 w-4 text-blue-600' />
+																}
+															>
+																{
+																	program.description
+																}
+															</ListItem>
+														)
+													)}
+												</ul>
+											</NavigationMenuContent>
+										</>
+									) : (
+										<Link
+											href={link.href!}
+											legacyBehavior
+											passHref
+										>
+											<NavigationMenuLink
+												className={`group inline-flex h-10 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors bg-transparent text-white hover:bg-transparent hover:text-slate-300 focus:bg-transparent focus:text-white focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-transparent data-[state=open]:bg-transparent`}
 											>
-												{program.description}
-											</ListItem>
-										))}
-									</ul>
-								</NavigationMenuContent>
-							</NavigationMenuItem>
-							<NavigationMenuItem>
-								<NavigationMenuTrigger>
-									About
-								</NavigationMenuTrigger>
-								<NavigationMenuContent>
-									<ul className='grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]'>
-										<li className='row-span-3'>
-											<NavigationMenuLink asChild>
-												<a
-													className='flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-blue-50 to-blue-100 p-6 no-underline outline-none focus:shadow-md'
-													href='/about'
-												>
-													<div className='mb-2 mt-4 text-lg font-medium text-blue-900'>
-														Our Approach
-													</div>
-													<p className='text-sm leading-tight text-slate-700'>
-														Learn how Lifestyle
-														Medicine and Behavior
-														Design can transform
-														your health and
-														well-being.
-													</p>
-												</a>
+												<span className='inline-flex items-center'>
+													{link.icon && (
+														<span className='inline-block transition-all duration-300 ease-out w-0 mr-0 group-hover:w-4 group-hover:mr-2 overflow-hidden'>
+															<link.icon
+																className={`h-4 w-4 block transition-all duration-300 ease-out opacity-0 scale-75 translate-x-4 rotate-[30deg] group-hover:opacity-100 group-hover:scale-100 group-hover:translate-x-0 group-hover:rotate-0`}
+															/>
+														</span>
+													)}
+													<span>{link.title}</span>
+												</span>
 											</NavigationMenuLink>
-										</li>
-										<ListItem
-											href='/about/team'
-											title='Our Team'
-											icon={
-												<Users className='mr-2 h-4 w-4 text-blue-600' />
-											}
-										>
-											Meet the experts behind
-											THRIVE&apos;s evidence-based
-											approach.
-										</ListItem>
-										<ListItem
-											href='/about/science'
-											title='The Science'
-											icon={
-												<FlaskConical className='mr-2 h-4 w-4 text-blue-600' />
-											}
-										>
-											Research and evidence supporting
-											Lifestyle Medicine.
-										</ListItem>
-										{/* <ListItem
-											href='/about/results'
-											title='Results'
-										>
-											Real outcomes from real participants in
-											our programs.
-										</ListItem> */}
-									</ul>
-								</NavigationMenuContent>
-							</NavigationMenuItem>
-							<NavigationMenuItem>
-								<Link href='/contact' legacyBehavior passHref>
-									<NavigationMenuLink
-										className={`${navigationMenuTriggerStyle()} group`}
-									>
-										<Mail className='mr-2 h-4 w-4 transition-transform duration-200 group-hover:-rotate-6' />
-										Contact
-									</NavigationMenuLink>
-								</Link>
-							</NavigationMenuItem>
+										</Link>
+									)}
+								</NavigationMenuItem>
+							))}
 						</NavigationMenuList>
 					</NavigationMenu>
 				</div>
