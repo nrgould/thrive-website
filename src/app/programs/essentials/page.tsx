@@ -1,3 +1,4 @@
+import { CTASection } from '@/components/CTASection';
 import { ArrowLeft, BookOpen, Clock, Award } from 'lucide-react';
 import Link from 'next/link';
 
@@ -58,7 +59,7 @@ export default function EssentialsPage() {
 								</div>
 							</div>
 							<button className='px-8 py-4 bg-blue-500 text-white rounded-full font-medium text-lg hover:bg-blue-600 transition-colors shadow-md'>
-								Enroll Now - $97
+								Coming Soon
 							</button>
 						</div>
 						<div className='flex-1 relative h-[350px] w-full rounded-3xl overflow-hidden'>
@@ -156,7 +157,7 @@ export default function EssentialsPage() {
 				</div>
 			</section>
 
-			{/* Course Modules */}
+			{/* Course Modules
 			<section className='w-full py-16 px-4 md:px-8 bg-blue-50'>
 				<div className='max-w-6xl mx-auto'>
 					<h2 className='text-3xl font-bold text-blue-950 mb-12 text-center'>
@@ -224,10 +225,10 @@ export default function EssentialsPage() {
 						))}
 					</div>
 				</div>
-			</section>
+			</section> */}
 
 			{/* CTA Section */}
-			<section className='w-full py-16 px-4 md:px-8 bg-white'>
+			{/* <section className='w-full py-16 px-4 md:px-8 bg-white'>
 				<div className='max-w-3xl mx-auto text-center'>
 					<h2 className='text-3xl font-bold text-blue-950 mb-6'>
 						Ready to Begin Your Journey?
@@ -244,7 +245,8 @@ export default function EssentialsPage() {
 						30-day satisfaction guarantee or your money back
 					</p>
 				</div>
-			</section>
+			</section> */}
+			<CTASection />
 		</main>
 	);
 }

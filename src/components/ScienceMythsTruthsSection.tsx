@@ -146,7 +146,7 @@ export function ScienceMythsTruthsSection() {
 	const mythTruthPairs: MythTruthPair[] = [
 		{
 			myth: 'The one with the most Willpower wins',
-			truth: 'The one with the best Systems wins',
+			truth: 'The one with the best Systems succeeds',
 			mythIcon: <Brain className='text-blue-500' size={22} />,
 			truthIcon: <Cog className='text-green-500' size={22} />,
 		},
@@ -206,9 +206,23 @@ export function ScienceMythsTruthsSection() {
 					<div className='inline-flex items-center justify-center mb-2 bg-blue-100 px-5 py-2 rounded-full shadow-sm'>
 						<ToggleRight className='text-blue-600 mr-2' size={18} />
 						<h3 className='text-md text-blue-600 font-medium uppercase'>
-							Creating a Lifestyle of Consistency
+							THRIVE Behavior Design: Creating a Lifestyle of
+							Consistency
 						</h3>
 					</div>
+					<motion.p
+						className='text-lg text-slate-700 max-w-2xl mx-auto my-4'
+						initial={{ opacity: 0, y: 20 }}
+						whileInView={{ opacity: 1, y: 0 }}
+						viewport={{ once: true }}
+						transition={{ duration: 0.4, delay: 0.1 }}
+					>
+						Behavior Design is the evidence-based approach of how to
+						design for reliable and sustainable behavior change by
+						providing a system - comprehensive set of models,
+						methods, and tools - for assessing and designing long
+						lasting behaviors.
+					</motion.p>
 				</motion.div>
 				<motion.h2
 					className='text-3xl md:text-4xl font-bold text-center text-blue-950'
@@ -217,7 +231,7 @@ export function ScienceMythsTruthsSection() {
 					viewport={{ once: true }}
 					transition={{ duration: 0.5 }}
 				>
-					Myths & Truths of Behavior Design
+					Myths & Truths of Behavior Change
 				</motion.h2>
 
 				<motion.p

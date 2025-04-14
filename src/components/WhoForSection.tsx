@@ -47,7 +47,7 @@ export function WhoForSection() {
 					<p className='text-lg text-slate-700 max-w-3xl mx-auto'>
 						THRIVE is designed to help a wide range of people
 						improve their health and well-being through
-						evidence-based lifestyle behaviorchanges.
+						evidence-based lifestyle behavior changes.
 					</p>
 				</motion.div>
 

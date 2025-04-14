@@ -23,7 +23,7 @@ export function ApproachHeroSection() {
 					transformation requires a fundamentally different approach.
 					At THRIVE, we combine evidence-based Lifestyle Medicine with
 					proven Behavior Design principles to help you create lasting
-					change.
+					change that nourishes the whole body.
 				</motion.p>
 				<motion.p
 					className='text-lg md:text-xl text-slate-700 leading-relaxed'
@@ -37,7 +37,8 @@ export function ApproachHeroSection() {
 					</span>
 					. We help you build sustainable habits that address the root
 					causes of chronic disease while enhancing your overall
-					wellbeing.
+					well-being in a community where everyone is supporting each
+					other&apos;s health journeys.
 				</motion.p>
 			</div>
 		</section>

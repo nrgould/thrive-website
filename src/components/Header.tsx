@@ -50,12 +50,18 @@ export function Header() {
 			<div className='max-w-full mx-auto flex items-center justify-between'>
 				<Link href='/' className='flex items-center gap-2'>
 					<span className='flex flex-col items-center leading-tight'>
-						<span className='text-3xl font-bold text-blue-500'>
+						<span className='text-3xl font-bold text-blue-600'>
 							THRIVE
 						</span>
-						<span className='text-xs text-blue-500 -mt-1'>
-							<span className='text-blue-800'>L</span>ifestyle
-							<span className='text-blue-800 ml-1'>M</span>edicine
+						<span className='text-xs text-blue-400 -mt-1'>
+							<span className='text-blue-600 text-md font-bold'>
+								L
+							</span>
+							ifestyle
+							<span className='text-blue-600 text-md font-bold ml-1'>
+								M
+							</span>
+							edicine
 						</span>
 					</span>
 				</Link>

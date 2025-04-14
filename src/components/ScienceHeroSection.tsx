@@ -4,7 +4,7 @@ import { ScrollDownCTA } from './ScrollDownCTA';
 
 export function ScienceHeroSection() {
 	return (
-		<section className='w-full min-h-[50vh] py-24 px-4 md:px-8 bg-gradient-to-b from-blue-500 to-blue-600 overflow-hidden relative text-white'>
+		<section className='w-full min-h-[30rem] py-24 px-4 md:px-8 bg-gradient-to-b from-blue-500 to-blue-600 overflow-hidden relative text-white'>
 			{/* Decorative elements */}
 			<div className='absolute top-20 left-10 w-64 h-64 rounded-full bg-white opacity-10 blur-3xl -z-10'></div>
 			<div className='absolute bottom-10 right-10 w-80 h-80 rounded-full bg-blue-300 opacity-10 blur-3xl -z-10'></div>

@@ -23,7 +23,7 @@ export function ApproachMethodologySection() {
 					Our approach combines three essential elements to create a
 					comprehensive system for sustainable health transformation.
 					Each component builds on the others to help you make changes
-					that last a lifetime.
+					that can last a lifetime.
 				</motion.p>
 
 				<div className='grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12'>
@@ -46,9 +46,10 @@ export function ApproachMethodologySection() {
 							<p className='text-slate-700 mb-6 leading-relaxed'>
 								Understanding forms the foundation of lasting
 								change. We provide scientifically-backed
-								knowledge about Lifestyle Medicine and its six
-								pillars: nutrition, physical activity, sleep,
-								stress management, social connection, and
+								knowledge about Lifestyle Medicine and through
+								theits six pillars of THRIVE: nutrition,
+								physical activity, sleep, stress management,
+								growth mindset, and social connection, and
 								healthy habits.
 							</p>
 							<p className='text-slate-700 mb-6 leading-relaxed'>
@@ -62,7 +63,7 @@ export function ApproachMethodologySection() {
 									/>
 									<span>
 										Evidence-based health and nutrition
-										information
+										information for mind and body
 									</span>
 								</li>
 								<li className='flex items-start gap-2'>
@@ -143,6 +144,7 @@ export function ApproachMethodologySection() {
 									/>
 									<span>
 										Techniques to overcome the willpower gap
+										and build more self-control
 									</span>
 								</li>
 								<li className='flex items-start gap-2'>
@@ -186,11 +188,12 @@ export function ApproachMethodologySection() {
 						</h4>
 						<div className='flex-1'>
 							<p className='text-slate-700 mb-6 leading-relaxed'>
-								Research consistently shows that social support
-								is crucial for lasting behavior change. Our
+								Human beings are tribal and rResearch
+								consistently shows that social support is
+								crucial for lasting behavior change. Our
 								approach embeds you in a supportive community
-								with expert guidance to help you navigate
-								challenges and celebrate successes.
+								with expert guidance to help you apply learning,
+								navigate challenges and celebrate successes.
 							</p>
 							<p className='text-slate-700 mb-6 leading-relaxed'>
 								Our connection framework includes:
@@ -213,7 +216,7 @@ export function ApproachMethodologySection() {
 									/>
 									<span>
 										Small group learning circles for peer
-										support
+										support and sharing
 									</span>
 								</li>
 								<li className='flex items-start gap-2'>

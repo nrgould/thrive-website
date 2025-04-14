@@ -116,7 +116,7 @@ export function SciencePillarsSection() {
 		<section className='w-full py-24 px-4 md:px-8 bg-white'>
 			<div className='max-w-6xl mx-auto'>
 				<motion.h2
-					className='text-3xl md:text-4xl font-bold text-center mb-16 text-blue-950'
+					className='text-3xl md:text-4xl font-bold text-center mb-4 text-blue-950'
 					initial={{ opacity: 0, y: 20 }}
 					whileInView={{ opacity: 1, y: 0 }}
 					viewport={{ once: true }}
@@ -124,6 +124,18 @@ export function SciencePillarsSection() {
 				>
 					The Six Pillars of THRIVE Lifestyle Medicine
 				</motion.h2>
+
+				<motion.p
+					className='text-center text-slate-700 mb-16 max-w-3xl mx-auto text-lg md:text-xl leading-relaxed'
+					initial={{ opacity: 0, y: 20 }}
+					whileInView={{ opacity: 1, y: 0 }}
+					viewport={{ once: true }}
+					transition={{ duration: 0.5, delay: 0.1 }}
+				>
+					Each Lifestyle Medicine pillar is supported by decades of
+					research demonstrating its crucial role in preventing,
+					treating, and often reversing chronic disease.
+				</motion.p>
 
 				<div className='grid grid-cols-1 gap-12'>
 					{pillars.map((pillar, index) => (

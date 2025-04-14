@@ -8,6 +8,42 @@ import {
 } from 'lucide-react';
 import Link from 'next/link';
 
+const cardData = [
+	{
+		title: 'Motivation & Willpower',
+		icon: Brain,
+		iconBgColor: 'bg-blue-500',
+		chevronColor: 'text-blue-500',
+		items: [
+			'Understanding the myths of motivation',
+			'Bridging the Willpower Gap',
+			"Building the 'muscles' of self-control",
+		],
+	},
+	{
+		title: 'Skills of Change',
+		icon: Lightbulb,
+		iconBgColor: 'bg-green-500',
+		chevronColor: 'text-green-500',
+		items: [
+			'Selecting which habits to build into your life',
+			'Understanding how & when to grow your habits',
+			'Changing your environment to make it work for you',
+		],
+	},
+	{
+		title: 'Habit Systems',
+		icon: Layers,
+		iconBgColor: 'bg-teal-500',
+		chevronColor: 'text-teal-500',
+		items: [
+			'Designing Habit Recipes',
+			'Untangling and stopping unwanted behaviors',
+			'Developing Identity-based habits',
+		],
+	},
+];
+
 export function BehaviorDesignSection() {
 	return (
 		<section
@@ -70,163 +106,52 @@ export function BehaviorDesignSection() {
 
 					{/* Right side - cards */}
 					<div className='space-y-6'>
-						{/* Card 1 */}
-						<motion.div
-							className='bg-white border border-slate-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow'
-							initial={{ opacity: 0, y: 30 }}
-							whileInView={{ opacity: 1, y: 0 }}
-							viewport={{ once: true }}
-							transition={{ duration: 0.6 }}
-						>
-							<div className='flex items-start gap-5'>
-								<div className='bg-blue-500 p-4 rounded-full shadow-md'>
-									<Brain className='text-white' size={28} />
-								</div>
-								<div className='space-y-3 flex-1'>
-									<h3 className='text-xl font-bold text-blue-950'>
-										Motivation & Willpower
-									</h3>
-									<ul className='space-y-2 text-slate-700'>
-										<li className='flex items-start gap-2'>
-											<ChevronRight
-												className='text-blue-500 flex-shrink-0 mt-1'
-												size={16}
+						{cardData.map((card, index) => {
+							const IconComponent = card.icon;
+							return (
+								<motion.div
+									key={card.title}
+									className='bg-white border border-slate-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow'
+									initial={{ opacity: 0, y: 30 }}
+									whileInView={{ opacity: 1, y: 0 }}
+									viewport={{ once: true }}
+									transition={{
+										duration: 0.6,
+										delay: index * 0.2,
+									}}
+								>
+									<div className='flex items-start gap-5'>
+										<div
+											className={`${card.iconBgColor} p-4 rounded-full shadow-md`}
+										>
+											<IconComponent
+												className='text-white'
+												size={28}
 											/>
-											<p>
-												The Willpower & Motivation myths
-											</p>
-										</li>
-										<li className='flex items-start gap-2'>
-											<ChevronRight
-												className='text-blue-500 flex-shrink-0 mt-1'
-												size={16}
-											/>
-											<p>
-												The Willpower Gap & how to
-												bridge it
-											</p>
-										</li>
-										<li className='flex items-start gap-2'>
-											<ChevronRight
-												className='text-blue-500 flex-shrink-0 mt-1'
-												size={16}
-											/>
-											<p>
-												Strategies to build the muscles
-												of self-control
-											</p>
-										</li>
-									</ul>
-								</div>
-							</div>
-						</motion.div>
-
-						{/* Card 2 */}
-						<motion.div
-							className='bg-white border border-slate-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow'
-							initial={{ opacity: 0, y: 30 }}
-							whileInView={{ opacity: 1, y: 0 }}
-							viewport={{ once: true }}
-							transition={{ duration: 0.6, delay: 0.2 }}
-						>
-							<div className='flex items-start gap-5'>
-								<div className='bg-green-500 p-4 rounded-full shadow-md'>
-									<Lightbulb
-										className='text-white'
-										size={28}
-									/>
-								</div>
-								<div className='space-y-3 flex-1'>
-									<h3 className='text-xl font-bold text-blue-950'>
-										Skills of Change
-									</h3>
-									<ul className='space-y-2 text-slate-700'>
-										<li className='flex items-start gap-2'>
-											<ChevronRight
-												className='text-green-500 flex-shrink-0 mt-1'
-												size={16}
-											/>
-											<p>
-												Selecting which habits to build
-												into your life
-											</p>
-										</li>
-										<li className='flex items-start gap-2'>
-											<ChevronRight
-												className='text-green-500 flex-shrink-0 mt-1'
-												size={16}
-											/>
-											<p>
-												Understanding how & when to grow
-												your habits
-											</p>
-										</li>
-										<li className='flex items-start gap-2'>
-											<ChevronRight
-												className='text-green-500 flex-shrink-0 mt-1'
-												size={16}
-											/>
-											<p>
-												Changing your environment to
-												make it work for you
-											</p>
-										</li>
-									</ul>
-								</div>
-							</div>
-						</motion.div>
-
-						{/* Card 3 */}
-						<motion.div
-							className='bg-white border border-slate-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow'
-							initial={{ opacity: 0, y: 30 }}
-							whileInView={{ opacity: 1, y: 0 }}
-							viewport={{ once: true }}
-							transition={{ duration: 0.6, delay: 0.4 }}
-						>
-							<div className='flex items-start gap-5'>
-								<div className='bg-teal-500 p-4 rounded-full shadow-md'>
-									<Layers className='text-white' size={28} />
-								</div>
-								<div className='space-y-3 flex-1'>
-									<h3 className='text-xl font-bold text-blue-950'>
-										Habit Systems
-									</h3>
-									<ul className='space-y-2 text-slate-700'>
-										<li className='flex items-start gap-2'>
-											<ChevronRight
-												className='text-teal-500 flex-shrink-0 mt-1'
-												size={16}
-											/>
-											<p>
-												Habit recipes and how to design
-												them
-											</p>
-										</li>
-										<li className='flex items-start gap-2'>
-											<ChevronRight
-												className='text-teal-500 flex-shrink-0 mt-1'
-												size={16}
-											/>
-											<p>
-												Untangling and unlearning
-												unwanted behaviors
-											</p>
-										</li>
-										<li className='flex items-start gap-2'>
-											<ChevronRight
-												className='text-teal-500 flex-shrink-0 mt-1'
-												size={16}
-											/>
-											<p>
-												3-step process for
-												Identity-based habits
-											</p>
-										</li>
-									</ul>
-								</div>
-							</div>
-						</motion.div>
+										</div>
+										<div className='space-y-3 flex-1'>
+											<h3 className='text-xl font-bold text-blue-950'>
+												{card.title}
+											</h3>
+											<ul className='space-y-2 text-slate-700'>
+												{card.items.map((item, i) => (
+													<li
+														key={i}
+														className='flex items-start gap-2'
+													>
+														<ChevronRight
+															className={`${card.chevronColor} flex-shrink-0 mt-1`}
+															size={16}
+														/>
+														<p>{item}</p>
+													</li>
+												))}
+											</ul>
+										</div>
+									</div>
+								</motion.div>
+							);
+						})}
 					</div>
 				</div>
 
@@ -239,7 +164,7 @@ export function BehaviorDesignSection() {
 				>
 					<blockquote className='italic text-slate-700 text-3xl md:text-4xl font-medium'>
 						&ldquo;We are what we repeatedly do; <br />
-						excellence, then, is not an act but a habit&rdquo;
+						excellence is not an act but a habit&rdquo;
 						<footer className='text-slate-500 text-xl mt-4'>
 							- Aristotle
 						</footer>

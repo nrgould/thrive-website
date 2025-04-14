@@ -15,6 +15,7 @@ import {
 	ArrowRight,
 	ChevronLeft,
 	ChevronRight,
+	ClipboardList,
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import {
@@ -35,6 +36,8 @@ interface PrincipleCard {
 	content: string;
 	icon: React.ReactNode;
 	color: string;
+	bgColorLight: string;
+	textColorDark: string;
 	keyPoints: KeyPoint[];
 }
 
@@ -98,35 +101,39 @@ export function ScienceBehaviorPrinciplesSection() {
 
 	const principles: PrincipleCard[] = [
 		{
-			title: 'Motivation & Willpower',
+			title: 'Willpower & Motivation',
 			content:
 				'Many people believe that a strong sense of willpower or motivation is the cornerstone to creating lasting change. Reality is that motivation is like a wave that constantly changes over time and is not the most reliable thing for us to use when designing our habits. There are much better places to start.',
 			icon: <Zap size={24} />,
 			color: 'bg-blue-400',
+			bgColorLight: 'bg-blue-100',
+			textColorDark: 'text-blue-600',
 			keyPoints: [
 				{
 					title: 'Motivation is unreliable',
 					description:
-						'Motivation naturally ebbs and flows, making it a poor foundation for lasting habits.',
+						'Motivation naturally ebbs and flows, making it a poor foundation to design for lasting habits.',
 				},
 				{
-					title: 'Design for low motivation',
+					title: 'Design for consistency',
 					description:
-						'Create systems that work even when your motivation is at its lowest point.',
+						'Create systems that work regardless of motivation levels.',
 				},
 				{
-					title: 'Harness motivation strategically',
+					title: 'Use willpower wisely and build it strategically',
 					description:
-						'Use high motivation periods to design and set up systems, not just to power through tasks.',
+						'Use willpower to design and set up systems that build it, not just to power through tasks.',
 				},
 			],
 		},
 		{
 			title: 'Skills of Change',
 			content:
-				'Changing our behavior is a skill and, like any skill, requires some knowledge and practice. Driving a car is a skill that, in the beginning, feels very uncomfortable, but for most becomes easy and automatic. Just like learning to drive a car, everyone can develop the skills of changing their habits.',
+				'Changing our behavior is a skill and, like any skill, requires knowledge and practice. Driving a car is a skill that, in the beginning, feels very uncomfortable, but for most people becomes easy and automatic. Just like learning to drive a car, everyone can develop the skills of changing their habits.',
 			icon: <Lightbulb size={24} />,
 			color: 'bg-indigo-400',
+			bgColorLight: 'bg-indigo-100',
+			textColorDark: 'text-indigo-600',
 			keyPoints: [
 				{
 					title: 'Change is learnable',
@@ -148,9 +155,11 @@ export function ScienceBehaviorPrinciplesSection() {
 		{
 			title: 'Habit Systems',
 			content:
-				'Often we feel that our habits happen to us and that lasting behavior change is a mysterious process. Science-based habit systems provide us with reliable approaches for anyone to build any habit in any domain. Building these systems allows us to make our habits work For Us and not To Us.',
+				'Often we feel that our habits happen to us and that lasting behavior change is a mysterious process. Science-based habit systems provide us with reliable approaches for anyone to build any habit in any area of their life. Building these systems allows us to make our habits work For Us and not To Us.',
 			icon: <Cog size={24} />,
 			color: 'bg-purple-400',
+			bgColorLight: 'bg-purple-100',
+			textColorDark: 'text-purple-600',
 			keyPoints: [
 				{
 					title: 'Systems over willpower',
@@ -172,33 +181,37 @@ export function ScienceBehaviorPrinciplesSection() {
 		{
 			title: 'Habit Recipes',
 			content:
-				'Habit Recipes are one of the most important and foundational habit systems that anyone can create. Learn how to establish the most reliable Cues, determine the right size to start a new Behavior, and how to best Celebrate success, so that we get our brains working for us in making our new behaviors Automatic.',
+				'Habit Recipes are one of the most important and foundational habit systems that anyone can create. Learn how to establish the most reliable CUES, determine the right size for a new BEHAVIOR, and how to best CELEBRATE success, so that we get our brains working for us in making our new behaviors automatic.',
 			icon: <Clipboard size={24} />,
 			color: 'bg-cyan-400',
+			bgColorLight: 'bg-cyan-100',
+			textColorDark: 'text-cyan-600',
 			keyPoints: [
 				{
 					title: 'Tiny habits grow naturally',
 					description:
-						"Starting with a behavior that's too small to fail creates momentum and builds confidence.",
+						"Starting with a behavior that's too small to fail creates momentum and builds consistency.",
 				},
 				{
 					title: 'Anchor to existing habits',
 					description:
-						'Connecting new behaviors to established routines creates reliable cues for action.',
+						'Connecting new habits to established routines creates reliable cues for action.',
 				},
 				{
-					title: 'Celebrate immediately',
+					title: 'Behaviors that get rewarded, get repeated',
 					description:
-						'Genuine celebration after completing a behavior wires your brain to crave the behavior itself.',
+						'Genuine celebration after completing a behavior wires your brain to crave that behavior.',
 				},
 			],
 		},
 		{
-			title: 'Small Wins & 1% Better',
+			title: '1% Better',
 			content:
-				"Habits are the compound interest of self-development. In a culture of 'Go Big or Go Home' marketing, it is often difficult for us to recognize the importance of small wins. But small + smart wins form the foundation of the operating system of Compounding Effect - the system that allows us to reap huge rewards thru small wins compounded over time.",
+				"Habits are the compound interest of self-development. In a culture of 'Go Big or Go Home' marketing, it is often difficult for us to see the importance of small wins. But small + smart choices form the foundation of Compounding Effect - the system that allows us to get big rewards through small wins compounded over time.",
 			icon: <TrendingUp size={24} />,
 			color: 'bg-emerald-400',
+			bgColorLight: 'bg-emerald-100',
+			textColorDark: 'text-emerald-600',
 			keyPoints: [
 				{
 					title: 'Embrace compound effect',
@@ -206,14 +219,14 @@ export function ScienceBehaviorPrinciplesSection() {
 						'Small improvements compound dramatically over time, just like interest in a financial investment.',
 				},
 				{
-					title: 'Celebrate progress milestones',
+					title: 'Celebrate progress',
 					description:
 						'Acknowledging small wins fuels motivation and reinforces your identity as someone who succeeds.',
 				},
 				{
-					title: 'Measure what matters',
+					title: 'Concentrate on consistency',
 					description:
-						'Track meaningful metrics to visualize your progress and maintain momentum during plateaus.',
+						'By prioritizing consistency you master the arts of showing up and recovering quickly',
 				},
 			],
 		},
@@ -223,6 +236,8 @@ export function ScienceBehaviorPrinciplesSection() {
 				'Our environment plays a huge role in triggering and supporting our habits. Setting up our environment in smart ways consistently nudges us in the directions we want to go and allows the choices we want to make to become the easiest choices for us to make.',
 			icon: <Puzzle size={24} />,
 			color: 'bg-green-400',
+			bgColorLight: 'bg-green-100',
+			textColorDark: 'text-green-600',
 			keyPoints: [
 				{
 					title: 'Design your environment',
@@ -237,16 +252,32 @@ export function ScienceBehaviorPrinciplesSection() {
 				{
 					title: 'Use choice architecture',
 					description:
-						'Arrange options so that the path of least resistance leads to your desired outcome.',
+						'Our environment is like gravity pulling us in specific directions; make choices that pull you where you want to go.',
 				},
 			],
 		},
 	];
 
 	return (
-		<section className='w-full py-24 px-4 md:px-8 bg-blue-50'>
-			<div className='max-w-6xl mx-auto'>
+		<section className='w-full pt-20 bg-blue-50'>
+			<div className='max-w-6xl mx-auto px-4 md:px-8'>
 				<div className='mb-16 text-center'>
+					<motion.div
+						className='inline-flex items-center justify-center mb-4 bg-blue-100 px-5 py-2 rounded-full shadow-sm'
+						initial={{ opacity: 0, y: 20 }}
+						whileInView={{ opacity: 1, y: 0 }}
+						viewport={{ once: true }}
+						transition={{ duration: 0.5 }}
+					>
+						<ClipboardList
+							className='text-blue-600 mr-2'
+							size={18}
+						/>
+						<h3 className='text-md text-blue-600 font-medium uppercase'>
+							Foundational Concepts
+						</h3>
+					</motion.div>
+
 					<motion.h2
 						className='text-3xl md:text-4xl font-bold mb-4 text-blue-950'
 						initial={{ opacity: 0, y: 20 }}
@@ -274,31 +305,36 @@ export function ScienceBehaviorPrinciplesSection() {
 					{principles.map((principle, index) => (
 						<motion.div
 							key={index}
-							className='bg-white rounded-xl shadow-sm border border-slate-100 hover:shadow-md transition-all duration-200 cursor-pointer'
+							className='bg-white rounded-3xl shadow-sm border border-blue-100 hover:shadow-md transition-all duration-200 cursor-pointer overflow-hidden'
 							initial={{ opacity: 0, y: 20 }}
 							whileInView={{ opacity: 1, y: 0 }}
 							viewport={{ once: true }}
 							transition={{ duration: 0.3, delay: index * 0.05 }}
 							onClick={() => openModal(index)}
-							whileHover={{ scale: 1.02 }}
-							whileTap={{ scale: 0.98 }}
+							whileHover={{ scale: 1.015 }}
 						>
 							<div className='p-6'>
 								<div className='flex items-center gap-4 mb-4'>
 									<div
 										className={cn(
-											'w-12 h-12 rounded-full flex items-center justify-center text-white',
-											principle.color
+											'w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0',
+											principle.bgColorLight
 										)}
 									>
-										{principle.icon}
+										<span
+											className={cn(
+												principle.textColorDark
+											)}
+										>
+											{principle.icon}
+										</span>
 									</div>
 									<h4 className='text-xl font-bold text-blue-950 flex-1'>
 										{principle.title}
 									</h4>
 								</div>
 
-								<p className='text-slate-600 line-clamp-2'>
+								<p className='text-slate-600 line-clamp-3'>
 									{principle.content}
 								</p>
 
@@ -310,31 +346,45 @@ export function ScienceBehaviorPrinciplesSection() {
 					))}
 				</div>
 
-				{/* CTA Section */}
-				<motion.div
-					className='mt-16 text-center'
-					initial={{ opacity: 0, y: 20 }}
-					whileInView={{ opacity: 1, y: 0 }}
-					viewport={{ once: true }}
-					transition={{ duration: 0.5, delay: 0.3 }}
-				>
-					<h3 className='text-2xl font-bold text-blue-950 mb-3'>
-						Ready to Apply These Principles?
-					</h3>
-					<p className='text-slate-600 max-w-2xl mx-auto mb-6'>
-						Join our 6-week program to learn how to implement these
-						behavior design principles and create lasting positive
-						changes in your life.
-					</p>
-					<Link
-						href='/programs/six-week#waitlist-form'
-						className='inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full font-medium transition-all duration-300 shadow-md'
-					>
-						Join Waitlist
-						<ArrowRight size={20} />
-					</Link>
-				</motion.div>
+				{/* CTA Section - Moved outside max-w-6xl for full width background */}
 			</div>
+
+			{/* CTA Section */}
+			<motion.div
+				className='mt-20 w-full'
+				initial={{ opacity: 0 }}
+				whileInView={{ opacity: 1 }}
+				viewport={{ once: true }}
+				transition={{ duration: 0.7, delay: 0.2 }}
+			>
+				<div className='bg-blue-600 w-full py-16'>
+					{' '}
+					{/* Full width blue background */}
+					<div className='max-w-3xl mx-auto text-center'>
+						{' '}
+						{/* Constrained content */}
+						<h3 className='text-3xl font-bold text-white mb-4'>
+							{' '}
+							{/* White text */}
+							Ready to Apply These Principles?
+						</h3>
+						<p className='text-blue-100 max-w-2xl mx-auto mb-8 text-lg'>
+							{' '}
+							{/* Lighter blue text */}
+							Join our 6-week program to learn how to implement
+							these behavior design principles and create lasting
+							positive changes in your life.
+						</p>
+						<Link
+							href='/programs/six-week#waitlist-form'
+							className='inline-flex items-center gap-2 bg-white hover:bg-blue-100 text-blue-600 px-8 py-4 rounded-full font-semibold transition-all duration-300 shadow-md text-lg' // Updated button style
+						>
+							Join Waitlist
+							<ArrowRight size={20} />
+						</Link>
+					</div>
+				</div>
+			</motion.div>
 
 			{/* Modal overlay with AnimatePresence and Carousel */}
 			<AnimatePresence>
@@ -473,14 +523,20 @@ export function ScienceBehaviorPrinciplesSection() {
 											className='pt-0'
 										>
 											<div className='pt-4 px-6 pb-6 overflow-auto max-h-[calc(90vh-80px)]'>
-												<div className='flex items-center gap-3 mb-4'>
+												<div className='flex items-center gap-4 mb-4'>
 													<div
 														className={cn(
-															'w-10 h-10 rounded-full flex items-center justify-center text-white',
-															principle.color
+															'w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0',
+															principle.bgColorLight
 														)}
 													>
-														{principle.icon}
+														<span
+															className={cn(
+																principle.textColorDark
+															)}
+														>
+															{principle.icon}
+														</span>
 													</div>
 													<h3 className='text-2xl font-bold text-blue-950'>
 														{principle.title}

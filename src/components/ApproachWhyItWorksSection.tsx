@@ -1,11 +1,5 @@
 import * as motion from 'motion/react-client';
-import {
-	CheckCircle,
-	Shield,
-	Heart,
-	Brain,
-	Clock,
-} from 'lucide-react';
+import { CheckCircle, Shield, Heart, Brain, Clock, Users } from 'lucide-react';
 
 export function ApproachWhyItWorksSection() {
 	return (
@@ -28,10 +22,11 @@ export function ApproachWhyItWorksSection() {
 					transition={{ duration: 0.5, delay: 0.1 }}
 					viewport={{ once: true }}
 				>
-					Lifestyle Medicine combined with Behavior Design creates a
-					powerful framework for sustainable health transformation.
-					Our integrated approach addresses both the what and the how
-					of lasting change.
+					Lifestyle Medicine education combined with Behavior Design
+					systems and tools creates a powerful framework for
+					sustainable health transformation. Our integrated approach
+					addresses both the what and the how of lasting, healthy
+					changes.
 				</motion.p>
 
 				<div className='grid grid-cols-1 lg:grid-cols-2 gap-14 items-start mb-20'>
@@ -46,23 +41,26 @@ export function ApproachWhyItWorksSection() {
 							Lifestyle is both the cause and the cure
 						</h3>
 						<p className='text-slate-700 text-lg leading-relaxed'>
-							Chronic diseases that affect millions—heart disease,
-							diabetes, hypertension, and more—are largely
-							influenced by lifestyle factors that are within our
-							control.
+							Chronic diseases - heart disease, diabetes,
+							hypertension, and more - that affect millions of
+							people every year are largely influenced by
+							lifestyle factors that are within our control.
 						</p>
 						<p className='text-slate-700 text-lg leading-relaxed'>
 							By addressing the six key pillars of Lifestyle
 							Medicine (nutrition, physical activity, sleep,
-							stress management, social connection, and healthy
-							habits), we can prevent, manage, and often reverse
-							these conditions.
+							stress management, growth mindset, and social
+							connection, and healthy habits), together we can
+							prevent, manage, and often reverse these conditions.
 						</p>
 						<p className='text-slate-700 text-lg leading-relaxed'>
 							THRIVE&apos;s methodology combines the science of
 							what to change with proven strategies for how to
 							change, creating a comprehensive solution for
-							sustainable health.
+							sustainable health. Our approach addresses the
+							health of the whole-person by focusing on strategies
+							and habits that build Physical, Cognitive-Emotional,
+							and Social Fitness.
 						</p>
 
 						<div className='pt-4 space-y-4'>
@@ -132,9 +130,9 @@ export function ApproachWhyItWorksSection() {
 									Improved Physical Health
 								</h4>
 								<p className='text-slate-700'>
-									Lower blood pressure, better cholesterol
-									levels, weight management, and reduced risk
-									of chronic disease.
+									Lower blood pressure, improve cholesterol
+									levels, reduce blood sugar, manage weight,
+									and reduced risk of chronic disease.
 								</p>
 							</div>
 
@@ -146,12 +144,30 @@ export function ApproachWhyItWorksSection() {
 									/>
 								</div>
 								<h4 className='text-lg font-bold text-blue-950 mb-2'>
-									Enhanced Mental Wellbeing
+									Enhanced Cognitive & Emotional Wellbeing
 								</h4>
 								<p className='text-slate-700'>
-									Reduced anxiety and depression, improved
-									cognitive function, better stress
-									management, and emotional resilience.
+									Develop a growth mindset, manage stress,
+									improve focus, reduce anxiety and
+									depression, improve cognitive function, and
+									build emotional resilience.
+								</p>
+							</div>
+
+							<div className='bg-blue-50 p-6 rounded-2xl'>
+								<div className='w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4'>
+									<Users
+										className='text-blue-500'
+										size={24}
+									/>
+								</div>
+								<h4 className='text-lg font-bold text-blue-950 mb-2'>
+									Social Fitness
+								</h4>
+								<p className='text-slate-700'>
+									Nurture deep and meaningful relationships
+									with self, family, and community and be part
+									of something bigger than yourself.
 								</p>
 							</div>
 
@@ -166,26 +182,10 @@ export function ApproachWhyItWorksSection() {
 									Sustainable Long-term Change
 								</h4>
 								<p className='text-slate-700'>
-									Habits that become automatic, reducing
-									reliance on willpower and creating lasting
+									Develop Habits that become automatic,
+									reducing decision-making and reliance on
+									willpower and creating lasting
 									transformation.
-								</p>
-							</div>
-
-							<div className='bg-blue-50 p-6 rounded-2xl'>
-								<div className='w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4'>
-									<Shield
-										className='text-blue-500'
-										size={24}
-									/>
-								</div>
-								<h4 className='text-lg font-bold text-blue-950 mb-2'>
-									Prevention & Resilience
-								</h4>
-								<p className='text-slate-700'>
-									Stronger immune function, disease
-									prevention, and improved ability to recover
-									from illness or injury.
 								</p>
 							</div>
 						</div>

@@ -15,8 +15,8 @@ const supportCards = [
 		icon: <MessageCircle className='text-blue-600' size={32} />,
 		title: 'Small-Group Learning Circles',
 		items: [
-			'Learn and grow with others on a similar health journey',
 			'Share challenges and celebrate successes together',
+			'Learn and grow with others on a similar health journey',
 			'Build meaningful connections that support lasting change',
 		],
 	},
@@ -64,7 +64,7 @@ export function SupportiveExperienceSection() {
 					transition={{ duration: 0.5 }}
 					viewport={{ once: true }}
 				>
-					Finding Consistency through Community
+					Supporting and Celebrating through Community
 				</motion.h2>
 
 				{/* Lifestyle Medicine Class Image Section */}
