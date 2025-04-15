@@ -621,6 +621,183 @@ function InteractivePyramid({
 	);
 }
 
+// Static Pyramid Subcomponent for Mobile
+// Removed motion, interactivity, popups, and animations
+function StaticPyramid() {
+	const strokeWidth = 8; // Keep stroke width consistent
+
+	// Define label positions - only need default positions
+	const labelPositions = {
+		connect: { x: 250, y: 125 },
+		release: { x: 185, y: 220 },
+		elevate: { x: 310, y: 220 },
+		nourish: { x: 110, y: 350 },
+		move: { x: 250, y: 350 },
+		sleep: { x: 380, y: 350 },
+	};
+
+	// Define default section styles
+	const defaultFill = 'white';
+	const defaultStroke = '#2563eb'; // blue-600
+	const defaultLabelColor = 'text-blue-600';
+
+	return (
+		<div className='relative h-[50vh] w-full max-w-[900px] mx-auto flex items-center'>
+			<svg
+				viewBox='0 0 600 500'
+				className='w-full h-full'
+				preserveAspectRatio='xMidYMid meet'
+			>
+				{/* Draw the pyramid - Static Sections */}
+				{/* Connect section */}
+				<polygon
+					points='300,50 217,183 383,183'
+					fill={defaultFill}
+					stroke={defaultStroke}
+					strokeWidth={strokeWidth}
+					strokeLinejoin='round'
+				/>
+
+				{/* Release section */}
+				<polygon
+					points='133,317 217,183 300,183 300,317'
+					fill={defaultFill}
+					stroke={defaultStroke}
+					strokeWidth={strokeWidth}
+					strokeLinejoin='round'
+				/>
+
+				{/* Elevate section */}
+				<polygon
+					points='467,317 383,183 300,183 300,317'
+					fill={defaultFill}
+					stroke={defaultStroke}
+					strokeWidth={strokeWidth}
+					strokeLinejoin='round'
+				/>
+
+				{/* Nourish section */}
+				<polygon
+					points='50,450 133,317 217,317 217,450'
+					fill={defaultFill}
+					stroke={defaultStroke}
+					strokeWidth={strokeWidth}
+					strokeLinejoin='round'
+				/>
+
+				{/* Move section */}
+				<polygon
+					points='217,450 217,317 383,317 383,450'
+					fill={defaultFill}
+					stroke={defaultStroke}
+					strokeWidth={strokeWidth}
+					strokeLinejoin='round'
+				/>
+
+				{/* Sleep section */}
+				<polygon
+					points='383,450 383,317 467,317 550,450'
+					fill={defaultFill}
+					stroke={defaultStroke}
+					strokeWidth={strokeWidth}
+					strokeLinejoin='round'
+				/>
+
+				{/* Section Labels - Static */}
+				{/* Connect label */}
+				<foreignObject
+					x={labelPositions.connect.x}
+					y={labelPositions.connect.y}
+					width='100'
+					height='60'
+					className='pointer-events-none'
+				>
+					<div
+						className={`w-full h-full flex items-center justify-center text-2xl font-bold ${defaultLabelColor}`}
+					>
+						Connect
+					</div>
+				</foreignObject>
+
+				{/* Release label */}
+				<foreignObject
+					x={labelPositions.release.x}
+					y={labelPositions.release.y}
+					width='100'
+					height='60'
+					className='pointer-events-none'
+				>
+					<div
+						className={`w-full h-full flex items-center justify-center text-2xl font-bold ${defaultLabelColor}`}
+					>
+						Release
+					</div>
+				</foreignObject>
+
+				{/* Elevate label */}
+				<foreignObject
+					x={labelPositions.elevate.x}
+					y={labelPositions.elevate.y}
+					width='100'
+					height='60'
+					className='pointer-events-none'
+				>
+					<div
+						className={`w-full h-full flex items-center justify-center text-2xl font-bold ${defaultLabelColor}`}
+					>
+						Elevate
+					</div>
+				</foreignObject>
+
+				{/* Nourish label */}
+				<foreignObject
+					x={labelPositions.nourish.x}
+					y={labelPositions.nourish.y}
+					width='100'
+					height='60'
+					className='pointer-events-none'
+				>
+					<div
+						className={`w-full h-full flex items-center justify-center text-2xl font-bold ${defaultLabelColor}`}
+					>
+						Nourish
+					</div>
+				</foreignObject>
+
+				{/* Move label */}
+				<foreignObject
+					x={labelPositions.move.x}
+					y={labelPositions.move.y}
+					width='100'
+					height='60'
+					className='pointer-events-none'
+				>
+					<div
+						className={`w-full h-full flex items-center justify-center text-2xl font-bold ${defaultLabelColor}`}
+					>
+						Move
+					</div>
+				</foreignObject>
+
+				{/* Sleep label */}
+				<foreignObject
+					x={labelPositions.sleep.x}
+					y={labelPositions.sleep.y}
+					width='100'
+					height='60'
+					className='pointer-events-none'
+				>
+					<div
+						className={`w-full h-full flex items-center justify-center text-2xl font-bold ${defaultLabelColor}`}
+					>
+						Sleep
+					</div>
+				</foreignObject>
+			</svg>
+		</div>
+	);
+}
+
 export function ProgramStructureSection() {
 	const [activeSection, setActiveSection] = useState<SectionId>(null);
 	const [popupSource, setPopupSource] = useState<'pyramid' | 'card' | null>(
@@ -728,13 +905,21 @@ export function ProgramStructureSection() {
 						animate={{ opacity: 1, scale: 1 }}
 						transition={{ duration: 0.6, delay: 0.3 }}
 					>
-						<InteractivePyramid
-							activeSection={activeSection}
-							onSectionHover={handlePyramidHover}
-							onSectionClick={handleSectionClick}
-							showPopups={popupSource === 'pyramid'}
-						/>
-						<h3 className='text-2xl text-center text-blue-950/80  md:-mt-8 md:mb-12'>
+						{/* Interactive Pyramid for Desktop */}
+						<div className='hidden md:block'>
+							<InteractivePyramid
+								activeSection={activeSection}
+								onSectionHover={handlePyramidHover}
+								onSectionClick={handleSectionClick}
+								showPopups={popupSource === 'pyramid'}
+							/>
+						</div>
+						{/* Static Pyramid for Mobile */}
+						<div className='block md:hidden'>
+							<StaticPyramid />
+						</div>
+
+						<h3 className='text-xl md:text-2xl text-center text-blue-950/80 mt-4 md:-mt-8 mb-8 md:mb-12 px-4'>
 							The THRIVE Lifestyle Medicine Pyramid
 						</h3>
 					</motion.div>
