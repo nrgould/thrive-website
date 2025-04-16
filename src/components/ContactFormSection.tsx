@@ -32,20 +32,36 @@ export function ContactFormSection() {
 		e.preventDefault();
 		setFormStatus('submitting');
 
-		// Simulating form submission
-		// In a real application, you would send this data to your server or a form service
 		try {
-			// Simulate API call
-			await new Promise((resolve) => setTimeout(resolve, 1500));
-			setFormStatus('success');
-			// Reset form after success
-			setFormData({
-				name: '',
-				email: '',
-				phone: '',
-				subject: '',
-				message: '',
+			const response = await fetch('/api/contact', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json',
+				},
+				body: JSON.stringify(formData),
 			});
+
+			if (!response.ok) {
+				throw new Error(`HTTP error! status: ${response.status}`);
+			}
+
+			const result = await response.json();
+
+			if (result.success) {
+				setFormStatus('success');
+				// Reset form after success
+				setFormData({
+					name: '',
+					email: '',
+					phone: '',
+					subject: '',
+					message: '',
+				});
+			} else {
+				// Handle potential errors returned from the API route itself
+				console.error('API Error:', result.error);
+				setFormStatus('error');
+			}
 		} catch (e) {
 			console.error('Form submission error:', e);
 			setFormStatus('error');

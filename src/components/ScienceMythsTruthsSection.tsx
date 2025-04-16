@@ -210,7 +210,7 @@ export function ScienceMythsTruthsSection() {
 
 	return (
 		<section
-			className='w-full my-12 px-4 md:px-8 relative'
+			className='w-full my-12 px-4 md:px-8 relative pb-24'
 			id='myths-truths'
 		>
 			{/* Decorative elements */}

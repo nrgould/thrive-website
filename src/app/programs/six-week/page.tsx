@@ -330,7 +330,7 @@ export default function SixWeekPage() {
 								positive outlook on life.&quot;
 							</p>
 							<p className='text-blue-500 font-medium'>
-								— Zach, 42
+								— Zach
 							</p>
 						</div>
 						<div className='bg-blue-50 p-6 rounded-3xl'>
@@ -341,7 +341,7 @@ export default function SixWeekPage() {
 								roof!&quot;
 							</p>
 							<p className='text-blue-500 font-medium'>
-								— Beverly, 56
+								— Beverly
 							</p>
 						</div>
 					</div>
