@@ -1,6 +1,7 @@
 import { CTASection } from '@/components/CTASection';
 import { ArrowLeft, BookOpen, Clock, Award } from 'lucide-react';
 import Link from 'next/link';
+import WaitlistForm from './WaitlistForm';
 
 export default function EssentialsPage() {
 	return (
@@ -58,7 +59,7 @@ export default function EssentialsPage() {
 									</span>
 								</div>
 							</div>
-							<button className='px-8 py-4 bg-blue-500 text-white rounded-full font-medium text-lg hover:bg-blue-600 transition-colors shadow-md'>
+							<button className='px-8 py-4 bg-blue-500 text-white rounded-full font-medium text-lg hover:bg-blue-600 transition-colors shadow-md opacity-50 cursor-not-allowed'>
 								Coming Soon
 							</button>
 						</div>
@@ -154,6 +155,23 @@ export default function EssentialsPage() {
 							</ul>
 						</div>
 					</div>
+				</div>
+			</section>
+
+			{/* Waitlist Form Section - Added */}
+			<section
+				id='essentials-waitlist'
+				className='w-full py-16 px-4 md:px-8 bg-gradient-to-b from-blue-50 to-white'
+			>
+				<div className='max-w-2xl mx-auto text-center'>
+					<h2 className='text-3xl font-bold text-blue-950 mb-6'>
+						Launching Soon!
+					</h2>
+					<p className='text-lg text-slate-700 mb-8'>
+						Sign up below to be the first to know when THRIVE
+						Essentials is available.
+					</p>
+					<WaitlistForm />
 				</div>
 			</section>
 
