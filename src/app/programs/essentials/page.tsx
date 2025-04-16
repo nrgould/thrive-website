@@ -17,7 +17,7 @@ export default function EssentialsPage() {
 						Back to Home
 					</Link>
 
-					<div className='flex flex-col lg:flex-row items-center gap-12'>
+					<div className='flex flex-col lg:flex-row items-start gap-12'>
 						<div className='flex-1'>
 							<h1 className='text-4xl md:text-5xl font-bold text-blue-950 mb-6'>
 								THRIVE{' '}
@@ -59,16 +59,9 @@ export default function EssentialsPage() {
 									</span>
 								</div>
 							</div>
-							<button className='px-8 py-4 bg-blue-500 text-white rounded-full font-medium text-lg hover:bg-blue-600 transition-colors shadow-md opacity-50 cursor-not-allowed'>
-								Coming Soon
-							</button>
 						</div>
-						<div className='flex-1 relative h-[350px] w-full rounded-3xl overflow-hidden'>
-							<div className='absolute inset-0 bg-blue-200 bg-opacity-50 rounded-3xl flex items-center justify-center'>
-								<p className='text-blue-800'>
-									Course preview image
-								</p>
-							</div>
+						<div className='flex-1 w-full'>
+							<WaitlistForm />
 						</div>
 					</div>
 				</div>
@@ -158,22 +151,7 @@ export default function EssentialsPage() {
 				</div>
 			</section>
 
-			{/* Waitlist Form Section - Added */}
-			<section
-				id='essentials-waitlist'
-				className='w-full py-16 px-4 md:px-8 bg-gradient-to-b from-blue-50 to-white'
-			>
-				<div className='max-w-2xl mx-auto text-center'>
-					<h2 className='text-3xl font-bold text-blue-950 mb-6'>
-						Launching Soon!
-					</h2>
-					<p className='text-lg text-slate-700 mb-8'>
-						Sign up below to be the first to know when THRIVE
-						Essentials is available.
-					</p>
-					<WaitlistForm />
-				</div>
-			</section>
+			{/* Waitlist Form Section - Removed */}
 
 			{/* Course Modules
 			<section className='w-full py-16 px-4 md:px-8 bg-blue-50'>
