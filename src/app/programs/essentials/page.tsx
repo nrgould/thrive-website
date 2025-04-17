@@ -108,7 +108,7 @@ export default function EssentialsPage() {
 										<div className='w-2 h-2 rounded-full bg-blue-500'></div>
 									</div>
 									<p className='text-slate-700'>
-										Lifetime access to all course materials
+										3-month access to all course materials
 									</p>
 								</li>
 								<li className='flex items-start gap-3'>

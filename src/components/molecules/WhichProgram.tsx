@@ -29,7 +29,7 @@ function WhichProgram() {
 							<Info className='text-blue-500' size={28} />
 						</div>
 						<h3 className='text-2xl font-bold text-blue-950 mb-3'>
-							THRIVE Essentials: Self-Paced Online Course
+							THRIVE Essentials: Self-Paced Online Course (complete in a week)
 						</h3>
 						<p className='text-slate-700 mb-6'>
 							Perfect for those who want to explore Lifestyle
@@ -57,6 +57,10 @@ function WhichProgram() {
 											Lifestyle Medicine but not ready to
 											commit to a full program
 										</p>
+									</li>
+									<li className='flex items-start gap-2'>
+										<div className='w-1.5 h-1.5 rounded-full bg-blue-500 mt-2 flex-shrink-0' />
+										<p>Complete the course in a week</p>
 									</li>
 								</ul>
 							</div>
@@ -129,8 +133,8 @@ function WhichProgram() {
 							<Zap className='text-white' size={28} />
 						</div>
 						<h3 className='text-2xl font-bold mb-3'>
-							THRIVE 6-Week Program: Comprehensive Lifestyle
-							Change
+							THRIVE Comprehensive: Lifestyle
+							Change in a 6-Week Program
 						</h3>
 						<p className='text-blue-100 mb-6'>
 							For those ready to commit to making sustainable

@@ -135,9 +135,9 @@ export function ScienceBehaviorPrinciplesSection() {
 			content:
 				'Many people believe that a strong sense of willpower or motivation is the cornerstone to creating lasting change. Reality is that motivation is like a wave that constantly changes over time and is not the most reliable thing for us to use when designing our habits. There are much better places to start.',
 			icon: <Zap size={24} />,
-			color: 'bg-blue-400',
-			bgColorLight: 'bg-blue-100',
-			textColorDark: 'text-blue-600',
+			color: 'bg-blue-500',
+			bgColorLight: 'bg-slate-800',
+			textColorDark: 'text-blue-500',
 			keyPoints: [
 				{
 					title: 'Motivation is unreliable',
@@ -161,9 +161,9 @@ export function ScienceBehaviorPrinciplesSection() {
 			content:
 				'Changing our behavior is a skill and, like any skill, requires knowledge and practice. Driving a car is a skill that, in the beginning, feels very uncomfortable, but for most people becomes easy and automatic. Just like learning to drive a car, everyone can develop the skills of changing their habits.',
 			icon: <Lightbulb size={24} />,
-			color: 'bg-indigo-400',
-			bgColorLight: 'bg-indigo-100',
-			textColorDark: 'text-indigo-600',
+			color: 'bg-green-500',
+			bgColorLight: 'bg-slate-800',
+			textColorDark: 'text-green-500',
 			keyPoints: [
 				{
 					title: 'Change is learnable',
@@ -187,9 +187,9 @@ export function ScienceBehaviorPrinciplesSection() {
 			content:
 				'Often we feel that our habits happen to us and that lasting behavior change is a mysterious process. Science-based habit systems provide us with reliable approaches for anyone to build any habit in any area of their life. Building these systems allows us to make our habits work For Us and not To Us.',
 			icon: <Cog size={24} />,
-			color: 'bg-purple-400',
-			bgColorLight: 'bg-purple-100',
-			textColorDark: 'text-purple-600',
+			color: 'bg-teal-500',
+			bgColorLight: 'bg-slate-800',
+			textColorDark: 'text-teal-500',
 			keyPoints: [
 				{
 					title: 'Systems over willpower',
@@ -213,9 +213,9 @@ export function ScienceBehaviorPrinciplesSection() {
 			content:
 				'Habit Recipes are one of the most important and foundational habit systems that anyone can create. Learn how to establish the most reliable CUES, determine the right size for a new BEHAVIOR, and how to best CELEBRATE success, so that we get our brains working for us in making our new behaviors automatic.',
 			icon: <Clipboard size={24} />,
-			color: 'bg-cyan-400',
-			bgColorLight: 'bg-cyan-100',
-			textColorDark: 'text-cyan-600',
+			color: 'bg-blue-400',
+			bgColorLight: 'bg-slate-800',
+			textColorDark: 'text-blue-400',
 			keyPoints: [
 				{
 					title: 'Tiny habits grow naturally',
@@ -239,9 +239,9 @@ export function ScienceBehaviorPrinciplesSection() {
 			content:
 				"Habits are the compound interest of self-development. In a culture of 'Go Big or Go Home' marketing, it is often difficult for us to see the importance of small wins. But small + smart choices form the foundation of Compounding Effect - the system that allows us to get big rewards through small wins compounded over time.",
 			icon: <TrendingUp size={24} />,
-			color: 'bg-emerald-400',
-			bgColorLight: 'bg-emerald-100',
-			textColorDark: 'text-emerald-600',
+			color: 'bg-blue-500',
+			bgColorLight: 'bg-slate-800',
+			textColorDark: 'text-blue-500',
 			keyPoints: [
 				{
 					title: 'Embrace compound effect',
@@ -265,9 +265,9 @@ export function ScienceBehaviorPrinciplesSection() {
 			content:
 				'Our environment plays a huge role in triggering and supporting our habits. Setting up our environment in smart ways consistently nudges us in the directions we want to go and allows the choices we want to make to become the easiest choices for us to make.',
 			icon: <Puzzle size={24} />,
-			color: 'bg-green-400',
-			bgColorLight: 'bg-green-100',
-			textColorDark: 'text-green-600',
+			color: 'bg-green-500',
+			bgColorLight: 'bg-slate-800',
+			textColorDark: 'text-green-500',
 			keyPoints: [
 				{
 					title: 'Design your environment',
@@ -289,22 +289,22 @@ export function ScienceBehaviorPrinciplesSection() {
 	];
 
 	return (
-		<section className='w-full pt-20 bg-blue-50'>
+		<section className='w-full pt-20 bg-slate-950'>
 			<div className='max-w-6xl mx-auto px-4 md:px-8'>
 				<div className='mb-16 text-center'>
 					<motion.h2
-						className='text-3xl md:text-4xl font-bold mb-4 text-blue-950'
+						className='text-3xl md:text-4xl font-bold mb-4 text-white'
 						initial={{ opacity: 0, y: 20 }}
 						whileInView={{ opacity: 1, y: 0 }}
 						viewport={{ once: true }}
 						transition={{ duration: 0.4 }}
 					>
 						Core Principles of{' '}
-						<span className='text-blue-600'>Behavior Design</span>
+						<span className='text-blue-500'>Behavior Design</span>
 					</motion.h2>
 
 					<motion.p
-						className='text-lg text-slate-700 max-w-2xl mx-auto mb-2'
+						className='text-lg text-slate-300 max-w-2xl mx-auto mb-2'
 						initial={{ opacity: 0, y: 20 }}
 						whileInView={{ opacity: 1, y: 0 }}
 						viewport={{ once: true }}
@@ -319,7 +319,7 @@ export function ScienceBehaviorPrinciplesSection() {
 					{principles.map((principle, index) => (
 						<motion.div
 							key={index}
-							className='bg-white rounded-3xl shadow-sm border border-blue-100 hover:shadow-md cursor-pointer overflow-hidden'
+							className='bg-slate-800 rounded-xl shadow-md hover:shadow-lg border border-slate-700 cursor-pointer overflow-hidden'
 							variants={cardVariants}
 							initial='initial'
 							whileInView='visible'
@@ -333,14 +333,11 @@ export function ScienceBehaviorPrinciplesSection() {
 									<div
 										className={cn(
 											'w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0',
-											principle.bgColorLight
+											principle.color
 										)}
 									>
 										<motion.span
-											className={cn(
-												'flex items-center justify-center',
-												principle.textColorDark
-											)}
+											className='flex items-center justify-center text-white'
 											variants={iconVariants}
 											animate={
 												index === activeModal
@@ -351,12 +348,12 @@ export function ScienceBehaviorPrinciplesSection() {
 											{principle.icon}
 										</motion.span>
 									</div>
-									<h4 className='text-xl font-bold text-blue-950 flex-1'>
+									<h4 className='text-xl font-bold text-white flex-1'>
 										{principle.title}
 									</h4>
 								</div>
 
-								<p className='text-slate-600 line-clamp-3'>
+								<p className='text-slate-300 line-clamp-3'>
 									{principle.content}
 								</p>
 
@@ -387,19 +384,17 @@ export function ScienceBehaviorPrinciplesSection() {
 						{/* Constrained content */}
 						<h3 className='text-3xl font-bold text-white mb-4'>
 							{' '}
-							{/* White text */}
 							Ready to Apply These Principles?
 						</h3>
 						<p className='text-blue-100 max-w-2xl mx-auto mb-8 text-lg'>
 							{' '}
-							{/* Lighter blue text */}
 							Join our 6-week program to learn how to implement
 							these behavior design principles and create lasting
 							positive changes in your life.
 						</p>
 						<Link
 							href='/programs/six-week#waitlist-form'
-							className='inline-flex items-center gap-2 bg-white hover:bg-blue-100 text-blue-600 px-8 py-4 rounded-full font-semibold transition-all duration-300 shadow-md text-lg' // Updated button style
+							className='inline-flex items-center gap-2 bg-white hover:bg-slate-100 text-blue-600 px-8 py-4 rounded-full font-semibold transition-all duration-300 shadow-md text-lg'
 						>
 							Join Waitlist
 							<ArrowRight size={20} />
@@ -429,7 +424,7 @@ export function ScienceBehaviorPrinciplesSection() {
 
 						<motion.div
 							ref={modalRef}
-							className='bg-white rounded-xl max-w-3xl w-full max-h-[90vh] overflow-hidden relative z-10'
+							className='bg-slate-900 rounded-xl max-w-3xl w-full max-h-[90vh] overflow-hidden relative z-10 border border-slate-700'
 							initial={{ opacity: 0, scale: 0.9, y: 20 }}
 							animate={{ opacity: 1, scale: 1, y: 0 }}
 							exit={{ opacity: 0, scale: 0.9, y: 20 }}
@@ -440,9 +435,9 @@ export function ScienceBehaviorPrinciplesSection() {
 								exit: { duration: 0.2 },
 							}}
 						>
-							<div className='sticky top-0 bg-white z-10 px-6 py-4 flex justify-between items-center border-b'>
+							<div className='sticky top-0 bg-slate-900 z-10 px-6 py-4 flex justify-between items-center border-b border-slate-700'>
 								<div className='flex-1'>
-									<div className='flex items-center space-x-2 text-sm text-slate-500'>
+									<div className='flex items-center space-x-2 text-sm text-slate-400'>
 										<span>Principle</span>
 										<span className='font-medium'>
 											{activeModal + 1}
@@ -458,7 +453,7 @@ export function ScienceBehaviorPrinciplesSection() {
 									<Button
 										variant='ghost'
 										size='icon'
-										className='rounded-full'
+										className='rounded-full text-slate-300 hover:text-white hover:bg-slate-800'
 										onClick={() => {
 											if (carouselApi) {
 												carouselApi.scrollPrev();
@@ -466,10 +461,7 @@ export function ScienceBehaviorPrinciplesSection() {
 										}}
 										disabled={activeModal === 0}
 									>
-										<ChevronLeft
-											size={20}
-											className='text-slate-700'
-										/>
+										<ChevronLeft size={20} />
 									</Button>
 
 									{/* Pagination dots */}
@@ -480,8 +472,8 @@ export function ScienceBehaviorPrinciplesSection() {
 												className={cn(
 													'w-2 h-2 rounded-full transition-colors duration-200',
 													activeModal === index
-														? 'bg-blue-600'
-														: 'bg-slate-200 hover:bg-slate-300 cursor-pointer'
+														? 'bg-blue-500'
+														: 'bg-slate-600 hover:bg-slate-500 cursor-pointer'
 												)}
 												onClick={() => {
 													if (carouselApi) {
@@ -497,7 +489,7 @@ export function ScienceBehaviorPrinciplesSection() {
 									<Button
 										variant='ghost'
 										size='icon'
-										className='rounded-full'
+										className='rounded-full text-slate-300 hover:text-white hover:bg-slate-800'
 										onClick={() => {
 											if (carouselApi) {
 												carouselApi.scrollNext();
@@ -508,22 +500,16 @@ export function ScienceBehaviorPrinciplesSection() {
 											principles.length - 1
 										}
 									>
-										<ChevronRight
-											size={20}
-											className='text-slate-700'
-										/>
+										<ChevronRight size={20} />
 									</Button>
 
 									<Button
 										variant='ghost'
 										size='icon'
-										className='rounded-full'
+										className='rounded-full text-slate-300 hover:text-white hover:bg-slate-800'
 										onClick={closeModal}
 									>
-										<X
-											size={20}
-											className='text-slate-500'
-										/>
+										<X size={20} />
 									</Button>
 								</div>
 							</div>
@@ -549,14 +535,11 @@ export function ScienceBehaviorPrinciplesSection() {
 													<div
 														className={cn(
 															'w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0',
-															principle.bgColorLight
+															principle.color
 														)}
 													>
 														<motion.span
-															className={cn(
-																'flex items-center justify-center',
-																principle.textColorDark
-															)}
+															className='flex items-center justify-center text-white'
 															variants={
 																iconVariants
 															}
@@ -570,12 +553,12 @@ export function ScienceBehaviorPrinciplesSection() {
 															{principle.icon}
 														</motion.span>
 													</div>
-													<h3 className='text-2xl font-bold text-blue-950'>
+													<h3 className='text-2xl font-bold text-white'>
 														{principle.title}
 													</h3>
 												</div>
 
-												<p className='text-slate-700 leading-relaxed mb-8'>
+												<p className='text-slate-300 leading-relaxed mb-8'>
 													{principle.content}
 												</p>
 
@@ -587,7 +570,7 @@ export function ScienceBehaviorPrinciplesSection() {
 												></div>
 
 												<div>
-													<h4 className='text-lg font-semibold text-blue-950 mb-4'>
+													<h4 className='text-lg font-semibold text-white mb-4'>
 														Key Applications
 													</h4>
 													<ul className='space-y-4'>
@@ -611,12 +594,12 @@ export function ScienceBehaviorPrinciplesSection() {
 																		</div>
 																	</div>
 																	<div>
-																		<p className='font-medium text-slate-800 mb-1'>
+																		<p className='font-medium text-slate-200 mb-1'>
 																			{
 																				point.title
 																			}
 																		</p>
-																		<p className='text-sm text-slate-600'>
+																		<p className='text-sm text-slate-400'>
 																			{
 																				point.description
 																			}
@@ -629,7 +612,7 @@ export function ScienceBehaviorPrinciplesSection() {
 												</div>
 
 												{/* Modal CTA */}
-												<div className='mt-8 pt-6 border-t border-slate-100'>
+												<div className='mt-8 pt-6 border-t border-slate-700'>
 													<Link
 														href='/programs/six-week#waitlist-form'
 														className='flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-5 py-3 rounded-xl font-medium transition-all duration-300 text-center w-full'

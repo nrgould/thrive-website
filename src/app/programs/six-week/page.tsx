@@ -1,4 +1,4 @@
-import { ArrowLeft, Calendar, Users, CheckCircle, Zap } from 'lucide-react';
+import { ArrowLeft, Calendar, Users, CheckCircle, Zap, DollarSign } from 'lucide-react';
 import Link from 'next/link';
 import WaitlistForm from './WaitlistForm';
 import Image from 'next/image';
@@ -56,6 +56,15 @@ export default function SixWeekPage() {
 									/>
 									<span className='text-blue-50'>
 										Evidence-based approach
+									</span>
+								</div>
+								<div className='flex items-center bg-blue-500 bg-opacity-30 px-4 py-2 rounded-full'>
+									<DollarSign
+										className='text-blue-200 mr-2'
+										size={20}
+									/>
+									<span className='text-blue-50'>
+										$499 one-time
 									</span>
 								</div>
 							</div>

@@ -115,10 +115,10 @@ export function SciencePillarsSection() {
 	];
 
 	return (
-		<motion.section className='w-full py-24 px-4 md:px-8 bg-slate-950'>
+		<motion.section className='w-full py-24 px-4 md:px-8 bg-white'>
 			<div className='max-w-6xl mx-auto'>
 				<motion.h2
-					className='text-3xl md:text-4xl font-bold text-center mb-4 text-white'
+					className='text-3xl md:text-4xl font-bold text-center mb-4 text-blue-950'
 					initial={{ opacity: 0, y: 20 }}
 					whileInView={{ opacity: 1, y: 0 }}
 					viewport={{ once: true }}
@@ -131,7 +131,7 @@ export function SciencePillarsSection() {
 				</motion.h2>
 
 				<motion.p
-					className='text-center text-slate-700 mb-16 max-w-3xl mx-auto text-lg md:text-xl text-white leading-relaxed'
+					className='text-center text-slate-700 mb-16 max-w-3xl mx-auto text-lg md:text-xl leading-relaxed'
 					initial={{ opacity: 0, y: 20 }}
 					whileInView={{ opacity: 1, y: 0 }}
 					viewport={{ once: true }}
@@ -143,55 +143,74 @@ export function SciencePillarsSection() {
 				</motion.p>
 
 				<div className='grid grid-cols-1 gap-12'>
-					{pillars.map((pillar, index) => (
-						<motion.div
-							key={index}
-							id={pillar.id}
-							className='bg-slate-900 rounded-3xl shadow-sm p-8  scroll-mt-24'
-							initial={{ opacity: 0, y: 30 }}
-							whileInView={{ opacity: 1, y: 0 }}
-							viewport={{ once: true, amount: 0.2 }}
-							transition={{ duration: 0.5, delay: index * 0.1 }}
-						>
-							<div className='flex flex-col md:flex-row gap-8'>
-								<div className='md:w-1/3'>
-									<div className={`${pillar.color} mb-4`}>
-										{pillar.icon}
-									</div>
-									<h3 className='text-2xl font-bold text-white mb-2'>
-										{pillar.title}
-									</h3>
-									<h4 className='text-lg text-blue-300 mb-4'>
-										{pillar.subtitle}
-									</h4>
-									<p className='text-slate-50 leading-relaxed'>
-										{pillar.description}
-									</p>
-								</div>
+					{pillars.map((pillar, index) => {
+						// Create a color mapping for the border
+						const colorMap: Record<string, string> = {
+							'bg-green-500': '#22c55e', // green-500
+							'bg-blue-500': '#3b82f6', // blue-500
+							'bg-indigo-500': '#6366f1', // indigo-500
+							'bg-purple-500': '#a855f7', // purple-500
+							'bg-orange-500': '#f97316', // orange-500
+							'bg-pink-500': '#ec4899', // pink-500
+						};
 
-								<div className='md:w-1/2'>
-									<h4 className='text-lg font-semibold text-white mb-4'>
-										Research Highlights
-									</h4>
-									<ul className='space-y-4'>
-										{pillar.evidence.map((item, i) => (
-											<li
-												key={i}
-												className='flex items-start gap-3'
-											>
-												<div
-													className={`w-2 h-2 rounded-full ${pillar.bgColor} mt-2 flex-shrink-0`}
-												/>
-												<p className='text-slate-50'>
-													{item}
-												</p>
-											</li>
-										))}
-									</ul>
+						const borderColor =
+							colorMap[pillar.bgColor] || '#3b82f6'; // default to blue
+
+						return (
+							<motion.div
+								key={index}
+								id={pillar.id}
+								className='bg-white rounded-3xl shadow-md p-8 scroll-mt-24 border-2'
+								style={{ borderColor }}
+								initial={{ opacity: 0, y: 30 }}
+								whileInView={{ opacity: 1, y: 0 }}
+								viewport={{ once: true, amount: 0.2 }}
+								transition={{
+									duration: 0.5,
+									delay: index * 0.1,
+								}}
+							>
+								<div className='flex flex-col md:flex-row gap-8'>
+									<div className='md:w-1/3'>
+										<div className={`${pillar.color} mb-4`}>
+											{pillar.icon}
+										</div>
+										<h3 className='text-2xl font-bold text-blue-950 mb-2'>
+											{pillar.title}
+										</h3>
+										<h4 className='text-lg text-blue-800 mb-4'>
+											{pillar.subtitle}
+										</h4>
+										<p className='text-slate-700 leading-relaxed'>
+											{pillar.description}
+										</p>
+									</div>
+
+									<div className='md:w-1/2'>
+										<h4 className='text-lg font-semibold text-blue-800 mb-4'>
+											Research Highlights
+										</h4>
+										<ul className='space-y-4'>
+											{pillar.evidence.map((item, i) => (
+												<li
+													key={i}
+													className='flex items-start gap-3'
+												>
+													<div
+														className={`w-2 h-2 rounded-full ${pillar.bgColor} mt-2 flex-shrink-0`}
+													/>
+													<p className='text-slate-700'>
+														{item}
+													</p>
+												</li>
+											))}
+										</ul>
+									</div>
 								</div>
-							</div>
-						</motion.div>
-					))}
+							</motion.div>
+						);
+					})}
 				</div>
 			</div>
 		</motion.section>

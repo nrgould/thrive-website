@@ -36,13 +36,13 @@ export const team: TeamMember[] = [
 	},
 	{
 		name: 'Quez "Papa Plants" Little',
-		role: 'Heart Health Advocate | Coach',
+		role: 'Heart Health Advocate | THRIVE Coach',
 		bio: "After a diagnosis of heart disease in 2012 followed by stents and bypass surgery, Quez knew he needed a new path. Twelve years later, he's still on a mission for optimal health. Quez shares his journey and passion for lifestyle transformation, helping others make health a permanent and empowering part of their lives.",
 		image: '/team/quez.webp',
 	},
 	{
 		name: 'Leticia A. Nichols, ANP-C, CHWC',
-		role: 'Nurse Practitioner | Health & Well-being Coach',
+		role: 'Nurse Practitioner | THRIVE Coach',
 		bio: 'Leticia brings over 35 years of clinical experience, now focusing on lifestyle medicine after addressing her own health challenges. Certified in Plant-based Nutrition (eCornell) and a Food for Life Instructor, she integrates her passion into both C2Life and her private practice, Healthy at Last! Leticia is dedicated to helping individuals finally achieve lasting wellness.',
 		image: '/team/leticia.webp',
 	},
@@ -56,7 +56,7 @@ export const team: TeamMember[] = [
 		name: 'Charlie Rice',
 		role: 'Coach',
 		bio: '(Bio Pending)',
-		image: '/team/charlie.webp',
+		image: '/charlie.png',
 	},
 ];
 
