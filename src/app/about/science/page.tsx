@@ -20,7 +20,10 @@ export default function SciencePage() {
 			<ScienceMythsTruthsSection />
 			<ScienceBehaviorPrinciplesSection />
 			<SciencePillarsSection />
-			<CTASection />
+			<CTASection
+				secondaryActionText='View Our Methodology'
+				secondaryActionLink='/about'
+			/>
 		</main>
 	);
 }

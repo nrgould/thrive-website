@@ -55,7 +55,7 @@ export function BehaviorDesignSection() {
 					{/* Left side - Main title */}
 					<div className='flex flex-col justify-center  max-w-[75%]'>
 						<motion.p
-							className='text-xl text-blue-400 font-medium mb-3'
+							className='text-xl text-blue-500 font-medium mb-3'
 							initial={{ opacity: 0, x: -20 }}
 							whileInView={{ opacity: 1, x: 0 }}
 							viewport={{ once: true }}
@@ -71,7 +71,7 @@ export function BehaviorDesignSection() {
 							viewport={{ once: true }}
 							transition={{ duration: 0.5, delay: 0.1 }}
 						>
-							<span className='text-blue-400 block mb-1'>
+							<span className='text-blue-500 block mb-1'>
 								Behavior Design:
 							</span>{' '}
 							Building Habits that Last

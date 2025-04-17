@@ -123,9 +123,9 @@ export function Footer() {
 							<span className='text-blue-100 text-sm'>
 								Sponsored by
 							</span>
-							<div className='h-8 w-24 relative'>
+							<div className='h-12 w-18 relative'>
 								<Image
-									src='/C2Life logo.png'
+									src='/C2Life_white.webp'
 									alt='C2Life'
 									className='h-full w-full object-contain'
 									width={96}

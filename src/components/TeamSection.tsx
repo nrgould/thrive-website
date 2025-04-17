@@ -13,7 +13,7 @@ export const team: TeamMember[] = [
 	{
 		name: 'Chasity Poteat Rice',
 		role: 'C2Life Founder/CEO',
-		bio: '(Bio Pending)',
+		bio: "Chasity has 25 years of combined healthcare marketing and nonprofit experience. She's a community advocate and founder of the C2Life Foundation, a nonprofit organization established in August 2020 focused on addressing chronic disease and food insecurity through wholesome nutrition and lifestyle education. She's a graduate of Western Carolina University and holds a certificate in Plant-Based Nutrition from the T. Colin Campbell Center for Nutrition Studies at Cornell. She and her husband, Charlie live in Morganton, NC. Together, they have four children, Kelsey, Alex, Olivia & Matthew.",
 		image: '/team/chasity.webp',
 	},
 	{
@@ -31,7 +31,7 @@ export const team: TeamMember[] = [
 	{
 		name: 'Nicholas Gould',
 		role: 'Creative Technologist',
-		bio: 'Nicholas leads technology development for the THRIVE program, focusing on creating a seamless and engaging experience for participants. With a background in software engineering and a passion for education, he helps shape how content is delivered and how users engage with the THRIVE platform—ensuring the program is accessible, supportive, and built for lasting impact.',
+		bio: 'Nicholas leads technology development for the THRIVE program, combining his background in software engineering with a deep passion for education to craft seamless and engaging digital experiences. A graduate of North Carolina State University, Nicholas believes technology should empower meaningful learning, ensuring the THRIVE platform remains intuitive, accessible, and impactful. Outside of technology, Nicholas is a photographer who loves to travel, drawing inspiration from exploring new landscapes and cultures—an approach he brings to creating dynamic, thoughtful experiences for THRIVE participants.',
 		image: '/team/nicholas.webp',
 	},
 	{

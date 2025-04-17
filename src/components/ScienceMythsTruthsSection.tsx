@@ -1,8 +1,6 @@
 'use client';
 
 import * as motion from 'motion/react-client';
-// Remove AnimatePresence from motion/react import if no longer needed elsewhere, but keep it for now
-// import { AnimatePresence } from 'motion/react';
 import {
 	Brain,
 	Cog,
@@ -16,12 +14,9 @@ import {
 	Heart,
 	Trophy,
 	RefreshCw,
-	// Re-add ChevronUp and ChevronDown for buttons
 	ChevronUp,
 	ChevronDown,
-	// Remove ToggleRight, // No longer used here
 } from 'lucide-react';
-// Add useEffect import
 import { useState, useEffect, useRef } from 'react';
 
 interface MythTruthPair {
@@ -42,11 +37,9 @@ const MythTruthCardDisplay = ({ pair }: { pair: MythTruthPair }) => {
 		>
 			<div className='p-6 md:p-8 bg-gray-50 border-b md:border-b-0 md:border-r border-blue-100'>
 				<div className='flex items-center'>
-					{/* Removed motion.div wrapper around icon */}
 					<div className='w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 mr-4'>
 						{pair.mythIcon}
 					</div>
-					{/* Removed inner motion.div */}
 					<div>
 						<p className='text-sm font-light uppercase tracking-wider text-slate-500 mb-1'>
 							Myth
@@ -60,11 +53,9 @@ const MythTruthCardDisplay = ({ pair }: { pair: MythTruthPair }) => {
 
 			<div className='p-6 md:p-8'>
 				<div className='flex items-center'>
-					{/* Removed motion.div wrapper around icon */}
 					<div className='w-12 h-12 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mr-4'>
 						{pair.truthIcon}
 					</div>
-					{/* Removed inner motion.div */}
 					<div>
 						<p className='text-sm font-light uppercase tracking-wider text-slate-500 mb-1'>
 							Truth

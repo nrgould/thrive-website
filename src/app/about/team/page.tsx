@@ -1,5 +1,5 @@
 import { TeamSection } from '@/components/TeamSection';
-import { TeamCTASection } from '@/components/TeamCTASection';
+import { CTASection } from '@/components/CTASection';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -13,7 +13,7 @@ export default function TeamPage() {
 		<main className='min-h-screen flex flex-col items-center'>
 			{/* <TeamHeroSection /> */}
 			<TeamSection />
-			<TeamCTASection />
+			<CTASection />
 		</main>
 	);
 }

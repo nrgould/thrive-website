@@ -47,8 +47,20 @@ export function ScienceBehaviorPrinciplesSection() {
 
 	// Define animation variants
 	const cardVariants = {
-		initial: { scale: 1 },
-		hover: { scale: 1.015 },
+		initial: { opacity: 0, y: 20 },
+		visible: (index: number) => ({
+			opacity: 1,
+			y: 0,
+			transition: {
+				duration: 0.4,
+				delay: index * 0.07,
+				ease: 'easeOut',
+			},
+		}),
+		hover: {
+			scale: 1.015,
+			transition: { duration: 0.2 },
+		},
 	};
 
 	const iconVariants = {
@@ -307,14 +319,14 @@ export function ScienceBehaviorPrinciplesSection() {
 					{principles.map((principle, index) => (
 						<motion.div
 							key={index}
-							className='bg-white rounded-3xl shadow-sm border border-blue-100 hover:shadow-md transition-all duration-200 cursor-pointer overflow-hidden'
-							initial={{ opacity: 0, y: 20 }}
-							whileInView={{ opacity: 1, y: 0 }}
-							viewport={{ once: true }}
-							transition={{ duration: 0.3, delay: index * 0.05 }}
-							onClick={() => openModal(index)}
+							className='bg-white rounded-3xl shadow-sm border border-blue-100 hover:shadow-md cursor-pointer overflow-hidden'
 							variants={cardVariants}
+							initial='initial'
+							whileInView='visible'
 							whileHover='hover'
+							viewport={{ once: true }}
+							custom={index}
+							onClick={() => openModal(index)}
 						>
 							<div className='p-6'>
 								<div className='flex items-center gap-4 mb-4'>

@@ -164,7 +164,7 @@ export function SciencePillarsSection() {
 									<h4 className='text-lg text-blue-300 mb-4'>
 										{pillar.subtitle}
 									</h4>
-									<p className='text-slate-300 leading-relaxed'>
+									<p className='text-slate-50 leading-relaxed'>
 										{pillar.description}
 									</p>
 								</div>
@@ -182,7 +182,7 @@ export function SciencePillarsSection() {
 												<div
 													className={`w-2 h-2 rounded-full ${pillar.bgColor} mt-2 flex-shrink-0`}
 												/>
-												<p className='text-slate-300'>
+												<p className='text-slate-50'>
 													{item}
 												</p>
 											</li>
