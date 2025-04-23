@@ -55,7 +55,7 @@ export default function EssentialsPage() {
 										size={20}
 									/>
 									<span className='text-slate-700'>
-										Certificate of completion
+										Practice writing Habit Recipes
 									</span>
 								</div>
 							</div>
@@ -78,10 +78,12 @@ export default function EssentialsPage() {
 						<div className='space-y-6'>
 							<p className='text-lg text-slate-700'>
 								THRIVE Essentials introduces you to the
-								fundamental principles of Lifestyle Medicine,
-								helping you understand how small, consistent
-								changes can lead to meaningful improvements in
-								your health and wellbeing.
+								fundamental principles of Lifestyle Medicine and
+								Behavior Design, helping you understand what
+								changes to make and how to make them in the most
+								reliable and sustainable ways that will lead to
+								meaningful improvements in your health and
+								wellbeing.
 							</p>
 							<p className='text-lg text-slate-700'>
 								This self-paced online course is perfect for
@@ -92,9 +94,11 @@ export default function EssentialsPage() {
 							<p className='text-lg text-slate-700'>
 								You&apos;ll learn about the six pillars of
 								health—nutrition, physical activity, sleep,
-								stress management, social connection, and
-								healthy habits—and how they form the foundation
-								for long-term wellbeing.
+								stress management, mindset, and social
+								connection—and how they form the foundation for
+								long-term wellbeing. Plus, you will get an
+								opportunity to write your own habit recipes with
+								guidance from our coaches.
 							</p>
 						</div>
 
@@ -125,7 +129,7 @@ export default function EssentialsPage() {
 										<div className='w-2 h-2 rounded-full bg-blue-500'></div>
 									</div>
 									<p className='text-slate-700'>
-										Basic habit-tracking tools and templates
+										Foundational habit-building tools and templates
 									</p>
 								</li>
 								<li className='flex items-start gap-3'>
@@ -143,6 +147,14 @@ export default function EssentialsPage() {
 									</div>
 									<p className='text-slate-700'>
 										Certificate of completion
+									</p>
+								</li>
+								<li className='flex items-start gap-3'>
+									<div className='w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center mt-0.5 flex-shrink-0'>
+										<div className='w-2 h-2 rounded-full bg-blue-500'></div>
+									</div>
+									<p className='text-slate-700'>
+										Apply towards 6-week program
 									</p>
 								</li>
 							</ul>

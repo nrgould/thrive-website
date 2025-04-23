@@ -30,7 +30,7 @@ export const team: TeamMember[] = [
 	},
 	{
 		name: 'Nicholas Gould',
-		role: 'Creative Technologist',
+		role: 'Web Developer | Program Admin',
 		bio: 'Nicholas leads technology development for the THRIVE program, combining his background in software engineering with a deep passion for education to craft seamless and engaging digital experiences. A graduate of North Carolina State University, Nicholas believes technology should empower meaningful learning, ensuring the THRIVE platform remains intuitive, accessible, and impactful. Outside of technology, Nicholas is a photographer who loves to travel, drawing inspiration from exploring new landscapes and cultures—an approach he brings to creating dynamic, thoughtful experiences for THRIVE participants.',
 		image: '/team/nicholas.webp',
 	},
@@ -54,9 +54,9 @@ export const team: TeamMember[] = [
 	},
 	{
 		name: 'Charlie Rice',
-		role: 'Coach',
-		bio: '(Bio Pending)',
-		image: '/charlie.png',
+		role: 'Advisor | THRIVE Coach',
+		bio: 'Charlie is a seasoned entrepreneur and business leader based in Morganton, NC. Beyond his business ventures, Charlie & his wife, Chasity, are actively involved in community health initiatives. He is a graduate of the Complete Health Improvement Program and serves as a contributor and coach for the C2Life Foundation THRIVE program.',
+		image: '/team/charlie.webp',
 	},
 ];
 

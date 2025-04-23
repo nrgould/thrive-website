@@ -42,7 +42,7 @@ const programs: {
 	icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
 }[] = [
 	{
-		title: 'THRIVE 6-Week Program',
+		title: 'THRIVE Comprehensive',
 		href: '/programs/six-week',
 		description:
 			'Our comprehensive lifestyle change program with guidance, structure, and community support.',

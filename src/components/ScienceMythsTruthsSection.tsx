@@ -106,7 +106,7 @@ export function ScienceMythsTruthsSection() {
 			truthIcon: <RotateCcw className='text-green-500' size={22} />,
 		},
 		{
-			myth: 'Just repeat this for 21 days (or 30, or 60, or 90...) to build habits',
+			myth: 'Just repeat this for 30 days to build a habit',
 			truth: 'Emotions build habits',
 			mythIcon: <Clock className='text-blue-500' size={22} />,
 			truthIcon: <Heart className='text-green-500' size={22} />,
@@ -120,7 +120,7 @@ export function ScienceMythsTruthsSection() {
 	];
 
 	const totalItems = mythTruthPairs.length;
-	const autoRotationDelay = 3000; // ms
+	const autoRotationDelay = 4000; // ms
 	const interactionPauseDuration = 7000; // ms before resuming auto-rotation
 
 	// Function to go to the next slide

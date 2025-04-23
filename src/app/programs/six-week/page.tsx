@@ -1,4 +1,11 @@
-import { ArrowLeft, Calendar, Users, CheckCircle, Zap, DollarSign } from 'lucide-react';
+import {
+	ArrowLeft,
+	Calendar,
+	Users,
+	CheckCircle,
+	Zap,
+	DollarSign,
+} from 'lucide-react';
 import Link from 'next/link';
 import WaitlistForm from './WaitlistForm';
 import Image from 'next/image';
@@ -22,11 +29,11 @@ export default function SixWeekPage() {
 							<h1 className='text-4xl md:text-5xl font-bold mb-6'>
 								THRIVE{' '}
 								<span className='text-blue-200'>
-									6-Week Program
+									Comprehensive
 								</span>
 							</h1>
 							<p className='text-xl text-blue-100 mb-8'>
-								A comprehensive, guided journey to transform
+								A 6-week, guided journey to transform
 								your lifestyle with expert coaching and
 								community support.
 							</p>
@@ -46,7 +53,7 @@ export default function SixWeekPage() {
 										size={20}
 									/>
 									<span className='text-blue-50'>
-										Small group coaching
+										Small group and 1:1 coaching
 									</span>
 								</div>
 								<div className='flex items-center bg-blue-500 bg-opacity-30 px-4 py-2 rounded-full'>
@@ -102,16 +109,17 @@ export default function SixWeekPage() {
 					<div className='grid grid-cols-1 md:grid-cols-2 gap-16 items-center'>
 						<div className='space-y-6'>
 							<p className='text-lg text-slate-700'>
-								The THRIVE 6-Week Program is designed for those
-								ready to make lasting changes through a
-								structured, supportive approach to Lifestyle
-								Medicine.
+								THRIVE Comprehensive is a 6-Week Program
+								designed for those ready to make lasting changes
+								through a structured, supportive approach to
+								Lifestyle Medicine.
 							</p>
 							<p className='text-lg text-slate-700'>
 								Each week focuses on a different pillar of
 								health, with expert-led sessions, personalized
-								coaching, and actionable steps to implement
-								immediately.
+								coaching, and actionable steps using our
+								behavior design tools that allow you to
+								implement the changes you want immediately.
 							</p>
 							<p className='text-lg text-slate-700'>
 								What sets this program apart is our
@@ -134,7 +142,7 @@ export default function SixWeekPage() {
 									/>
 									<p className='text-slate-700'>
 										Weekly live learning sessions with
-										expert coaches
+										THRIVE coaches
 									</p>
 								</li>
 								<li className='flex items-start gap-3'>
@@ -163,7 +171,7 @@ export default function SixWeekPage() {
 										size={22}
 									/>
 									<p className='text-slate-700'>
-										Lifetime access to program materials and
+										6-month access to program materials and
 										video recordings
 									</p>
 								</li>
@@ -173,8 +181,8 @@ export default function SixWeekPage() {
 										size={22}
 									/>
 									<p className='text-slate-700'>
-										Ongoing community support through
-										graduate network
+										Ongoing community support through the
+										THRIVE graduate network
 									</p>
 								</li>
 							</ul>
@@ -243,7 +251,7 @@ export default function SixWeekPage() {
 									'Cultivate a mindset that supports your health goals and connect to deeper purpose in your wellness journey.',
 								highlights: [
 									'Identifying values and meaning',
-									'Overcoming obstacles and setbacks',
+									'Learning from every experience',
 									'Building intrinsic motivation',
 								],
 							},
@@ -254,7 +262,7 @@ export default function SixWeekPage() {
 									'Understand the powerful impact of social connections on health and build supportive relationships.',
 								highlights: [
 									'Creating a health-supporting social environment',
-									'Communication skills for better connections',
+									'Practices for bettering connections',
 									'Building your support network',
 								],
 							},
@@ -338,9 +346,7 @@ export default function SixWeekPage() {
 								I&apos;m sleeping better, and have a much more
 								positive outlook on life.&quot;
 							</p>
-							<p className='text-blue-500 font-medium'>
-								— Zach
-							</p>
+							<p className='text-blue-500 font-medium'>— Zach</p>
 						</div>
 						<div className='bg-blue-50 p-6 rounded-3xl'>
 							<p className='text-slate-700 text-lg leading-relaxed'>
@@ -361,7 +367,8 @@ export default function SixWeekPage() {
 			<section className='w-full py-16 px-4 md:px-8 bg-gradient-to-r from-blue-100 to-white'>
 				<div className='max-w-6xl mx-auto text-center'>
 					<h2 className='text-3xl font-bold text-blue-950 mb-6'>
-						Learn More About the Science of THRIVE
+						Learn More About the Science of evidence-based Lifestyle
+						Medicine and Behavior Design Principles
 					</h2>
 					<p className='text-lg text-slate-700 mb-8 max-w-3xl mx-auto'>
 						Our program is built on evidence-based Lifestyle
