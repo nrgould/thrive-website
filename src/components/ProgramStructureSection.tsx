@@ -444,7 +444,7 @@ function InteractivePyramid({
 					transition={springTransition}
 				>
 					<div
-						className={`w-full h-full flex items-center justify-center text-lg font-bold ${
+						className={`w-full h-full flex items-center justify-center text-lg font-bold transform-gpu ${
 							activeSection === 'connect'
 								? 'text-white'
 								: 'text-blue-600'
@@ -474,7 +474,7 @@ function InteractivePyramid({
 					transition={springTransition}
 				>
 					<div
-						className={`w-full h-full flex items-center justify-center text-lg font-bold ${
+						className={`w-full h-full flex items-center justify-center text-lg font-bold transform-gpu ${
 							activeSection === 'release'
 								? 'text-white'
 								: 'text-blue-600'
@@ -504,7 +504,7 @@ function InteractivePyramid({
 					transition={springTransition}
 				>
 					<div
-						className={`w-full h-full flex items-center justify-center text-lg font-bold ${
+						className={`w-full h-full flex items-center justify-center text-lg font-bold transform-gpu ${
 							activeSection === 'elevate'
 								? 'text-white'
 								: 'text-blue-600'
@@ -534,7 +534,7 @@ function InteractivePyramid({
 					transition={springTransition}
 				>
 					<div
-						className={`w-full h-full flex items-center justify-center text-lg font-bold ${
+						className={`w-full h-full flex items-center justify-center text-lg font-bold transform-gpu ${
 							activeSection === 'nourish'
 								? 'text-white'
 								: 'text-blue-600'
@@ -564,7 +564,7 @@ function InteractivePyramid({
 					transition={springTransition}
 				>
 					<div
-						className={`w-full h-full flex items-center justify-center text-lg font-bold ${
+						className={`w-full h-full flex items-center justify-center text-lg font-bold transform-gpu ${
 							activeSection === 'move'
 								? 'text-white z-100'
 								: 'text-blue-600 z-10'
@@ -594,7 +594,7 @@ function InteractivePyramid({
 					transition={springTransition}
 				>
 					<div
-						className={`w-full h-full flex items-center justify-center text-lg font-bold ${
+						className={`w-full h-full flex items-center justify-center text-lg font-bold transform-gpu ${
 							activeSection === 'sleep'
 								? 'text-white'
 								: 'text-blue-600'
@@ -713,7 +713,7 @@ function StaticPyramid() {
 					className='pointer-events-none'
 				>
 					<div
-						className={`w-full h-full flex items-center justify-center text-lg font-bold ${defaultLabelColor}`}
+						className={`w-full h-full flex items-center justify-center text-lg font-bold transform-gpu ${defaultLabelColor}`}
 					>
 						Connect
 					</div>
@@ -728,7 +728,7 @@ function StaticPyramid() {
 					className='pointer-events-none'
 				>
 					<div
-						className={`w-full h-full flex items-center justify-center text-lg font-bold ${defaultLabelColor}`}
+						className={`w-full h-full flex items-center justify-center text-lg font-bold transform-gpu ${defaultLabelColor}`}
 					>
 						Release
 					</div>
@@ -743,7 +743,7 @@ function StaticPyramid() {
 					className='pointer-events-none'
 				>
 					<div
-						className={`w-full h-full flex items-center justify-center text-lg font-bold ${defaultLabelColor}`}
+						className={`w-full h-full flex items-center justify-center text-lg font-bold transform-gpu ${defaultLabelColor}`}
 					>
 						Elevate
 					</div>
@@ -758,7 +758,7 @@ function StaticPyramid() {
 					className='pointer-events-none'
 				>
 					<div
-						className={`w-full h-full flex items-center justify-center text-lg font-bold ${defaultLabelColor}`}
+						className={`w-full h-full flex items-center justify-center text-lg font-bold transform-gpu ${defaultLabelColor}`}
 					>
 						Nourish
 					</div>
@@ -773,7 +773,7 @@ function StaticPyramid() {
 					className='pointer-events-none'
 				>
 					<div
-						className={`w-full h-full flex items-center justify-center text-lg font-bold ${defaultLabelColor}`}
+						className={`w-full h-full flex items-center justify-center text-lg font-bold transform-gpu ${defaultLabelColor}`}
 					>
 						Move
 					</div>
@@ -788,7 +788,7 @@ function StaticPyramid() {
 					className='pointer-events-none'
 				>
 					<div
-						className={`w-full h-full flex items-center justify-center text-lg font-bold ${defaultLabelColor}`}
+						className={`w-full h-full flex items-center justify-center text-lg font-bold transform-gpu ${defaultLabelColor}`}
 					>
 						Sleep
 					</div>
@@ -906,7 +906,7 @@ export function ProgramStructureSection() {
 						transition={{ duration: 0.6, delay: 0.3 }}
 					>
 						{/* Interactive Pyramid for Desktop */}
-						<div className='hidden md:block'>
+						<div className='hidden lg:block'>
 							<InteractivePyramid
 								activeSection={activeSection}
 								onSectionHover={handlePyramidHover}
@@ -914,12 +914,12 @@ export function ProgramStructureSection() {
 								showPopups={popupSource === 'pyramid'}
 							/>
 						</div>
-						{/* Static Pyramid for Mobile */}
-						<div className='block md:hidden'>
+						{/* Static Pyramid for Mobile & Tablet */}
+						<div className='block lg:hidden'>
 							<StaticPyramid />
 						</div>
 
-						<h3 className='text-xl md:text-2xl text-center text-blue-950/80 mt-4 md:-mt-8 mb-8 md:mb-12 px-4'>
+						<h3 className='text-xl md:text-2xl text-center text-blue-950/80 mt-4 lg:-mt-8 mb-8 md:mb-12 px-4'>
 							The THRIVE Lifestyle Medicine Pyramid
 						</h3>
 					</motion.div>
