@@ -1,11 +1,4 @@
-import {
-	ArrowLeft,
-	Calendar,
-	Users,
-	CheckCircle,
-	Zap,
-	DollarSign,
-} from 'lucide-react';
+import { ArrowLeft, Calendar, Users, CheckCircle, Zap } from 'lucide-react';
 import Link from 'next/link';
 import WaitlistForm from './WaitlistForm';
 import Image from 'next/image';
@@ -33,9 +26,9 @@ export default function SixWeekPage() {
 								</span>
 							</h1>
 							<p className='text-xl text-blue-100 mb-8'>
-								A 6-week, guided journey to transform
-								your lifestyle with expert coaching and
-								community support.
+								A 6-week, guided journey to transform your
+								lifestyle with expert coaching and community
+								support.
 							</p>
 							<div className='flex flex-wrap gap-4 mb-8'>
 								<div className='flex items-center bg-blue-500 bg-opacity-30 px-4 py-2 rounded-full'>
@@ -63,15 +56,6 @@ export default function SixWeekPage() {
 									/>
 									<span className='text-blue-50'>
 										Evidence-based approach
-									</span>
-								</div>
-								<div className='flex items-center bg-blue-500 bg-opacity-30 px-4 py-2 rounded-full'>
-									<DollarSign
-										className='text-blue-200 mr-2'
-										size={20}
-									/>
-									<span className='text-blue-50'>
-										$499 one-time
 									</span>
 								</div>
 							</div>
@@ -363,24 +347,15 @@ export default function SixWeekPage() {
 				</div>
 			</section>
 
-			{/* Science Section */}
-			<section className='w-full py-16 px-4 md:px-8 bg-gradient-to-r from-blue-100 to-white'>
+			{/* Pricing Placeholder Section */}
+			<section className='w-full py-12 px-4 md:px-8 bg-blue-50'>
 				<div className='max-w-6xl mx-auto text-center'>
-					<h2 className='text-3xl font-bold text-blue-950 mb-6'>
-						Learn More About the Science of evidence-based Lifestyle
-						Medicine and Behavior Design Principles
+					<h2 className='text-3xl font-bold text-blue-950 mb-4'>
+						Program Investment
 					</h2>
-					<p className='text-lg text-slate-700 mb-8 max-w-3xl mx-auto'>
-						Our program is built on evidence-based Lifestyle
-						Medicine principles. Discover the research and science
-						behind our approach to health transformation.
+					<p className='text-xl text-slate-600'>
+						Summer cohort pricing to be announced soon.
 					</p>
-					<Link
-						href='/about/science'
-						className='px-8 py-4 bg-blue-600 text-white rounded-full font-medium text-lg hover:bg-blue-700 transition-colors shadow-md inline-block'
-					>
-						Explore the Science
-					</Link>
 				</div>
 			</section>
 
@@ -402,6 +377,27 @@ export default function SixWeekPage() {
 					<div className='flex justify-center'>
 						<WaitlistForm />
 					</div>
+				</div>
+			</section>
+
+			{/* Science Section */}
+			<section className='w-full py-16 px-4 md:px-8 bg-gradient-to-r from-blue-100 to-white'>
+				<div className='max-w-6xl mx-auto text-center'>
+					<h2 className='text-4xl font-bold text-blue-950 mb-6 leading-tight'>
+						Learn about the science of <br />
+						Lifestyle Medicine and Behavior Design Principles
+					</h2>
+					<p className='text-lg text-slate-700 mb-8 max-w-3xl mx-auto'>
+						Our program is built on evidence-based Lifestyle
+						Medicine principles. Discover the research and science
+						behind our approach to health transformation.
+					</p>
+					<Link
+						href='/about/science'
+						className='px-8 py-4 bg-blue-600 text-white rounded-full font-medium text-lg hover:bg-blue-700 transition-colors shadow-md inline-block'
+					>
+						Explore the Science
+					</Link>
 				</div>
 			</section>
 		</main>

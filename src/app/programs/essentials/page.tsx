@@ -1,7 +1,7 @@
-import { CTASection } from '@/components/CTASection';
 import { ArrowLeft, BookOpen, Clock, Award } from 'lucide-react';
 import Link from 'next/link';
 import WaitlistForm from './WaitlistForm';
+import { EssentialsCTASection } from './EssentialsCTASection';
 
 export default function EssentialsPage() {
 	return (
@@ -129,7 +129,8 @@ export default function EssentialsPage() {
 										<div className='w-2 h-2 rounded-full bg-blue-500'></div>
 									</div>
 									<p className='text-slate-700'>
-										Foundational habit-building tools and templates
+										Foundational habit-building tools and
+										templates
 									</p>
 								</li>
 								<li className='flex items-start gap-3'>
@@ -149,14 +150,14 @@ export default function EssentialsPage() {
 										Certificate of completion
 									</p>
 								</li>
-								<li className='flex items-start gap-3'>
+								{/* <li className='flex items-start gap-3'>
 									<div className='w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center mt-0.5 flex-shrink-0'>
 										<div className='w-2 h-2 rounded-full bg-blue-500'></div>
 									</div>
 									<p className='text-slate-700'>
 										Apply towards 6-week program
 									</p>
-								</li>
+								</li> */}
 							</ul>
 						</div>
 					</div>
@@ -254,7 +255,7 @@ export default function EssentialsPage() {
 					</p>
 				</div>
 			</section> */}
-			<CTASection />
+			<EssentialsCTASection />
 		</main>
 	);
 }
