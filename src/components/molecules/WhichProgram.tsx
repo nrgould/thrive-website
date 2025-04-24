@@ -29,7 +29,7 @@ function WhichProgram() {
 							<Info className='text-blue-500' size={28} />
 						</div>
 						<h3 className='text-2xl font-bold text-blue-950 mb-3'>
-							THRIVE Essentials: Self-Paced Online Course (complete in a week)
+							THRIVE Essentials: 1-Week Online Course (coming soon)
 						</h3>
 						<p className='text-slate-700 mb-6'>
 							Perfect for those who want to explore Lifestyle
@@ -106,20 +106,20 @@ function WhichProgram() {
 							</div>
 						</div>
 
-						<div className='w-full block'>
+						{/* <div className='w-full block'>
 							<button className='cursor-pointer w-full py-3 bg-blue-100 text-blue-700 rounded-full font-medium hover:bg-blue-200 transition-colors opacity-75'>
 								Coming Soon
 							</button>
-						</div>
+						</div> */}
 
-						{/* <Link
+						<Link
 							href='/programs/essentials'
 							className='w-full block'
 						>
 							<button className='cursor-pointer w-full py-3 bg-blue-100 text-blue-700 rounded-full font-medium hover:bg-blue-200 transition-colors'>
 								Learn More
 							</button>
-						</Link> */}
+						</Link>
 					</motion.div>
 
 					<motion.div

@@ -77,8 +77,8 @@ export function ApproachWhyItWorksSection() {
 							By addressing the six key pillars of Lifestyle
 							Medicine (nutrition, physical activity, sleep,
 							stress management, growth mindset, and social
-							connection, and healthy habits), together we can
-							prevent, manage, and often reverse these conditions.
+							connection), together we can prevent, manage, and
+							often reverse these conditions.
 						</p>
 						<p className='text-slate-50 text-lg leading-relaxed'>
 							THRIVE&apos;s methodology combines the science of
@@ -148,7 +148,10 @@ export function ApproachWhyItWorksSection() {
 									className='bg-slate-900 p-6 rounded-2xl'
 									initial={{ opacity: 0, x: 30 }}
 									whileInView={{ opacity: 1, x: 0 }}
-									transition={{ duration: 0.6, delay: index * 0.2 }}
+									transition={{
+										duration: 0.6,
+										delay: index * 0.2,
+									}}
 									viewport={{ once: true, amount: 0.3 }}
 									whileHover={{
 										y: -5,
