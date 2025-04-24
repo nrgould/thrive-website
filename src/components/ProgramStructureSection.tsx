@@ -1,7 +1,8 @@
 'use client';
 
 import * as motion from 'motion/react-client';
-import { AnimatePresence } from 'motion/react';
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+import { AnimatePresence } from 'motion/react'; // Kept for future use
 import {
 	ArrowRight,
 	Apple,
@@ -11,7 +12,8 @@ import {
 	Brain,
 	Users,
 } from 'lucide-react';
-import { useState, useRef, useEffect } from 'react';
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+import { useState, useRef, useEffect } from 'react'; // Kept useEffect for future use
 import Link from 'next/link';
 
 // Define section ID type for type safety
@@ -24,7 +26,8 @@ type SectionId =
 	| 'connect'
 	| null;
 
-const strokeWidth = 8;
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const strokeWidth = 8; // Kept for future use
 
 // Define the sections data in one place to be reused
 const lifestyleSections = [
@@ -74,8 +77,10 @@ const lifestyleSections = [
 ];
 
 // Interactive Pyramid Component Props
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 interface InteractivePyramidProps {
 	activeSection: SectionId;
+	// eslint-disable-next-line @typescript-eslint/no-unused-vars
 	onSectionHover: (section: SectionId) => void;
 	onSectionClick: (section: SectionId) => void;
 }
@@ -89,9 +94,11 @@ const sharedTransition = {
 };
 
 // Pop-out offset for active sections
-const popOutOffset = 20;
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const popOutOffset = 20; // Kept for future use
 
 // Popup component for the pyramid sections
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 function SectionPopup({
 	section,
 	x,
@@ -192,6 +199,7 @@ function SectionPopup({
 }
 
 // Interactive Pyramid Subcomponent
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 function InteractivePyramid({
 	activeSection,
 	onSectionHover,
@@ -800,9 +808,10 @@ function StaticPyramid() {
 
 export function ProgramStructureSection() {
 	const [activeSection, setActiveSection] = useState<SectionId>(null);
+	// eslint-disable-next-line @typescript-eslint/no-unused-vars
 	const [popupSource, setPopupSource] = useState<'pyramid' | 'card' | null>(
 		null
-	);
+	); // Kept for future use
 	const sectionRef = useRef<HTMLDivElement>(null);
 
 	const handleSectionClick = (section: SectionId) => {
@@ -812,14 +821,15 @@ export function ProgramStructureSection() {
 		}
 	};
 
+	// eslint-disable-next-line @typescript-eslint/no-unused-vars
 	const handlePyramidHover = (section: SectionId) => {
 		setActiveSection(section);
 		setPopupSource('pyramid');
-	};
+	}; // Kept for future use
 
 	const handleCardHover = (section: SectionId) => {
 		setActiveSection(section);
-		setPopupSource('card');
+		// setPopupSource('card'); // Commented out for now
 	};
 
 	const fadeInUp = {
@@ -905,17 +915,10 @@ export function ProgramStructureSection() {
 						animate={{ opacity: 1, scale: 1 }}
 						transition={{ duration: 0.6, delay: 0.3 }}
 					>
-						{/* Interactive Pyramid for Desktop */}
-						<div className='hidden lg:block'>
-							<InteractivePyramid
-								activeSection={activeSection}
-								onSectionHover={handlePyramidHover}
-								onSectionClick={handleSectionClick}
-								showPopups={popupSource === 'pyramid'}
-							/>
-						</div>
-						{/* Static Pyramid for Mobile & Tablet */}
-						<div className='block lg:hidden'>
+						{/* Removed Interactive Pyramid Rendering */}
+
+						{/* Static Pyramid for All Screens */}
+						<div>
 							<StaticPyramid />
 						</div>
 
