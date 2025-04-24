@@ -22,7 +22,7 @@ const inter = Inter({
 export const metadata: Metadata = {
 	title: 'THRIVE | A Better Way to Live',
 	description:
-		'THRIVE is a 6-week lifestyle medicine program built on science-backed strategies that support physical, mental, and emotional well-being.',
+		'THRIVE is a lifestyle medicine program built on science-backed strategies that support physical, mental, and emotional well-being.',
 };
 
 export default function RootLayout({

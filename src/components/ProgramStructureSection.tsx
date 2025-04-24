@@ -444,7 +444,7 @@ function InteractivePyramid({
 					transition={springTransition}
 				>
 					<div
-						className={`w-full h-full flex items-center justify-center text-2xl font-bold ${
+						className={`w-full h-full flex items-center justify-center text-lg font-bold ${
 							activeSection === 'connect'
 								? 'text-white'
 								: 'text-blue-600'
@@ -474,7 +474,7 @@ function InteractivePyramid({
 					transition={springTransition}
 				>
 					<div
-						className={`w-full h-full flex items-center justify-center text-2xl font-bold ${
+						className={`w-full h-full flex items-center justify-center text-lg font-bold ${
 							activeSection === 'release'
 								? 'text-white'
 								: 'text-blue-600'
@@ -504,7 +504,7 @@ function InteractivePyramid({
 					transition={springTransition}
 				>
 					<div
-						className={`w-full h-full flex items-center justify-center text-2xl font-bold ${
+						className={`w-full h-full flex items-center justify-center text-lg font-bold ${
 							activeSection === 'elevate'
 								? 'text-white'
 								: 'text-blue-600'
@@ -534,7 +534,7 @@ function InteractivePyramid({
 					transition={springTransition}
 				>
 					<div
-						className={`w-full h-full flex items-center justify-center text-2xl font-bold ${
+						className={`w-full h-full flex items-center justify-center text-lg font-bold ${
 							activeSection === 'nourish'
 								? 'text-white'
 								: 'text-blue-600'
@@ -564,7 +564,7 @@ function InteractivePyramid({
 					transition={springTransition}
 				>
 					<div
-						className={`w-full h-full flex items-center justify-center text-2xl font-bold ${
+						className={`w-full h-full flex items-center justify-center text-lg font-bold ${
 							activeSection === 'move'
 								? 'text-white z-100'
 								: 'text-blue-600 z-10'
@@ -594,7 +594,7 @@ function InteractivePyramid({
 					transition={springTransition}
 				>
 					<div
-						className={`w-full h-full flex items-center justify-center text-2xl font-bold ${
+						className={`w-full h-full flex items-center justify-center text-lg font-bold ${
 							activeSection === 'sleep'
 								? 'text-white'
 								: 'text-blue-600'
@@ -713,7 +713,7 @@ function StaticPyramid() {
 					className='pointer-events-none'
 				>
 					<div
-						className={`w-full h-full flex items-center justify-center text-2xl font-bold ${defaultLabelColor}`}
+						className={`w-full h-full flex items-center justify-center text-lg font-bold ${defaultLabelColor}`}
 					>
 						Connect
 					</div>
@@ -728,7 +728,7 @@ function StaticPyramid() {
 					className='pointer-events-none'
 				>
 					<div
-						className={`w-full h-full flex items-center justify-center text-2xl font-bold ${defaultLabelColor}`}
+						className={`w-full h-full flex items-center justify-center text-lg font-bold ${defaultLabelColor}`}
 					>
 						Release
 					</div>
@@ -743,7 +743,7 @@ function StaticPyramid() {
 					className='pointer-events-none'
 				>
 					<div
-						className={`w-full h-full flex items-center justify-center text-2xl font-bold ${defaultLabelColor}`}
+						className={`w-full h-full flex items-center justify-center text-lg font-bold ${defaultLabelColor}`}
 					>
 						Elevate
 					</div>
@@ -758,7 +758,7 @@ function StaticPyramid() {
 					className='pointer-events-none'
 				>
 					<div
-						className={`w-full h-full flex items-center justify-center text-2xl font-bold ${defaultLabelColor}`}
+						className={`w-full h-full flex items-center justify-center text-lg font-bold ${defaultLabelColor}`}
 					>
 						Nourish
 					</div>
@@ -773,7 +773,7 @@ function StaticPyramid() {
 					className='pointer-events-none'
 				>
 					<div
-						className={`w-full h-full flex items-center justify-center text-2xl font-bold ${defaultLabelColor}`}
+						className={`w-full h-full flex items-center justify-center text-lg font-bold ${defaultLabelColor}`}
 					>
 						Move
 					</div>
@@ -788,7 +788,7 @@ function StaticPyramid() {
 					className='pointer-events-none'
 				>
 					<div
-						className={`w-full h-full flex items-center justify-center text-2xl font-bold ${defaultLabelColor}`}
+						className={`w-full h-full flex items-center justify-center text-lg font-bold ${defaultLabelColor}`}
 					>
 						Sleep
 					</div>
