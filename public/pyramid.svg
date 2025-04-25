@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 1200 1200"
+     width="1200" height="1200"
+     style="background: none;">
+  <!-- Outer triangle -->
+  <polygon points="100,1100 1100,1100 600,100"
+           fill="none"
+           stroke="#246cff"
+           stroke-width="20"/>
+
+  <!-- Horizontal partition lines -->
+  <line x1="475" y1="350" x2="725" y2="350"
+        stroke="#246cff"
+        stroke-width="20"/>
+  <line x1="325" y1="650" x2="875" y2="650"
+        stroke="#246cff"
+        stroke-width="20"/>
+
+  <!-- Vertical partition lines -->
+  <line x1="600" y1="350" x2="600" y2="650"
+        stroke="#246cff"
+        stroke-width="20"/>
+  <line x1="433" y1="650" x2="433" y2="1100"
+        stroke="#246cff"
+        stroke-width="20"/>
+  <line x1="767" y1="650" x2="767" y2="1100"
+        stroke="#246cff"
+        stroke-width="20"/>
+
+  <!-- Text labels -->
+  <text x="600"  y="225"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="70"
+        fill="#246cff"
+        text-anchor="middle"
+        dominant-baseline="middle">
+    CONNECT
+  </text>
+
+  <text x="500"  y="500"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="60"
+        fill="#246cff"
+        text-anchor="middle"
+        dominant-baseline="middle">
+    RELEASE
+  </text>
+  <text x="700"  y="500"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="60"
+        fill="#246cff"
+        text-anchor="middle"
+        dominant-baseline="middle">
+    ELEVATE
+  </text>
+
+  <text x="323"  y="875"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="60"
+        fill="#246cff"
+        text-anchor="middle"
+        dominant-baseline="middle">
+    NOURISH
+  </text>
+  <text x="600"  y="875"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="60"
+        fill="#246cff"
+        text-anchor="middle"
+        dominant-baseline="middle">
+    MOVE
+  </text>
+  <text x="877"  y="875"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="60"
+        fill="#246cff"
+        text-anchor="middle"
+        dominant-baseline="middle">
+    SLEEP
+  </text>
+</svg>

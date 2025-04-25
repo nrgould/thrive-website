@@ -2,7 +2,6 @@ import React from 'react';
 import * as motion from 'motion/react-client';
 import { BookOpen, Layers, Users, LucideIcon } from 'lucide-react';
 import ApproachMethodologyTabs from './ui/ApproachMethodologyTabs';
-
 // Define types for keys used in data and maps
 type IconBgColor = 'bg-blue-500' | 'bg-teal-500' | 'bg-green-500';
 type AccentColor = 'blue' | 'teal' | 'green';

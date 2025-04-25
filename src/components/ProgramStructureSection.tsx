@@ -15,7 +15,7 @@ import {
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { useState, useRef, useEffect } from 'react'; // Kept useEffect for future use
 import Link from 'next/link';
-
+import Image from 'next/image';
 // Define section ID type for type safety
 type SectionId =
 	| 'nourish'
@@ -632,176 +632,22 @@ function InteractivePyramid({
 // Static Pyramid Subcomponent for Mobile
 // Removed motion, interactivity, popups, and animations
 function StaticPyramid() {
-	const strokeWidth = 8; // Keep stroke width consistent
+	// eslint-disable-next-line @typescript-eslint/no-unused-vars
+	const strokeWidth = 8; // Keep stroke width consistent - no longer used by image
 
-	// Define label positions - only need default positions
-	const labelPositions = {
-		connect: { x: 250, y: 125 },
-		release: { x: 185, y: 220 },
-		elevate: { x: 310, y: 220 },
-		nourish: { x: 110, y: 350 },
-		move: { x: 250, y: 350 },
-		sleep: { x: 380, y: 350 },
-	};
-
-	// Define default section styles
-	const defaultFill = 'white';
-	const defaultStroke = '#2563eb'; // blue-600
-	const defaultLabelColor = 'text-blue-600';
+	// Define default section styles - no longer used by image
+	// const defaultFill = 'white';
+	// const defaultStroke = '#2563eb'; // blue-600
 
 	return (
-		<div className='relative h-[50vh] w-full max-w-[900px] mx-auto flex items-center'>
-			<svg
-				viewBox='0 0 600 500'
-				className='w-full h-full'
-				preserveAspectRatio='xMidYMid meet'
-			>
-				{/* Draw the pyramid - Static Sections */}
-				{/* Connect section */}
-				<polygon
-					points='300,50 217,183 383,183'
-					fill={defaultFill}
-					stroke={defaultStroke}
-					strokeWidth={strokeWidth}
-					strokeLinejoin='round'
-				/>
-
-				{/* Release section */}
-				<polygon
-					points='133,317 217,183 300,183 300,317'
-					fill={defaultFill}
-					stroke={defaultStroke}
-					strokeWidth={strokeWidth}
-					strokeLinejoin='round'
-				/>
-
-				{/* Elevate section */}
-				<polygon
-					points='467,317 383,183 300,183 300,317'
-					fill={defaultFill}
-					stroke={defaultStroke}
-					strokeWidth={strokeWidth}
-					strokeLinejoin='round'
-				/>
-
-				{/* Nourish section */}
-				<polygon
-					points='50,450 133,317 217,317 217,450'
-					fill={defaultFill}
-					stroke={defaultStroke}
-					strokeWidth={strokeWidth}
-					strokeLinejoin='round'
-				/>
-
-				{/* Move section */}
-				<polygon
-					points='217,450 217,317 383,317 383,450'
-					fill={defaultFill}
-					stroke={defaultStroke}
-					strokeWidth={strokeWidth}
-					strokeLinejoin='round'
-				/>
-
-				{/* Sleep section */}
-				<polygon
-					points='383,450 383,317 467,317 550,450'
-					fill={defaultFill}
-					stroke={defaultStroke}
-					strokeWidth={strokeWidth}
-					strokeLinejoin='round'
-				/>
-
-				{/* Section Labels - Static */}
-				{/* Connect label */}
-				<foreignObject
-					x={labelPositions.connect.x}
-					y={labelPositions.connect.y}
-					width='100'
-					height='60'
-					className='pointer-events-none'
-				>
-					<div
-						className={`w-full h-full flex items-center justify-center text-lg font-bold transform-gpu ${defaultLabelColor}`}
-					>
-						Connect
-					</div>
-				</foreignObject>
-
-				{/* Release label */}
-				<foreignObject
-					x={labelPositions.release.x}
-					y={labelPositions.release.y}
-					width='100'
-					height='60'
-					className='pointer-events-none'
-				>
-					<div
-						className={`w-full h-full flex items-center justify-center text-lg font-bold transform-gpu ${defaultLabelColor}`}
-					>
-						Release
-					</div>
-				</foreignObject>
-
-				{/* Elevate label */}
-				<foreignObject
-					x={labelPositions.elevate.x}
-					y={labelPositions.elevate.y}
-					width='100'
-					height='60'
-					className='pointer-events-none'
-				>
-					<div
-						className={`w-full h-full flex items-center justify-center text-lg font-bold transform-gpu ${defaultLabelColor}`}
-					>
-						Elevate
-					</div>
-				</foreignObject>
-
-				{/* Nourish label */}
-				<foreignObject
-					x={labelPositions.nourish.x}
-					y={labelPositions.nourish.y}
-					width='100'
-					height='60'
-					className='pointer-events-none'
-				>
-					<div
-						className={`w-full h-full flex items-center justify-center text-lg font-bold transform-gpu ${defaultLabelColor}`}
-					>
-						Nourish
-					</div>
-				</foreignObject>
-
-				{/* Move label */}
-				<foreignObject
-					x={labelPositions.move.x}
-					y={labelPositions.move.y}
-					width='100'
-					height='60'
-					className='pointer-events-none'
-				>
-					<div
-						className={`w-full h-full flex items-center justify-center text-lg font-bold transform-gpu ${defaultLabelColor}`}
-					>
-						Move
-					</div>
-				</foreignObject>
-
-				{/* Sleep label */}
-				<foreignObject
-					x={labelPositions.sleep.x}
-					y={labelPositions.sleep.y}
-					width='100'
-					height='60'
-					className='pointer-events-none'
-				>
-					<div
-						className={`w-full h-full flex items-center justify-center text-lg font-bold transform-gpu ${defaultLabelColor}`}
-					>
-						Sleep
-					</div>
-				</foreignObject>
-			</svg>
+		<div className='relative h-[40vh] w-full max-w-[900px] mx-auto flex items-center justify-center'>
+			{/* Replaced SVG with Image */}
+			<Image
+				src='/pyramid.webp'
+				alt='THRIVE Lifestyle Medicine Pyramid'
+				width={500}
+				height={500}
+			/>
 		</div>
 	);
 }
@@ -918,11 +764,11 @@ export function ProgramStructureSection() {
 						{/* Removed Interactive Pyramid Rendering */}
 
 						{/* Static Pyramid for All Screens */}
-						<div>
+						<div className='mt-12'>
 							<StaticPyramid />
 						</div>
 
-						<h3 className='text-xl md:text-2xl text-center text-blue-950/80 mt-4 lg:-mt-8 mb-8 md:mb-12 px-4'>
+						<h3 className='text-xl md:text-2xl text-center text-blue-950/80 md:mt-2 mb-8 md:mb-12 px-4'>
 							The THRIVE Lifestyle Medicine Pyramid
 						</h3>
 					</motion.div>
