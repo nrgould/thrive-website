@@ -95,7 +95,7 @@ export function SupportiveExperienceSection() {
 							setting. Learn practical strategies while also
 							supporting others on their health journeys through
 							whole-food nutrition, physical activity, stress
-							management, and more
+							management, and more.
 						</p>
 					</div>
 				</motion.div>

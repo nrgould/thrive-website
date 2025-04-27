@@ -16,7 +16,7 @@ const methodologyData: MethodologyItem[] = [
 		title: 'Education',
 		subtitle: 'Learn a Healthier Way',
 		description1:
-			'Understanding forms the foundation of lasting change. We provide scientifically-backed knowledge about Lifestyle Medicine and through the six pillars of THRIVE: nutrition, physical activity, sleep, stress management, growth mindset, and social connection, and healthy habits.',
+			'Understanding forms the foundation of lasting change. We provide scientifically-backed knowledge about Lifestyle Medicine through the six pillars of THRIVE: nutrition, physical activity, sleep, stress management, growth mindset, and social connection.',
 		description2: 'Our educational approach includes:',
 		listItems: [
 			'Evidence-based health and nutrition information for mind and body',

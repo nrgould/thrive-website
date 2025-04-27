@@ -52,8 +52,10 @@ export function ApproachWhyItWorksSection() {
 					Lifestyle Medicine education combined with Behavior Design
 					systems and tools creates a powerful framework for
 					sustainable health transformation. Our integrated approach
-					addresses both the what and the how of lasting, healthy
-					changes.
+					addresses both the{' '}
+					<span className='font-bold italic'>what</span> and the{' '}
+					<span className='font-bold italic'>how</span> of lasting,
+					healthy changes.
 				</motion.p>
 
 				<div className='grid grid-cols-1 lg:grid-cols-2 gap-14 items-start mb-20'>
@@ -82,7 +84,9 @@ export function ApproachWhyItWorksSection() {
 						</p>
 						<p className='text-slate-50 text-lg leading-relaxed'>
 							THRIVE&apos;s methodology combines the science of
-							what to change with proven strategies for how to
+							<span className='font-bold italic'>what</span> to
+							change with proven strategies for{' '}
+							<span className='font-bold italic'>how</span> to
 							change, creating a comprehensive solution for
 							sustainable health. Our approach addresses the
 							health of the whole-person by focusing on strategies

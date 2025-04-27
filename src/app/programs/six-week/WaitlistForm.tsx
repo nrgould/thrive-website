@@ -173,12 +173,14 @@ export function WaitlistForm() {
 								{loading ? 'Submitting...' : 'Join Waitlist'}
 							</Button>
 						</div>
+						<p className='text-xs text-slate-500 text-center'>
+							THRIVE does not share your information with third
+							parties.
+						</p>
 					</div>
 				</form>
 			</div>
 		</div>
-
-		/* Removed all Script tags related to jQuery and Mailchimp */
 	);
 }
 

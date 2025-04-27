@@ -213,11 +213,11 @@ export function ContactFormSection() {
 								></textarea>
 							</div>
 
-							<div className='flex justify-end'>
+							<div className='flex justify-start'>
 								<button
 									type='submit'
 									disabled={formStatus === 'submitting'}
-									className={`px-6 py-3 bg-blue-500 text-white rounded-full font-medium flex items-center gap-2 transition ${
+									className={`px-6 py-3 bg-blue-500 text-white cursor-pointer rounded-full font-medium flex items-center gap-2 transition ${
 										formStatus === 'submitting'
 											? 'opacity-70 cursor-not-allowed'
 											: 'hover:bg-blue-600 shadow-md hover:shadow-lg'
@@ -245,7 +245,8 @@ export function ContactFormSection() {
 
 							<p className='text-xs text-slate-500 mt-6'>
 								By submitting this form, you agree to being
-								contacted about THRIVE programs.
+								contacted about THRIVE programs. THRIVE does not
+								share your information with third parties.
 							</p>
 						</form>
 					)}
