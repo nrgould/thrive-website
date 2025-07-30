@@ -24,7 +24,7 @@ export const team: TeamMember[] = [
 	},
 	{
 		name: 'Brett Wells',
-		role: 'Operations | Behavior Design',
+		role: 'Chief Behavior Officer',
 		bio: 'After a 30-year international commercial operations career in diagnostics, Brett pivoted in 2022 to focus his efforts solely on his passion of helping people, and their communities, reach their true health potential.  Brett is certified in human behavior design and leads our efforts at THRIVE to integrate Lifestyle Medicine principles into the strategies that allow our clients to make lasting changes in their lives.  He lives in Waynesville, NC with his wife Paige and their Irish Red & White Setters.  Brett and Paige have three children - Zac, Graham, and Maison.',
 		image: '/team/brett.webp',
 	},
