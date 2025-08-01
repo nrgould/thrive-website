@@ -411,7 +411,7 @@ export function Header() {
 					className='hidden md:flex px-4 py-2 bg-blue-500 text-white rounded-full text-sm font-medium hover:bg-blue-600 transition-colors items-center group'
 				>
 					<UserPlus className='mr-2 h-4 w-4 transition-transform duration-200 group-hover:scale-125' />
-					Join Waitlist
+					Register Now
 				</Link>
 			</div>
 		</header>

@@ -205,14 +205,14 @@ export function HeroSection() {
 								className='px-8 py-4 bg-blue-500 text-white rounded-full font-medium text-lg flex items-center gap-2 hover:bg-blue-600 transition-colors shadow-lg hover:shadow-xl cursor-pointer'
 								whileTap={{ scale: 0.95 }}
 							>
-								Register for next cohort{' '}
+								Register for the August 18th Cohort{' '}
 								<ArrowRight className='ml-1' size={20} />
 							</motion.button>
 						</Link>
 					</motion.div>
 
 					<motion.div
-						className='flex items-center gap-3 justify-center mt-8'
+						className='flex flex-col items-center gap-2 justify-center mt-8'
 						initial={{ opacity: 0, y: 20 }}
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.5, delay: 0.8 }}

@@ -30,40 +30,46 @@ export default function SixWeekPage() {
 								lifestyle with expert coaching and community
 								support.
 							</p>
-							<div className='flex flex-wrap gap-4 mb-8'>
-								<div className='flex items-center bg-blue-500 bg-opacity-30 px-4 py-2 rounded-full'>
-									<Calendar
-										className='text-blue-200 mr-2'
-										size={20}
-									/>
-									<span className='text-blue-50'>
-										6-week structured program
-									</span>
-								</div>
-								<div className='flex items-center bg-blue-500 bg-opacity-30 px-4 py-2 rounded-full'>
-									<Users
-										className='text-blue-200 mr-2'
-										size={20}
-									/>
-									<span className='text-blue-50'>
-										Small group and 1:1 coaching
-									</span>
-								</div>
-								<div className='flex items-center bg-blue-500 bg-opacity-30 px-4 py-2 rounded-full'>
-									<Zap
-										className='text-blue-200 mr-2'
-										size={20}
-									/>
-									<span className='text-blue-50'>
-										Evidence-based approach
-									</span>
+							<div className='mb-8'>
+								<div className='flex flex-wrap gap-4'>
+									<div className='flex items-center bg-blue-500 bg-opacity-30 px-4 py-2 rounded-full'>
+										<Calendar
+											className='text-blue-200 mr-2'
+											size={20}
+										/>
+										<span className='text-blue-50'>
+											6-week structured program
+										</span>
+									</div>
+									<div className='flex items-center bg-blue-500 bg-opacity-30 px-4 py-2 rounded-full'>
+										<Users
+											className='text-blue-200 mr-2'
+											size={20}
+										/>
+										<span className='text-blue-50'>
+											Small group and 1:1 coaching
+										</span>
+									</div>
+									<div className='flex items-center bg-blue-500 bg-opacity-30 px-4 py-2 rounded-full'>
+										<Zap
+											className='text-blue-200 mr-2'
+											size={20}
+										/>
+										<span className='text-blue-50'>
+											Evidence-based approach
+										</span>
+									</div>
 								</div>
 							</div>
+							<p className='text-lg text-blue-100 font-semibold mb-4 flex items-center'>
+								<Calendar className='mr-2' />
+								UPCOMING COHORTS: August 18th & October 6th
+							</p>
 							<a
 								href='#waitlist-form'
 								className='px-8 py-4 bg-white text-blue-600 rounded-full font-medium text-lg hover:bg-blue-50 transition-colors shadow-md inline-block'
 							>
-								Join Waitlist
+								Register Now
 							</a>
 						</div>
 						<div className='flex-1 relative h-[350px] w-full rounded-3xl overflow-hidden'>
@@ -348,14 +354,51 @@ export default function SixWeekPage() {
 			</section>
 
 			{/* Pricing Placeholder Section */}
-			<section className='w-full py-12 px-4 md:px-8 bg-blue-50'>
-				<div className='max-w-6xl mx-auto text-center'>
-					<h2 className='text-3xl font-bold text-blue-950 mb-4'>
-						Program Investment
-					</h2>
-					<p className='text-xl text-slate-600'>
-						Summer cohort pricing to be announced soon.
-					</p>
+			<section className='w-full py-16 px-4 md:px-8 bg-blue-50'>
+				<div className='max-w-6xl mx-auto'>
+					<div className='grid grid-cols-1 md:grid-cols-2 gap-10 items-center max-w-4xl mx-auto'>
+						<div className='text-center md:text-right'>
+							<p className='text-md text-red-500 font-semibold mb-2'>
+								LIMITED-TIME OFFER
+							</p>
+							<h2 className='text-3xl font-bold text-blue-950 mb-2'>
+								Program Investment
+							</h2>
+							<p className='text-lg text-slate-600 mb-2'>
+								Special 2025 introductory rate!
+							</p>
+							<p className='text-5xl md:text-6xl font-bold text-blue-600'>
+								<span className='text-3xl md:text-4xl text-slate-400 line-through mr-2'>
+									$1000
+								</span>
+								$250
+							</p>
+						</div>
+
+						<div className='flex justify-center md:justify-start'>
+							<div className='bg-white p-8 px-12 rounded-3xl shadow-md text-left inline-block'>
+								<h3 className='text-xl font-bold text-blue-950 mb-4'>
+									Upcoming Cohorts
+								</h3>
+								<div className='space-y-3 mb-4'>
+									<p className='flex items-center text-lg font-medium text-zinc-600'>
+										<Calendar className='mr-2 h-5 w-5 text-blue-500' />
+										August 18th
+									</p>
+									<p className='flex items-center text-lg font-medium text-zinc-600'>
+										<Calendar className='mr-2 h-5 w-5 text-blue-500' />
+										October 6th
+									</p>
+								</div>
+								<a
+									href='#waitlist-form'
+									className='px-8 py-4 bg-blue-600 text-white rounded-full font-medium text-lg hover:bg-blue-700 transition-colors shadow-md inline-block'
+								>
+									Register Now
+								</a>
+							</div>
+						</div>
+					</div>
 				</div>
 			</section>
 
