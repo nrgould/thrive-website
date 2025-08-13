@@ -61,9 +61,16 @@ export default function SixWeekPage() {
 									</div>
 								</div>
 							</div>
-							<p className='text-lg text-blue-100 font-semibold mb-4 flex items-center'>
+							<p className='text-lg text-blue-100 font-semibold mb-4 flex items-center flex-wrap gap-2'>
 								<Calendar className='mr-2' />
-								UPCOMING COHORTS: August 18th & October 6th
+								<span>UPCOMING COHORTS:</span>
+								<span className='line-through opacity-80'>
+									August 18th
+								</span>
+								<span>&amp; October 6th</span>
+								<span className='ml-2 inline-flex items-center text-sm bg-white/20 text-white px-2 py-0.5 rounded-full'>
+									Now accepting applications for October 6th
+								</span>
 							</p>
 							<a
 								href='#waitlist-form'
@@ -381,13 +388,23 @@ export default function SixWeekPage() {
 									Upcoming Cohorts
 								</h3>
 								<div className='space-y-3 mb-4'>
-									<p className='flex items-center text-lg font-medium text-zinc-600'>
+									<p className='flex items-center text-lg font-medium text-zinc-600 flex-nowrap'>
 										<Calendar className='mr-2 h-5 w-5 text-blue-500' />
-										August 18th
+										<span className='line-through text-zinc-400 whitespace-nowrap'>
+											August 18th
+										</span>
+										<span className='ml-2 whitespace-nowrap text-xs md:text-sm bg-red-100 text-red-700 px-2 py-0.5 rounded-full'>
+											Closed
+										</span>
 									</p>
-									<p className='flex items-center text-lg font-medium text-zinc-600'>
-										<Calendar className='mr-2 h-5 w-5 text-blue-500' />
-										October 6th
+									<p className='flex items-center text-lg font-medium text-zinc-600 flex-nowrap'>
+										<Calendar className='mr-2 h-5 w-5 text-blue-500 shrink-0' />
+										<span className='whitespace-nowrap'>
+											October 6th
+										</span>
+										<span className='ml-2 whitespace-nowrap text-sm bg-blue-100 text-blue-700 px-3 py-1 rounded-full'>
+											Now accepting applications
+										</span>
 									</p>
 								</div>
 								<a

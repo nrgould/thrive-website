@@ -131,7 +131,7 @@ export function HeroSection() {
 				</div>
 
 				<motion.div
-					className='space-y-6 md:space-y-8 relative'
+					className='space-y-6 relative'
 					initial={{ opacity: 0, y: 20 }}
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.7 }}
