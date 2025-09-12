@@ -205,7 +205,7 @@ export function HeroSection() {
 								className='px-8 py-4 bg-blue-500 text-white rounded-full font-medium text-lg flex items-center gap-2 hover:bg-blue-600 transition-colors shadow-lg hover:shadow-xl cursor-pointer'
 								whileTap={{ scale: 0.95 }}
 							>
-								Register for the August 18th Cohort{' '}
+								Register for the October 6th Cohort{' '}
 								<ArrowRight className='ml-1' size={20} />
 							</motion.button>
 						</Link>
