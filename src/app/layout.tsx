@@ -4,6 +4,10 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { Analytics } from '@vercel/analytics/react';
 import { GoogleTagManager } from '@next/third-parties/google';
+import dynamic from 'next/dynamic';
+const FacebookPixel = dynamic(() => import('../components/FacebookPixel'), {
+	ssr: false,
+});
 
 const geistSans = Geist({
 	variable: '--font-geist-sans',
@@ -40,6 +44,7 @@ export default function RootLayout({
 				<Header />
 				<main>{children}</main>
 				<Footer />
+				<FacebookPixel />
 			</body>
 			<Analytics />
 		</html>
