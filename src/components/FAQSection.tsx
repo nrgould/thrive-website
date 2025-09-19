@@ -50,7 +50,7 @@ export function FAQSection() {
 					href='mailto:info@thrive.com'
 					className='text-blue-500 underline'
 				>
-					info@thrive.com
+					thrive@c2life.org
 				</a>{' '}
 				if you cannot find an answer to your question.
 			</motion.p>
