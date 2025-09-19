@@ -5,9 +5,7 @@ import { Footer } from '@/components/Footer';
 import { Analytics } from '@vercel/analytics/react';
 import { GoogleTagManager } from '@next/third-parties/google';
 import dynamic from 'next/dynamic';
-const FacebookPixel = dynamic(() => import('../components/FacebookPixel'), {
-	ssr: false,
-});
+const FacebookPixel = dynamic(() => import('../components/FacebookPixel'));
 
 const geistSans = Geist({
 	variable: '--font-geist-sans',
