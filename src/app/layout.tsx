@@ -1,9 +1,9 @@
-import type { Metadata } from 'next';
 import { Geist, Geist_Mono, Inter } from 'next/font/google';
 import './globals.css';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { Analytics } from '@vercel/analytics/react';
+import { GoogleTagManager } from '@next/third-parties/google';
 
 const geistSans = Geist({
 	variable: '--font-geist-sans',
@@ -20,7 +20,7 @@ const inter = Inter({
 	subsets: ['latin'],
 });
 
-export const metadata: Metadata = {
+export const metadata = {
 	title: 'THRIVE | A Better Way to Live',
 	description:
 		'THRIVE is a lifestyle medicine program built on science-backed strategies that support physical, mental, and emotional well-being.',
@@ -33,6 +33,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang='en'>
+			<GoogleTagManager gtmId='GTM-NJ7DVKZF' />
 			<body
 				className={`${geistSans.variable} ${geistMono.variable} ${inter.className} antialiased`}
 			>
