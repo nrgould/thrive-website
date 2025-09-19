@@ -16,6 +16,13 @@ export function WaitlistForm() {
 	const [status, setStatus] = useState('');
 	const [loading, setLoading] = useState(false);
 
+	const appendSubmittedParam = () => {
+		if (typeof window === 'undefined') return;
+		const url = new URL(window.location.href);
+		url.searchParams.set('submitted', 'true');
+		window.history.replaceState({}, '', url.toString());
+	};
+
 	const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
 		event.preventDefault();
 		setLoading(true);
@@ -43,6 +50,7 @@ export function WaitlistForm() {
 				setStatus(
 					'Success! You will be notified when Essentials launches.'
 				);
+				appendSubmittedParam();
 				setEmail('');
 				setFirstName('');
 				setLastName('');

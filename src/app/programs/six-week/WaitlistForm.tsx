@@ -15,6 +15,13 @@ export function WaitlistForm() {
 	const [status, setStatus] = useState(''); // For feedback
 	const [loading, setLoading] = useState(false);
 
+	const appendSubmittedParam = () => {
+		if (typeof window === 'undefined') return;
+		const url = new URL(window.location.href);
+		url.searchParams.set('submitted', 'true');
+		window.history.replaceState({}, '', url.toString());
+	};
+
 	const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
 		event.preventDefault();
 		setLoading(true);
@@ -39,6 +46,7 @@ export function WaitlistForm() {
 
 			if (response.ok && data.success) {
 				setStatus('Success! You have been added to the waitlist.');
+				appendSubmittedParam();
 				// Optionally clear the form
 				setEmail('');
 				setFirstName('');
