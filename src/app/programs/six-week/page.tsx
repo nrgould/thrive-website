@@ -426,12 +426,12 @@ export default function SixWeekPage() {
 			>
 				<div className='max-w-6xl mx-auto'>
 					<h2 className='text-4xl font-bold text-white mb-6 text-center'>
-						Join the Waitlist
+						Get Started
 					</h2>
 					<p className='text-lg text-white mb-8 text-center max-w-3xl mx-auto'>
 						Our program cohorts fill up quickly. Sign up for our
-						waitlist to be notified when registration opens for the
-						next cohort and to receive exclusive early access.
+						list to be notified when registration opens for the next
+						cohort and to receive exclusive early access.
 					</p>
 
 					<div className='flex justify-center'>

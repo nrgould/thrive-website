@@ -45,7 +45,7 @@ export function WaitlistForm() {
 			const data = await response.json();
 
 			if (response.ok && data.success) {
-				setStatus('Success! You have been added to the waitlist.');
+				setStatus('Success! You have been added to the list.');
 				appendSubmittedParam();
 				// Optionally clear the form
 				setEmail('');
