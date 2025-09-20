@@ -178,7 +178,7 @@ export function WaitlistForm() {
 								size='lg'
 								disabled={loading}
 							>
-								{loading ? 'Submitting...' : 'Join Waitlist'}
+								{loading ? 'Submitting...' : 'Get Started'}
 							</Button>
 						</div>
 						<p className='text-xs text-slate-500 text-center'>
